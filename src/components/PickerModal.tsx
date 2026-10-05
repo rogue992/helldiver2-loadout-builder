@@ -8,6 +8,8 @@ import { useStore } from '../store/useStore'
 import { sizesOf, type GearSlot } from '../store/types'
 import { GEAR_ORDER, cellTarget, firstEmptyCell, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool } from '../rules/picker'
 import { copy } from '../copy/ko'
+import Icon from './Icon'
+import btn from './Buttons.module.css'
 import Tile from './Tile'
 import { useModal } from './useModal'
 import styles from './PickerModal.module.css'
@@ -26,7 +28,7 @@ function ClearX({ label, small = false, onClear }: { label: string; small?: bool
   return (
     <button
       type="button"
-      className={[styles.clearBtn, small && styles.clearBtnSmall].filter(Boolean).join(' ')}
+      className={[btn.clearX, styles.clearBtn, small && styles.clearBtnSmall].filter(Boolean).join(' ')}
       onClick={(e) => {
         e.stopPropagation()
         onClear()
@@ -36,7 +38,7 @@ function ClearX({ label, small = false, onClear }: { label: string; small?: bool
       title={copy.clear}
       data-part="picker-clear"
     >
-      ✕
+      <Icon name="x" stroke={2.4} />
     </button>
   )
 }
@@ -143,7 +145,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
           <h2>{title}</h2>
           <input className={styles.search} value={q} onChange={(e) => setQ(e.target.value)} placeholder={copy.searchPlaceholder} autoFocus />
           <button className={styles.close} onClick={onClose} aria-label={copy.close}>
-            ✕
+            <Icon name="x" stroke={2} />
           </button>
         </header>
 

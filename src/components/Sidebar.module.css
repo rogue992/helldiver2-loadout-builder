@@ -169,20 +169,26 @@
   opacity: 0.35;
 }
 
-/* ⋯ 메뉴: 복제 · 말소. 버튼은 이름 줄(높이 20px, 위 여백 7px)과 같은 선에 */
+/* ⋯ 메뉴: 복제 · 말소. 버튼 가운데가 이름 줄 가운데와 같은 선에 오도록 위 여백을 맞춘다 */
 .more {
   align-self: start;
-  margin-top: 7px;
-  height: 20px;
+  margin-top: 6px;
+  width: 22px;
+  height: 22px;
   display: grid;
   place-items: center;
+  border-radius: var(--r-pill);
   color: var(--muted);
   font-size: 15px;
   line-height: 1;
+  transition:
+    color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
 }
 .more:hover,
 .more[aria-expanded='true'] {
   color: var(--fg);
+  background: color-mix(in srgb, var(--acc) 10%, transparent);
 }
 .menu {
   position: fixed;
@@ -210,17 +216,19 @@
   color: var(--danger-fg) !important;
 }
 
+/* 신규 배정: 알약(Buttons.module.css) + 오른쪽 노란 + 칩(올리면 돈다) */
 .new {
   flex: none;
-  margin: 0 8px 12px;
-  padding: 8px;
-  border: 1px dashed var(--line);
-  border-radius: var(--r);
-  color: var(--muted);
-  font: 600 13px var(--font-display);
-  text-align: center;
+  margin: 4px 8px 14px;
 }
 .new:hover {
-  color: var(--fg);
   border-color: var(--acc);
+}
+.newIc {
+  background: var(--yellow);
+  color: var(--on-yellow);
+  box-shadow: 0 8px 18px -10px color-mix(in srgb, var(--yellow) 65%, transparent);
+}
+.new:hover .newIc {
+  transform: rotate(90deg);
 }

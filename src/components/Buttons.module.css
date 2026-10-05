@@ -1,0 +1,62 @@
+/* 여러 화면이 같이 쓰는 버튼 모양. 크기 · 위치 · 색 · 올렸을 때 움직임은 쓰는 쪽 모듈이 정한다(같은 속성을 겹쳐 쓰지 않게) */
+
+/* 알약 + 오른쪽 원형 아이콘 칩(허가서 저장 · 초기화 · 삭제, 서랍 신규 배정) */
+.pill {
+  height: 42px;
+  padding: 0 5px 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  background: var(--bg2);
+  font: 600 14.5px var(--font-display);
+  letter-spacing: 0.03em;
+  color: var(--fg);
+  white-space: nowrap;
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    background-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+.pill:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.pillIc {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  font-size: 15px;
+  transition: transform 0.5s var(--ease);
+}
+
+/* 원형 해제 ✕(빌더 후보 · 장비, 선택 창 타일). 아이콘 크기는 쓰는 쪽 font-size */
+.clearX {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--acc) 24%, transparent);
+  background: color-mix(in srgb, var(--panel) 92%, transparent);
+  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.6);
+  color: var(--muted);
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+.clearX:hover {
+  color: var(--danger-fg);
+  border-color: var(--danger);
+  background: var(--danger-soft);
+  transform: scale(1.1);
+}
+.clearX:active {
+  transform: scale(0.92);
+}

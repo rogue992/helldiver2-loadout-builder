@@ -10,6 +10,8 @@ import { isDefaultLoadout } from '../store/defaults'
 import type { Loadout, Settings } from '../store/types'
 import { displayStamp, evaluate, stampState, type StampState } from '../rules/warnings'
 import { copy } from '../copy/ko'
+import Icon from './Icon'
+import btn from './Buttons.module.css'
 import styles from './Sidebar.module.css'
 
 interface Props {
@@ -92,8 +94,11 @@ export default function Sidebar({ onOpen, onDuplicate, onDelete }: Props) {
           </SortableContext>
         </DndContext>
       </div>
-      <button className={styles.new} onClick={() => onOpen('')}>
+      <button className={[btn.pill, styles.new].join(' ')} onClick={() => onOpen('')}>
         {copy.newLoadout}
+        <span className={[btn.pillIc, styles.newIc].join(' ')}>
+          <Icon name="plus" stroke={1.9} />
+        </span>
       </button>
     </aside>
   )

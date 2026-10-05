@@ -7,6 +7,8 @@ import { copy } from '../copy/ko'
 import PermitFrame from './PermitFrame'
 import Stamp from './Stamp'
 import Broadcast from './Broadcast'
+import Icon from './Icon'
+import btn from './Buttons.module.css'
 import ReeducationDialog from './ReeducationDialog'
 import styles from './Permit.module.css'
 
@@ -141,20 +143,38 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
       </div>
 
       <div className={styles.btns} data-part="permit-buttons" data-export="skip">
-        <button className={styles.primary} onClick={onSave} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+        <button className={[btn.pill, styles.primary].join(' ')} onClick={onSave} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.save}
+          <span className={[btn.pillIc, styles.ic].join(' ')}>
+            <Icon name="arrow" stroke={1.8} />
+          </span>
         </button>
         <div className={styles.row}>
-          <button onClick={onDuplicate}>{copy.duplicate}</button>
-          <button onClick={onExportImage}>{copy.image}</button>
-          <button onClick={onBriefing}>{copy.briefing}</button>
+          <button className={btn.pill} onClick={onDuplicate}>
+            <Icon name="copy" />
+            {copy.duplicate}
+          </button>
+          <button className={btn.pill} onClick={onExportImage}>
+            <Icon name="image" />
+            {copy.image}
+          </button>
+          <button className={btn.pill} onClick={onBriefing}>
+            <Icon name="doc" />
+            {copy.briefing}
+          </button>
         </div>
-        <button className={styles.reset} onClick={() => setConfirmReset(true)} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+        <button className={[btn.pill, styles.reset].join(' ')} onClick={() => setConfirmReset(true)} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.reset}
+          <span className={[btn.pillIc, styles.ic].join(' ')}>
+            <Icon name="reset" />
+          </span>
         </button>
         {/* 확인 없이 바로 삭제(되돌리기 토스트가 안전장치). 기본 로드아웃과 아직 목록에 없는 초안은 삭제 불가 */}
-        <button className={styles.danger} onClick={() => onDelete(draft.id)} disabled={!saved || lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+        <button className={[btn.pill, styles.danger].join(' ')} onClick={() => onDelete(draft.id)} disabled={!saved || lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.delete}
+          <span className={[btn.pillIc, styles.ic].join(' ')}>
+            <Icon name="trash" />
+          </span>
         </button>
       </div>
 

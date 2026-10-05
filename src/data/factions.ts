@@ -48,9 +48,9 @@ export const RACES: RaceInfo[] = [
     nameKo: '일루미닛',
     factions: [
       { id: 'default', nameKo: '기본' },
+      { id: 'mindless-masses', nameKo: '무분별한 대중' },
       { id: 'appropriators', nameKo: '적임자' },
       { id: 'vote-snatchers', nameKo: '보트 스내처' },
-      { id: 'mindless-masses', nameKo: '무분별한 대중' },
     ],
   },
 ]

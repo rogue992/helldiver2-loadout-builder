@@ -181,42 +181,75 @@
   color: var(--ok-fg);
   border-color: var(--ok);
 }
+/* 버튼: 알약(Buttons.module.css). 저장 · 초기화 · 삭제는 오른쪽에 원형 아이콘 칩, 복제 · 이미지 · 브리핑은 앞에 선 아이콘 */
 .btns {
-  padding: 10px 12px;
+  padding: 12px 12px 14px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
 }
-.btns button {
-  padding: 8px 12px;
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
-  font: 600 14px var(--font-display);
-  letter-spacing: 0.02em;
-  color: var(--fg);
+.btns button:hover:not(:disabled) {
+  border-color: var(--box-line);
 }
-.primary {
-  background: var(--yellow) !important;
-  color: var(--on-yellow) !important;
-  border-color: var(--yellow) !important;
+.btns button:hover:not(:disabled) .ic {
+  transform: translate(1px, -1px) scale(1.05);
+}
+.btns .primary {
+  background: var(--yellow);
+  color: var(--on-yellow);
+  border-color: var(--yellow);
+  font-weight: 700;
+  box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--yellow) 55%, transparent);
+}
+.btns .primary:hover:not(:disabled) {
+  border-color: var(--yellow);
+  box-shadow: 0 18px 32px -16px color-mix(in srgb, var(--yellow) 75%, transparent);
+}
+.primary .ic {
+  background: var(--on-yellow);
+  color: var(--yellow);
 }
 .row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 7px;
 }
-.row button {
-  font-size: 12.5px;
-  padding: 7px 4px;
+.btns .row button {
+  height: 36px;
+  padding: 0 8px;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13.5px;
+}
+.row svg {
+  flex: none;
+  font-size: 14px;
+  color: var(--muted);
+  transition: color 0.4s var(--ease);
+}
+.row button:hover:not(:disabled) svg {
+  color: var(--fg);
 }
 /* 초기화: 주의(호박색) 톤. 삭제: 위험(붉은색) 톤 */
-.reset {
-  color: var(--warn-fg) !important;
-  border-color: var(--warn) !important;
-  background: var(--warn-soft) !important;
+.btns .reset {
+  color: var(--warn-fg);
+  border-color: color-mix(in srgb, var(--warn) 45%, transparent);
+  background: var(--warn-soft);
 }
-.danger {
-  color: var(--danger-fg) !important;
-  border-color: var(--danger) !important;
-  background: var(--danger-soft) !important;
+.btns .reset:hover:not(:disabled) {
+  border-color: var(--warn);
+}
+.reset .ic {
+  background: color-mix(in srgb, var(--warn) 16%, transparent);
+}
+.btns .danger {
+  color: var(--danger-fg);
+  border-color: color-mix(in srgb, var(--danger) 45%, transparent);
+  background: var(--danger-soft);
+}
+.btns .danger:hover:not(:disabled) {
+  border-color: var(--danger);
+}
+.danger .ic {
+  background: color-mix(in srgb, var(--danger) 16%, transparent);
 }

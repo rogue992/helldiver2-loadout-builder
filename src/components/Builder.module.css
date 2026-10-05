@@ -1,20 +1,11 @@
 .builder {
   min-width: 0;
 }
-/* 고정 로드아웃(기본): 누를 수 있는 것이 없다 */
+/* 고정 로드아웃(기본): 누를 수 있는 것이 없다. 크기 선택 · 빈 칸은 disabled라 hover 반응도 :not(:disabled)에서 빠진다 */
 .locked .sizeSel button,
 .locked .emptyCell,
 .locked .render {
   cursor: default;
-}
-.locked .sizeSel button:hover {
-  color: var(--muted);
-}
-.locked .sizeSel .sizeOn:hover {
-  color: var(--bg2);
-}
-.locked .emptyCell:hover {
-  opacity: 0.45;
 }
 .sec {
   margin-bottom: 14px;
@@ -103,32 +94,40 @@
   white-space: nowrap;
 }
 
-/* 후보 칸 수 선택: 캡션 오른쪽의 작은 4단 세그먼트 */
+/* 후보 칸 수 선택: 캡션 오른쪽 작은 트레이 안의 원 4개 */
 .sizeSel {
   display: inline-flex;
   flex: none;
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
-  overflow: hidden;
+  padding: 1px;
+  border: 1px var(--bstyle) color-mix(in srgb, var(--acc) 14%, transparent);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--acc) 4%, transparent);
 }
 .sizeSel button {
-  width: 17px;
-  height: 15px;
-  font: 700 10px/1 var(--font-display);
+  width: 16px;
+  height: 16px;
+  border-radius: var(--r-pill);
+  font: 600 10.5px/1 var(--font-display);
   color: var(--muted);
-  border-right: 1px var(--bstyle) var(--line);
   display: grid;
   place-items: center;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
 }
-.sizeSel button:last-child {
-  border-right: 0;
-}
-.sizeSel button:hover {
+.sizeSel button:hover:not(:disabled) {
   color: var(--fg);
+  background: color-mix(in srgb, var(--acc) 12%, transparent);
 }
-.sizeSel .sizeOn {
+.sizeSel button:active:not(:disabled) {
+  transform: scale(0.9);
+}
+.sizeSel .sizeOn,
+.sizeSel .sizeOn:hover:not(:disabled) {
   background: var(--acc);
   color: var(--bg2);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--acc) 18%, transparent);
 }
 
 .grid2 {
@@ -154,19 +153,12 @@
 .one .cell {
   height: 100%;
 }
+/* 모양은 Buttons.module.css의 원형 ✕. 여기서는 크기 · 자리만 */
 .x,
 .clear {
   width: 18px;
   height: 18px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1;
-  padding: 0;
+  font-size: 8px;
 }
 .x {
   position: absolute;
@@ -174,34 +166,53 @@
   right: -7px;
   z-index: 1;
 }
-.x:hover,
-.clear:hover {
-  color: var(--danger-fg);
-  border-color: var(--danger);
-}
 .clear {
   flex: none;
   width: 16px;
   height: 16px;
-  font-size: 9px;
+  font-size: 7px;
 }
 
-/* 빈 후보 칸: 점선 소켓. 누르면 선택 모달 */
+/* 빈 후보 칸: 둥근 점선 소켓 + 원형 + 칩. 누르면 선택 모달 */
 .emptyCell {
   aspect-ratio: 1;
   width: 100%;
-  border: 2px dashed var(--tile-line);
-  border-radius: var(--r);
-  opacity: 0.45;
-  display: grid;
-  place-items: center;
+  border: 1.5px dashed color-mix(in srgb, var(--tile-line) 32%, transparent);
+  border-radius: var(--r-soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   color: var(--muted);
   font: 600 11px var(--font-display);
   letter-spacing: 0.08em;
+  transition:
+    border-color 0.4s var(--ease),
+    background-color 0.4s var(--ease),
+    color 0.4s var(--ease);
 }
-.emptyCell:hover,
+.emptyCell:hover:not(:disabled),
 .emptyCell:focus-visible {
-  opacity: 1;
+  border-color: var(--acc);
+  background: color-mix(in srgb, var(--acc) 4%, transparent);
+  color: var(--fg);
+}
+.emptyIc {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--acc) 8%, transparent);
+  font-size: 13px;
+  transition:
+    transform 0.5s var(--ease),
+    background-color 0.4s var(--ease);
+}
+.emptyCell:hover:not(:disabled) .emptyIc {
+  transform: rotate(90deg);
+  background: color-mix(in srgb, var(--acc) 16%, transparent);
 }
 .emptyOne {
   aspect-ratio: auto;

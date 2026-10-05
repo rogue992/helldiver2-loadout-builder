@@ -1,16 +1,16 @@
+/* 넓은 화면은 한 줄: 칩 줄(.chips)만 줄어들 수 있고 나머지는 제 폭을 지킨다. 좁은 폭의 2단 · 감김은 맨 아래 미디어 쿼리 */
 .bar {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  min-height: var(--bar-h);
-  padding: 0 16px 0 0;
+  gap: 0 7px;
+  height: var(--bar-h);
+  padding: 0 12px 0 0;
   background: color-mix(in srgb, var(--bg) 94%, transparent);
   backdrop-filter: blur(6px);
   border-bottom: 1px var(--bstyle) var(--line);
 }
 
-/* 서랍 머리: 아래 목록 패널과 같은 폭 · 배경 · 오른쫇 경계선. 바의 아래 경계선을 덮어 패널과 끊김 없이 이어진다 */
+/* 서랍 머리: 아래 목록 패널과 같은 폭 · 배경 · 오른쪽 경계선. 바의 아래 경계선을 덮어 패널과 끊김 없이 이어진다 */
 .drawerHead {
   position: relative;
   z-index: 1;
@@ -41,6 +41,9 @@
   font-weight: 600;
   color: var(--muted);
 }
+.bar > * {
+  flex: none;
+}
 .menuBtn {
   width: 30px;
   height: 30px;
@@ -48,23 +51,35 @@
   display: grid;
   place-items: center;
   border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
+  border-radius: var(--r-pill);
+  background: var(--bg2);
   color: var(--muted);
   font-size: 15px;
-  line-height: 1;
+  transition:
+    transform 0.4s var(--ease),
+    color 0.4s var(--ease),
+    background-color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
 }
 .menuBtn:hover {
   color: var(--fg);
 }
+.menuBtn:active {
+  transform: scale(0.94);
+}
 .drawerOpen .menuBtn {
   color: var(--yellow);
-  border-color: var(--yellow);
+  border-color: color-mix(in srgb, var(--yellow) 50%, transparent);
+  background: color-mix(in srgb, var(--yellow) 8%, transparent);
+}
+.drawerOpen .menuBtn:hover {
+  background: color-mix(in srgb, var(--yellow) 15%, transparent);
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-right: 6px;
+  margin-right: 2px;
 }
 .seal {
   width: 28px;
@@ -81,24 +96,38 @@
   color: var(--yellow);
   white-space: nowrap;
 }
+/* 종족 탭: 오목한 트레이 안의 알약. 선택은 종족색 틴트 + 가는 테두리 */
 .races {
   display: flex;
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
-  overflow: hidden;
+  gap: 2px;
+  padding: 3px;
+  border: 1px var(--bstyle) color-mix(in srgb, var(--acc) 14%, transparent);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--acc) 4%, transparent);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
   flex: none;
 }
 .races button {
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 7px 14px;
+  gap: 6px;
+  height: 32px;
+  padding: 0 9px;
+  border-radius: var(--r-pill);
   font: 600 14px var(--font-display);
   color: var(--muted);
-  border-right: 1px var(--bstyle) var(--line);
+  transition:
+    transform 0.4s var(--ease),
+    color 0.4s var(--ease),
+    background-color 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
-.races button:last-child {
-  border-right: 0;
+.races button:hover {
+  color: var(--fg);
+  background: color-mix(in srgb, var(--acc) 7%, transparent);
+}
+.races button:active {
+  transform: scale(0.97);
 }
 .races button i {
   width: 9px;
@@ -106,12 +135,17 @@
   border-radius: 50%;
   background: var(--dot);
 }
-.races .on {
-  background: var(--dot);
-  color: #0a0a0a;
+.races .on,
+.races .on:hover {
+  color: var(--fg);
+  background: color-mix(in srgb, var(--dot) 20%, var(--bg2));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--dot) 60%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 8px 18px -10px color-mix(in srgb, var(--dot) 80%, transparent);
 }
 .races .on i {
-  background: #0a0a0a;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 28%, transparent);
 }
 .sep {
   width: 1px;
@@ -124,25 +158,55 @@
   color: var(--muted);
   letter-spacing: 0.06em;
 }
+/* 팩션 칩 줄: 남는 폭만 쓰고, 넘치면 가로로 민다(스크롤 막대 없이). 넘친 쪽 끝은 흐리게(data-more, TopBar가 붙인다) */
 .chips {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   align-items: center;
-  flex-wrap: wrap;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-block: 4px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.chips::-webkit-scrollbar {
+  display: none;
+}
+.chips[data-more] {
+  -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent);
+  mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent);
 }
 .chip {
-  padding: 4px 10px;
+  flex: none;
+  height: 28px;
+  padding: 0 8px;
   border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
+  border-radius: var(--r-pill);
   font-size: 12.5px;
-  color: var(--fg);
+  color: var(--muted);
   background: var(--bg2);
   white-space: nowrap;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
 }
-.chipOn {
+.chip:hover {
+  color: var(--fg);
+  border-color: var(--box-line);
+}
+.chip:active {
+  transform: scale(0.97);
+}
+.chipOn,
+.chipOn:hover {
+  color: var(--fg);
   border-color: var(--acc);
   background: var(--acc-soft);
   font-weight: 600;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 .right {
   margin-left: auto;
@@ -168,14 +232,19 @@
   background: var(--sbg);
   overflow: hidden;
   opacity: 0.72;
+  transition:
+    opacity 0.3s var(--ease),
+    transform 0.4s var(--ease);
 }
 .scr:hover {
   opacity: 1;
+  transform: translateY(-1px);
 }
 .scrOn {
   opacity: 1;
   outline: 2px solid var(--yellow);
-  outline-offset: 1px;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px color-mix(in srgb, var(--yellow) 10%, transparent);
 }
 .scr i {
   position: absolute;
@@ -212,15 +281,119 @@
   --sacc: #5ec27a;
   --spanel: #0f2417;
 }
+/* 크레딧 · 설정: 테두리 없는 글자 버튼. 올리거나 열려 있으면 밑줄이 왼쪽부터 그려진다 */
 .btn {
-  padding: 5px 10px;
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
-  font-size: 12.5px;
+  position: relative;
+  padding: 6px 4px;
+  color: var(--muted);
+  font: 600 13.5px var(--font-body);
+  white-space: nowrap;
+  transition: color 0.4s var(--ease);
 }
+.btn::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  right: 4px;
+  bottom: 2px;
+  height: 1px;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease);
+}
+.btn:hover,
 .btnOn {
-  border-color: var(--yellow);
-  color: var(--yellow);
+  color: var(--fg);
+}
+.btn:hover::after,
+.btnOn::after {
+  transform: scaleX(1);
+}
+
+/* 팩션 칩까지 한 줄에 넣기 빠듯한 폭: 브랜드 글자는 화면에서만 숨기고 도장만 남긴다(제목은 스크린 리더에 그대로) */
+@media (1200px <= width < 1440px) {
+  .withFactions .brand {
+    gap: 0;
+  }
+  .withFactions .brand h1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+/* 한 줄이 안 들어가는 폭(서랍이 옆 기둥인 구간): 2단.
+   윗단 서랍 머리 | 브랜드 ...... 테마 · 크레딧 · 설정, 아랫단 종족 탭 | 팩션 칩(감김).
+   서랍 머리가 두 단 높이를 다 차지해 아래 목록과 기둥이 끊기지 않는다 */
+@media (820px < width < 1200px) {
+  .bar {
+    display: grid;
+    grid-template-columns: auto auto auto auto minmax(0, 1fr) auto;
+    grid-template-rows: var(--bar-h) auto;
+    column-gap: 7px;
+    height: auto;
+  }
+  .drawerHead {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-items: flex-start;
+    padding-top: calc((var(--bar-h) - 30px) / 2);
+  }
+  .brand {
+    grid-column: 2 / 6;
+    grid-row: 1;
+  }
+  .right {
+    grid-column: 6;
+    grid-row: 1;
+  }
+  .races,
+  .bar > .sep,
+  .k {
+    grid-row: 2;
+    margin-bottom: 8px;
+  }
+  .races {
+    grid-column: 2;
+  }
+  .bar > .sep {
+    grid-column: 3;
+  }
+  .k {
+    grid-column: 4;
+  }
+  .chips {
+    grid-column: 5 / 7;
+    grid-row: 2;
+    flex-wrap: wrap;
+    overflow: visible;
+    padding-block: 0 8px;
+  }
+}
+/* 폰 폭: 서랍이 위로 올라가므로 그냥 감긴다. 종족 탭 뒤 구분선 자리에서 줄을 바꿔 팩션 라벨과 칩이 함께 내려간다 */
+@media (width <= 820px) {
+  .bar {
+    flex-wrap: wrap;
+    gap: 6px 8px;
+    height: auto;
+    min-height: var(--bar-h);
+    padding-bottom: 6px;
+  }
+  .bar > .sep {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .k {
+    margin-left: 12px;
+  }
+  .chips {
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
 }
 
 /* 종족 전환 플래시: 화면 가장자리에 종족색이 짧게 번쩍 */

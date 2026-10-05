@@ -44,9 +44,27 @@
   font: inherit;
 }
 .close {
-  padding: 4px 10px;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  display: grid;
+  place-items: center;
   border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
+  border-radius: var(--r-pill);
+  background: var(--bg2);
+  color: var(--muted);
+  font-size: 12px;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+.close:hover {
+  color: var(--fg);
+  border-color: var(--box-line);
+}
+.close:active {
+  transform: scale(0.94);
 }
 
 /* 대상 슬롯 줄(SES식): 가운데 모은 정사각 큰 타일 4개. 현재 대상은 노란 테두리 · 빛 · 아래 점 */
@@ -186,7 +204,7 @@
   color: var(--muted);
   white-space: nowrap;
 }
-/* 창 안 해제 ×: 타일 오른쪽 위 */
+/* 창 안 해제 ×: 타일 오른쪽 위. 모양은 Buttons.module.css의 원형 ✕, 여기서는 크기 · 자리만 */
 .clearBtn {
   position: absolute;
   top: 5px;
@@ -194,26 +212,14 @@
   z-index: 2;
   width: 20px;
   height: 20px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1;
-  padding: 0;
-}
-.clearBtn:hover {
-  color: var(--danger-fg);
-  border-color: var(--danger);
+  font-size: 9px;
 }
 .clearBtnSmall {
   top: -6px;
   right: -6px;
   width: 17px;
   height: 17px;
-  font-size: 9.5px;
+  font-size: 7.5px;
 }
 .slotDot {
   position: absolute;

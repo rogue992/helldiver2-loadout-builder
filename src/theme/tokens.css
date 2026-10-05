@@ -20,6 +20,8 @@
   --z-toast: 90;
   /* 위험 줄무늬(허가서 머리 · 크레딧 · 방송 띠). 줄 색은 --yellow, 바탕은 테마별 --hazard-bg */
   --hazard: repeating-linear-gradient(-62deg, var(--yellow) 0 12px, transparent 12px 26px);
+  /* 버튼 · 칩 움직임: 빠르게 출발해 무게 있게 멈춘다 */
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
 }
 
 /* ── console: 관제 콘솔 (기본) ── */
@@ -53,6 +55,9 @@
   --glow: #12253f;
   --hazard-bg: #0a0f18;
   --r: 3px;
+  /* 버튼 · 칩 · 아이콘 칩(알약)과 빈 칸 소켓의 모서리 */
+  --r-pill: 999px;
+  --r-soft: 8px;
   --bstyle: solid;
   --font-display: var(--display);
   --font-body: var(--body);
@@ -89,6 +94,8 @@
   --glow: #0a1a12;
   --hazard-bg: #040a0f;
   --r: 0;
+  --r-pill: 0;
+  --r-soft: 0;
   --bstyle: dashed;
   --font-display: var(--mono);
   --font-body: var(--mono);

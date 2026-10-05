@@ -10,6 +10,8 @@ import { sizesOf, type GearSlot as GearSlotKey, type PoolSize } from '../store/t
 import type { Warning } from '../rules/warnings'
 import { cellTarget } from '../rules/picker'
 import { copy } from '../copy/ko'
+import Icon from './Icon'
+import btn from './Buttons.module.css'
 import Tile from './Tile'
 import PickerModal, { type PickerTarget } from './PickerModal'
 import styles from './Builder.module.css'
@@ -70,8 +72,8 @@ export default function Builder({ warnings }: Props) {
           <b>{KIND_LABEL[slot]}</b>
           <span className={styles.types}>{item ? gearCaption(item) : ''}</span>
           {item && !locked && (
-            <button type="button" className={styles.clear} onClick={() => setGear(slot, null)} aria-label={`${KIND_LABEL[slot]} ${copy.clear}`} title={copy.clear}>
-              ✕
+            <button type="button" className={[btn.clearX, styles.clear].join(' ')} onClick={() => setGear(slot, null)} aria-label={`${KIND_LABEL[slot]} ${copy.clear}`} title={copy.clear}>
+              <Icon name="x" stroke={2.4} />
             </button>
           )}
         </div>
@@ -118,13 +120,18 @@ export default function Builder({ warnings }: Props) {
                       <span key={id} className={styles.cell}>
                         <Tile item={index.byId.get(id) ?? null} missingId={id} shape={size === 1 ? 'fixed' : 'square'} mark={markOf.get(id) ?? 'none'} onClick={locked ? undefined : () => openPool(i, k)} />
                         {!locked && (
-                          <button type="button" className={styles.x} onClick={() => setPool(i, pool.filter((x) => x !== id))} aria-label={`${index.byId.get(id) ? name(index.byId.get(id)!) : id} ${copy.clear}`} title={copy.clear} data-part="clear-candidate">
-                            ✕
+                          <button type="button" className={[btn.clearX, styles.x].join(' ')} onClick={() => setPool(i, pool.filter((x) => x !== id))} aria-label={`${index.byId.get(id) ? name(index.byId.get(id)!) : id} ${copy.clear}`} title={copy.clear} data-part="clear-candidate">
+                            <Icon name="x" stroke={2.4} />
                           </button>
                         )}
                       </span>
                     ) : (
                       <button key={`e${k}`} type="button" className={[styles.emptyCell, size === 1 && styles.emptyOne].filter(Boolean).join(' ')} disabled={locked} onClick={() => openPool(i, k)} aria-label={`${copy.pickerStrat(i + 1)} ${locked ? copy.lockedCell : copy.emptyCell}`} data-part="empty-cell">
+                        {!locked && (
+                          <span className={styles.emptyIc}>
+                            <Icon name="plus" stroke={1.8} />
+                          </span>
+                        )}
                         <span>{locked ? copy.lockedCell : copy.emptyCell}</span>
                       </button>
                     ),

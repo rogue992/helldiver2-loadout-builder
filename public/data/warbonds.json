@@ -1,0 +1,194 @@
+[
+  {
+    "id": "helldivers-mobilize-warbond",
+    "nameKo": "헬다이버 출동!",
+    "nameEn": "Helldivers Mobilize!",
+    "order": 0,
+    "releaseDate": "2024-02-08",
+    "type": "standard"
+  },
+  {
+    "id": "steeled-veterans-premium-warbond",
+    "nameKo": "결연한 베테랑",
+    "nameEn": "Steeled Veterans",
+    "order": 1,
+    "releaseDate": "2024-02-08",
+    "type": "premium"
+  },
+  {
+    "id": "cutting-edge-premium-warbond",
+    "nameKo": "최첨단",
+    "nameEn": "Cutting Edge",
+    "order": 2,
+    "releaseDate": "2024-03-14",
+    "type": "premium"
+  },
+  {
+    "id": "democratic-detonation-premium-warbond",
+    "nameKo": "민주적 폭파",
+    "nameEn": "Democratic Detonation",
+    "order": 3,
+    "releaseDate": "2024-04-11",
+    "type": "premium"
+  },
+  {
+    "id": "polar-patriots-premium-warbond",
+    "nameKo": "극지의 애국자",
+    "nameEn": "Polar Patriots",
+    "order": 4,
+    "releaseDate": "2024-05-09",
+    "type": "premium"
+  },
+  {
+    "id": "viper-commandos-premium-warbond",
+    "nameKo": "독사 특공대",
+    "nameEn": "Viper Commandos",
+    "order": 5,
+    "releaseDate": "2024-06-13",
+    "type": "premium"
+  },
+  {
+    "id": "freedom-s-flame-premium-warbond",
+    "nameKo": "자유의 불꽃",
+    "nameEn": "Freedom's Flame",
+    "order": 6,
+    "releaseDate": "2024-08-08",
+    "type": "premium"
+  },
+  {
+    "id": "chemical-agents-premium-warbond",
+    "nameKo": "화학 요원",
+    "nameEn": "Chemical Agents",
+    "order": 7,
+    "releaseDate": "2024-09-19",
+    "type": "premium"
+  },
+  {
+    "id": "truth-enforcers-premium-warbond",
+    "nameKo": "진리의 집행자",
+    "nameEn": "Truth Enforcers",
+    "order": 8,
+    "releaseDate": "2024-10-31",
+    "type": "premium"
+  },
+  {
+    "id": "urban-legends-premium-warbond",
+    "nameKo": "도시 전설",
+    "nameEn": "Urban Legends",
+    "order": 9,
+    "releaseDate": "2024-12-13",
+    "type": "premium"
+  },
+  {
+    "id": "servants-of-freedom-premium-warbond",
+    "nameKo": "자유의 종복",
+    "nameEn": "Servants of Freedom",
+    "order": 10,
+    "releaseDate": "2025-02-06",
+    "type": "premium"
+  },
+  {
+    "id": "borderline-justice-premium-warbond",
+    "nameKo": "정의의 경계선",
+    "nameEn": "Borderline Justice",
+    "order": 11,
+    "releaseDate": "2025-03-20",
+    "type": "premium"
+  },
+  {
+    "id": "masters-of-ceremony-premium-warbond",
+    "nameKo": "의장의 달인",
+    "nameEn": "Masters of Ceremony",
+    "order": 12,
+    "releaseDate": "2025-05-15",
+    "type": "premium"
+  },
+  {
+    "id": "force-of-law-premium-warbond",
+    "nameKo": "법의 위력",
+    "nameEn": "Force of Law",
+    "order": 13,
+    "releaseDate": "2025-06-12",
+    "type": "premium"
+  },
+  {
+    "id": "control-group-premium-warbond",
+    "nameKo": "대조군",
+    "nameEn": "Control Group",
+    "order": 14,
+    "releaseDate": "2025-07-17",
+    "type": "premium"
+  },
+  {
+    "id": "obedient-democracy-support-troopers-legendary-warbond",
+    "nameKo": "민주적 궤도 강하 타격대",
+    "nameEn": "Obedient Democracy Support Troopers",
+    "order": 15,
+    "releaseDate": "2025-08-26",
+    "type": "legendary"
+  },
+  {
+    "id": "dust-devils-premium-warbond",
+    "nameKo": "먼지 폭풍",
+    "nameEn": "Dust Devils",
+    "order": 16,
+    "releaseDate": "2025-09-04",
+    "type": "premium"
+  },
+  {
+    "id": "python-commandos-premium-warbond",
+    "nameKo": "금사 특공대",
+    "nameEn": "Python Commandos",
+    "order": 17,
+    "releaseDate": "2025-12-02",
+    "type": "premium"
+  },
+  {
+    "id": "righteous-revenants-legendary-warbond",
+    "nameKo": "정의로운 망령",
+    "nameEn": "Righteous Revenants",
+    "order": 18,
+    "releaseDate": "2025-12-18",
+    "type": "legendary"
+  },
+  {
+    "id": "redacted-regiment-premium-warbond",
+    "nameKo": "존재하지 않는 부대",
+    "nameEn": "Redacted Regiment",
+    "order": 19,
+    "releaseDate": "2026-01-22",
+    "type": "premium"
+  },
+  {
+    "id": "siege-breakers-premium-warbond",
+    "nameKo": "공성 파괴자",
+    "nameEn": "Siege Breakers",
+    "order": 20,
+    "releaseDate": "2026-02-03",
+    "type": "premium"
+  },
+  {
+    "id": "entrenched-division-premium-warbond",
+    "nameKo": "견고한 참호 사단",
+    "nameEn": "Entrenched Division",
+    "order": 21,
+    "releaseDate": "2026-03-17",
+    "type": "premium"
+  },
+  {
+    "id": "exo-experts-premium-warbond",
+    "nameKo": "외계 전문가",
+    "nameEn": "Exo Experts",
+    "order": 22,
+    "releaseDate": "2026-04-28",
+    "type": "premium"
+  },
+  {
+    "id": "castellan-s-creed-legendary-warbond",
+    "nameKo": "카스텔란의 신조",
+    "nameEn": "Castellan's Creed",
+    "order": 23,
+    "releaseDate": "2026-08-12",
+    "type": "legendary"
+  }
+]

@@ -1,0 +1,136 @@
+.panel {
+  position: relative;
+  margin: 14px 16px 0;
+  background: var(--panel);
+  border: 1px var(--bstyle) var(--yellow);
+  border-radius: var(--r);
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 8px 24px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 1px dashed var(--line);
+}
+.row > span:first-child {
+  white-space: nowrap;
+}
+.meta {
+  font-size: 12px;
+  color: var(--muted);
+}
+.seg {
+  display: inline-flex;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+  flex: none;
+}
+.seg button {
+  padding: 3px 9px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.seg .on {
+  background: var(--acc);
+  color: var(--bg2);
+  font-weight: 600;
+}
+.toggle {
+  width: 32px;
+  height: 17px;
+  border-radius: 9px;
+  background: var(--line);
+  position: relative;
+  flex: none;
+}
+.toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  transition: left 0.15s;
+}
+.toggleOn {
+  background: var(--acc);
+}
+.toggleOn::after {
+  left: 17px;
+}
+.wide {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+}
+.wideHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wideTitle {
+  font: 600 12px var(--font-display);
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+}
+.wideBtns {
+  display: inline-flex;
+  gap: 4px;
+}
+.wideBtns button {
+  padding: 1px 8px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  font: 600 11px var(--font-display);
+  color: var(--muted);
+}
+.wideBtns button:hover {
+  color: var(--fg);
+  border-color: var(--acc);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.chip {
+  padding: 2px 8px;
+  border: 1px var(--bstyle) var(--acc);
+  border-radius: var(--r);
+  font-size: 11.5px;
+  background: var(--acc-soft);
+  color: var(--fg);
+  font-weight: 600;
+}
+.chipOff {
+  border-color: var(--line);
+  background: var(--bg2);
+  opacity: 0.45;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 6px;
+  border-top: 1px dashed var(--line);
+}
+.actions button {
+  padding: 5px 10px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  font-size: 12.5px;
+}

@@ -1,0 +1,105 @@
+/* console: 위험 줄무늬 띠. 상단 고정 영역 맨 위(상단 바 위)에 놓인다 */
+.ticker {
+  height: 26px;
+  display: flex;
+  align-items: stretch;
+  background: var(--hazard-bg);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-image: repeating-linear-gradient(-62deg, var(--yellow) 0 10px, var(--hazard-bg) 10px 20px) 4;
+}
+.lbl {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px 0 12px;
+  background: var(--yellow);
+  color: var(--on-yellow);
+  font: 800 11.5px var(--font-display);
+  letter-spacing: 0.14em;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+}
+.lbl i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hazard-bg);
+  animation: blink 1s steps(1) infinite;
+}
+.runWrap {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+/* 문구 묶음 2벌이 한 줄로 이어져 있고, 한 벌 폭(-50%)만큼 흘러간 뒤 처음으로 돌아오므로 끊김이 없다.
+   여백은 padding이 아니라 left로 준다: padding은 요소 폭에 섞여 -50% 이동 거리가 한 벌 폭과 어긋난다 */
+.run {
+  position: absolute;
+  left: 12px;
+  white-space: nowrap;
+  animation: run 160s linear infinite;
+  color: var(--yellow);
+  font: 700 12.5px/18px var(--font-display);
+  letter-spacing: 0.06em;
+}
+.runStill {
+  animation: none;
+}
+.run span {
+  margin-right: 48px;
+}
+.run em {
+  display: inline-block;
+  margin-right: 12px;
+  font-style: normal;
+  font-size: 9px;
+  vertical-align: 1px;
+  opacity: 0.85;
+}
+@keyframes run {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* teletype: 타이핑 */
+.tty {
+  padding: 9px 12px;
+  border-bottom: 1px dashed var(--line);
+  font: 600 12px/1.5 var(--font-body);
+  color: var(--ok);
+}
+/* 문구 길이와 무관하게 3줄 높이를 항상 차지한다(아래 UI가 오르내리지 않게) */
+.ttyMsg {
+  height: 54px;
+  overflow: hidden;
+  word-break: keep-all;
+}
+.ttyHead {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+.ttyHead i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ok);
+  display: inline-block;
+  animation: blink 1.2s steps(1) infinite;
+}
+.ttyMsg::after {
+  content: '█';
+  animation: blink 0.8s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -1,0 +1,191 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(0, 0, 0, 0.65);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+/* 표창장: 위험 줄무늬 머리띠 + 노란 테두리 문서 */
+.sheet {
+  width: min(600px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--panel);
+  border: 1px var(--bstyle) color-mix(in srgb, var(--yellow) 60%, transparent);
+  border-top: 0;
+  border-radius: 0 0 var(--r) var(--r);
+  position: relative;
+}
+.hazard {
+  height: 12px;
+  background: var(--hazard-bg) var(--hazard);
+  border-bottom: 2px solid var(--yellow);
+}
+.head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px 14px;
+  border-bottom: 1px var(--bstyle) var(--line);
+}
+.seal {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--on-yellow);
+  display: grid;
+  place-items: center;
+  font: 800 16px var(--font-display);
+  box-shadow: 0 0 0 3px var(--panel), 0 0 0 4px var(--yellow);
+}
+.head h2 {
+  font: 800 26px/1 var(--font-display);
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+}
+.head p {
+  margin: 4px 0 0;
+  font: 500 12px var(--font-display);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.no {
+  margin-left: auto;
+  align-self: flex-start;
+  font: 600 10.5px var(--font-display);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* 제작자: 큰 핸들 */
+.maker {
+  padding: 16px 22px 14px;
+  border-bottom: 1px var(--bstyle) var(--line);
+  display: grid;
+  gap: 4px;
+}
+.lbl {
+  font: 600 11px var(--font-display);
+  color: var(--muted);
+  letter-spacing: 0.12em;
+}
+.handle {
+  font: 800 30px/1.1 var(--font-display);
+  color: var(--fg);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  width: fit-content;
+  border-bottom: 2px solid var(--yellow);
+}
+.handle:hover {
+  color: var(--yellow);
+}
+.maker p {
+  margin: 6px 0 2px;
+  font-size: 13px;
+  color: var(--fg);
+  word-break: keep-all;
+}
+.repo {
+  font: 500 12px var(--font-body);
+  color: var(--acc);
+  text-decoration: none;
+  width: fit-content;
+}
+.repo:hover {
+  text-decoration: underline;
+}
+
+/* 전공 기록: 훈장 리본 + 항목 */
+.medals,
+.legal {
+  padding: 14px 22px;
+  border-bottom: 1px var(--bstyle) var(--line);
+}
+.medals h3,
+.legal h3 {
+  font: 600 11px var(--font-display);
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  margin: 0 0 10px;
+}
+.medals ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.medals li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+.medal {
+  width: 22px;
+  height: 30px;
+  background: linear-gradient(90deg, var(--danger) 0 33%, var(--fg) 33% 66%, var(--acc) 66%);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  opacity: 0.9;
+  margin-top: 2px;
+}
+.medals li div {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.medals a {
+  font: 700 14px var(--font-display);
+  color: var(--fg);
+  text-decoration: none;
+}
+.medals a:hover {
+  color: var(--yellow);
+}
+.medals b {
+  font: 600 12px var(--font-display);
+  color: var(--acc);
+}
+.medals small {
+  font-size: 12px;
+  color: var(--muted);
+  word-break: keep-all;
+}
+.legal p {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.55;
+  word-break: keep-all;
+}
+
+/* 바닥: 검열 도장 + 닫기 */
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 22px 18px;
+}
+.stamp {
+  font: 800 12px/1 var(--font-display);
+  letter-spacing: 0.08em;
+  padding: 5px 8px;
+  border: 2px solid var(--ok);
+  color: var(--ok-fg);
+  border-radius: 2px;
+  transform: rotate(-6deg);
+}
+.close {
+  padding: 8px 16px;
+  border: 1px var(--bstyle) var(--yellow);
+  border-radius: var(--r);
+  background: var(--yellow);
+  color: var(--on-yellow);
+  font: 700 14px var(--font-display);
+}

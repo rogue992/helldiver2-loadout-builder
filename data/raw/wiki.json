@@ -1,0 +1,4165 @@
+{
+ "fetchedAt": "2026-09-13T12:43:47.760Z",
+ "tables": {
+  "Stratagems": [
+   {
+    "_pageName": "40-K Meltagun",
+    "image": "Meltagun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Chargeup &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "480s",
+    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]"
+   },
+   {
+    "_pageName": "A/AC-8 Autocannon Sentry",
+    "image": "Autocannon Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "150s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "A/ARC-3 Tesla Tower",
+    "image": "Tesla Tower Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Arc",
+    "base_cooldown": "120s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "A/FLAM-40 Flame Sentry",
+    "image": "Flame Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Incendiary &nbsp;&bull;&nbsp; Sentry",
+    "base_cooldown": "100s",
+    "source": "[[Urban Legends Premium Warbond#Page 2|Urban Legends]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "A/G-16 Gatling Sentry",
+    "image": "Gatling Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "150s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "A/GM-17 Gas Mortar Sentry",
+    "image": "Gas Mortar Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Caustic &nbsp;&bull;&nbsp; Sentry",
+    "base_cooldown": "180s",
+    "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "A/LAS-98 Laser Sentry",
+    "image": "Laser Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Heat &nbsp;&bull;&nbsp; Beam",
+    "base_cooldown": "150s",
+    "source": "[[Control Group Premium Warbond#Page 2|Control Group]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "A/M-12 Mortar Sentry",
+    "image": "Mortar Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "180s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "A/M-23 EMS Mortar Sentry",
+    "image": "EMS Mortar Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Stun",
+    "base_cooldown": "180s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "A/MG-43 Machine Gun Sentry",
+    "image": "Machine Gun Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "90s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "A/MLS-4X Rocket Sentry",
+    "image": "Rocket Sentry Stratagem Icon Background.svg",
+    "stratagem_type": "Sentry",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Sentry &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "150s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "AC-8 Autocannon",
+    "image": "Autocannon Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "Activate E-711 Extraction Drill",
+    "image": "Drill Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "Supply",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "APW-1 Anti-Materiel Rifle",
+    "image": "Anti-Materiel Rifle Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "Aquifer Drill",
+    "image": "Drill Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "ARC-3 Arc Thrower",
+    "image": "Arc Thrower Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Chargeup &nbsp;&bull;&nbsp; Arc",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "AX/AR-23 Guard Dog",
+    "image": "Guard Dog Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "AX/ARC-3 K-9",
+    "image": "K-9 Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Arc",
+    "base_cooldown": "480s",
+    "source": "[[Force of Law Premium Warbond#Page 3|Force of Law]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "AX/FLAM-75 Hot Dog",
+    "image": "Hot Dog Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "480s",
+    "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>"
+   },
+   {
+    "_pageName": "AX/LAS-5 Rover",
+    "image": "Rover Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Light Armor Penetrating &nbsp;&bull;&nbsp; Beam",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "AX/TX-13 Dog Breath",
+    "image": "Dog Breath Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Caustic",
+    "base_cooldown": "480s",
+    "source": "[[Chemical Agents Premium Warbond#Page 3|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "B-1 Supply Pack",
+    "image": "Supply Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "B-100 Portable Hellbomb",
+    "image": "Portable Hellbomb Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "300s",
+    "source": "[[Servants_of_Freedom_Premium_Warbond#Page 3|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "B/FLAM-80 Cremator",
+    "image": "Cremator Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Hellpod &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "480s",
+    "source": "[[Entrenched Division Premium Warbond#Page_3|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "B/MD C4 Pack",
+    "image": "C4 Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Sticky",
+    "base_cooldown": "480s",
+    "source": "[[Redacted Regiment Premium Warbond#Page 3|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "Call In Super Destroyer",
+    "image": "Call In Super Destroyer Stratagem Icon Background.svg",
+    "stratagem_type": "Ship",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "N/A",
+    "source": ""
+   },
+   {
+    "_pageName": "Cargo Container",
+    "image": "Cargo Container Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "CQC-1 One True Flag",
+    "image": "One True Flag Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Medium Armor Penetrating &nbsp;&bull;&nbsp; Melee &nbsp;&bull;&nbsp; One Handed",
+    "base_cooldown": "480s",
+    "source": "[[Masters_of_Ceremony_Premium_Warbond#Page_3|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "CQC-20 Breaching Hammer",
+    "image": "Breaching Hammer Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Melee",
+    "base_cooldown": "480s",
+    "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>"
+   },
+   {
+    "_pageName": "CQC-9 Defoliation Tool",
+    "image": "Defoliation Tool Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Melee",
+    "base_cooldown": "480s",
+    "source": "[[Python Commandos_Premium_Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "Dark Fluid Vessel",
+    "image": "Dark_Fluid_Vessel Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "30s",
+    "source": ""
+   },
+   {
+    "_pageName": "E/AT-12 Anti-Tank Emplacement",
+    "image": "Anti-Tank Emplacement Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "180s",
+    "source": "[[Urban Legends Premium Warbond#Page 3|Urban Legends]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "E/GL-21 Grenadier Battlement",
+    "image": "Grenadier Battlement Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "120s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "E/MG-101 HMG Emplacement",
+    "image": "HMG Emplacement Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "180s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "Eagle 110mm Rocket Pods",
+    "image": "Eagle 110mm Rocket Pods Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle 500kg Bomb",
+    "image": "Eagle 500kg Bomb Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offense",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle Airstrike",
+    "image": "Eagle Airstrike Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle Cluster Bomb",
+    "image": "Eagle Cluster Bomb Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle Gas Airstrike",
+    "image": "Eagle Gas Airstrike Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Caustic",
+    "base_cooldown": "15s",
+    "source": "[[Campaigns#Counterdissident_Hammer|Counterdissident Hammer]]"
+   },
+   {
+    "_pageName": "Eagle Napalm Airstrike",
+    "image": "Eagle Napalm Airstrike Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle Rearm",
+    "image": "Eagle Rearm Stratagem Icon Background.svg",
+    "stratagem_type": "Ship",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Eagle Smoke Strike",
+    "image": "Eagle Smoke Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Eagle",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Eagle Strafing Run",
+    "image": "Eagle Strafing Run Stratagem Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Eagle &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "15s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "EAT-17 Expendable Anti-Tank",
+    "image": "Expendable Anti-Tank Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "70s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "EAT-411 Leveller",
+    "image": "Leveller Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "140s",
+    "source": "[[Siege Breakers Premium Warbond#Page 2|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "EAT-700 Expendable Napalm",
+    "image": "Expendable Napalm Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Incendiary &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "140s",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "EXO-45 Patriot Exosuit",
+    "image": "Patriot Exosuit Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Vehicle &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "420s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "EXO-49 Emancipator Exosuit",
+    "image": "Emancipator Exosuit Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Vehicle &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "420s",
+    "source": "Robotics Workshop"
+   },
+   {
+    "_pageName": "EXO-51 Lumberer Exosuit",
+    "image": "Lumberer Exosuit Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Vehicle &nbsp;&bull;&nbsp; Incendiary &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "420s",
+    "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "EXO-55 Breakthrough Exosuit",
+    "image": "Breakthrough Exosuit Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "420s",
+    "source": "[[Exo Experts Premium Warbond#Page 3|Exo Experts]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "FAF-14 Spear",
+    "image": "Spear Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Stationary Reload &nbsp;&bull;&nbsp; Guided",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "FLAM-40 Flamethrower",
+    "image": "Flamethrower Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Hellpod &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "FX-12 Shield Generator Relay",
+    "image": "Shield Generator Relay Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod",
+    "base_cooldown": "90s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "GL-21 Grenade Launcher",
+    "image": "Grenade Launcher Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "GL-28 Belt-Fed Grenade Launcher",
+    "image": "Belt-Fed Grenade Launcher Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Explosive",
+    "base_cooldown": "480s",
+    "source": "[[Siege Breakers Premium Warbond#Page_3|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "GL-52 De-Escalator",
+    "image": "De-Escalator Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Arc",
+    "base_cooldown": "480s",
+    "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "GR-8 Recoilless Rifle",
+    "image": "Recoilless Rifle Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "Hive Breaker Drill",
+    "image": "Drill Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "LAS-98 Laser Cannon",
+    "image": "Laser Cannon Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Hellpod &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Heat &nbsp;&bull;&nbsp; Beam",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "LAS-99 Quasar Cannon",
+    "image": "Quasar Cannon Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Chargeup",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "LIFT-182 Warp Pack",
+    "image": "Warp Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "[[Control Group Premium Warbond#Page_3|Control Group]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "LIFT-850 Jump Pack",
+    "image": "Jump Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "LIFT-860 Hover Pack",
+    "image": "Hover Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "[[Borderline Justice Premium Warbond#Page 3|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "M-1000 Maxigun",
+    "image": "Maxigun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Medium Armor Penetrating &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "[[Python Commandos Premium Warbond#Page 3|Python Commandos]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "M-102 Gunner FRV",
+    "image": "Fast Recon Vehicle Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "M-103 Supply FRV",
+    "image": "Supply FRV Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "[[Campaigns#Census_Thunder|Census Thunder]]"
+   },
+   {
+    "_pageName": "M-104 Incinerator FRV",
+    "image": "Incinerator FRV Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "480s",
+    "source": "N/A"
+   },
+   {
+    "_pageName": "M-105 Stalwart",
+    "image": "Stalwart Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Light Armor Penetrating",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "MD-17 Anti-Tank Mines",
+    "image": "Anti-Tank Mines Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "120s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "MD-6 Anti-Personnel Minefield",
+    "image": "Anti-Personnel Minefield Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "120s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "MD-8 Gas Mines",
+    "image": "Gas Mines Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Caustic",
+    "base_cooldown": "120s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "MD-I4 Incendiary Mines",
+    "image": "Incendiary Mines Stratagem Icon Background.svg",
+    "stratagem_type": "Emplacement",
+    "permit_type": "Defensive",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "120s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "MG-206 Heavy Machine Gun",
+    "image": "Heavy Machine Gun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "MG-43 Machine Gun",
+    "image": "Machine Gun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Medium Armor Penetrating &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "MGX-42 Bullet Storm",
+    "image": "Bullet Storm Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Light Armor Penetrating &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "70s",
+    "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>"
+   },
+   {
+    "_pageName": "MLS-4X Commando",
+    "image": "Commando Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "120s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "MS-11 Solo Silo",
+    "image": "Solo Silo Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Expendable",
+    "base_cooldown": "180s",
+    "source": "[[Dust Devils Premium Warbond#Page 3|Dust Devils]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
+    "_pageName": "NUX-223 Hellbomb",
+    "image": "Hellbomb Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "30s",
+    "source": ""
+   },
+   {
+    "_pageName": "Orbital 120mm HE Barrage",
+    "image": "Orbital 120mm HE Barrage Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "180s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital 380mm HE Barrage",
+    "image": "Orbital 380mm HE Barrage Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "240s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Airburst Strike",
+    "image": "Orbital Airburst Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Medium Armor Penetrating",
+    "base_cooldown": "100s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital EMS Strike",
+    "image": "Orbital EMS Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Orbital &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Stun",
+    "base_cooldown": "75s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "Orbital Gas Strike",
+    "image": "Orbital Gas Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Caustic",
+    "base_cooldown": "75s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "Orbital Gatling Barrage",
+    "image": "Orbital Gatling Barrage Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "70s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Illumination Flare",
+    "image": "Orbital Illumination Flare Stratagem Icon Background.svg",
+    "stratagem_type": "Other",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "N/A",
+    "source": ""
+   },
+   {
+    "_pageName": "Orbital Laser",
+    "image": "Orbital Laser Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Orbital &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Beam",
+    "base_cooldown": "300s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Napalm Barrage",
+    "image": "Orbital Napalm Barrage Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Incendiary",
+    "base_cooldown": "240s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Precision Strike",
+    "image": "Orbital Precision Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "90s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "Orbital Railcannon Strike",
+    "image": "Orbital Railcannon Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Orbital &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "180s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Smoke Strike",
+    "image": "Orbital Smoke Strike Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital",
+    "base_cooldown": "75s",
+    "source": "Bridge"
+   },
+   {
+    "_pageName": "Orbital Walking Barrage",
+    "image": "Orbital Walking Barrage Stratagem Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "240s",
+    "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "PLAS-45 Epoch",
+    "image": "Epoch Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Stationary Reload &nbsp;&bull;&nbsp; Chargeup",
+    "base_cooldown": "480s",
+    "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>"
+   },
+   {
+    "_pageName": "Portable Comms Relay",
+    "image": "Cargo Container Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Prospecting Drill",
+    "image": "Drill Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Rapid Acquisition",
+    "image": "Cargo Container Stratagem Icon Background.svg",
+    "stratagem_type": "",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "",
+    "source": ""
+   },
+   {
+    "_pageName": "Reinforce",
+    "image": "Reinforce Stratagem Icon Background.svg",
+    "stratagem_type": "Ship",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Reinforcement Pods",
+    "image": "Upload Data Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "N/A",
+    "source": ""
+   },
+   {
+    "_pageName": "Resupply",
+    "image": "Resupply Stratagem Icon Background.svg",
+    "stratagem_type": "Ship",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "180s",
+    "source": ""
+   },
+   {
+    "_pageName": "RL-77 Airburst Rocket Launcher",
+    "image": "Airburst Rocket Launcher Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Medium Armor Penetrating &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "RS-422 Railgun",
+    "image": "Railgun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Chargeup",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "S-11 Speargun",
+    "image": "Speargun Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Caustic &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "480s",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "SEAF Artillery",
+    "image": "SEAF Artillery Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Seismic Probe",
+    "image": "Seismic Probe Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Seize Industrial Complex",
+    "image": "Super Earth Flag Stratagem Icon Background.svg",
+    "stratagem_type": "",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "",
+    "source": ""
+   },
+   {
+    "_pageName": "Seize Industrial Complex",
+    "image": "Upload Data Stratagem Icon Background.svg",
+    "stratagem_type": "",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "",
+    "source": ""
+   },
+   {
+    "_pageName": "SH-20 Ballistic Shield Backpack",
+    "image": "Ballistic Shield Backpack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "240s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "SH-32 Shield Generator Pack",
+    "image": "Shield Generator Pack Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "480s",
+    "source": "Engineering Bay"
+   },
+   {
+    "_pageName": "SH-51 Directional Shield",
+    "image": "Directional Shield Stratagem Icon Background.svg",
+    "stratagem_type": "Backpack",
+    "permit_type": "Supply",
+    "traits": "Hellpod &nbsp;&bull;&nbsp; Backpack",
+    "base_cooldown": "300s",
+    "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>"
+   },
+   {
+    "_pageName": "SoS Beacon",
+    "image": "SOS Beacon Stratagem Icon Background.svg",
+    "stratagem_type": "Ship",
+    "permit_type": "Supply",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Spread Democracy",
+    "image": "Super Earth Flag Stratagem Icon Background.svg",
+    "stratagem_type": "",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "",
+    "source": ""
+   },
+   {
+    "_pageName": "SSSD Delivery",
+    "image": "Upload Data Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "StA-X3 W.A.S.P. Launcher",
+    "image": "W.A.S.P. Launcher Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp;Stationary Reload &nbsp;&bull;&nbsp; Guided",
+    "base_cooldown": "480s",
+    "source": "Patriotic Administration Center"
+   },
+   {
+    "_pageName": "Super Earth Flag",
+    "image": "Super Earth Flag Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "Tactical Video Camera",
+    "image": "placeholder.png",
+    "stratagem_type": "Objective",
+    "permit_type": "Supply",
+    "traits": "Hellpod",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "TD-220 Bastion MK XVI",
+    "image": "Bastion MK XVI Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Explosive &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Heavy Armor Penetrating",
+    "base_cooldown": "780s",
+    "source": "Hangar"
+   },
+   {
+    "_pageName": "Tectonic Drill",
+    "image": "Drill Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "Supply",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   },
+   {
+    "_pageName": "TX-41 Sterilizer",
+    "image": "Sterilizer Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Caustic",
+    "base_cooldown": "480s",
+    "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
+   },
+   {
+    "_pageName": "Upload Data",
+    "image": "Upload Data Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "0s",
+    "source": ""
+   }
+  ],
+  "Weapons": [
+   {
+    "_pageName": "40-K Meltagun",
+    "image": "40-K Meltagun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Energy-Based",
+    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "AC-8 Autocannon",
+    "image": "AC-8_Autocannon_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Explosives",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "APW-1 Anti-Materiel Rifle",
+    "image": "APW-1 Anti-Materiel Rifle Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Armor Precision",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "AR-2 Coyote",
+    "image": "AR-2 Coyote Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Dust Devils Premium Warbond|Dust Devils]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-23 Liberator",
+    "image": "AR-23 Liberator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "Starter Equipment",
+    "cost": ""
+   },
+   {
+    "_pageName": "AR-23A Liberator Carbine",
+    "image": "AR-23A Liberator Carbine Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Viper Commandos Premium Warbond#Page 1|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-23C Liberator Concussive",
+    "image": "AR-23C Liberator Concussive Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-23P Liberator Penetrator",
+    "image": "AR-23P Liberator Penetrator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Helldivers Mobilize Warbond#Page 6|Helldivers Mobilize]] <small><span  class=\"explain \" title=\"Page 6\">P6</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-32 Pacifier",
+    "image": "AR-32_Pacifier_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Force of Law Premium Warbond#Page 1|Force of Law]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-59 Suppressor",
+    "image": "AR-59 Suppressor Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Redacted Regiment Premium Warbond#Page 2|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-61 Tenderizer",
+    "image": "AR-61 Tenderizer Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Polar Patriots Premium Warbond#Page 1|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]</span>"
+   },
+   {
+    "_pageName": "AR/GL-21 One-Two",
+    "image": "AR-GL-21 One Two Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "ARC-12 Blitzer",
+    "image": "ARC-12 Blitzer Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 80</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "ARC-3 Arc Thrower",
+    "image": "ARC-3 Arc Thrower Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Energy-Based",
+    "source": "Engineering Bay",
+    "cost": ""
+   },
+   {
+    "_pageName": "B/FLAM-80 Cremator",
+    "image": "B_FLAM-80_Cremator_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Entrenched Division Premium Warbond#Page_3|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "B/MD C4 Pack",
+    "image": "B MD C4 Pack Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Tank",
+    "source": "[[Redacted Regiment Premium Warbond#Page 3|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "BR-14 Adjudicator",
+    "image": "BR-14 Adjudicator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "CB-9 Exploding Crossbow",
+    "image": "CB-9 Exploding Crossbow Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Explosives",
+    "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 80</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "CQC-1 One True Flag",
+    "image": "CQC-1 One True Flag Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Masters_of_Ceremony_Premium_Warbond#Page_3|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "CQC-19 Stun Lance",
+    "image": "CQC-19 Stun Lance Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 30</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "CQC-2 Saber",
+    "image": "CQC-2 Saber Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 2|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "CQC-20 Breaching Hammer",
+    "image": "CQC-20 Breaching Hammer Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "CQC-30 Stun Baton",
+    "image": "CQC-30 Stun Baton Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 200</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "CQC-42 Machete",
+    "image": "CQC-42 Machete Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 200</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "CQC-5 Combat Hatchet",
+    "image": "CQC-5 Combat Hatchet Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 200</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "CQC-72 Entrenchment Tool",
+    "image": "CQC-72 Entrenchment Tool Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Melee",
+    "source": "",
+    "cost": ""
+   },
+   {
+    "_pageName": "CQC-73 Entrenchment Tool",
+    "image": "CQC-73 Entrenchment Tool Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Melee",
+    "source": "",
+    "cost": ""
+   },
+   {
+    "_pageName": "CQC-9 Defoliation Tool",
+    "image": "CQC-9 Defoliation Tool Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Melee",
+    "source": "[[Python Commandos_Premium_Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "DBS-2 Double Freedom",
+    "image": "DBS-2_Shotgun_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 400</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "EAT-17 Expendable Anti-Tank",
+    "image": "EAT-17 Expendable Anti-Tank Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Tank",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "EAT-411 Leveller",
+    "image": "EAT-411_Leveller_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Tank",
+    "source": "[[Siege Breakers Premium Warbond#Page 2|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "EAT-700 Expendable Napalm",
+    "image": "EAT-700 Expendable Napalm Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Incendiary",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "FAF-14 Spear",
+    "image": "FAF-14 Spear Weapon and Backpack Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Missiles",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "FLAM-40 Flamethrower",
+    "image": "FLAM-40 Flamethrower Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "FLAM-66 Torcher",
+    "image": "FLAM-66 Torcher Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Freedom's Flame Premium Warbond#Page 2|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-10 Incendiary",
+    "image": "G-10 Incendiary Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Standard",
+    "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 25</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-109 Urchin",
+    "image": "G-109_Urchin_Throwable_Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Force of Law Premium Warbond#Page 3|Force of Law]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-12 High Explosive",
+    "image": "G-12 High Explosive Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Standard",
+    "source": "Starter Equipment",
+    "cost": ""
+   },
+   {
+    "_pageName": "G-123 Thermite",
+    "image": "G-123 Thermite Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 15</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-13 Incendiary Impact",
+    "image": "G-13 Incendiary Impact Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 25</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-142 Pyrotech",
+    "image": "G-142_Pyrotech_Throwable_Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 3|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-16 Impact",
+    "image": "G-16 Impact Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-23 Stun",
+    "image": "G-23 Stun Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 25</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-3 Smoke",
+    "image": "G-3 Smoke Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 25</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-31 Arc",
+    "image": "G-31_ARC_Throwable_Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Control Group Premium Warbond#Page 3|Control Group]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-4 Gas",
+    "image": "G-4 Gas Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Chemical Agents Premium Warbond#Page 1|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 30</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-48 Giga Grenade",
+    "image": "G-48 Giga Grenade Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-50 Seeker",
+    "image": "G-50 Seeker Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Servants of Freedom Premium Warbond#Page 3|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-6 Frag",
+    "image": "G-6 Frag Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Standard",
+    "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 2</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-7 Pineapple",
+    "image": "G-7 Pineapple Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Standard",
+    "source": "[[Dust Devils Premium Warbond#Page 3|Dust Devils]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-89 Smokescreen",
+    "image": "G-89_Smokescreen_Throwable_Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 300</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "G/40-K Melta Mine",
+    "image": "G-40-K Melta Mine Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G/SH-39 Shield",
+    "image": "G-SH-39 Shield Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Siege Breakers Premium Warbond#Page 3|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "GL-21 Grenade Launcher",
+    "image": "GL-21 Grenade Launcher Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Explosives",
+    "source": "Engineering Bay",
+    "cost": ""
+   },
+   {
+    "_pageName": "GL-28 Belt-Fed Grenade Launcher",
+    "image": "GL-28_Belt-Fed_Grenade_Launcher_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Siege Breakers Premium Warbond#Page_3|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "GL-52 De-Escalator",
+    "image": "GL-52 De-Escalator Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Stun &nbsp;&bull;&nbsp; Tesla",
+    "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "GP-20 Ultimatum",
+    "image": "GP-20 Ultimatum Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Servants of Freedom Premium Warbond#Page 2|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "GP-31 Grenade Pistol",
+    "image": "GP-31 Grenade Pistol Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "GR-8 Recoilless Rifle",
+    "image": "GR-8_Recoilless_Rifle_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Tank",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "JAR-5 Dominator",
+    "image": "JAR-5 Dominator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Steeled Veterans Premium Warbond#Page 3|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 80</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "K-2 Throwing Knife",
+    "image": "K-2 Throwing Knife Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Viper Commandos Premium Warbond#Page 3|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-13 Trident",
+    "image": "LAS-13 Trident Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-16 Sickle",
+    "image": "LAS-16 Sickle Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Cutting Edge Premium Warbond#Page 1|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-17 Double-Edge Sickle",
+    "image": "LAS-17 Double-Edge Sickle Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Servants of Freedom Premium Warbond#Page 1|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-5 Scythe",
+    "image": "LAS-5 Scythe Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 30</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-58 Talon",
+    "image": "LAS-58 Talon Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Borderline Justice Premium Warbond#Page 2|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-7 Dagger",
+    "image": "LAS-7 Dagger Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-98 Laser Cannon",
+    "image": "LAS-98 Laser Cannon Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Energy-Based",
+    "source": "Engineering Bay",
+    "cost": ""
+   },
+   {
+    "_pageName": "LAS-99 Quasar Cannon",
+    "image": "LAS-99 Quasar Cannon Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Energy-Based",
+    "source": "Engineering Bay",
+    "cost": ""
+   },
+   {
+    "_pageName": "M-1000 Maxigun",
+    "image": "M-1000_Maxigun_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Python Commandos Premium Warbond#Page 3|Python Commandos]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "M-105 Stalwart",
+    "image": "M-105 Stalwart Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "M6C/SOCOM Pistol",
+    "image": "M6C-SOCOM Pistol Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 3|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 75</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "M7S SMG",
+    "image": "M7S_SMG_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 2|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "M90A Shotgun",
+    "image": "M90A_Shotgun_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 3|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "MA5C Assault Rifle",
+    "image": "MA5C_Assault_Rifle_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 1|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "MG-206 Heavy Machine Gun",
+    "image": "MG-206 Heavy Machine Gun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "Patriotic Administration Center",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Requisition Slip.svg|link=Requisition Slips|alt=]] 6000</span> [[Requisition Slips]]</span>"
+   },
+   {
+    "_pageName": "MG-43 Machine Gun",
+    "image": "MG-43 Machine Gun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "MGX-42 Bullet Storm",
+    "image": "MGX-42 Bullet Storm Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "MLS-4X Commando",
+    "image": "MLS-4X Commando Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Missiles",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "MP-98 Knight",
+    "image": "MP-98 Knight Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Super Citizen Edition]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "MS-11 Solo Silo",
+    "image": "MS-11 Solo Silo Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Explosive",
+    "source": "[[Dust Devils Premium Warbond#Page 3|Dust Devils]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "P-11 Stim Pistol",
+    "image": "P-11 Stim Pistol Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Chemical Agents Premium Warbond#Page 3|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 80</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-113 Verdict",
+    "image": "P-113 Verdict Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-19 Redeemer",
+    "image": "P-19 Redeemer Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 5</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-2 Peacemaker",
+    "image": "P-2 Peacemaker Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "Starter Equipment",
+    "cost": ""
+   },
+   {
+    "_pageName": "P-33 Missile Pistol",
+    "image": "P-33 Missile Pistol Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-35 Re-Educator",
+    "image": "P-35 Re-Educator Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-4 Senator",
+    "image": "P-4 Senator Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 15</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-69 Veto",
+    "image": "P-69 Veto Secondary Icon.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Entrenched Division Premium Warbond#Page 3|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-72 Crisper",
+    "image": "P-72 Crisper Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Freedom's Flame Premium Warbond#Page 3|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 45</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-92 Warrant",
+    "image": "P-92_Warrant_Secondary_Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 300</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "P/40-K Bolt Pistol",
+    "image": "P-40-K Bolt Pistol Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "PLAS-1 Scorcher",
+    "image": "PLAS-1 Scorcher Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Helldivers Mobilize Warbond#Page 10|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 10\">P10</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 75</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "PLAS-101 Purifier",
+    "image": "PLAS-101 Purifier Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 80</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "PLAS-15 Loyalist",
+    "image": "PLAS-15 Loyalist Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Truth Enforcers Premium Warbond#Page 3|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 45</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "PLAS-39 Accelerator Rifle",
+    "image": "PLAS-39 Accelerator Rifle Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Righteous Revenants Legendary Warbond#Page 2|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "PLAS-45 Epoch",
+    "image": "PLAS-45 Epoch Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "R-2 Amendment",
+    "image": "R-2 Amendment Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 1|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R-2124 Constitution",
+    "image": "R-2124 Constitution Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Liberty Day]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "R-36 Eruptor",
+    "image": "R-36 Eruptor Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Explosives",
+    "source": "[[Democratic Detonation Premium Warbond#Page 2|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R-4 Hyena",
+    "image": "R-4 Hyena Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Campaigns#Celestial Fence|Celestial Fence]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "R-6 Deadeye",
+    "image": "R-6 Deadeye Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Borderline Justice Premium Warbond#Page 1|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R-63 Diligence",
+    "image": "R-63 Diligence Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 8</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R-63CS Diligence Counter Sniper",
+    "image": "R-63CS Diligence Counter Sniper Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Helldivers Mobilize Warbond#Page 7|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 7\">P7</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R-72 Censor",
+    "image": "R-72 Censor Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Marksman Rifles",
+    "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "R/40-K Hot-Shot Marksman Rifle",
+    "image": "R-40-K Hot-Shot Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "RL-77 Airburst Rocket Launcher",
+    "image": "RL-77_Airburst_Rocket_Launcher_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Rocket Launcher",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "RS-422 Railgun",
+    "image": "RS-422 Railgun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Armor Precision",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "S-11 Speargun",
+    "image": "S-11 Speargun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Anti-Armor Precision",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "SG-20 Halt",
+    "image": "SG-20 Halt Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Truth Enforcers Premium Warbond#Page 1|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-22 Bushwhacker",
+    "image": "SG-22 Bushwhacker Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Viper Commandos Premium Warbond#Page 2|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-225 Breaker",
+    "image": "SG-225 Breaker Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Helldivers Mobilize Warbond#Page 4|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 4\">P4</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-225IE Breaker Incendiary",
+    "image": "SG-225IE Breaker Incendiary Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-225SP Breaker Spray&Pray",
+    "image": "SG-225SP Breaker Spray&Pray Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Helldivers Mobilize Warbond#Page 9|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 9\">P9</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-451 Cookout",
+    "image": "SG-451 Cookout Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Freedom's Flame Premium Warbond#Page 1|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-8 Punisher",
+    "image": "SG-8 Punisher Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 4</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-88 Break-Action Shotgun",
+    "image": "SG-88 Break-Action Shotgun Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Shotguns",
+    "source": "",
+    "cost": ""
+   },
+   {
+    "_pageName": "SG-8P Punisher Plasma",
+    "image": "SG-8P Punisher Plasma Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-8S Slugger",
+    "image": "SG-8S Slugger Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SG-97 Sweeper",
+    "image": "SG-97_Shotgun_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Shotguns",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 400</span> [[Super Credits]]</span>"
+   },
+   {
+    "_pageName": "SMG-203 Gallant",
+    "image": "SMG-203 Gallant Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]</span>"
+   },
+   {
+    "_pageName": "SMG-32 Reprimand",
+    "image": "SMG-32 Reprimand Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Truth Enforcers Premium Warbond#Page 2|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 40</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SMG-37 Defender",
+    "image": "SMG-37 Defender Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 15</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SMG-72 Pummeler",
+    "image": "SMG-72 Pummeler Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "SMG/FLAM-34 Stoker",
+    "image": "SMGFLAM-34 Stoker Primary Icon.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Entrenched Division Premium Warbond#Page 1|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "StA-11 SMG",
+    "image": "StA-11 SMG Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Submachine Guns",
+    "source": "[[Righteous Revenants Legendary Warbond#Page 3|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "StA-52 Assault Rifle",
+    "image": "StA-52 Assault Rifle Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Righteous Revenants Legendary Warbond#Page 1|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "StA-X3 W.A.S.P. Launcher",
+    "image": "StA-X3_W.A.S.P._Launcher_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Missiles",
+    "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "TED-63 Dynamite",
+    "image": "TED-63 Dynamite Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Standard",
+    "source": "[[Borderline Justice Premium Warbond#Page 3|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "TM-1 Lure Mine",
+    "image": "TM-1 Lure Mine Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Redacted Regiment Premium Warbond#Page 3|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "TX-41 Sterilizer",
+    "image": "TX-41 Sterilizer Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "Heavy Weapons",
+    "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": ""
+   },
+   {
+    "_pageName": "VG-70 Variable",
+    "image": "VG-70_Variable_Primary_Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]</span>"
+   }
+  ],
+  "Armor": [
+   {
+    "_pageName": "A-35 Recon",
+    "image": "A-35 Recon Armor Render.png",
+    "type": "Medium",
+    "passive": "Feet First",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 2|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "A-35 Recon",
+    "image": "A-35 Recon Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 2|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "A-9 Helljumper",
+    "image": "A-9 Helljumper Armor Render.png",
+    "type": "Medium",
+    "passive": "Feet First",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 1|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "A-9 Helljumper",
+    "image": "A-9 Helljumper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 1|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "AC-1 Dutiful",
+    "image": "AC-1 Dutiful Armor Render.png",
+    "type": "Medium",
+    "passive": "Acclimated",
+    "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "AC-1 Dutiful",
+    "image": "AC-1 Dutiful Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "AC-2 Obedient",
+    "image": "AC-2 Obedient Armor Render.png",
+    "type": "Light",
+    "passive": "Acclimated",
+    "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "AC-2 Obedient",
+    "image": "AC-2 Obedient Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "AD-11 Livewire",
+    "image": "AD-11 Livewire Armor Render.png",
+    "type": "Light",
+    "passive": "Adreno-Defibrillator",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "AD-11 Livewire",
+    "image": "AD-11 Livewire Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "AD-26 Bleeding Edge",
+    "image": "AD-26 Bleeding Edge Armor Render.png",
+    "type": "Medium",
+    "passive": "Adreno-Defibrillator",
+    "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "AD-26 Bleeding Edge",
+    "image": "AD-26 Bleeding Edge Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "AD-49 Apollonian",
+    "image": "AD-49 Apollonian Armor Render.png",
+    "type": "Heavy",
+    "passive": "Adreno-Defibrillator",
+    "source": "[[Control Group Premium Warbond#Page 2|Control Group]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "AD-49 Apollonian",
+    "image": "AD-49 Apollonian Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Control Group Premium Warbond#Page 2|Control Group]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "AF-02 Haz-Master",
+    "image": "AF-02 Haz-Master Armor Render.png",
+    "type": "Medium",
+    "passive": "Advanced Filtration",
+    "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "AF-02 Haz-Master",
+    "image": "AF-02 Haz-Master Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "AF-50 Noxious Ranger",
+    "image": "AF-50 Noxious Ranger Armor Render.png",
+    "type": "Light",
+    "passive": "Advanced Filtration",
+    "source": "[[Chemical Agents Premium Warbond#Page 1|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+   },
+   {
+    "_pageName": "AF-50 Noxious Ranger",
+    "image": "AF-50 Noxious Ranger Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Chemical Agents Premium Warbond#Page 1|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "AF-52 Lockdown",
+    "image": "AF-52 Lockdown Armor Render.png",
+    "type": "Heavy",
+    "passive": "Advanced Filtration",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+   },
+   {
+    "_pageName": "AF-52 Lockdown",
+    "image": "AF-52 Lockdown Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "AF-91 Field Chemist",
+    "image": "AF-91 Field Chemist Armor Render.png",
+    "type": "Medium",
+    "passive": "Advanced Filtration",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "AF-91 Field Chemist",
+    "image": "AF-91 Field Chemist Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "B-01 Tactical",
+    "image": "B-01 Tactical v1 Armor Render.png",
+    "type": "Medium",
+    "passive": "Extra Padding",
+    "source": "Starter Equipment",
+    "cost": ""
+   },
+   {
+    "_pageName": "B-01 Tactical",
+    "image": "B-01 Tactical v1 Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "Starter Equipment",
+    "cost": ""
+   },
+   {
+    "_pageName": "B-08 Light Gunner",
+    "image": "B-08 Light Gunner Armor Render.png",
+    "type": "Light",
+    "passive": "Extra Padding",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "B-08 Light Gunner",
+    "image": "B-08 Light Gunner Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "B-22 Model Citizen",
+    "image": "B-22 Model Citizen Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "Anniversary Gift",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "B-22 Model Citizen",
+    "image": "B-22 Model Citizen Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "Anniversary Gift",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "B-24 Enforcer",
+    "image": "B-24 Enforcer Body Icon.png",
+    "type": "Medium",
+    "passive": "Fortified",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "B-24 Enforcer",
+    "image": "B-24 Enforcer Helmet Icon.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "B-27 Fortified Commando",
+    "image": "B-27 Fortified Commando Armor Render.png",
+    "type": "Heavy",
+    "passive": "Extra Padding",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+   },
+   {
+    "_pageName": "B-27 Fortified Commando",
+    "image": "B-27 Fortified Commando Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+   },
+   {
+    "_pageName": "BP-20 Correct Officer",
+    "image": "BP-20 Correct Officer Armor Render.png",
+    "type": "Medium",
+    "passive": "Ballistic Padding",
+    "source": "[[Force of Law Premium Warbond#Page 1|Force of Law]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "BP-20 Correct Officer",
+    "image": "BP-20 Correct Officer Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Force of Law Premium Warbond#Page 1|Force of Law]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "BP-32 Jackboot",
+    "image": "BP-32 Jackboot Armor Render.png",
+    "type": "Light",
+    "passive": "Ballistic Padding",
+    "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "BP-32 Jackboot",
+    "image": "BP-32 Jackboot Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "BP-77 Grand Juror",
+    "image": "BP-77 Grand Juror Armor Render.png",
+    "type": "Heavy",
+    "passive": "Ballistic Padding",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "BP-77 Grand Juror",
+    "image": "BP-77 Grand Juror Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CE-07 Demolition Specialist",
+    "image": "CE-07 Demolition Specialist Armor Render.png",
+    "type": "Light",
+    "passive": "Engineering Kit",
+    "source": "[[Democratic Detonation Premium Warbond#Page 2|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "CE-07 Demolition Specialist",
+    "image": "CE-07 Demolition Specialist Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Democratic Detonation Premium Warbond#Page 2|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "CE-101 Guerilla Gorilla",
+    "image": "CE-101 Guerilla Gorilla Armor Render.png",
+    "type": "Heavy",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CE-101 Guerilla Gorilla",
+    "image": "CE-101 Guerilla Gorilla Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CE-27 Ground Breaker",
+    "image": "CE-27 Ground Breaker Armor Render.png",
+    "type": "Medium",
+    "passive": "Engineering Kit",
+    "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+   },
+   {
+    "_pageName": "CE-27 Ground Breaker",
+    "image": "CE-27 Ground Breaker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "CE-35 Trench Engineer",
+    "image": "CE-35 Trench Engineer Armor Render.png",
+    "type": "Medium",
+    "passive": "Engineering Kit",
+    "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 10</span></span>"
+   },
+   {
+    "_pageName": "CE-35 Trench Engineer",
+    "image": "CE-35 Trench Engineer Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 7</span></span>"
+   },
+   {
+    "_pageName": "CE-64 Grenadier",
+    "image": "CE-64 Grenadier Armor Render.png",
+    "type": "Heavy",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "CE-64 Grenadier",
+    "image": "CE-64 Grenadier Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "CE-67 Titan",
+    "image": "CE-67 Titan Armor Render.png",
+    "type": "Light",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "CE-67 Titan",
+    "image": "CE-67 Titan Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "CE-74 Breaker",
+    "image": "CE-74 Breaker Armor Render.png",
+    "type": "Light",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CE-74 Breaker",
+    "image": "CE-74 Breaker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CE-81 Juggernaut",
+    "image": "CE-81 Juggernaut Armor Render.png",
+    "type": "Medium",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CE-81 Juggernaut",
+    "image": "CE-81 Juggernaut Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CM-09 Bonesnapper",
+    "image": "CM-09 Bonesnapper Armor Render.png",
+    "type": "Medium",
+    "passive": "Med-Kit",
+    "source": "[[Helldivers Mobilize Warbond#Page 4|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 4\">P4</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 15</span></span>"
+   },
+   {
+    "_pageName": "CM-09 Bonesnapper",
+    "image": "CM-09 Bonesnapper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 4|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 4\">P4</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "CM-10 Clinician",
+    "image": "CM-10 Clinician Armor Render.png",
+    "type": "Medium",
+    "passive": "Med-Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CM-10 Clinician",
+    "image": "CM-10 Clinician Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CM-14 Physician",
+    "image": "CM-14 Physician Armor Render.png",
+    "type": "Medium",
+    "passive": "Med-Kit",
+    "source": "[[Helldivers Mobilize Warbond#Page 9|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 9\">P9</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 70</span></span>"
+   },
+   {
+    "_pageName": "CM-14 Physician",
+    "image": "CM-14 Physician Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 9|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 9\">P9</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 50</span></span>"
+   },
+   {
+    "_pageName": "CM-17 Butcher",
+    "image": "CM-17 Butcher Body Icon.png",
+    "type": "Heavy",
+    "passive": "Med-Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CM-17 Butcher",
+    "image": "CM-17 Butcher Helmet Icon.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CM-21 Trench Paramedic",
+    "image": "CM-21 Trench Paramedic Armor Render.png",
+    "type": "Light",
+    "passive": "Med-Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CM-21 Trench Paramedic",
+    "image": "CM-21 Trench Paramedic Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CPG-48 Sapper",
+    "image": "CPG-48 Sapper Armor Render.png",
+    "type": "Medium",
+    "passive": "Concussive Padding, Grenadier",
+    "source": "[[Entrenched Division Premium Warbond#Page 1|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "CPG-48 Sapper",
+    "image": "CPG-48 Sapper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Entrenched Division Premium Warbond#Page 1|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "CPH-26 Commandant",
+    "image": "CPH-26 Commandant Armor Render.png",
+    "type": "Light",
+    "passive": "Concussive Padding, Hazmat",
+    "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "CPH-26 Commandant",
+    "image": "CPH-26 Commandant Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "CPR-80 Bulwark",
+    "image": "CPR-80 Bulwark Armor Render.png",
+    "type": "Heavy",
+    "passive": "Concussive Padding, Reinforced",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "CPR-80 Bulwark",
+    "image": "CPR-80 Bulwark Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "CW-22 Kodiak",
+    "image": "CW-22 Kodiak Armor Render.png",
+    "type": "Heavy",
+    "passive": "Fortified",
+    "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "CW-22 Kodiak",
+    "image": "CW-22 Kodiak Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "CW-36 Winter Warrior",
+    "image": "CW-36 Winter Warrior Armor Render.png",
+    "type": "Heavy",
+    "passive": "Servo-Assisted",
+    "source": "[[Polar Patriots Premium Warbond#Page 1|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+   },
+   {
+    "_pageName": "CW-36 Winter Warrior",
+    "image": "CW-36 Winter Warrior Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Polar Patriots Premium Warbond#Page 1|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "CW-4 Arctic Ranger",
+    "image": "CW-4 Arctic Ranger Armor Render.png",
+    "type": "Light",
+    "passive": "Scout",
+    "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+   },
+   {
+    "_pageName": "CW-4 Arctic Ranger",
+    "image": "CW-4 Arctic Ranger Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+   },
+   {
+    "_pageName": "CW-9 White Wolf",
+    "image": "CW-9 White Wolf Armor Render.png",
+    "type": "Medium",
+    "passive": "Extra Padding",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "CW-9 White Wolf",
+    "image": "CW-9 White Wolf Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "DP-00 Tactical",
+    "image": "DP-00 Tactical Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "[[Liberty Day]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "DP-00 Tactical",
+    "image": "DP-00 Tactical Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Liberty Day]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "DP-11 Champion of the People",
+    "image": "DP-11 Champion of the People Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "[[Helldivers Mobilize Warbond#Page 10|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 10\">P10</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 100</span></span>"
+   },
+   {
+    "_pageName": "DP-11 Champion of the People",
+    "image": "DP-11 Champion of the People Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 10|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 10\">P10</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 75</span></span>"
+   },
+   {
+    "_pageName": "DP-40 Hero of the Federation",
+    "image": "DP-40 Hero of the Federation Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 25</span></span>"
+   },
+   {
+    "_pageName": "DP-40 Hero of the Federation",
+    "image": "DP-40 Hero of the Federation Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 20</span></span>"
+   },
+   {
+    "_pageName": "DP-53 Savior of the Free",
+    "image": "DP-53 Savior of the Free Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "[[Super Citizen Edition]]",
+    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20"
+   },
+   {
+    "_pageName": "DP-53 Savior of the Free",
+    "image": "DP-53 Savior of the Free Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Super Citizen Edition]]",
+    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20"
+   },
+   {
+    "_pageName": "DP-8 Mountain-Scaled",
+    "image": "DP-8 Mountain-Scaled Armor Render.png",
+    "type": "Medium",
+    "passive": "Siege-Ready",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "DP-8 Mountain-Scaled",
+    "image": "DP-8 Mountain-Scaled Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "DS-10 Big Game Hunter",
+    "image": "DS-10 Big Game Hunter Armor Render.png",
+    "type": "Light",
+    "passive": "Desert Stormer",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "DS-10 Big Game Hunter",
+    "image": "DS-10 Big Game Hunter Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "DS-191 Scorpion",
+    "image": "DS-191 Scorpion Armor Render.png",
+    "type": "Medium",
+    "passive": "Desert Stormer",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "DS-191 Scorpion",
+    "image": "DS-191 Scorpion Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "DS-42 Federation's Blade",
+    "image": "DS-42 Federation's Blade Armor Render.png",
+    "type": "Heavy",
+    "passive": "Desert Stormer",
+    "source": "[[Dust Devils Premium Warbond#Page 1|Dust Devils]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "DS-42 Federation's Blade",
+    "image": "DS-42 Federation&#39;s Blade Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Dust Devils Premium Warbond#Page 1|Dust Devils]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "EX-00 Prototype X",
+    "image": "EX-00 Prototype X Armor Render.png",
+    "type": "Light",
+    "passive": "Electrical Conduit",
+    "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+   },
+   {
+    "_pageName": "EX-00 Prototype X",
+    "image": "EX-00 Prototype X Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+   },
+   {
+    "_pageName": "EX-03 Prototype 3",
+    "image": "EX-03 Prototype 3 Armor Render.png",
+    "type": "Medium",
+    "passive": "Electrical Conduit",
+    "source": "[[Cutting Edge Premium Warbond#Page 1|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+   },
+   {
+    "_pageName": "EX-03 Prototype 3",
+    "image": "EX-03 Prototype 3 Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Cutting Edge Premium Warbond#Page 1|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "EX-16 Prototype 16",
+    "image": "EX-16 Prototype 16 Armor Render.png",
+    "type": "Medium",
+    "passive": "Electrical Conduit",
+    "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "EX-16 Prototype 16",
+    "image": "EX-16 Prototype 16 Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "FS-05 Marksman",
+    "image": "FS-05 Marksman Body Icon.png",
+    "type": "Heavy",
+    "passive": "Fortified",
+    "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 6</span></span>"
+   },
+   {
+    "_pageName": "FS-05 Marksman",
+    "image": "FS-05 Marksman Helmet Icon.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 5</span></span>"
+   },
+   {
+    "_pageName": "FS-11 Executioner",
+    "image": "FS-11 Executioner Armor Render.png",
+    "type": "Heavy",
+    "passive": "Fortified",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "FS-11 Executioner",
+    "image": "FS-11 Executioner Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "FS-23 Battle Master",
+    "image": "FS-23 Battle Master Armor Render.png",
+    "type": "Heavy",
+    "passive": "Fortified",
+    "source": "[[Helldivers Mobilize Warbond#Page 6|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 6\">P6</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "FS-23 Battle Master",
+    "image": "FS-23 Battle Master Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 6|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 6\">P6</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 25</span></span>"
+   },
+   {
+    "_pageName": "FS-34 Exterminator",
+    "image": "FS-34 Exterminator Armor Render.png",
+    "type": "Medium",
+    "passive": "Fortified",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+   },
+   {
+    "_pageName": "FS-34 Exterminator",
+    "image": "FS-34 Exterminator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+   },
+   {
+    "_pageName": "FS-37 Ravager",
+    "image": "FS-37 Ravager Armor Render.png",
+    "type": "Light",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "FS-37 Ravager",
+    "image": "FS-37 Ravager Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "FS-38 Eradicator",
+    "image": "FS-38 Eradicator Armor Render.png",
+    "type": "Light",
+    "passive": "Fortified",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "FS-38 Eradicator",
+    "image": "FS-38 Eradicator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "FS-55 Devastator",
+    "image": "FS-55 Devastator Armor Render.png",
+    "type": "Heavy",
+    "passive": "Fortified",
+    "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+   },
+   {
+    "_pageName": "FS-55 Devastator",
+    "image": "FS-55 Devastator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+   },
+   {
+    "_pageName": "FS-61 Dreadnought",
+    "image": "FS-61 Dreadnought Armor Render.png",
+    "type": "Heavy",
+    "passive": "Servo-Assisted",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "FS-61 Dreadnought",
+    "image": "FS-61 Dreadnought Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "GS-11 Democracy's Deputy",
+    "image": "GS-11 Democracy's Deputy Armor Render.png",
+    "type": "Light",
+    "passive": "Gunslinger",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "GS-11 Democracy's Deputy",
+    "image": "GS-11 Democracy's Deputy Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "GS-17 Frontier Marshal",
+    "image": "GS-17 Frontier Marshal Armor Render.png",
+    "type": "Medium",
+    "passive": "Gunslinger",
+    "source": "[[Borderline Justice Premium Warbond#Page 1|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "GS-17 Frontier Marshal",
+    "image": "GS-17 Frontier Marshal Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Borderline Justice Premium Warbond#Page 1|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "GS-66 Lawmaker",
+    "image": "GS-66 Lawmaker Armor Render.png",
+    "type": "Heavy",
+    "passive": "Gunslinger",
+    "source": "[[Borderline Justice Premium Warbond#Page 2|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "GS-66 Lawmaker",
+    "image": "GS-66 Lawmaker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Borderline Justice Premium Warbond#Page 2|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "I-09 Heatseeker",
+    "image": "I-09 Heatseeker Armor Render.png",
+    "type": "Light",
+    "passive": "Inflammable",
+    "source": "[[Freedom's Flame Premium Warbond#Page 1|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+   },
+   {
+    "_pageName": "I-09 Heatseeker",
+    "image": "I-09 Heatseeker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Freedom's Flame Premium Warbond#Page 1|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "I-102 Draconaught",
+    "image": "I-102 Draconaught Armor Render.png",
+    "type": "Medium",
+    "passive": "Inflammable",
+    "source": "[[Freedom's Flame Premium Warbond#Page 2|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "I-102 Draconaught",
+    "image": "I-102 Draconaught Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Freedom's Flame Premium Warbond#Page 2|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "I-44 Salamander",
+    "image": "I-44 Salamander Armor Render.png",
+    "type": "Heavy",
+    "passive": "Inflammable",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "I-44 Salamander",
+    "image": "I-44 Salamander Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "I-92 Fire Fighter",
+    "image": "I-92 Fire Fighter Armor Render.png",
+    "type": "Medium",
+    "passive": "Inflammable",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "I-92 Fire Fighter",
+    "image": "I-92 Fire Fighter Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "IE-12 Righteous",
+    "image": "IE-12 Righteous Armor Render.png",
+    "type": "Medium",
+    "passive": "Integrated Explosives",
+    "source": "[[Servants of Freedom Premium Warbond#Page 2|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "IE-12 Righteous",
+    "image": "IE-12 Righteous Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Servants of Freedom Premium Warbond#Page 2|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "IE-3 Martyr",
+    "image": "IE-3 Martyr Armor Render.png",
+    "type": "Medium",
+    "passive": "Integrated Explosives",
+    "source": "[[Servants of Freedom Premium Warbond#Page 1|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "IE-3 Martyr",
+    "image": "IE-3 Martyr Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Servants of Freedom Premium Warbond#Page 1|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "IE-57 Hell-Bent",
+    "image": "IE-57 Hell-Bent Armor Render.png",
+    "type": "Light",
+    "passive": "Integrated Explosives",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "IE-57 Hell-Bent",
+    "image": "IE-57 Hell-Bent Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "IX-Voidwalker",
+    "image": "IX-Voidwalker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Campaigns#Void Piercer|Void Piercer]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "KDM-500 Outrider",
+    "image": "KDM-500 Outrider Armor Render.png",
+    "type": "Heavy",
+    "passive": "Kinetic Displacement Mitigation",
+    "source": "[[Campaigns#Permanent Enclosure|Permanent Enclosure]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "KDM-500 Outrider",
+    "image": "KDM-500 Outrider Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Campaigns#Lightning Intercept|Lightning Intercept]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "O-2 Heavy Operator",
+    "image": "O-2 Heavy Operator Armor Render.png",
+    "type": "Heavy",
+    "passive": "Oxygenator",
+    "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "O-2 Heavy Operator",
+    "image": "O-2 Heavy Operator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "O-3 Free Spirit",
+    "image": "O-3 Free Spirit Armor Render.png",
+    "type": "Light",
+    "passive": "Oxygenator",
+    "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "O-3 Free Spirit",
+    "image": "O-3 Free Spirit Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "O-44 Bonded Pilot",
+    "image": "O-44 Bonded Pilot Armor Render.png",
+    "type": "Medium",
+    "passive": "Oxygenator",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "O-44 Bonded Pilot",
+    "image": "O-44 Bonded Pilot Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "PH-202 Twigsnapper",
+    "image": "PH-202 Twigsnapper Armor Render.png",
+    "type": "Heavy",
+    "passive": "Peak Physique",
+    "source": "[[Viper Commandos Premium Warbond#Page 2|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "PH-202 Twigsnapper",
+    "image": "PH-202 Twigsnapper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Viper Commandos Premium Warbond#Page 2|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "PH-56 Jaguar",
+    "image": "PH-56 Jaguar Armor Render.png",
+    "type": "Medium",
+    "passive": "Peak Physique",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "PH-56 Jaguar",
+    "image": "PH-56 Jaguar Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "PH-9 Predator",
+    "image": "PH-9 Predator Armor Render.png",
+    "type": "Light",
+    "passive": "Peak Physique",
+    "source": "[[Viper Commandos Premium Warbond#Page 1|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+   },
+   {
+    "_pageName": "PH-9 Predator",
+    "image": "PH-9 Predator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Viper Commandos Premium Warbond#Page 1|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "RE-1861 Parade Commander",
+    "image": "RE-1861 Parade Commander Armor Render.png",
+    "type": "Light",
+    "passive": "Reinforced Epaulettes",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 2|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "RE-1861 Parade Commander",
+    "image": "RE-1861 Parade Commander Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 2|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RE-2310 Honorary Guard",
+    "image": "RE-2310 Honorary Guard Armor Render.png",
+    "type": "Medium",
+    "passive": "Reinforced Epaulettes",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 1|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RE-2310 Honorary Guard",
+    "image": "RE-2310 Honorary Guard Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Masters of Ceremony Premium Warbond#Page 1|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "RE-824 Bearer of the Standard",
+    "image": "RE-824 Bearer of the Standard Armor Render.png",
+    "type": "Heavy",
+    "passive": "Reinforced Epaulettes",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+   },
+   {
+    "_pageName": "RE-824 Bearer of the Standard",
+    "image": "RE-824 Bearer of the Standard Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+   },
+   {
+    "_pageName": "RS-100 Sanctioner",
+    "image": "RS-100 Sanctioner Armor Render.png",
+    "type": "Light",
+    "passive": "Reduced Signature",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "RS-100 Sanctioner",
+    "image": "RS-100 Sanctioner Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "RS-20 Constrictor",
+    "image": "RS-20 Constrictor Armor Render.png",
+    "type": "Light",
+    "passive": "Rock Solid",
+    "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RS-20 Constrictor",
+    "image": "RS-20 Constrictor Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "RS-40 Beast of Prey",
+    "image": "RS-40 Beast of Prey Armor Render.png",
+    "type": "Heavy",
+    "passive": "Rock Solid",
+    "source": "[[Python Commandos Premium Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "RS-40 Beast of Prey",
+    "image": "RS-40 Beast of Prey Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Python Commandos Premium Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RS-6 Fiend Destroyer",
+    "image": "RS-6 Fiend Destroyer Armor Render.png",
+    "type": "Medium",
+    "passive": "Rock Solid",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+   },
+   {
+    "_pageName": "RS-6 Fiend Destroyer",
+    "image": "RS-6 Fiend Destroyer Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "RS-67 Null Cipher",
+    "image": "RS-67 Null Cipher Armor Render.png",
+    "type": "Medium",
+    "passive": "Reduced Signature",
+    "source": "[[Redacted Regiment Premium Warbond#Page 2|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "RS-67 Null Cipher",
+    "image": "RS-67 Null Cipher Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Redacted Regiment Premium Warbond#Page 2|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RS-89 Shadow Paragon",
+    "image": "RS-89 Shadow Paragon Armor Render.png",
+    "type": "Light",
+    "passive": "Reduced Signature",
+    "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "RS-89 Shadow Paragon",
+    "image": "RS-89 Shadow Paragon Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "SA-04 Combat Technician",
+    "image": "SA-04 Combat Technician Armor Render.png",
+    "type": "Medium",
+    "passive": "Scout",
+    "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 60</span></span>"
+   },
+   {
+    "_pageName": "SA-04 Combat Technician",
+    "image": "SA-04 Combat Technician Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+   },
+   {
+    "_pageName": "SA-12 Servo Assisted",
+    "image": "SA-12 Servo Assisted Armor Render.png",
+    "type": "Medium",
+    "passive": "Servo-Assisted",
+    "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "SA-12 Servo Assisted",
+    "image": "SA-12 Servo Assisted Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "SA-25 Steel Trooper",
+    "image": "SA-25 Steel Trooper Armor Render.png",
+    "type": "Medium",
+    "passive": "Servo-Assisted",
+    "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span> </small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+   },
+   {
+    "_pageName": "SA-25 Steel Trooper",
+    "image": "SA-25 Steel Trooper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span> </small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+   },
+   {
+    "_pageName": "SA-32 Dynamo",
+    "image": "SA-32 Dynamo Armor Render.png",
+    "type": "Heavy",
+    "passive": "Servo-Assisted",
+    "source": "[[Steeled Veterans Premium Warbond#Page 3|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+   },
+   {
+    "_pageName": "SA-32 Dynamo",
+    "image": "SA-32 Dynamo Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Steeled Veterans Premium Warbond#Page 3|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+   },
+   {
+    "_pageName": "SA-7 Headfirst",
+    "image": "SA-7 Headfirst Armor Render.png",
+    "type": "Medium",
+    "passive": "Supplementary Adrenaline",
+    "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "SA-7 Headfirst",
+    "image": "SA-7 Headfirst Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "SA-8 Ram",
+    "image": "SA-8 Ram Armor Render.png",
+    "type": "Heavy",
+    "passive": "Supplementary Adrenaline",
+    "source": "[[Siege Breakers Premium Warbond|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "SA-8 Ram",
+    "image": "SA-8 Ram Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Siege Breakers Premium Warbond|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "SC-15 Drone Master",
+    "image": "SC-15 Drone Master Armor Render.png",
+    "type": "Medium",
+    "passive": "Engineering Kit",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "SC-15 Drone Master",
+    "image": "SC-15 Drone Master Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "SC-30 Trailblazer Scout",
+    "image": "SC-30 Trailblazer Scout Armor Render.png",
+    "type": "Light",
+    "passive": "Scout",
+    "source": "[[Helldivers Mobilize Warbond#Page 7|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 7\">P7</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 50</span></span>"
+   },
+   {
+    "_pageName": "SC-30 Trailblazer Scout",
+    "image": "SC-30 Trailblazer Scout Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 7|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 7\">P7</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "SC-34 Infiltrator",
+    "image": "SC-34 Infiltrator Armor Render.png",
+    "type": "Light",
+    "passive": "Scout",
+    "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 3</span></span>"
+   },
+   {
+    "_pageName": "SC-34 Infiltrator",
+    "image": "SC-34 Infiltrator Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 2</span></span>"
+   },
+   {
+    "_pageName": "SC-37 Legionnaire",
+    "image": "SC-37 Legionnaire Armor Render.png",
+    "type": "Light",
+    "passive": "Servo-Assisted",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+   },
+   {
+    "_pageName": "SC-37 Legionnaire",
+    "image": "SC-37 Legionnaire Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+   },
+   {
+    "_pageName": "SR-18 Roadblock",
+    "image": "SR-18 Roadblock Armor Render.png",
+    "type": "Heavy",
+    "passive": "Siege-Ready",
+    "source": "[[Urban Legends Premium Warbond#Page 2|Urban Legends]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "SR-18 Roadblock",
+    "image": "SR-18 Roadblock Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Urban Legends Premium Warbond#Page 2|Urban Legends]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "SR-24 Street Scout",
+    "image": "SR-24 Street Scout Armor Render.png",
+    "type": "Light",
+    "passive": "Siege-Ready",
+    "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+   },
+   {
+    "_pageName": "SR-24 Street Scout",
+    "image": "SR-24 Street Scout Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "SR-64 Cinderblock",
+    "image": "SR-64 Cinderblock Armor Render.png",
+    "type": "Heavy",
+    "passive": "Siege-Ready",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "SR-64 Cinderblock",
+    "image": "SR-64 Cinderblock Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+   },
+   {
+    "_pageName": "TG-122 Demo-Trooper",
+    "image": "TG-122 Demo-Trooper Armor Render.png",
+    "type": "Heavy",
+    "passive": "True Grit",
+    "source": "[[Castellan's Creed Legendary Warbond#Page 2|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "TG-122 Demo-Trooper",
+    "image": "TG-122 Demo-Trooper Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Castellan's Creed Legendary Warbond#Page 2|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "TG-8 Sharpshooter",
+    "image": "TG-8 Sharpshooter Armor Render.png",
+    "type": "Medium",
+    "passive": "True Grit",
+    "source": "[[Castellan's Creed Legendary Warbond#Page 1|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "TG-8 Sharpshooter",
+    "image": "TG-8 Sharpshooter Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Castellan's Creed Legendary Warbond#Page 1|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "TR-117 Alpha Commander",
+    "image": "TR-117 Alpha Commander Armor Render.png",
+    "type": "Medium",
+    "passive": "Med-Kit",
+    "source": "[[Downloadable Content]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "TR-117 Alpha Commander",
+    "image": "TR-117 Alpha Commander Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Downloadable Content]]",
+    "cost": ""
+   },
+   {
+    "_pageName": "TR-40 Gold Eagle",
+    "image": "TR-40 Gold Eagle Armor Render.png",
+    "type": "Medium",
+    "passive": "Extra Padding",
+    "source": "[[Escalation of Freedom]]",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-40 Gold Eagle",
+    "image": "TR-40 Gold Eagle Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Escalation of Freedom]]",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-62 Knight",
+    "image": "TR-62 Knight Armor Render.png",
+    "type": "Heavy",
+    "passive": "Servo-Assisted",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-62 Knight",
+    "image": "TR-62 Knight Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-7 Ambassador of the Brand",
+    "image": "TR-7 Ambassador of the Brand Armor Render.png",
+    "type": "Medium",
+    "passive": "Extra Padding",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-7 Ambassador of the Brand",
+    "image": "TR-7 Ambassador of the Brand Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-9 Cavalier of Democracy",
+    "image": "TR-9 Cavalier of Democracy Armor Render.png",
+    "type": "Medium",
+    "passive": "Democracy Protects",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "TR-9 Cavalier of Democracy",
+    "image": "TR-9 Cavalier of Democracy Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "Pre-Order Bonus",
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+   },
+   {
+    "_pageName": "UF-16 Inspector",
+    "image": "UF-16 Inspector Armor Render.png",
+    "type": "Light",
+    "passive": "Unflinching",
+    "source": "[[Truth Enforcers Premium Warbond#Page 3|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 65</span></span>"
+   },
+   {
+    "_pageName": "UF-16 Inspector",
+    "image": "UF-16 Inspector Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Truth Enforcers Premium Warbond#Page 3|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "UF-50 Bloodhound",
+    "image": "UF-50 Bloodhound Armor Render.png",
+    "type": "Medium",
+    "passive": "Unflinching",
+    "source": "[[Truth Enforcers Premium Warbond#Page 2|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "UF-50 Bloodhound",
+    "image": "UF-50 Bloodhound Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Truth Enforcers Premium Warbond#Page 2|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+   },
+   {
+    "_pageName": "UF-84 Doubt Killer",
+    "image": "UF-84 Doubt Killer Armor Render.png",
+    "type": "Medium",
+    "passive": "Unflinching",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+   },
+   {
+    "_pageName": "UF-84 Doubt Killer",
+    "image": "UF-84 Doubt Killer Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+   }
+  ],
+  "Armor_Passive": [
+   {
+    "_pageName": "Acclimated",
+    "image": "Acclimated Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Adreno-Defibrillator",
+    "image": "Adreno-Defibrillator Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Advanced Filtration",
+    "image": "Advanced Filtration Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Ballistic Padding",
+    "image": "Ballistic Padding Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Concussive Padding, Grenadier",
+    "image": "Concussive Padding Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Concussive Padding, Hazmat",
+    "image": "Concussive Padding Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Concussive Padding, Reinforced",
+    "image": "Concussive Padding Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Democracy Protects",
+    "image": "Democracy Protects Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Desert Stormer",
+    "image": "Desert Stormer Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Electrical Conduit",
+    "image": "Electrical Conduit Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Engineering Kit",
+    "image": "Engineering Kit Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Extra Padding",
+    "image": "Extra Padding Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Feet First",
+    "image": "Feet First Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Fortified",
+    "image": "Fortified Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Gunslinger",
+    "image": "Gunslinger Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Inflammable",
+    "image": "Inflammable Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Integrated Explosives",
+    "image": "Integrated Explosives Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Kinetic Displacement Mitigation",
+    "image": "Kinetic Displacement Mitigation Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Med-Kit",
+    "image": "Med-Kit Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Oxygenator",
+    "image": "Oxygenator Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Peak Physique",
+    "image": "Peak Physique Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Reduced Signature",
+    "image": "Reduced Signature Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Reinforced Epaulettes",
+    "image": "Reinforced Epaulettes Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Rock Solid",
+    "image": "Rock Solid Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Scout",
+    "image": "Scout Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Servo-Assisted",
+    "image": "Servo-Assisted Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Siege-Ready",
+    "image": "Siege-Ready Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Supplementary Adrenaline",
+    "image": "Supplementary Adrenaline Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "True Grit",
+    "image": "True Grit Armor Passive Icon.svg"
+   },
+   {
+    "_pageName": "Unflinching",
+    "image": "Unflinching Armor Passive Icon.svg"
+   }
+  ],
+  "Warbonds": [
+   {
+    "_pageName": "Borderline Justice Premium Warbond",
+    "title": "Borderline Justice",
+    "image": "Borderline Justice Premium Warbond Cover.png",
+    "date": "2025-03-20",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Castellan's Creed Legendary Warbond",
+    "title": "Castellan's Creed",
+    "image": "Castellan's Creed Legendary Warbond Cover.png",
+    "date": "2026-08-12",
+    "type": "Legendary",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Chemical Agents Premium Warbond",
+    "title": "Chemical Agents",
+    "image": "Chemical Agents Premium Warbond Cover.png",
+    "date": "2024-09-19",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Control Group Premium Warbond",
+    "title": "Control Group",
+    "image": "Control Group Premium Warbond Cover.png",
+    "date": "2025-07-17",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Cutting Edge Premium Warbond",
+    "title": "Cutting Edge",
+    "image": "Cutting Edge Premium Warbond Cover.png",
+    "date": "2024-03-14",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Democratic Detonation Premium Warbond",
+    "title": "Democratic Detonation",
+    "image": "Democratic Detonation Premium Warbond Cover.png",
+    "date": "2024-04-11",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Dust Devils Premium Warbond",
+    "title": "Dust Devils",
+    "image": "Dust Devils Premium Warbond Cover.png",
+    "date": "2025-09-04",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Entrenched Division Premium Warbond",
+    "title": "Entrenched Division",
+    "image": "Entrenched Division Premium Warbond Cover.png",
+    "date": "2026-03-17",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Exo Experts Premium Warbond",
+    "title": "Exo Experts",
+    "image": "Exo Experts Premium Warbond Cover.png",
+    "date": "2026-04-28",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Force of Law Premium Warbond",
+    "title": "Force of Law",
+    "image": "Force of Law Premium Warbond Cover.png",
+    "date": "2025-06-12",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Freedom's Flame Premium Warbond",
+    "title": "Freedom's Flame",
+    "image": "Freedom's Flame Premium Warbond Cover.png",
+    "date": "2024-08-08",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Helldivers Mobilize Warbond",
+    "title": "Helldivers Mobilize!",
+    "image": "Helldivers Mobilize Warbond Cover.png",
+    "date": "2024-02-08",
+    "type": "Standard",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Masters of Ceremony Premium Warbond",
+    "title": "Masters of Ceremony",
+    "image": "Masters of Ceremony Premium Warbond Cover.png",
+    "date": "2025-05-15",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Obedient Democracy Support Troopers Legendary Warbond",
+    "title": "Obedient Democracy Support Troopers",
+    "image": "Halo ODST Legendary Warbond Cover.png",
+    "date": "2025-08-26",
+    "type": "Legendary",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Polar Patriots Premium Warbond",
+    "title": "Polar Patriots",
+    "image": "Polar Patriots Premium Warbond Cover.png",
+    "date": "2024-05-09",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Python Commandos Premium Warbond",
+    "title": "Python Commandos",
+    "image": "Python Commandos Premium Warbond Cover.png",
+    "date": "2025-12-02",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Redacted Regiment Premium Warbond",
+    "title": "Redacted Regiment",
+    "image": "Redacted Regiment Premium Warbond Cover.png",
+    "date": "2026-01-22",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Righteous Revenants Legendary Warbond",
+    "title": "Righteous Revenants",
+    "image": "Righteous Revenants Legendary Warbond Cover.png",
+    "date": "2025-12-18",
+    "type": "Legendary",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Servants of Freedom Premium Warbond",
+    "title": "Servants of Freedom",
+    "image": "Servants of Freedom Premium Warbond Cover.png",
+    "date": "2025-02-06",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Siege Breakers Premium Warbond",
+    "title": "Siege Breakers",
+    "image": "Siege Breakers Premium Warbond Cover.png",
+    "date": "2026-02-03",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Steeled Veterans Premium Warbond",
+    "title": "Steeled Veterans",
+    "image": "Steeled Veterans Premium Warbond Cover.png",
+    "date": "2024-02-08",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Truth Enforcers Premium Warbond",
+    "title": "Truth Enforcers",
+    "image": "Truth Enforcers Premium Warbond Cover.png",
+    "date": "2024-10-31",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Urban Legends Premium Warbond",
+    "title": "Urban Legends",
+    "image": "Urban Legends Premium Warbond Cover.png",
+    "date": "2024-12-13",
+    "type": "Premium",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Viper Commandos Premium Warbond",
+    "title": "Viper Commandos",
+    "image": "Viper Commandos Premium Warbond Cover.png",
+    "date": "2024-06-13",
+    "type": "Premium",
+    "date__precision": "1"
+   }
+  ]
+ }
+}

@@ -1,0 +1,30 @@
+/* teletype 테마 전용. 셀렉터는 [data-theme="teletype"] [data-part=…] 만. */
+
+:root[data-theme='teletype'] body {
+  background-image: radial-gradient(ellipse at 50% -10%, var(--glow) 0%, var(--bg) 55%), repeating-linear-gradient(0deg, transparent 0 2px, rgba(94, 194, 122, 0.03) 2px 3px);
+}
+:root[data-theme='teletype'] [data-part='top-bar'] h1::before {
+  content: '> ';
+}
+:root[data-theme='teletype'] [data-part='race-tabs'] button i {
+  border-radius: 0;
+}
+:root[data-theme='teletype'] [data-part='section-title']::before {
+  content: '// ';
+  color: var(--muted);
+}
+:root[data-theme='teletype'] [data-part='alert'] {
+  background: transparent;
+  border: 0;
+  padding: 2px 0;
+  font-weight: 500;
+}
+:root[data-theme='teletype'] [data-part='permit-head'] h2::before {
+  content: '> ';
+}
+:root[data-theme='teletype'] [data-part='render'] {
+  background: var(--tile);
+}
+:root[data-theme='teletype'] [data-part='notice'] {
+  font-family: var(--mono);
+}

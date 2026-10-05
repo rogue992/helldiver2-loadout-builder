@@ -1,0 +1,54 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-dialog);
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.dialog {
+  width: min(420px, 100%);
+  background: var(--panel);
+  border: 2px solid var(--danger);
+  border-radius: var(--r);
+  padding: 14px 16px 16px;
+}
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hd h2 {
+  font: 700 16px var(--font-display);
+  letter-spacing: 0.06em;
+  color: var(--danger-fg);
+}
+.close {
+  padding: 2px 8px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+}
+.body {
+  margin: 12px 0 16px;
+  line-height: 1.6;
+}
+.btns {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.cancel,
+.confirm {
+  padding: 8px 14px;
+  border-radius: var(--r);
+  font: 600 14px var(--font-display);
+}
+.cancel {
+  border: 1px var(--bstyle) var(--line);
+}
+.confirm {
+  background: var(--danger);
+  color: #fff;
+  border: 1px solid var(--danger);
+}

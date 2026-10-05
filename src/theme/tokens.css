@@ -1,0 +1,150 @@
+/* 테마 토큰. 컴포넌트는 이 변수만 쓴다. 테마별 값은 아래 테마 블록에서만 바뀐다. */
+
+:root {
+  --display: 'Barlow Condensed', 'Noto Sans KR', sans-serif;
+  --body: 'Barlow', 'Noto Sans KR', sans-serif;
+  --mono: 'IBM Plex Mono', 'Noto Sans KR', monospace;
+  /* 상단 고정 영역(방송 띠 + 상단 바) 높이의 첫 프레임용 값. 마운트 뒤에는 App이 실제 높이를 재서 인라인으로 덮어쓴다 */
+  --chrome-h: 72px;
+  --bar-h: 46px;
+  /* 왼쪽 서랍(저장 목록) 폭. 상단 바의 서랍 머리와 같은 값 */
+  --drawer-w: 250px;
+  --race-terminid: #f08a24;
+  --race-automaton: #e0402f;
+  --race-illuminate: #8b5cf6;
+  --race-all: #ffe14d;
+  /* 겹침 순서: 브리핑 < 선택 창 · 크레딧 < 확인창 · 가져오기 < 토스트 */
+  --z-briefing: 70;
+  --z-modal: 80;
+  --z-dialog: 85;
+  --z-toast: 90;
+  /* 위험 줄무늬(허가서 머리 · 크레딧 · 방송 띠). 줄 색은 --yellow, 바탕은 테마별 --hazard-bg */
+  --hazard: repeating-linear-gradient(-62deg, var(--yellow) 0 12px, transparent 12px 26px);
+}
+
+/* ── console: 관제 콘솔 (기본) ── */
+:root,
+:root[data-theme='console'] {
+  --bg: #08111d;
+  --bg2: #0b1626;
+  --fg: #dbe9f5;
+  --muted: #8fb0cc;
+  --line: #1f3a57;
+  --panel: #0e1a2b;
+  --box: #0b1626;
+  --box-line: #27466a;
+  --tile: #0a1320;
+  --tile-line: #7fc2ea;
+  --tag: #173052;
+  --tag-fg: #bfe0f7;
+  --yellow: #ffe14d;
+  --on-yellow: #1a1600;
+  --acc: #7fc2ea;
+  --acc-soft: #123553;
+  --danger: #e0553a;
+  --danger-soft: #2a1410;
+  --danger-fg: #ffb4a4;
+  --warn: #ffb347;
+  --warn-soft: #2a1e0f;
+  --warn-fg: #ffd08a;
+  --ok: #5ec27a;
+  --ok-soft: #0f2417;
+  --ok-fg: #a9e6bb;
+  --glow: #12253f;
+  --hazard-bg: #0a0f18;
+  --r: 3px;
+  --bstyle: solid;
+  --font-display: var(--display);
+  --font-body: var(--body);
+}
+
+/* ── teletype: 녹색 단말 ── */
+:root[data-theme='teletype'] {
+  --chrome-h: 46px;
+  --bg: #040a0f;
+  --bg2: #071016;
+  --fg: #b9f0c4;
+  --muted: #3e8a52;
+  --line: #1e3a2a;
+  --panel: #060d12;
+  --box: #071016;
+  --box-line: #1e3a2a;
+  --tile: #03080b;
+  --tile-line: #5ec27a;
+  --tag: #0f2417;
+  --tag-fg: #a9e6bb;
+  --yellow: #5ec27a;
+  --on-yellow: #04130a;
+  --acc: #5ec27a;
+  --acc-soft: #0f2417;
+  --danger: #ff5a3c;
+  --danger-soft: #1e0c08;
+  --danger-fg: #ffb4a4;
+  --warn: #ffcf5a;
+  --warn-soft: #1e1808;
+  --warn-fg: #ffe0a0;
+  --ok: #5ec27a;
+  --ok-soft: #0f2417;
+  --ok-fg: #a9e6bb;
+  --glow: #0a1a12;
+  --hazard-bg: #040a0f;
+  --r: 0;
+  --bstyle: dashed;
+  --font-display: var(--mono);
+  --font-body: var(--mono);
+  /* 단말 톤에 맞춘 종족색. 전체만 단말 녹색 */
+  --race-terminid: #e8a83a;
+  --race-automaton: #ff5a3c;
+  --race-illuminate: #a78bfa;
+  --race-all: #5ec27a;
+}
+
+/* 기본 리셋 · 바탕 */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  min-height: 100vh;
+  background: var(--bg) radial-gradient(ellipse at 50% -10%, var(--glow) 0%, var(--bg) 55%);
+  color: var(--fg);
+  font: 14px/1.5 var(--font-body);
+  /* 한글: 어절 단위로만 줄을 바꾼다. 너무 긴 한 어절만 강제로 끊는다 */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

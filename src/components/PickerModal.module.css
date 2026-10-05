@@ -1,0 +1,393 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+/* 창 크기는 내용과 무관하게 고정: 목록이 짧거나 탭이 바뀌어도 머리 · 슬롯 줄 · 버튼이 오르내리지 않는다.
+   --sq = 대상 슬롯 타일 한 변. 좁거나 낮은 화면에서는 4개가 한 줄에 다 보이도록 줄인다(아래 미디어 쿼리) */
+.modal {
+  --sq: 148px;
+  --sq-gap: 22px;
+  width: min(1100px, 100%);
+  height: min(92vh, 980px);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px var(--bstyle) var(--yellow);
+  border-radius: var(--r);
+  overflow: hidden;
+}
+.hd {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px var(--bstyle) var(--line);
+}
+.hd h2 {
+  font: 600 16px var(--font-display);
+  color: var(--yellow);
+  white-space: nowrap;
+}
+.search {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 10px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  background: var(--bg2);
+  color: var(--fg);
+  font: inherit;
+}
+.close {
+  padding: 4px 10px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+}
+
+/* 대상 슬롯 줄(SES식): 가운데 모은 정사각 큰 타일 4개. 현재 대상은 노란 테두리 · 빛 · 아래 점 */
+.slots {
+  display: flex;
+  justify-content: center;
+  gap: var(--sq-gap);
+  padding: 12px 14px 2px;
+  border-bottom: 1px var(--bstyle) var(--line);
+}
+.slot {
+  position: relative;
+  width: var(--sq);
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 0 0 12px;
+  color: var(--fg);
+  min-width: 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+.slot:focus-visible {
+  outline: 2px solid var(--yellow);
+  outline-offset: 2px;
+}
+.slotLbl {
+  font: 700 10.5px var(--font-display);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+.slotOn .slotLbl {
+  color: var(--yellow);
+}
+/* 정사각 타일: 하나면 가득, 2~4칸이면 2×2 */
+.sq {
+  position: relative;
+  width: var(--sq);
+  height: var(--sq);
+  display: grid;
+  place-items: center;
+  padding: 8%;
+  background: var(--tile);
+  border: 2px solid var(--line);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.slot:hover .sq {
+  border-color: var(--acc);
+}
+.slotOn .sq {
+  border-color: var(--yellow);
+  box-shadow: 0 0 16px color-mix(in srgb, var(--yellow) 45%, transparent);
+}
+.sqGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  padding: 8px;
+}
+/* 2×2 안의 칸: 각각 대상이 될 수 있다(찬 칸 = 교체). 래퍼는 × 위치 기준 */
+.cellWrap {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+}
+.cell {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  padding: 8%;
+  border: 1px solid var(--tile-line);
+  border-radius: 2px;
+  overflow: hidden;
+  color: var(--fg);
+}
+.cell:hover {
+  border-color: var(--acc);
+}
+.cellEmpty {
+  border-style: dashed !important;
+  opacity: 0.45;
+}
+.cellOn {
+  border: 2px solid var(--yellow) !important;
+  opacity: 1;
+}
+/* 데이터에서 사라진 아이템이 든 칸: 찬 칸이므로 ✕로 뺄 수 있다 */
+.cellMissing {
+  border-style: dashed;
+  border-color: var(--danger);
+}
+.cellMissingMark {
+  font: 700 13px var(--font-display);
+  color: var(--danger-fg);
+}
+.sq img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+}
+/* 방어구 상체 크롭은 정사각이라 타일을 그대로 채운다 */
+.sqArmor {
+  padding: 0;
+}
+.sqEmpty {
+  border-style: dashed;
+}
+.sqHint {
+  font: 600 12px var(--font-display);
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0.6;
+}
+.slotName {
+  max-width: 100%;
+  height: 17px;
+  font: 700 13px/17px var(--font-display);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.slotSub {
+  height: 13px;
+  font: 500 11px/13px var(--font-display);
+  color: var(--muted);
+  white-space: nowrap;
+}
+/* 창 안 해제 ×: 타일 오른쪽 위 */
+.clearBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1;
+  padding: 0;
+}
+.clearBtn:hover {
+  color: var(--danger-fg);
+  border-color: var(--danger);
+}
+.clearBtnSmall {
+  top: -6px;
+  right: -6px;
+  width: 17px;
+  height: 17px;
+  font-size: 9.5px;
+}
+.slotDot {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+/* 탭 줄은 한 줄 고정(넘치면 가로 스크롤). 줄바꿈으로 높이가 바뀌지 않게 */
+.tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+  height: 46px;
+  padding: 0 14px;
+  border-bottom: 1px var(--bstyle) var(--line);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+.tab {
+  flex: none;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  font-size: 12.5px;
+  background: var(--bg2);
+}
+.tabOn {
+  border-color: var(--acc);
+  background: var(--acc-soft);
+  font-weight: 600;
+}
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 6px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.group {
+  padding-top: 8px;
+}
+.groupTitle {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 8px;
+  padding: 6px 0 4px;
+  background: var(--panel);
+  border-bottom: 1px var(--bstyle) var(--line);
+  font: 600 12.5px var(--font-display);
+  color: var(--yellow);
+  letter-spacing: 0.04em;
+}
+.groupTitle small {
+  font: 500 11px var(--font-display);
+  color: var(--muted);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  background: var(--box);
+  border: 1px var(--bstyle) var(--box-line);
+  border-radius: var(--r);
+  text-align: left;
+  color: var(--fg);
+}
+.card:hover {
+  border-color: var(--acc);
+}
+.cardDup {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+/* 현재 장비: 노란 테두리, 다시 고를 필요 없음 */
+.cardCurrent {
+  border-color: var(--yellow);
+  box-shadow: inset 0 0 0 1px var(--yellow);
+  cursor: default;
+}
+/* 미보유 채권 · 스토어 제외: 뒤쪽에 흐리게. 올리면 또렷해지고 선택은 가능 */
+.cardUnowned {
+  opacity: 0.42;
+  filter: saturate(0.6);
+}
+.cardUnowned:hover,
+.cardUnowned:focus-visible {
+  opacity: 0.9;
+  filter: none;
+}
+.cardTag {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  padding: 1px 6px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  background: var(--bg2);
+  color: var(--muted);
+  font: 700 9.5px var(--font-display);
+  letter-spacing: 0.06em;
+}
+.cardTagCurrent {
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+.cardName {
+  font: 600 13px/1.25 var(--font-display);
+  word-break: keep-all;
+}
+.cardSub {
+  font-size: 11px;
+  color: var(--muted);
+  min-height: 13px;
+}
+.none {
+  color: var(--muted);
+  word-break: keep-all;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* 폰 너비: 슬롯 4개가 한 줄에 들어가게 타일을 줄인다(창 안쪽 폭 = 화면 - 바깥 여백 · 테두리 · 줄 여백 · 간격) */
+@media (max-width: 720px) {
+  .modal {
+    --sq: min(148px, calc((100vw - 90px) / 4));
+    --sq-gap: 8px;
+  }
+  .slots {
+    padding-inline: 8px;
+  }
+  .slotName {
+    font-size: 11.5px;
+  }
+  .clearBtn {
+    top: 3px;
+    right: 3px;
+    width: 18px;
+    height: 18px;
+  }
+  .clearBtnSmall {
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+  }
+}
+/* 낮은 화면(가로 폰 등): 슬롯 줄이 카드 목록 자리를 다 차지하지 않게 */
+@media (max-height: 640px) {
+  .modal {
+    --sq: min(88px, calc((100vw - 90px) / 4));
+    height: calc(100vh - 32px);
+  }
+}

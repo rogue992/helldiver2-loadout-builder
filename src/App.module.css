@@ -1,0 +1,81 @@
+/* 상단 고정 영역(방송 띠 + 상단 바). 아래 sticky 요소들은 --chrome-h 만큼 내려 붙는다 */
+.chrome {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* 왼쪽 서랍(목록) + 가운데 내용. 서랍은 화면 왼쪽 가장자리에 붙고, 내용만 가운데 정렬 */
+.app {
+  display: grid;
+  grid-template-columns: var(--drawer-w) minmax(0, 1fr);
+  align-items: start;
+}
+.folded {
+  grid-template-columns: minmax(0, 1fr);
+}
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 272px;
+  gap: 16px;
+  padding: 16px 16px 64px;
+  max-width: 1270px;
+  margin: 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+@media (max-width: 1200px) {
+  .content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .content > :last-child {
+    position: static !important;
+  }
+}
+@media (max-width: 820px) {
+  .app,
+  .folded {
+    grid-template-columns: 1fr;
+  }
+}
+.main {
+  min-width: 0;
+}
+.importBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-dialog);
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.importBox {
+  width: min(420px, 100%);
+  background: var(--panel);
+  border: 1px var(--bstyle) var(--yellow);
+  border-radius: var(--r);
+  padding: 14px 16px;
+}
+.importBox h2 {
+  font: 700 16px var(--font-display);
+  color: var(--yellow);
+}
+.check {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 13px;
+  margin: 6px 0 12px;
+}
+.importBtns {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.importBtns button {
+  padding: 7px 14px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r);
+  font: 600 14px var(--font-display);
+}

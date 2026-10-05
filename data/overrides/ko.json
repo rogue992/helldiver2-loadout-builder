@@ -1,0 +1,1391 @@
+{
+  "items": {
+    "ar-b-01-tactical": {
+      "nameKo": "B-01 전술"
+    },
+    "ar-sc-34-infiltrator": {
+      "nameKo": "SC-34 잠입병",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 1
+    },
+    "ar-fs-05-marksman": {
+      "nameKo": "FS-05 명사수",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 2
+    },
+    "ar-ce-35-trench-engineer": {
+      "nameKo": "CE-35 참호 기술자",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 3
+    },
+    "ar-cm-09-bonesnapper": {
+      "nameKo": "CM-09 뼈 절단기",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 4
+    },
+    "ar-dp-40-hero-of-the-federation": {
+      "nameKo": "DP-40 연방의 영웅",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 5
+    },
+    "ar-fs-23-battle-master": {
+      "nameKo": "FS-23 전투의 달인",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 6
+    },
+    "ar-sc-30-trailblazer-scout": {
+      "nameKo": "SC-30 선봉 정찰병",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 7
+    },
+    "ar-sa-04-combat-technician": {
+      "nameKo": "SA-04 전투 기술자",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 8
+    },
+    "ar-cm-14-physician": {
+      "nameKo": "CM-14 내과 전문의",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 9
+    },
+    "ar-dp-11-champion-of-the-people": {
+      "nameKo": "DP-11 만인의 투사",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 10
+    },
+    "ar-sa-25-steel-trooper": {
+      "nameKo": "SA-25 강철 보병",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-sa-12-servo-assisted": {
+      "nameKo": "SA-12 서보 보조",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-sa-32-dynamo": {
+      "nameKo": "SA-32 넘치는 힘",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 3
+    },
+    "ar-ex-03-prototype-3": {
+      "nameKo": "EX-03 시제품 3",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ex-16-prototype-16": {
+      "nameKo": "EX-16 시제품 16",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-ex-00-prototype-x": {
+      "nameKo": "EX-00 시제품 X",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 3
+    },
+    "ar-ce-27-ground-breaker": {
+      "nameKo": "CE-27 대지 파괴자",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ce-07-demolition-specialist": {
+      "nameKo": "CE-07 철거 전문가",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-fs-55-devastator": {
+      "nameKo": "FS-55 유린자",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 3
+    },
+    "ar-cw-36-winter-warrior": {
+      "nameKo": "CW-36 겨울의 전사",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-cw-22-kodiak": {
+      "nameKo": "CW-22 코디악",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-cw-4-arctic-ranger": {
+      "nameKo": "CW-4 극지 수색대",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 3
+    },
+    "ar-ph-9-predator": {
+      "nameKo": "PH-9 포식자",
+      "warbondId": "viper-commandos-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ph-202-twigsnapper": {
+      "nameKo": "PH-202 트위그스내퍼",
+      "warbondId": "viper-commandos-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-i-09-heatseeker": {
+      "nameKo": "I-09 히트시커",
+      "warbondId": "freedom-s-flame-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-i-102-draconaught": {
+      "nameKo": "I-102 드라코노트",
+      "warbondId": "freedom-s-flame-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-af-50-noxious-ranger": {
+      "nameKo": "AF-50 독성 수색대",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-af-02-haz-master": {
+      "nameKo": "AF-02 위험물 전문가",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-uf-50-bloodhound": {
+      "nameKo": "UF-50 블러드하운드",
+      "warbondId": "truth-enforcers-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-uf-16-inspector": {
+      "nameKo": "UF-16 조사관",
+      "warbondId": "truth-enforcers-premium-warbond",
+      "warbondPage": 3
+    },
+    "ar-sr-24-street-scout": {
+      "nameKo": "SR-24 거리의 정찰자",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-sr-18-roadblock": {
+      "nameKo": "SR-18 로드블록",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-ie-3-martyr": {
+      "nameKo": "IE-3 순교자",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ie-12-righteous": {
+      "nameKo": "IE-12 의로움",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-gs-17-frontier-marshal": {
+      "nameKo": "GS-17 개척 원수",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-gs-66-lawmaker": {
+      "nameKo": "GS-66 법률가",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-bp-20-correct-officer": {
+      "nameKo": "BP-20 올바른 장교",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-bp-32-jackboot": {
+      "nameKo": "BP-32 잭부트",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-re-2310-honorary-guard": {
+      "nameKo": "RE-2310 의장대",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-re-1861-parade-commander": {
+      "nameKo": "RE-1861 퍼레이드 사령관",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-ad-26-bleeding-edge": {
+      "nameKo": "AD-26 최첨단",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ad-49-apollonian": {
+      "nameKo": "AD-49 아폴로니언",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-a-9-helljumper": {
+      "nameKo": "A-9 헬점퍼",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 1
+    },
+    "ar-a-35-recon": {
+      "nameKo": "A-35 리콘",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 2
+    },
+    "ar-ds-42-federation-s-blade": {
+      "nameKo": "DS-42 연방의 칼날",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-ds-191-scorpion": {
+      "nameKo": "DS-191 전갈",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-rs-20-constrictor": {
+      "nameKo": "RS-20 보아뱀",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-rs-40-beast-of-prey": {
+      "nameKo": "RS-40 육식동물",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-ac-1-dutiful": {
+      "nameKo": "AC-1 충실",
+      "warbondId": "righteous-revenants-legendary-warbond",
+      "warbondPage": 1
+    },
+    "ar-ac-2-obedient": {
+      "nameKo": "AC-2 복종",
+      "warbondId": "righteous-revenants-legendary-warbond",
+      "warbondPage": 2
+    },
+    "ar-rs-89-shadow-paragon": {
+      "nameKo": "RS-89 그림자의 귀감",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-rs-67-null-cipher": {
+      "nameKo": "RS-67 널 암호",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-sa-7-headfirst": {
+      "nameKo": "SA-7 맹호",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-sa-8-ram": {
+      "nameKo": "SA-8 RAM",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-cpg-48-sapper": {
+      "nameKo": "CPG-48 공병",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-cph-26-commandant": {
+      "nameKo": "CPH-26 사령관",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-o-3-free-spirit": {
+      "nameKo": "O-3 자유로운 영혼",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 1
+    },
+    "ar-o-2-heavy-operator": {
+      "nameKo": "O-2 중장비 운전원",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 2
+    },
+    "ar-kdm-500-outrider": {
+      "nameKo": "KDM-500 아웃라이더"
+    },
+    "ar-tg-8-sharpshooter": {
+      "nameKo": "TG-8 샤프슈터",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 1
+    },
+    "ar-tg-122-demo-trooper": {
+      "nameKo": "TG-122 데모-트루퍼",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 2
+    },
+    "ar-ce-81-juggernaut": {
+      "nameKo": "CE-81 거구"
+    },
+    "ar-fs-34-exterminator": {
+      "nameKo": "FS-34 절멸자"
+    },
+    "ar-fs-11-executioner": {
+      "nameKo": "FS-11 처형자"
+    },
+    "ar-cm-21-trench-paramedic": {
+      "nameKo": "CM-21 참호 의무보조병"
+    },
+    "ar-b-08-light-gunner": {
+      "nameKo": "B-08 견인포병"
+    },
+    "ar-fs-61-dreadnought": {
+      "nameKo": "FS-61 드레드넛"
+    },
+    "ar-b-27-fortified-commando": {
+      "nameKo": "B-27 강화된 특공대"
+    },
+    "ar-fs-38-eradicator": {
+      "nameKo": "FS-38 근절자"
+    },
+    "ar-b-24-enforcer": {
+      "nameKo": "B-24 집행자"
+    },
+    "ar-ce-74-breaker": {
+      "nameKo": "CE-74 파괴자"
+    },
+    "ar-sc-37-legionnaire": {
+      "nameKo": "SC-37 리저네어"
+    },
+    "ar-sc-15-drone-master": {
+      "nameKo": "SC-15 드론의 달인"
+    },
+    "ar-cm-17-butcher": {
+      "nameKo": "CM-17 도살자"
+    },
+    "ar-ce-67-titan": {
+      "nameKo": "CE-67 타이탄"
+    },
+    "ar-cm-10-clinician": {
+      "nameKo": "CM-10 임상의"
+    },
+    "ar-fs-37-ravager": {
+      "nameKo": "FS-37 약탈자"
+    },
+    "ar-cw-9-white-wolf": {
+      "nameKo": "CW-9 화이트 울프"
+    },
+    "ar-ce-64-grenadier": {
+      "nameKo": "CE-64 척탄병"
+    },
+    "ar-ph-56-jaguar": {
+      "nameKo": "PH-56 재규어"
+    },
+    "ar-ce-101-guerilla-gorilla": {
+      "nameKo": "CE-101 게릴라 고릴라"
+    },
+    "ar-i-44-salamander": {
+      "nameKo": "I-44 샐러맨더"
+    },
+    "ar-i-92-fire-fighter": {
+      "nameKo": "I-92 소방관"
+    },
+    "ar-af-52-lockdown": {
+      "nameKo": "AF-52 철통방어"
+    },
+    "ar-af-91-field-chemist": {
+      "nameKo": "AF-91 야전 화학자"
+    },
+    "ar-uf-84-doubt-killer": {
+      "nameKo": "UF-84 의심 파훼자"
+    },
+    "ar-sr-64-cinderblock": {
+      "nameKo": "SR-64 신더블록"
+    },
+    "ar-ie-57-hell-bent": {
+      "nameKo": "IE-57 광분"
+    },
+    "ar-gs-11-democracy-s-deputy": {
+      "nameKo": "GS-11 민주주의의 대리인"
+    },
+    "ar-dp-8-mountain-scaled": {
+      "nameKo": "DP-8 등정"
+    },
+    "ar-re-824-bearer-of-the-standard": {
+      "nameKo": "RE-824 기준의 수호자"
+    },
+    "ar-bp-77-grand-juror": {
+      "nameKo": "BP-77 대배심원"
+    },
+    "ar-ad-11-livewire": {
+      "nameKo": "AD-11 라이브와이어"
+    },
+    "ar-ds-10-big-game-hunter": {
+      "nameKo": "DS-10 대형 표적 사냥꾼"
+    },
+    "ar-rs-6-fiend-destroyer": {
+      "nameKo": "RS-6 악의 파괴자"
+    },
+    "ar-rs-100-sanctioner": {
+      "nameKo": "RS-100 제재 집행자"
+    },
+    "ar-cpr-80-bulwark": {
+      "nameKo": "CPR-80 방벽"
+    },
+    "ar-o-44-bonded-pilot": {
+      "nameKo": "O-44 조종사와의 유대감"
+    },
+    "pw-ar-23-liberator": {
+      "nameKo": "AR-23 리버레이터",
+      "weaponType": "돌격소총"
+    },
+    "sw-p-2-peacemaker": {
+      "nameKo": "P-2 피스메이커",
+      "weaponType": "보조-권총"
+    },
+    "th-g-12-high-explosive": {
+      "nameKo": "G-12 고폭",
+      "weaponType": "수류탄"
+    },
+    "pw-r-2124-constitution": {
+      "nameKo": "R-2124 콘스티튜션",
+      "weaponType": "지정사수소총"
+    },
+    "pw-mp-98-knight": {
+      "nameKo": "MP-98 나이트",
+      "weaponType": "기관단총"
+    },
+    "pw-sg-8-punisher": {
+      "nameKo": "SG-8 퍼니셔",
+      "weaponType": "산탄총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 1
+    },
+    "th-g-6-frag": {
+      "nameKo": "G-6 세열",
+      "weaponType": "수류탄",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 1
+    },
+    "pw-r-63-diligence": {
+      "nameKo": "R-63 딜리전스",
+      "weaponType": "지정사수소총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 2
+    },
+    "sw-p-19-redeemer": {
+      "nameKo": "P-19 리디머",
+      "weaponType": "보조-권총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 2
+    },
+    "pw-smg-37-defender": {
+      "nameKo": "SMG-37 디펜더",
+      "weaponType": "기관단총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 3
+    },
+    "pw-sg-225-breaker": {
+      "nameKo": "SG-225 브레이커",
+      "weaponType": "산탄총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 4
+    },
+    "pw-las-5-scythe": {
+      "nameKo": "LAS-5 사이스",
+      "weaponType": "에너지",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 5
+    },
+    "th-g-16-impact": {
+      "nameKo": "G-16 충격",
+      "weaponType": "특수 수류탄",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 5
+    },
+    "pw-ar-23p-liberator-penetrator": {
+      "nameKo": "AR-23P 리버레이터 페네트레이터",
+      "weaponType": "돌격소총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 6
+    },
+    "pw-r-63cs-diligence-counter-sniper": {
+      "nameKo": "R-63CS 딜리전스 카운터 스나이퍼",
+      "weaponType": "지정사수소총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 7
+    },
+    "pw-sg-8s-slugger": {
+      "nameKo": "SG-8S 슬러거",
+      "weaponType": "산탄총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 8
+    },
+    "th-g-3-smoke": {
+      "nameKo": "G-3 연막",
+      "weaponType": "특수 수류탄",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 8
+    },
+    "pw-sg-225sp-breaker-spray-pray": {
+      "nameKo": "SG-225SP 브레이커 S&P",
+      "weaponType": "산탄총",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 9
+    },
+    "pw-plas-1-scorcher": {
+      "nameKo": "PLAS-1 스코처",
+      "weaponType": "에너지",
+      "warbondId": "helldivers-mobilize-warbond",
+      "warbondPage": 10
+    },
+    "pw-ar-23c-liberator-concussive": {
+      "nameKo": "AR-23C 리버레이터 컨커시브",
+      "weaponType": "돌격소총",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-p-4-senator": {
+      "nameKo": "P-4 세너터",
+      "weaponType": "보조-권총",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-sg-225ie-breaker-incendiary": {
+      "nameKo": "SG-225IE 브레이커 인센디어리",
+      "weaponType": "산탄총",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-g-10-incendiary": {
+      "nameKo": "G-10 소이",
+      "weaponType": "수류탄",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 2
+    },
+    "pw-jar-5-dominator": {
+      "nameKo": "JAR-5 도미네이터",
+      "weaponType": "특수",
+      "warbondId": "steeled-veterans-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-las-16-sickle": {
+      "nameKo": "LAS-16 시클",
+      "weaponType": "에너지",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-sg-8p-punisher-plasma": {
+      "nameKo": "SG-8P 퍼니셔 플라즈마",
+      "weaponType": "에너지",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-g-23-stun": {
+      "nameKo": "G-23 기절",
+      "weaponType": "특수 수류탄",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 2
+    },
+    "pw-arc-12-blitzer": {
+      "nameKo": "ARC-12 블리처",
+      "weaponType": "에너지",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 3
+    },
+    "sw-las-7-dagger": {
+      "nameKo": "LAS-7 대거",
+      "weaponType": "보조-특수",
+      "warbondId": "cutting-edge-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-br-14-adjudicator": {
+      "nameKo": "BR-14 어드주디케이터",
+      "weaponType": "돌격소총",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 1
+    },
+    "th-g-123-thermite": {
+      "nameKo": "G-123 테르밋",
+      "weaponType": "특수 수류탄",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-r-36-eruptor": {
+      "nameKo": "R-36 이럽터",
+      "weaponType": "폭발",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 2
+    },
+    "pw-cb-9-exploding-crossbow": {
+      "nameKo": "CB-9 익스플로딩 크로스보우",
+      "weaponType": "폭발",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 3
+    },
+    "sw-gp-31-grenade-pistol": {
+      "nameKo": "GP-31 유탄 권총",
+      "weaponType": "보조-특수",
+      "warbondId": "democratic-detonation-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-ar-61-tenderizer": {
+      "nameKo": "AR-61 텐더라이저",
+      "weaponType": "돌격소총",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-smg-72-pummeler": {
+      "nameKo": "SMG-72 퍼멜러",
+      "weaponType": "기관단총",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-g-13-incendiary-impact": {
+      "nameKo": "G-13 소이 충격",
+      "weaponType": "특수 수류탄",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 2
+    },
+    "pw-plas-101-purifier": {
+      "nameKo": "PLAS-101 퓨리파이어",
+      "weaponType": "에너지",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 3
+    },
+    "sw-p-113-verdict": {
+      "nameKo": "P-113 버딕트",
+      "weaponType": "보조-권총",
+      "warbondId": "polar-patriots-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-ar-23a-liberator-carbine": {
+      "nameKo": "AR-23A 리버레이터 카빈",
+      "weaponType": "돌격소총",
+      "warbondId": "viper-commandos-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-sg-22-bushwhacker": {
+      "nameKo": "SG-22 부시웨커",
+      "weaponType": "보조-특수",
+      "warbondId": "viper-commandos-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-k-2-throwing-knife": {
+      "nameKo": "K-2 투척 나이프",
+      "weaponType": "특수 수류탄",
+      "warbondId": "viper-commandos-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-sg-451-cookout": {
+      "nameKo": "SG-451 쿡아웃",
+      "weaponType": "산탄총",
+      "warbondId": "freedom-s-flame-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-flam-66-torcher": {
+      "nameKo": "FLAM-66 토처",
+      "weaponType": "특수",
+      "warbondId": "freedom-s-flame-premium-warbond",
+      "warbondPage": 2
+    },
+    "sw-p-72-crisper": {
+      "nameKo": "P-72 크리스퍼",
+      "weaponType": "보조-특수",
+      "warbondId": "freedom-s-flame-premium-warbond",
+      "warbondPage": 3
+    },
+    "th-g-4-gas": {
+      "nameKo": "G-4 가스",
+      "weaponType": "특수 수류탄",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-p-11-stim-pistol": {
+      "nameKo": "P-11 각성제 권총",
+      "weaponType": "보조-특수",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-sg-20-halt": {
+      "nameKo": "SG-20 홀트",
+      "weaponType": "산탄총",
+      "warbondId": "truth-enforcers-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-smg-32-reprimand": {
+      "nameKo": "SMG-32 레프리맨드",
+      "weaponType": "기관단총",
+      "warbondId": "truth-enforcers-premium-warbond",
+      "warbondPage": 2
+    },
+    "sw-plas-15-loyalist": {
+      "nameKo": "PLAS-15 로열리스트",
+      "weaponType": "보조-특수",
+      "warbondId": "truth-enforcers-premium-warbond",
+      "warbondPage": 3
+    },
+    "sw-cqc-19-stun-lance": {
+      "nameKo": "CQC-19 기절 창",
+      "weaponType": "보조-근접",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-las-17-double-edge-sickle": {
+      "nameKo": "LAS-17 더블 엣지 시클",
+      "weaponType": "에너지",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-gp-20-ultimatum": {
+      "nameKo": "GP-20 얼티메이텀",
+      "weaponType": "보조-특수",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-g-50-seeker": {
+      "nameKo": "G-50 시커",
+      "weaponType": "특수 수류탄",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-r-6-deadeye": {
+      "nameKo": "R-6 데드아이",
+      "weaponType": "지정사수소총",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-las-58-talon": {
+      "nameKo": "LAS-58 탈론",
+      "weaponType": "보조-특수",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-ted-63-dynamite": {
+      "nameKo": "TED-63 다이너마이트",
+      "weaponType": "수류탄",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-r-2-amendment": {
+      "nameKo": "R-2 어멘드멘트",
+      "weaponType": "지정사수소총",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-cqc-2-saber": {
+      "nameKo": "CQC-2 세이버",
+      "weaponType": "보조-근접",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-g-142-pyrotech": {
+      "nameKo": "G-142 파이로테크",
+      "weaponType": "특수 수류탄",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-ar-32-pacifier": {
+      "nameKo": "AR-32 퍼시파이어",
+      "weaponType": "돌격소총",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 1
+    },
+    "th-g-109-urchin": {
+      "nameKo": "G-109 어친",
+      "weaponType": "특수 수류탄",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-vg-70-variable": {
+      "nameKo": "VG-70 배리어블",
+      "weaponType": "특수",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 1
+    },
+    "th-g-31-arc": {
+      "nameKo": "G-31 아크",
+      "weaponType": "특수 수류탄",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-ma5c-assault-rifle": {
+      "nameKo": "MA5C 어썰트 라이플",
+      "weaponType": "돌격소총",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 1
+    },
+    "pw-m7s-smg": {
+      "nameKo": "M7S 기관단총",
+      "weaponType": "기관단총",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 2
+    },
+    "pw-m90a-shotgun": {
+      "nameKo": "M90A 샷건",
+      "weaponType": "산탄총",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 3
+    },
+    "sw-m6c-socom-pistol": {
+      "nameKo": "M6C/SOCOM 권총",
+      "weaponType": "보조-권총",
+      "warbondId": "obedient-democracy-support-troopers-legendary-warbond",
+      "warbondPage": 3
+    },
+    "pw-ar-2-coyote": {
+      "nameKo": "AR-2 코요테",
+      "weaponType": "돌격소총",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 1
+    },
+    "th-g-7-pineapple": {
+      "nameKo": "G-7 파인애플",
+      "weaponType": "수류탄",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-ar-gl-21-one-two": {
+      "nameKo": "AR/GL-21 원 투",
+      "weaponType": "돌격소총",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-sta-52-assault-rifle": {
+      "nameKo": "StA-52 돌격소총",
+      "weaponType": "돌격소총",
+      "warbondId": "righteous-revenants-legendary-warbond",
+      "warbondPage": 1
+    },
+    "pw-plas-39-accelerator-rifle": {
+      "nameKo": "PLAS-39 가속소총",
+      "weaponType": "에너지",
+      "warbondId": "righteous-revenants-legendary-warbond",
+      "warbondPage": 2
+    },
+    "pw-sta-11-smg": {
+      "nameKo": "StA-11 기관단총",
+      "weaponType": "기관단총",
+      "warbondId": "righteous-revenants-legendary-warbond",
+      "warbondPage": 3
+    },
+    "pw-r-72-censor": {
+      "nameKo": "R-72 센서",
+      "weaponType": "지정사수소총",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-p-35-re-educator": {
+      "nameKo": "P-35 리에듀케이터",
+      "weaponType": "보조-특수",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 1
+    },
+    "pw-ar-59-suppressor": {
+      "nameKo": "AR-59 서프레서",
+      "weaponType": "돌격소총",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 2
+    },
+    "th-tm-1-lure-mine": {
+      "nameKo": "TM-1 유인 지뢰",
+      "weaponType": "특수 수류탄",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-las-13-trident": {
+      "nameKo": "LAS-13 트라이던트",
+      "weaponType": "에너지",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 1
+    },
+    "th-g-sh-39-shield": {
+      "nameKo": "G/SH-39 방어막",
+      "weaponType": "특수 수류탄",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-smg-flam-34-stoker": {
+      "nameKo": "SMG/FLAM-34 스토커",
+      "weaponType": "기관단총",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-cqc-73-entrenchment-tool": {
+      "nameKo": "CQC-73 참호 도구",
+      "weaponType": "보조-근접"
+    },
+    "th-g-48-giga-grenade": {
+      "nameKo": "G-48 기가 수류탄",
+      "weaponType": "특수 수류탄",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 2
+    },
+    "sw-p-69-veto": {
+      "nameKo": "P-69 비토",
+      "weaponType": "보조-권총",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 3
+    },
+    "pw-smg-203-gallant": {
+      "nameKo": "SMG-203 갤런트",
+      "weaponType": "기관단총",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 1
+    },
+    "sw-p-33-missile-pistol": {
+      "nameKo": "P-33 미사일 권총",
+      "weaponType": "보조-특수",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 2
+    },
+    "pw-r-4-hyena": {
+      "nameKo": "R-4 하이에나",
+      "weaponType": "지정사수소총"
+    },
+    "pw-r-40-k-hot-shot-marksman-rifle": {
+      "nameKo": "R/40-K 핫 샷 마크맨 라이플",
+      "weaponType": "에너지",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 1
+    },
+    "sw-p-40-k-bolt-pistol": {
+      "nameKo": "P/40-K 볼트 피스톨",
+      "weaponType": "보조-특수",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 2
+    },
+    "th-g-40-k-melta-mine": {
+      "nameKo": "G/40-K 멜타마인",
+      "weaponType": "특수 수류탄",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 2
+    },
+    "sw-cqc-30-stun-baton": {
+      "nameKo": "CQC-30 기절 제압봉",
+      "weaponType": "보조-근접"
+    },
+    "sw-cqc-5-combat-hatchet": {
+      "nameKo": "CQC-5 컴뱃 해칫",
+      "weaponType": "보조-근접"
+    },
+    "sw-p-92-warrant": {
+      "nameKo": "P-92 워런트",
+      "weaponType": "보조-권총"
+    },
+    "sw-cqc-42-machete": {
+      "nameKo": "CQC-42 마체테",
+      "weaponType": "보조-근접"
+    },
+    "pw-dbs-2-double-freedom": {
+      "nameKo": "DBS-2 더블 프리덤",
+      "weaponType": "산탄총"
+    },
+    "th-g-89-smokescreen": {
+      "nameKo": "G-89 충격 연막",
+      "weaponType": "특수 수류탄"
+    },
+    "pw-sg-97-sweeper": {
+      "nameKo": "SG-97 스위퍼",
+      "weaponType": "산탄총"
+    },
+    "st-orbital-precision-strike": {
+      "nameKo": "궤도 정밀 타격"
+    },
+    "st-orbital-gatling-barrage": {
+      "nameKo": "궤도 개틀링 폭격"
+    },
+    "st-orbital-gas-strike": {
+      "nameKo": "궤도 가스 타격"
+    },
+    "st-orbital-120mm-he-barrage": {
+      "nameKo": "궤도 120mm 고폭 폭격"
+    },
+    "st-orbital-airburst-strike": {
+      "nameKo": "궤도 공중폭발 타격"
+    },
+    "st-orbital-ems-strike": {
+      "nameKo": "궤도 EMS 타격"
+    },
+    "st-orbital-smoke-strike": {
+      "nameKo": "궤도 연막 타격"
+    },
+    "st-orbital-380mm-he-barrage": {
+      "nameKo": "궤도 380mm 고폭 폭격"
+    },
+    "st-orbital-walking-barrage": {
+      "nameKo": "궤도 이동 폭격"
+    },
+    "st-orbital-laser": {
+      "nameKo": "궤도 레이저"
+    },
+    "st-orbital-napalm-barrage": {
+      "nameKo": "궤도 네이팜 폭격"
+    },
+    "st-orbital-railcannon-strike": {
+      "nameKo": "궤도 레일캐넌 타격"
+    },
+    "st-eagle-strafing-run": {
+      "nameKo": "이글 기총소사"
+    },
+    "st-eagle-airstrike": {
+      "nameKo": "이글 공중타격"
+    },
+    "st-eagle-cluster-bomb": {
+      "nameKo": "이글 집속탄"
+    },
+    "st-eagle-napalm-airstrike": {
+      "nameKo": "이글 네이팜 공중타격"
+    },
+    "st-eagle-smoke-strike": {
+      "nameKo": "이글 연막 타격"
+    },
+    "st-eagle-110mm-rocket-pods": {
+      "nameKo": "이글 110mm 로켓 포드"
+    },
+    "st-eagle-500kg-bomb": {
+      "nameKo": "이글 500kg 폭탄"
+    },
+    "st-eagle-gas-airstrike": {
+      "nameKo": "이글 가스 공중타격"
+    },
+    "st-mg-43-machine-gun": {
+      "nameKo": "MG-43 기관총"
+    },
+    "st-m-105-stalwart": {
+      "nameKo": "M-105 스털워트"
+    },
+    "st-apw-1-anti-materiel-rifle": {
+      "nameKo": "APW-1 대물소총"
+    },
+    "st-eat-17-expendable-anti-tank": {
+      "nameKo": "EAT-17 일회성 대전차"
+    },
+    "st-las-98-laser-cannon": {
+      "nameKo": "LAS-98 레이저 캐넌"
+    },
+    "st-gr-8-recoilless-rifle": {
+      "nameKo": "GR-8 무반동포"
+    },
+    "st-gl-21-grenade-launcher": {
+      "nameKo": "GL-21 유탄 발사기"
+    },
+    "st-flam-40-flamethrower": {
+      "nameKo": "FLAM-40 화염방사기"
+    },
+    "st-ac-8-autocannon": {
+      "nameKo": "AC-8 오토캐넌"
+    },
+    "st-mg-206-heavy-machine-gun": {
+      "nameKo": "MG-206 중기관총"
+    },
+    "st-arc-3-arc-thrower": {
+      "nameKo": "ARC-3 아크 발사기"
+    },
+    "st-rl-77-airburst-rocket-launcher": {
+      "nameKo": "RL-77 공중폭발 로켓 발사기"
+    },
+    "st-mls-4x-commando": {
+      "nameKo": "MLS-4X 코만도"
+    },
+    "st-las-99-quasar-cannon": {
+      "nameKo": "LAS-99 퀘이사 캐넌"
+    },
+    "st-faf-14-spear": {
+      "nameKo": "FAF-14 스피어"
+    },
+    "st-rs-422-railgun": {
+      "nameKo": "RS-422 레일건"
+    },
+    "st-sta-x3-w-a-s-p-launcher": {
+      "nameKo": "StA-X3 W.A.S.P. 발사기"
+    },
+    "st-tx-41-sterilizer": {
+      "nameKo": "TX-41 스터릴라이저",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-cqc-1-one-true-flag": {
+      "nameKo": "CQC-1 원 트루 플래그",
+      "warbondId": "masters-of-ceremony-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-gl-52-de-escalator": {
+      "nameKo": "GL-52 디에스컬레이터",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-plas-45-epoch": {
+      "nameKo": "PLAS-45 에포크",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 1
+    },
+    "st-s-11-speargun": {
+      "nameKo": "S-11 작살총",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-eat-700-expendable-napalm": {
+      "nameKo": "EAT-700 일회성 네이팜",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-ms-11-solo-silo": {
+      "nameKo": "MS-11 솔로 사일로",
+      "warbondId": "dust-devils-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-cqc-9-defoliation-tool": {
+      "nameKo": "CQC-9 고엽도구",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-m-1000-maxigun": {
+      "nameKo": "M-1000 맥시건",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-b-md-c4-pack": {
+      "nameKo": "B/MD C4 팩",
+      "warbondId": "redacted-regiment-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-cqc-20-breaching-hammer": {
+      "nameKo": "CQC-20 벽 폭파 망치",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 1
+    },
+    "st-eat-411-leveller": {
+      "nameKo": "EAT-411 평탄화기",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-gl-28-belt-fed-grenade-launcher": {
+      "nameKo": "GL-28 벨트식 유탄 발사기",
+      "warbondId": "siege-breakers-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-b-flam-80-cremator": {
+      "nameKo": "B/FLAM-80 크리메이터",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-mgx-42-bullet-storm": {
+      "nameKo": "MGX-42 불릿 스톰",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 1
+    },
+    "st-40-k-meltagun": {
+      "nameKo": "40-K 멜타건",
+      "warbondId": "castellan-s-creed-legendary-warbond",
+      "warbondPage": 3
+    },
+    "st-b-1-supply-pack": {
+      "nameKo": "B-01 보급 팩"
+    },
+    "st-lift-850-jump-pack": {
+      "nameKo": "LIFT-850 점프 팩"
+    },
+    "st-ax-ar-23-guard-dog": {
+      "nameKo": "AX/AR-23 '가드독'"
+    },
+    "st-ax-las-5-rover": {
+      "nameKo": "AX/LAS-5 '가드독' 로버"
+    },
+    "st-sh-20-ballistic-shield-backpack": {
+      "nameKo": "SH-20 탄도 방패 배낭"
+    },
+    "st-sh-32-shield-generator-pack": {
+      "nameKo": "SH-32 방어막 생성 팩"
+    },
+    "st-ax-tx-13-dog-breath": {
+      "nameKo": "AX/TX-13 '가드독' 독 브레스",
+      "warbondId": "chemical-agents-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-sh-51-directional-shield": {
+      "nameKo": "SH-51 방향 방패",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 1
+    },
+    "st-b-100-portable-hellbomb": {
+      "nameKo": "B-100 휴대용 지옥폭탄",
+      "warbondId": "servants-of-freedom-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-lift-860-hover-pack": {
+      "nameKo": "LIFT-860 호버 팩",
+      "warbondId": "borderline-justice-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-ax-arc-3-k-9": {
+      "nameKo": "AX/ARC-3 '가드독' K-9",
+      "warbondId": "force-of-law-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-lift-182-warp-pack": {
+      "nameKo": "LIFT-182 워프 팩",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-ax-flam-75-hot-dog": {
+      "nameKo": "AX/FLAM-75 '가드독' 핫 도그",
+      "warbondId": "python-commandos-premium-warbond",
+      "warbondPage": 1
+    },
+    "st-td-220-bastion-mk-xvi": {
+      "nameKo": "TD-220 바스티온 Mk.XVI"
+    },
+    "st-exo-45-patriot-exosuit": {
+      "nameKo": "EXO-45 애국자 엑소슈트"
+    },
+    "st-exo-49-emancipator-exosuit": {
+      "nameKo": "EXO-49 해방자 엑소슈트"
+    },
+    "st-m-102-gunner-frv": {
+      "nameKo": "M-102 사수 FRV"
+    },
+    "st-exo-51-lumberer-exosuit": {
+      "nameKo": "EXO-51 벌목꾼 엑소슈트",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-exo-55-breakthrough-exosuit": {
+      "nameKo": "EXO-55 돌파구 엑소슈트",
+      "warbondId": "exo-experts-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-m-103-supply-frv": {
+      "nameKo": "M-103 보급 FRV"
+    },
+    "st-a-mg-43-machine-gun-sentry": {
+      "nameKo": "A/MG-43 기관총 센트리"
+    },
+    "st-a-g-16-gatling-sentry": {
+      "nameKo": "A/G-16 개틀링 센트리"
+    },
+    "st-a-m-12-mortar-sentry": {
+      "nameKo": "A/M-12 박격포 센트리"
+    },
+    "st-a-ac-8-autocannon-sentry": {
+      "nameKo": "A/AC-8 오토캐넌 센트리"
+    },
+    "st-a-mls-4x-rocket-sentry": {
+      "nameKo": "A/MLS-4X 로켓 센트리"
+    },
+    "st-a-m-23-ems-mortar-sentry": {
+      "nameKo": "A/M-23 EMS 박격포 센트리"
+    },
+    "st-a-flam-40-flame-sentry": {
+      "nameKo": "A/FLAM-40 화염 센트리",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-a-las-98-laser-sentry": {
+      "nameKo": "A/LAS-98 레이저 센트리",
+      "warbondId": "control-group-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-a-gm-17-gas-mortar-sentry": {
+      "nameKo": "A/GM-17 가스 박격포 센트리",
+      "warbondId": "entrenched-division-premium-warbond",
+      "warbondPage": 2
+    },
+    "st-e-mg-101-hmg-emplacement": {
+      "nameKo": "E/MG-101 중기관총 거치포"
+    },
+    "st-e-gl-21-grenadier-battlement": {
+      "nameKo": "E/GL-21 척탄 흉벽"
+    },
+    "st-e-at-12-anti-tank-emplacement": {
+      "nameKo": "E/AT-12 대전차 거치포",
+      "warbondId": "urban-legends-premium-warbond",
+      "warbondPage": 3
+    },
+    "st-md-6-anti-personnel-minefield": {
+      "nameKo": "MD-6 대인 지뢰 매설 지역"
+    },
+    "st-md-i4-incendiary-mines": {
+      "nameKo": "MD-I4 소이 지뢰"
+    },
+    "st-fx-12-shield-generator-relay": {
+      "nameKo": "FX-12 방어막 생성 릴레이"
+    },
+    "st-md-17-anti-tank-mines": {
+      "nameKo": "MD-17 대전차 지뢰"
+    },
+    "st-a-arc-3-tesla-tower": {
+      "nameKo": "A/ARC-3 테슬라 탑"
+    },
+    "st-md-8-gas-mines": {
+      "nameKo": "MD-8 가스 지뢰"
+    },
+    "ar-b-22-model-citizen": {
+      "nameKo": "B-22 모범 시민"
+    },
+    "ar-dp-00-tactical": {
+      "nameKo": "DP-00 전술"
+    },
+    "ar-dp-53-savior-of-the-free": {
+      "nameKo": "DP-53 자유의 구원자"
+    },
+    "ar-tr-117-alpha-commander": {
+      "nameKo": "TR-117 우수 사령관"
+    },
+    "ar-tr-40-gold-eagle": {
+      "nameKo": "TR-40 황금 독수리"
+    },
+    "ar-tr-62-knight": {
+      "nameKo": "TR-62 기사"
+    },
+    "ar-tr-7-ambassador-of-the-brand": {
+      "nameKo": "TR-7 브랜드 앰버서더"
+    },
+    "ar-tr-9-cavalier-of-democracy": {
+      "nameKo": "TR-9 민주주의의 기병"
+    },
+    "st-m-104-incinerator-frv": {
+      "nameKo": "M-104 소각 FRV"
+    }
+  },
+  "passives": {
+    "Extra Padding": "추가 완충제",
+    "Scout": "정찰",
+    "Fortified": "강화",
+    "Engineering Kit": "공병 키트",
+    "Med-Kit": "구급 키트",
+    "Democracy Protects": "민주주의의 가호",
+    "Servo-Assisted": "서보 보조",
+    "Electrical Conduit": "전도성",
+    "Peak Physique": "이상적인 체형",
+    "Inflammable": "인화성 물질",
+    "Advanced Filtration": "고급 여과",
+    "Unflinching": "결연함",
+    "Siege-Ready": "포위 준비 완료",
+    "Integrated Explosives": "통합 폭발물",
+    "Gunslinger": "총잡이",
+    "Ballistic Padding": "탄도 완충제",
+    "Reinforced Epaulettes": "강화된 견장",
+    "Adreno-Defibrillator": "아드레노-제세동기",
+    "Feet First": "발 먼저",
+    "Desert Stormer": "사막 돌격대",
+    "Rock Solid": "굳건한 바위",
+    "Acclimated": "적응력",
+    "Reduced Signature": "신호 감소",
+    "Supplementary Adrenaline": "보급 아드레날린",
+    "Concussive Padding, Grenadier": "충격 방지 패드, 척탄병",
+    "Concussive Padding, Hazmat": "충격 방지 패드, 위험물",
+    "Oxygenator": "산소공급기",
+    "Kinetic Displacement Mitigation": "운동 에너지 변위 완화",
+    "True Grit": "진정한 위용",
+    "Concussive Padding, Reinforced": "충격 방지 패드, 강화 버전"
+  },
+  "warbonds": {
+    "helldivers-mobilize-warbond": "헬다이버 출동!",
+    "steeled-veterans-premium-warbond": "결연한 베테랑",
+    "cutting-edge-premium-warbond": "최첨단",
+    "democratic-detonation-premium-warbond": "민주적 폭파",
+    "polar-patriots-premium-warbond": "극지의 애국자",
+    "viper-commandos-premium-warbond": "독사 특공대",
+    "freedom-s-flame-premium-warbond": "자유의 불꽃",
+    "chemical-agents-premium-warbond": "화학 요원",
+    "truth-enforcers-premium-warbond": "진리의 집행자",
+    "urban-legends-premium-warbond": "도시 전설",
+    "servants-of-freedom-premium-warbond": "자유의 종복",
+    "borderline-justice-premium-warbond": "정의의 경계선",
+    "force-of-law-premium-warbond": "법의 위력",
+    "masters-of-ceremony-premium-warbond": "의장의 달인",
+    "control-group-premium-warbond": "대조군",
+    "obedient-democracy-support-troopers-legendary-warbond": "민주적 궤도 강하 타격대",
+    "dust-devils-premium-warbond": "먼지 폭풍",
+    "python-commandos-premium-warbond": "금사 특공대",
+    "righteous-revenants-legendary-warbond": "정의로운 망령",
+    "redacted-regiment-premium-warbond": "존재하지 않는 부대",
+    "siege-breakers-premium-warbond": "공성 파괴자",
+    "entrenched-division-premium-warbond": "견고한 참호 사단",
+    "exo-experts-premium-warbond": "외계 전문가",
+    "castellan-s-creed-legendary-warbond": "카스텔란의 신조"
+  }
+}

@@ -1,0 +1,71 @@
+.stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  --c: var(--warn);
+  --cf: var(--warn-fg);
+}
+.hold {
+  --c: var(--warn);
+  --cf: var(--warn-fg);
+}
+.treason {
+  --c: var(--danger);
+  --cf: var(--danger-fg);
+}
+.approved {
+  --c: var(--ok);
+  --cf: var(--ok-fg);
+}
+/* console: 회전 도장 */
+.console {
+  font: 800 12px/1 var(--font-display);
+  letter-spacing: 0.06em;
+  padding: 4px 7px;
+  border: 2px solid var(--c);
+  color: var(--cf);
+  transform: rotate(-6deg);
+  border-radius: 2px;
+}
+
+/* teletype: LED + 텍스트 */
+.teletype {
+  font: 800 18px/1 var(--font-display);
+  letter-spacing: 0.08em;
+  color: var(--cf);
+}
+.led {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 10px var(--c);
+  animation: blink 1s steps(1) infinite;
+}
+.approved .led {
+  animation: none;
+}
+
+/* 저장 직후 도장을 쾅 찍는 움직임 */
+.slam {
+  animation: slam 0.35s cubic-bezier(0.2, 1.4, 0.4, 1);
+}
+@keyframes slam {
+  0% {
+    transform: scale(1.8) rotate(-20deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.95) rotate(-6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-6deg);
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

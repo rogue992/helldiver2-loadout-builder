@@ -1,0 +1,17 @@
+{
+  "version": "01.007.001",
+  "builtAt": "2026-09-13T23:53:26.032Z",
+  "fetchedAt": "2026-09-13T12:43:47.760Z",
+  "counts": {
+    "primary": 52,
+    "secondary": 24,
+    "throwable": 21,
+    "armor": 107,
+    "stratagem": 92
+  },
+  "missingKo": [],
+  "unknownSource": [
+    "sw-cqc-73-entrenchment-tool",
+    "st-m-104-incinerator-frv"
+  ]
+}

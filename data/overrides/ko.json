@@ -1328,6 +1328,42 @@
     },
     "st-m-104-incinerator-frv": {
       "nameKo": "M-104 소각 FRV"
+    },
+    "pw-ar-11-arbitrator": {
+      "nameKo": "AR-11 아비트레이터",
+      "weaponType": "돌격소총"
+    },
+    "pw-gl-15-evictor": {
+      "nameKo": "GL-15 이빅터",
+      "weaponType": "폭발"
+    },
+    "pw-las-12-sai": {
+      "nameKo": "LAS-12 사이",
+      "weaponType": "에너지"
+    },
+    "sw-p-34-breacher": {
+      "nameKo": "P-34 브리처",
+      "weaponType": "보조-특수"
+    },
+    "th-g-60-anti-tank-seeker": {
+      "nameKo": "G-60 대전차 드론",
+      "weaponType": "특수 수류탄"
+    },
+    "th-g-8-immolation": {
+      "nameKo": "G-8 번제",
+      "weaponType": "특수 수류탄"
+    },
+    "ar-bfm-16-tanker": {
+      "nameKo": "BFM-16 탱커"
+    },
+    "ar-bfm-220-ironclad": {
+      "nameKo": "BFM-220 철벽"
+    },
+    "ar-bfm-77-reformer": {
+      "nameKo": "BFM-77 리포머"
+    },
+    "st-td-110-maelstrom": {
+      "nameKo": "TD-110 마엘스트롬"
     }
   },
   "passives": {
@@ -1354,13 +1390,14 @@
     "Rock Solid": "굳건한 바위",
     "Acclimated": "적응력",
     "Reduced Signature": "신호 감소",
-    "Supplementary Adrenaline": "보급 아드레날린",
+    "Supplemental Adrenaline": "보급 아드레날린",
     "Concussive Padding, Grenadier": "충격 방지 패드, 척탄병",
     "Concussive Padding, Hazmat": "충격 방지 패드, 위험물",
     "Oxygenator": "산소공급기",
     "Kinetic Displacement Mitigation": "운동 에너지 변위 완화",
     "True Grit": "진정한 위용",
-    "Concussive Padding, Reinforced": "충격 방지 패드, 강화 버전"
+    "Concussive Padding, Reinforced": "충격 방지 패드, 강화 버전",
+    "Blunt-Force Mitigation": "둔기 충격 완화"
   },
   "warbonds": {
     "helldivers-mobilize-warbond": "헬다이버 출동!",
@@ -1386,6 +1423,7 @@
     "siege-breakers-premium-warbond": "공성 파괴자",
     "entrenched-division-premium-warbond": "견고한 참호 사단",
     "exo-experts-premium-warbond": "외계 전문가",
-    "castellan-s-creed-legendary-warbond": "카스텔란의 신조"
+    "castellan-s-creed-legendary-warbond": "카스텔란의 신조",
+    "ironclad-democracy-premium-warbond": "철갑의 민주주의"
   }
 }

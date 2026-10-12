@@ -3,6 +3,10 @@ import type { ThemeId } from '../store/types'
 import { copy, slogans, SLOGAN_EXEMPLARY } from '../copy/ko'
 import styles from './Broadcast.module.css'
 
+// 줄무늬 띠가 흐르는 속도를 문구 양과 무관하게 맞춘다: 한 벌이 지나가는 시간을 글자 수(문구 사이 간격 몫 포함)에 비례시킨다
+const RUN_SEC_PER_CHAR = 0.24
+const GAP_CHARS = 5
+
 interface Props {
   theme: ThemeId
   /** 승인 도장 상태면 "모범 헬다이버" 문구를 섞는다 */
@@ -18,6 +22,7 @@ export default function Broadcast({ theme, exemplary = false }: Props) {
 
   // 승인 상태가 바뀌면 문구 줄 수가 달라진다. 번호는 늘 줄 수로 나눈 나머지로 읽는다
   const line = lines[i % lines.length]
+  const runSec = useMemo(() => lines.reduce((n, s) => n + s.length + GAP_CHARS, 0) * RUN_SEC_PER_CHAR, [lines])
 
   useEffect(() => {
     if (theme === 'console') return
@@ -64,7 +69,7 @@ export default function Broadcast({ theme, exemplary = false }: Props) {
       </span>
       <div className={styles.runWrap}>
         {/* 같은 문구 묶음을 두 번 이어 붙이고 절반만큼 이동시켜, 끝나고 비는 구간 없이 계속 이어진다 */}
-        <div className={[styles.run, reduce && styles.runStill].filter(Boolean).join(' ')}>
+        <div className={[styles.run, reduce && styles.runStill].filter(Boolean).join(' ')} style={{ '--run-s': `${runSec}s` } as React.CSSProperties}>
           {[0, 1].map((copyIdx) =>
             lines.map((s, k) => (
               <span key={`${copyIdx}-${k}`} aria-hidden={copyIdx === 1 || undefined}>

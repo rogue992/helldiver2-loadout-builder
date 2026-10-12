@@ -33,12 +33,13 @@
   position: relative;
 }
 /* 문구 묶음 2벌이 한 줄로 이어져 있고, 한 벌 폭(-50%)만큼 흘러간 뒤 처음으로 돌아오므로 끊김이 없다.
-   여백은 padding이 아니라 left로 준다: padding은 요소 폭에 섞여 -50% 이동 거리가 한 벌 폭과 어긋난다 */
+   여백은 padding이 아니라 left로 준다: padding은 요소 폭에 섞여 -50% 이동 거리가 한 벌 폭과 어긋난다.
+   한 바퀴 시간(--run-s)은 문구 양에 맞춰 Broadcast가 정한다 */
 .run {
   position: absolute;
   left: 12px;
   white-space: nowrap;
-  animation: run 160s linear infinite;
+  animation: run var(--run-s, 160s) linear infinite;
   color: var(--yellow);
   font: 700 12.5px/18px var(--font-display);
   letter-spacing: 0.06em;

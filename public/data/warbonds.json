@@ -190,5 +190,13 @@
     "order": 23,
     "releaseDate": "2026-08-12",
     "type": "legendary"
+  },
+  {
+    "id": "ironclad-democracy-premium-warbond",
+    "nameKo": "철갑의 민주주의",
+    "nameEn": "Ironclad Democracy",
+    "order": 24,
+    "releaseDate": "2026-09-22",
+    "type": "premium"
   }
 ]

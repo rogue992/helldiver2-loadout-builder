@@ -13,7 +13,8 @@
   --race-automaton: #e0402f;
   --race-illuminate: #8b5cf6;
   --race-all: #ffe14d;
-  /* 겹침 순서: 브리핑 < 선택 창 · 크레딧 < 확인창 · 가져오기 < 토스트 */
+  /* 겹침 순서: 버전 표시 < 브리핑 < 선택 창 · 크레딧 < 확인창 · 가져오기 < 토스트 */
+  --z-tag: 40;
   --z-briefing: 70;
   --z-modal: 80;
   --z-dialog: 85;

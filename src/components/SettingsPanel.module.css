@@ -120,6 +120,10 @@
   text-decoration: line-through;
   font-weight: 400;
 }
+.chipNew {
+  margin-left: 6px;
+  vertical-align: 1px;
+}
 .actions {
   grid-column: 1 / -1;
   display: flex;

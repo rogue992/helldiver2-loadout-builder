@@ -261,6 +261,17 @@
   background: var(--acc-soft);
   font-weight: 600;
 }
+/* 새로 들어온 항목이 든 탭: 라벨 뒤 작은 노란 점 */
+.tabNew {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 6px;
+  vertical-align: 2px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--yellow) 22%, transparent);
+}
 .body {
   flex: 1;
   min-height: 0;
@@ -348,6 +359,13 @@
 .cardTagCurrent {
   border-color: var(--yellow);
   color: var(--yellow);
+}
+/* NEW 알약: 카드 왼쪽 위(오른쪽 위는 미보유 · 현재 태그 자리) */
+.cardNew {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
 }
 .cardName {
   font: 600 13px/1.25 var(--font-display);

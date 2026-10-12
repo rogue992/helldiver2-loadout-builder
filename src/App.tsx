@@ -18,6 +18,7 @@ import Permit from './components/Permit'
 import BriefingView from './components/BriefingView'
 import ReeducationDialog from './components/ReeducationDialog'
 import Credits from './components/Credits'
+import VersionTag from './components/VersionTag'
 import { ToastProvider, useToast } from './components/Toast'
 import { useModal } from './components/useModal'
 import styles from './App.module.css'
@@ -235,6 +236,7 @@ function Shell() {
           <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} onSave={onSave} onDuplicate={onDuplicate} onExportImage={onExportImage} onBriefing={onBriefing} onDelete={onDelete} />
         </div>
       </div>
+      <VersionTag />
       {credits && <Credits onClose={() => setCredits(false)} />}
       {briefing && <BriefingView loadout={briefing} onClose={() => (location.hash = '')} />}
       {pending && (

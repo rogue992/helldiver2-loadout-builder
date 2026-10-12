@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-09-13T12:43:47.760Z",
+ "fetchedAt": "2026-10-12T05:54:41.778Z",
  "tables": {
   "Stratagems": [
    {
@@ -9,7 +9,7 @@
     "permit_type": "Supply",
     "traits": "Support Weapon &nbsp;&bull;&nbsp; Chargeup &nbsp;&bull;&nbsp; Anti-Tank",
     "base_cooldown": "480s",
-    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]"
+    "source": "[[Castellan’s Creed Legendary Warbond#Page_3|Castellan’s Creed]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
    },
    {
     "_pageName": "A/AC-8 Autocannon Sentry",
@@ -521,7 +521,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "119s",
     "source": ""
    },
    {
@@ -791,7 +791,7 @@
     "stratagem_type": "Orbital",
     "permit_type": "Offensive",
     "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Anti-Tank",
-    "base_cooldown": "90s",
+    "base_cooldown": "80s",
     "source": "Bridge"
    },
    {
@@ -836,7 +836,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "N/A",
     "source": ""
    },
    {
@@ -917,7 +917,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "14s",
     "source": ""
    },
    {
@@ -926,7 +926,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "N/A",
     "source": ""
    },
    {
@@ -998,7 +998,16 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "8s",
+    "source": ""
+   },
+   {
+    "_pageName": "SSSD Delivery",
+    "image": "Upload Data Stratagem Icon Background.svg",
+    "stratagem_type": "Objective",
+    "permit_type": "",
+    "traits": "",
+    "base_cooldown": "8s",
     "source": ""
    },
    {
@@ -1016,17 +1025,26 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "N/A",
     "source": ""
    },
    {
     "_pageName": "Tactical Video Camera",
-    "image": "placeholder.png",
+    "image": "Tactical Video Camera Stratagem Icon Background.svg",
     "stratagem_type": "Objective",
     "permit_type": "Supply",
     "traits": "Hellpod",
-    "base_cooldown": "0s",
+    "base_cooldown": "N/A",
     "source": ""
+   },
+   {
+    "_pageName": "TD-110 Maelstrom",
+    "image": "Maelstrom Stratagem Icon Background.svg",
+    "stratagem_type": "Vehicle",
+    "permit_type": "Supply",
+    "traits": "Vehicle &nbsp;&bull;&nbsp; Heavy Armor Penetrating &nbsp;&bull;&nbsp; Anti-Tank",
+    "base_cooldown": "780s",
+    "source": "[[Campaigns#Armored Eagle|Armored Eagle]]"
    },
    {
     "_pageName": "TD-220 Bastion MK XVI",
@@ -1061,7 +1079,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "0s",
+    "base_cooldown": "N/A",
     "source": ""
    }
   ],
@@ -1071,7 +1089,7 @@
     "image": "40-K Meltagun Support Render.png",
     "weapon_category": "Support Weapons",
     "weapon_type": "Heavy Energy-Based",
-    "source": "[[Castellan’s Creed Legendary Warbond|Castellan’s Creed]]",
+    "source": "[[Castellan’s Creed Legendary Warbond#Page_3|Castellan’s Creed]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
    {
@@ -1089,6 +1107,14 @@
     "weapon_type": "Anti-Armor Precision",
     "source": "Patriotic Administration Center",
     "cost": ""
+   },
+   {
+    "_pageName": "AR-11 Arbitrator",
+    "image": "AR-11 Arbitrator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
    },
    {
     "_pageName": "AR-2 Coyote",
@@ -1459,12 +1485,28 @@
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 2</span> [[Medal]]s</span>"
    },
    {
+    "_pageName": "G-60 Anti-Tank Seeker",
+    "image": "G-60 Anti-Tank Seeker Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
     "_pageName": "G-7 Pineapple",
     "image": "G-7 Pineapple Throwable Render.png",
     "weapon_category": "Throwables",
     "weapon_type": "Standard",
     "source": "[[Dust Devils Premium Warbond#Page 3|Dust Devils]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-8 Immolation",
+    "image": "G-8 Immolation Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
    },
    {
     "_pageName": "G-89 Smokescreen",
@@ -1488,6 +1530,14 @@
     "weapon_category": "Throwables",
     "weapon_type": "Special",
     "source": "[[Siege Breakers Premium Warbond#Page 3|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "GL-15 Evictor",
+    "image": "GL-15 Evictor Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Explosives",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
    },
    {
@@ -1553,6 +1603,14 @@
     "weapon_type": "Special",
     "source": "[[Viper Commandos Premium Warbond#Page 3|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 60</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "LAS-12 Sai",
+    "image": "LAS-12 Sai Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Energy-Based",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 400</span> [[Super Credits]]</span>"
    },
    {
     "_pageName": "LAS-13 Trident",
@@ -1752,6 +1810,14 @@
     "weapon_category": "Secondary Weapons",
     "weapon_type": "Special",
     "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-34 Breacher",
+    "image": "P-34 Breacher Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Special",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 50</span> [[Medal]]s</span>"
    },
    {
@@ -2379,6 +2445,54 @@
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+   },
+   {
+    "_pageName": "BFM-16 Tanker",
+    "image": "BFM-16 Tanker Armor Render.png",
+    "type": "Light",
+    "passive": "Blunt-Force Mitigation",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "BFM-16 Tanker",
+    "image": "BFM-16 Tanker Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+   },
+   {
+    "_pageName": "BFM-220 Ironclad",
+    "image": "BFM-220 Ironclad Armor Render.png",
+    "type": "Heavy",
+    "passive": "Blunt-Force Mitigation",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+   },
+   {
+    "_pageName": "BFM-220 Ironclad",
+    "image": "BFM-220 Ironclad Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+   },
+   {
+    "_pageName": "BFM-77 Reformer",
+    "image": "BFM-77 Reformer Armor Render.png",
+    "type": "Medium",
+    "passive": "Blunt-Force Mitigation",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+   },
+   {
+    "_pageName": "BFM-77 Reformer",
+    "image": "BFM-77 Reformer Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
    },
    {
     "_pageName": "BP-20 Correct Officer",
@@ -3544,7 +3658,7 @@
     "_pageName": "SA-7 Headfirst",
     "image": "SA-7 Headfirst Armor Render.png",
     "type": "Medium",
-    "passive": "Supplementary Adrenaline",
+    "passive": "Supplemental Adrenaline",
     "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
    },
@@ -3560,7 +3674,7 @@
     "_pageName": "SA-8 Ram",
     "image": "SA-8 Ram Armor Render.png",
     "type": "Heavy",
-    "passive": "Supplementary Adrenaline",
+    "passive": "Supplemental Adrenaline",
     "source": "[[Siege Breakers Premium Warbond|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
    },
@@ -3863,6 +3977,10 @@
     "image": "Ballistic Padding Armor Passive Icon.svg"
    },
    {
+    "_pageName": "Blunt-Force Mitigation",
+    "image": "Blunt-Force Mitigation Armor Passive Icon.svg"
+   },
+   {
     "_pageName": "Concussive Padding, Grenadier",
     "image": "Concussive Padding Armor Passive Icon.svg"
    },
@@ -3955,8 +4073,8 @@
     "image": "Siege-Ready Armor Passive Icon.svg"
    },
    {
-    "_pageName": "Supplementary Adrenaline",
-    "image": "Supplementary Adrenaline Armor Passive Icon.svg"
+    "_pageName": "Supplemental Adrenaline",
+    "image": "Supplemental Adrenaline Armor Passive Icon.svg"
    },
    {
     "_pageName": "True Grit",
@@ -4062,6 +4180,14 @@
     "image": "Helldivers Mobilize Warbond Cover.png",
     "date": "2024-02-08",
     "type": "Standard",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Ironclad Democracy Premium Warbond",
+    "title": "Ironclad Democracy",
+    "image": "Ironclad Democracy Premium Warbond Cover.png",
+    "date": "2026-09-22",
+    "type": "Premium",
     "date__precision": "1"
    },
    {

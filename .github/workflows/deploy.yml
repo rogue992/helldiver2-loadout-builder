@@ -19,6 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 화면 버전의 마지막 숫자를 커밋 수로 센다(vite.config.ts). 얕은 클론이면 항상 0이 된다
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: .nvmrc

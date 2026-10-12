@@ -4,11 +4,13 @@ import { ARMOR_CLASS_LABEL, KIND_LABEL, STRAT_TYPE_LABEL, STRAT_TYPE_ORDER, acqu
 import { assetUrl } from '../data/loadData'
 import type { Item, StratType } from '../data/types'
 import { useItemName } from '../data/useItemName'
+import { isNewItem } from '../data/newness'
 import { useStore } from '../store/useStore'
 import { sizesOf, type GearSlot } from '../store/types'
 import { GEAR_ORDER, cellTarget, firstEmptyCell, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool } from '../rules/picker'
 import { copy } from '../copy/ko'
 import Icon from './Icon'
+import NewBadge from './NewBadge'
 import btn from './Buttons.module.css'
 import Tile from './Tile'
 import { useModal } from './useModal'
@@ -81,6 +83,10 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
     return null
   }
   const ownedFirst = (items: Item[]) => [...items.filter((i) => !unownedReason(i)), ...items.filter((i) => unownedReason(i))]
+  // 새로 들어온 아이템: 카드에 NEW, 그 아이템이 든 탭(전체 포함)에 점
+  const fresh = useMemo(() => new Set(base.filter((i) => isNewItem(i)).map((i) => i.id)), [base])
+  const tabOf = (it: Item) => (kind === 'stratagem' ? it.stratType : kind === 'armor' ? it.armorClass : it.weaponType)
+  const freshTabs = new Set(base.filter((i) => fresh.has(i.id)).flatMap((i) => ['all', tabOf(i)]))
 
   const tabs: { id: string; label: string }[] =
     kind === 'stratagem'
@@ -245,6 +251,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
           {tabs.map((t) => (
             <button key={t.id} role="tab" aria-selected={tab === t.id} className={[styles.tab, tab === t.id && styles.tabOn].filter(Boolean).join(' ')} onClick={() => setTab(t.id)}>
               {t.label}
+              {freshTabs.has(t.id) && <span className={styles.tabNew} role="img" aria-label={copy.pickerNewHint} title={copy.pickerNewHint} />}
             </button>
           ))}
         </div>
@@ -274,6 +281,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                       data-part="card"
                       data-unowned={reason ? '' : undefined}
                     >
+                      {fresh.has(it.id) && <NewBadge className={styles.cardNew} />}
                       {reason && <span className={styles.cardTag}>{reason}</span>}
                       {current && <span className={[styles.cardTag, styles.cardTagCurrent].join(' ')}>{copy.pickerCurrent}</span>}
                       <Tile item={it} size="card" shape={shape} />

@@ -1,13 +1,13 @@
 {
-  "version": "01.007.001",
-  "builtAt": "2026-09-13T23:53:26.032Z",
-  "fetchedAt": "2026-09-13T12:43:47.760Z",
+  "version": "01.007.100",
+  "builtAt": "2026-10-12T06:07:29.129Z",
+  "fetchedAt": "2026-10-12T05:54:41.778Z",
   "counts": {
-    "primary": 52,
-    "secondary": 24,
-    "throwable": 21,
-    "armor": 107,
-    "stratagem": 92
+    "primary": 55,
+    "secondary": 25,
+    "throwable": 23,
+    "armor": 110,
+    "stratagem": 93
   },
   "missingKo": [],
   "unknownSource": [

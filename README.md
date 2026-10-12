@@ -25,6 +25,8 @@
 | 아이템 wiki 보기 | 타일 우클릭(폰은 길게 누른 뒤 손을 뗄 때 열린다) |
 | 브리핑 뷰 | 허가서의 **브리핑**. 텍스트 없이 큰 타일만. 세컨드 모니터 · 폰용 |
 | 내보내기 | **JSON 내보내기/가져오기**(전체, 설정 패널) · **이미지**(PNG, 허가서 버튼. 슬롯과 허가서를 함께 찍는다) |
+| 새 아이템 | 데이터에 새로 들어온 장비 · 스트라타젬은 30일 동안 선택 창 카드 왼쪽 위에 **NEW**가 붙고, 그 아이템이 든 탭에 노란 점이 찍힌다. 새 채권은 설정의 보유 채권 칩에도 NEW. 새 채권은 처음에 보유로 잡히니 미보유면 칩을 눌러 끈다 |
+| 버전 | 화면 오른쪽 아래(좁은 화면은 페이지 맨 끝)의 `v1.0.N`. 배포할 때마다 마지막 숫자가 오른다. 마우스를 올리면 빌드 커밋 · 날짜 · 데이터 패치가 보인다 |
 
 가져오기는 형식을 검사한다. 식별할 수 없는 로드아웃이 하나라도 있으면 파일 전체를 거부하고, 종족 · 칸 수 · 날짜처럼 어긋난 필드는 안전한 값으로 보정한다. **병합**은 열린 초안을 건드리지 않는다. **설정도 가져오기**는 파일마다 새로 체크한다.
 **교체**를 고르면 직전 상태를 브라우저 안(`hd2lb.backup`) + JSON 다운로드로 백업한 뒤 바꾼다. 설정의 **마지막 백업 복원**으로 되돌릴 수 있고, 복원도 전체 교체라 항상 확인을 거친다.
@@ -39,12 +41,14 @@ npm run dev          # http://localhost:5173/helldiver2-loadout-builder/
 npm run typecheck    # tsc -b --noEmit (app · node · scripts · test)
 npm run lint:copy    # 문구에 em dash 금지
 npm run lint:theme   # 테마 셀렉터 위치 검사
-npm test             # 단위 테스트(tsx --test, Node 내장 러너): 경고 판정 · 선택 창 칸 이동 · 값 보정 · SVG 검사 · id 규칙
+npm test             # 단위 테스트(tsx --test, Node 내장 러너): 경고 판정 · 선택 창 칸 이동 · 값 보정 · NEW 판정 · SVG 검사 · id 규칙
 npm run build        # dist/
 ```
 
 스택: Vite + React 19 + TypeScript · zustand(persist) · @dnd-kit · html-to-image. Node 24(`.nvmrc`).
 `main` push가 GitHub Actions로 Pages에 배포된다(레포 Settings → Pages → Source = GitHub Actions 1회 설정). 배포 전에 typecheck · lint 2종 · 테스트를 돌리고, 하나라도 실패하면 배포하지 않는다.
+
+화면 버전은 `major.minor.patch`다. major.minor는 `package.json`의 `version`에서 손으로 올리고, patch는 그 `version` 줄을 마지막으로 바꾼 커밋 뒤에 쌓인 커밋 수를 빌드할 때 git으로 센다(`vite.config.ts`). 그래서 `main` push(배포)마다 저절로 오르고, minor를 올리면 0부터 다시 센다. CI는 이 수를 세려고 전체 기록을 받는다(`fetch-depth: 0`). 로컬 개발 서버에서는 `-dev`가 붙는다.
 
 ## 데이터 갱신
 
@@ -54,12 +58,12 @@ npm run build        # dist/
 1. `npm run data:fetch` : wiki.gg Cargo 5테이블 수집(1.5초 간격, API만) + diff
 2. `npm run data:build -- --dry-run` : counts · missingKo · unknownSource 확인
 3. 새 아이템 한글명 · 분류를 `data/overrides/ko.json` · `manual.json`에 기록(사용자 확인)
-4. `npm run data:build -- --assign-n --label <패치>` → `npm run icons:fetch` → 재빌드
+4. `npm run data:build -- --assign-n --label <패치>` → `npm run icons:fetch` → 재빌드. 새 아이템은 번호와 함께 그날 날짜를 받아 30일 동안 NEW로 보인다
 5. 검증 후 커밋 · 푸시
 
 스트라타젬 아이콘의 출처(nvigneux)는 커밋 SHA로 고정돼 있고, 받은 SVG에 스크립트 · 이벤트 속성 · 외부 참조가 있으면 저장하지 않는다. `data:seed`는 1회성이라 `ko.json`이 있으면 `--force` 없이는 덮어쓰지 않는다.
 
-`data/registry.json`(아이템 번호표 `n`, 현재 앱은 읽지 않지만 데이터 계약으로 유지)과 아이템 `id` 규칙은 계약이다. `id` 규칙을 바꾸면 기존 저장본이 깨진다.
+`data/registry.json`(아이템 번호표 `n`과, 첫 수집 뒤에 들어온 아이템이 번호를 받은 날 `added`. 앱은 직접 읽지 않고 `items.json`의 `n` · `addedAt`으로 받는다)과 아이템 `id` 규칙은 계약이다. 둘 다 덧붙이기만 하고, `id` 규칙을 바꾸면 기존 저장본이 깨진다.
 
 ## 표기 규칙
 

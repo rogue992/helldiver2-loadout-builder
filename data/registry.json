@@ -1,5 +1,5 @@
 {
-  "next": 297,
+  "next": 307,
   "ids": {
     "pw-ar-2-coyote": 1,
     "pw-ar-23-liberator": 2,
@@ -296,6 +296,28 @@
     "st-sh-51-directional-shield": 293,
     "st-sta-x3-w-a-s-p-launcher": 294,
     "st-td-220-bastion-mk-xvi": 295,
-    "st-tx-41-sterilizer": 296
+    "st-tx-41-sterilizer": 296,
+    "pw-ar-11-arbitrator": 297,
+    "th-g-60-anti-tank-seeker": 298,
+    "th-g-8-immolation": 299,
+    "pw-gl-15-evictor": 300,
+    "pw-las-12-sai": 301,
+    "sw-p-34-breacher": 302,
+    "ar-bfm-16-tanker": 303,
+    "ar-bfm-220-ironclad": 304,
+    "ar-bfm-77-reformer": 305,
+    "st-td-110-maelstrom": 306
+  },
+  "added": {
+    "pw-ar-11-arbitrator": "2026-10-12",
+    "th-g-60-anti-tank-seeker": "2026-10-12",
+    "th-g-8-immolation": "2026-10-12",
+    "pw-gl-15-evictor": "2026-10-12",
+    "pw-las-12-sai": "2026-10-12",
+    "sw-p-34-breacher": "2026-10-12",
+    "ar-bfm-16-tanker": "2026-10-12",
+    "ar-bfm-220-ironclad": "2026-10-12",
+    "ar-bfm-77-reformer": "2026-10-12",
+    "st-td-110-maelstrom": "2026-10-12"
   }
 }

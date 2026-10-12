@@ -1,5 +1,19 @@
 # 데이터 변경 기록
 
+## 01.007.100 (2026-10-12)
+
+추가:
+- AR-11 아비트레이터 (AR-11 Arbitrator)
+- G-60 대전차 드론 (G-60 Anti-Tank Seeker)
+- G-8 번제 (G-8 Immolation)
+- GL-15 이빅터 (GL-15 Evictor)
+- LAS-12 사이 (LAS-12 Sai)
+- P-34 브리처 (P-34 Breacher)
+- BFM-16 탱커 (BFM-16 Tanker)
+- BFM-220 철벽 (BFM-220 Ironclad)
+- BFM-77 리포머 (BFM-77 Reformer)
+- TD-110 마엘스트롬 (TD-110 Maelstrom)
+
 ## 01.007.001 (2026-09-13)
 
 추가:

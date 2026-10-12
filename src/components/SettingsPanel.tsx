@@ -1,7 +1,9 @@
 import { useGameData } from '../data/GameDataContext'
+import { isNewItem } from '../data/newness'
 import { useStore } from '../store/useStore'
 import type { NameDisplay } from '../store/types'
 import { copy } from '../copy/ko'
+import NewBadge from './NewBadge'
 import styles from './SettingsPanel.module.css'
 
 interface Props {
@@ -16,10 +18,12 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
   const setSetting = useStore((s) => s.setSetting)
   const toggleUnowned = useStore((s) => s.toggleUnownedWarbond)
   const setUnowned = useStore((s) => s.setUnownedWarbonds)
-  const { warbonds, meta } = useGameData()
+  const { warbonds, meta, index } = useGameData()
   const unowned = new Set(settings.unownedWarbonds)
   // 현재 데이터의 채권 기준으로 센다(가져온 설정에 지금은 없는 채권 id가 섞여 있어도 어긋나지 않게)
   const owned = warbonds.filter((w) => !unowned.has(w.id)).length
+  // 새로 들어온 아이템이 있는 채권. 새 채권은 기본이 보유라, 표시를 보고 보유 여부를 다시 정할 수 있게 한다
+  const freshBonds = new Set(index.items.filter((i) => i.warbondId && isNewItem(i)).map((i) => i.warbondId))
 
   const seg = <T extends string>(value: T, options: [T, string][], onPick: (v: T) => void) => (
     <span className={styles.seg} role="radiogroup">
@@ -77,6 +81,7 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
             return (
               <button key={w.id} role="checkbox" aria-checked={has} className={[styles.chip, !has && styles.chipOff].filter(Boolean).join(' ')} onClick={() => toggleUnowned(w.id)}>
                 {w.nameKo}
+                {freshBonds.has(w.id) && <NewBadge className={styles.chipNew} />}
               </button>
             )
           })}

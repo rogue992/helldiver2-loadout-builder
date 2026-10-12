@@ -37,6 +37,7 @@ CI는 데이터 스크립트를 돌리지 않는다.
    - 기록 위치: `data/overrides/ko.json`의 `items[id].nameKo`, `passives[영문]`, `warbonds[id]`.
 5. **산출물 생성**: `npm run data:build -- --assign-n --label <패치 버전>` (예: `01.007.002`)
    - 신규 아이템에 `n`이 배정되고 `public/data/*.json`, `data/registry.json`, `data/CHANGELOG.md`가 갱신된다.
+   - 번호를 받은 날이 `registry.added`에 남고 `items.json`의 `addedAt`이 된다. 앱은 그날부터 30일 동안 NEW로 표시한다(`src/data/newness.ts`). rename을 놓치면 이름만 바뀐 아이템도 새 번호와 NEW를 받으니 2단계 rename 확인을 먼저 끝낸다.
 6. **아이콘**: `npm run icons:fetch`
    - 스트라타젬은 nvigneux(정규화 매칭 + `scripts/lib/strat-map.ts` 수동표), 없으면 wiki SVG 임시 폴백 + `data/icon-fallbacks.json`에 기록(매 실행 재시도).
    - 실패 목록이 나오면 보고. 매칭 키 충돌이면 `NVIGNEUX_MANUAL`에 항목을 추가한다.
@@ -51,5 +52,5 @@ CI는 데이터 스크립트를 돌리지 않는다.
 - `Armor` 테이블은 헬멧 행이 본체와 페이지명을 공유한다. 빌드가 `type === 'Helmet'`을 걸러내니 counts.armor가 직전 빌드의 두 배 가까이 뛰면 필터가 깨진 것.
 - `Weapons`의 `Support Weapons`는 스트라타젬 쪽에서만 취급한다(무기 슬롯에 넣지 않음).
 - 채권 링크 타깃은 `_`, U+2019 어포스트로피가 섞여 온다. `lib/wikitext.ts`가 정규화하니 조인 실패가 나면 새 변형인지 확인.
-- `data/registry.json`(아이템 번호 `n`)은 append-only다. 지우거나 재생성하지 않는다(데이터 계약). 제외(`manual.json`의 `exclude`) 항목에는 번호가 배정되지 않는다.
+- `data/registry.json`(아이템 번호 `n`, 들어온 날 `added`)은 append-only다. 지우거나 재생성하지 않는다(데이터 계약). 제외(`manual.json`의 `exclude`) 항목에는 번호가 배정되지 않는다.
 - `data:seed`는 1회성이다. `ko.json`이 있으면 `--force` 없이는 덮어쓰지 않는다.

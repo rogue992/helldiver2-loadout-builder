@@ -44,6 +44,8 @@ export interface Item {
   weaponType: string | null
   armorClass: ArmorClass | null
   passive: Passive | null
+  /** 데이터에 처음 들어온 날(YYYY-MM-DD). 첫 수집분에는 없다. NEW 표시의 기준 */
+  addedAt?: string
 }
 
 export type WarbondType = 'standard' | 'premium' | 'legendary'

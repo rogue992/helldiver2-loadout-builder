@@ -10,7 +10,8 @@ import { KO_PATH, readJson, resolveAliasId, type KoOverrides } from './lib/overr
 import type { CargoRow } from './lib/cargo.ts'
 
 interface Manual { [id: string]: { stratType?: StratType; exclude?: boolean } }
-interface Registry { next: number; ids: Record<string, number> }
+// ids: 아이템 번호 n. added: 첫 수집 뒤에 들어온 아이템이 번호를 받은 날(앱의 NEW 표시 근거). 둘 다 덧붙이기만 한다
+interface Registry { next: number; ids: Record<string, number>; added?: Record<string, string> }
 
 const OUT = 'public/data'
 const args = new Set(process.argv.slice(2))
@@ -18,6 +19,7 @@ const dryRun = args.has('--dry-run')
 const assignN = args.has('--assign-n')
 const labelIdx = process.argv.indexOf('--label')
 const label = labelIdx > 0 ? process.argv[labelIdx + 1] : undefined
+const today = new Date().toISOString().slice(0, 10)
 
 const EM = '—'
 const errors: string[] = []
@@ -77,6 +79,7 @@ function main() {
   const manual = readJson<Manual>('data/overrides/manual.json', {})
   const aliases = readJson<Record<string, string>>('data/overrides/aliases.json', {})
   const registry = readJson<Registry>('data/registry.json', { next: 1, ids: {} })
+  const addedOn = (registry.added ??= {})
   const prevMeta = readJson<Partial<Meta> | null>(`${OUT}/meta.json`, null)
   const prevItems = readJson<Item[]>(`${OUT}/items.json`, [])
 
@@ -84,6 +87,7 @@ function main() {
   // 아이템에 고정된 채권 id(ko.items[*].warbondId)는 base()에서 alias를 따라간다
   for (const [oldId, newId] of Object.entries(aliases)) {
     if (registry.ids[oldId] !== undefined && registry.ids[newId] === undefined) registry.ids[newId] = registry.ids[oldId]
+    if (addedOn[oldId] && !addedOn[newId]) addedOn[newId] = addedOn[oldId]
     if (ko.items[oldId] && !ko.items[newId]) ko.items[newId] = ko.items[oldId]
     if (ko.warbonds[oldId] && !ko.warbonds[newId]) ko.warbonds[newId] = ko.warbonds[oldId]
     if (manual[oldId] && !manual[newId]) manual[newId] = manual[oldId]
@@ -114,6 +118,7 @@ function main() {
     if (registry.ids[id] !== undefined) return registry.ids[id]
     if (assignN) {
       registry.ids[id] = registry.next++
+      addedOn[id] = today
       return registry.ids[id]
     }
     unassigned.push(id)
@@ -129,7 +134,11 @@ function main() {
     if (k?.warbondPage !== undefined) src.warbondPage = k.warbondPage
     if (src.source === 'unknown') unknownSource.push(id)
     // wikiPage는 위키 페이지 키(아이콘 조인 · wiki 링크)라 원문 그대로 둔다. 화면에 보이는 nameEn만 em dash를 치환한다
-    return { id, n: nOf(id), kind, nameKo: k?.nameKo ?? nameEn, nameEn, wikiPage: row._pageName, ...src, weaponType: k?.weaponType ?? null, armorClass: null as Item['armorClass'], passive: null as Item['passive'] }
+    const n = nOf(id)
+    return {
+      id, n, kind, nameKo: k?.nameKo ?? nameEn, nameEn, wikiPage: row._pageName, ...src, weaponType: k?.weaponType ?? null,
+      armorClass: null as Item['armorClass'], passive: null as Item['passive'], ...(addedOn[id] ? { addedAt: addedOn[id] } : {}),
+    }
   }
   for (const row of targetWeapons(raw)) {
     const kind = WEAPON_CATEGORY_TO_KIND[row.weapon_category]

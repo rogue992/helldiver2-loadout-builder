@@ -76,7 +76,8 @@
 }
 .kv {
   display: grid;
-  grid-template-columns: 44px 1fr;
+  /* 이름 칸은 가장 긴 이름에 맞춘다(영어 화면의 Subfaction 등) */
+  grid-template-columns: minmax(44px, max-content) 1fr;
   gap: 6px 8px;
   padding: 9px 12px;
   font-size: 12.5px;

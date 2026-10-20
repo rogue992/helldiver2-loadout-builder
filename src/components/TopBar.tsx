@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
-import { LOADOUT_RACES, raceInfo, type LoadoutRace } from '../data/factions'
+import { LOADOUT_RACES, factionLabel, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
 import type { ThemeId } from '../store/types'
-import { APP_NAME, copy } from '../copy/ko'
+import { copy } from '../copy'
 import Icon from './Icon'
 import styles from './TopBar.module.css'
 
@@ -10,10 +10,9 @@ interface Props {
   onOpenCredits: () => void
 }
 
-const THEMES: { id: ThemeId; label: string }[] = [
-  { id: 'console', label: copy.themeConsole },
-  { id: 'teletype', label: copy.themeTeletype },
-]
+const THEMES: ThemeId[] = ['console', 'teletype']
+/** 문구는 그리는 순간 읽는다(화면 언어를 따라가게) */
+const themeLabel = (id: ThemeId) => (id === 'console' ? copy.themeConsole : copy.themeTeletype)
 
 /**
  * 상단 바 1줄: [서랍 머리 ☰ + 저장된 로드아웃] · 브랜드 · 종족 세그먼트 · 팩션 칩 · 테마 · 크레딧/설정.
@@ -94,7 +93,7 @@ export default function TopBar({ onOpenCredits }: Props) {
         <span className={styles.seal} aria-hidden>
           SE
         </span>
-        <h1>{APP_NAME}</h1>
+        <h1>{copy.appName}</h1>
       </div>
 
       <div className={styles.races} role="tablist" aria-label={copy.race} data-part="race-tabs">
@@ -107,7 +106,7 @@ export default function TopBar({ onOpenCredits }: Props) {
             style={{ '--dot': `var(--race-${r.id})` } as React.CSSProperties}
             onClick={() => pickRace(r.id)}
           >
-            <i /> {r.nameKo}
+            <i /> {raceLabel(r)}
           </button>
         ))}
       </div>
@@ -122,7 +121,7 @@ export default function TopBar({ onOpenCredits }: Props) {
             </button>
             {race.factions.map((f) => (
               <button key={f.id} role="tab" aria-selected={ui.faction === f.id} className={[styles.chip, ui.faction === f.id && styles.chipOn].filter(Boolean).join(' ')} onClick={() => setUi({ faction: f.id })}>
-                {f.nameKo}
+                {factionLabel(f)}
               </button>
             ))}
           </div>
@@ -133,7 +132,7 @@ export default function TopBar({ onOpenCredits }: Props) {
         {/* 테마: 각 테마 화면의 축소판(상단 바 · 목록 · 본문). 텍스트 버튼(크레딧 · 설정)과 구분 */}
         <span className={styles.themes} role="radiogroup" aria-label={copy.settingsTheme} data-part="theme-select">
           {THEMES.map((t) => (
-            <button key={t.id} role="radio" aria-checked={theme === t.id} className={[styles.scr, styles[`scr_${t.id}`], theme === t.id && styles.scrOn].filter(Boolean).join(' ')} onClick={() => setSetting('theme', t.id)} title={t.label} aria-label={t.label}>
+            <button key={t} role="radio" aria-checked={theme === t} className={[styles.scr, styles[`scr_${t}`], theme === t && styles.scrOn].filter(Boolean).join(' ')} onClick={() => setSetting('theme', t)} title={themeLabel(t)} aria-label={themeLabel(t)}>
               <i className={styles.scrTop} aria-hidden />
               <i className={styles.scrSide} aria-hidden />
               <i className={styles.scrMain} aria-hidden />

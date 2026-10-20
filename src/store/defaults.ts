@@ -1,5 +1,5 @@
 // 수정 · 삭제할 수 없는 고정 기본 로드아웃(복제만 가능). 구성은 ses-csd의 기본 로드아웃과 같다(궤도 정밀 타격 · MG-43 · B-01 · AR-23 · P-2 · G-12).
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import type { Loadout } from './types'
 
 export const DEFAULT_LOADOUT_ID = 'default'
@@ -23,6 +23,9 @@ export function defaultLoadout(): Loadout {
 }
 
 export const isDefaultLoadout = (id: string | undefined | null): boolean => id === DEFAULT_LOADOUT_ID
+
+/** 화면에 보이는 로드아웃 이름. 기본 로드아웃은 저장된 이름 대신 화면 언어의 이름 */
+export const loadoutLabel = (l: Pick<Loadout, 'id' | 'name'>): string => (isDefaultLoadout(l.id) ? copy.defaultLoadoutName : l.name)
 
 /** 목록에 기본 로드아웃이 없으면 맨 앞에 끼우고, 있으면 순서만 남기고 지급 구성으로 되돌린다(첫 실행 · 가져오기 교체 · 다른 탭 반영 뒤). */
 export function ensureDefault(loadouts: Loadout[]): Loadout[] {

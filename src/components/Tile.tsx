@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, type MouseEvent, type PointerEvent } from 
 import { assetUrl } from '../data/loadData'
 import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Tile.module.css'
 
 /** torso = 방어구 상체 확대(SES 방식: 같은 렌더를 cover로 크롭) */

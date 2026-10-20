@@ -1,6 +1,6 @@
-import { RACES, RACE_ALL, type LoadoutRace } from '../data/factions'
+import { RACES, RACE_ALL, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './RaceGate.module.css'
 
 interface Props {
@@ -27,7 +27,7 @@ export default function RaceGate({ onAssign }: Props) {
           {RACES.map((r) => (
             <button key={r.id} type="button" style={{ '--rc': `var(--race-${r.id})` } as React.CSSProperties} onClick={() => onAssign(r.id)}>
               <i aria-hidden />
-              {r.nameKo}
+              {raceLabel(r)}
               <small>{viewing === r.id ? copy.gateCurrent : copy.gateSaved(loadouts.filter((l) => l.race === r.id).length)}</small>
             </button>
           ))}

@@ -5,6 +5,7 @@ import type { Aliases } from '../data/types'
 import { resolveAlias } from '../data/loadData'
 import { defaultLoadout, ensureDefault, isDefaultLoadout } from './defaults'
 import { sanitizeDraft, sanitizeLoadouts, sanitizeSettings } from './sanitize'
+import { copy } from '../copy'
 import { assignView } from '../rules/assign'
 import {
   DEFAULT_SETTINGS,
@@ -84,7 +85,7 @@ function normalize(loadouts: Loadout[]): Loadout[] {
 function nextName(loadouts: Loadout[]): string {
   const taken = new Set(loadouts.map((l) => l.name))
   for (let n = loadouts.filter((l) => !isDefaultLoadout(l.id)).length + 1; ; n++) {
-    const name = `로드아웃 ${n}`
+    const name = copy.loadoutN(n)
     if (!taken.has(name)) return name
   }
 }
@@ -222,10 +223,10 @@ export const useStore = create<Store>()(
         const { loadouts } = get()
         const src = loadouts.find((x) => x.id === id)
         if (!src) return null
-        const copy: Loadout = { ...src, id: newId(), name: `${src.name} (복제)`, order: src.order + 0.5, createdAt: now(), updatedAt: now(), gear: { ...src.gear }, pools: src.pools.map((p) => [...p]) as Pools, sizes: sizesOf(src) }
-        const renumbered = normalize([...loadouts, copy])
+        const dup: Loadout = { ...src, id: newId(), name: copy.duplicateName(src.name), order: src.order + 0.5, createdAt: now(), updatedAt: now(), gear: { ...src.gear }, pools: src.pools.map((p) => [...p]) as Pools, sizes: sizesOf(src) }
+        const renumbered = normalize([...loadouts, dup])
         set({ loadouts: renumbered })
-        return renumbered.find((l) => l.id === copy.id) ?? copy
+        return renumbered.find((l) => l.id === dup.id) ?? dup
       },
       reorder: (orderedIds) =>
         set((s) => {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { StampState } from '../rules/warnings'
 import type { ThemeId } from '../store/types'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Stamp.module.css'
 
 interface Props {
@@ -11,7 +11,8 @@ interface Props {
   stampKey?: number
 }
 
-const LABEL: Record<Exclude<StampState, 'none'>, string> = { hold: copy.stampHold, treason: copy.stampTreason, approved: copy.stampApproved }
+/** 문구는 그리는 순간 읽는다(화면 언어를 따라가게) */
+const label = (state: Exclude<StampState, 'none'>) => ({ hold: copy.stampHold, treason: copy.stampTreason, approved: copy.stampApproved })[state]
 
 /** 테마 슬롯: console = 회전 도장, teletype = LED + 텍스트. 전부 비어 있으면(none) 찍지 않는다. */
 export default function Stamp({ state, theme, stampKey = 0 }: Props) {
@@ -29,13 +30,13 @@ export default function Stamp({ state, theme, stampKey = 0 }: Props) {
     return (
       <span className={cls} data-part="stamp" role="status">
         <i className={styles.led} aria-hidden />
-        <b>{LABEL[state]}</b>
+        <b>{label(state)}</b>
       </span>
     )
   }
   return (
     <span className={cls} data-part="stamp" role="status">
-      {LABEL[state]}
+      {label(state)}
     </span>
   )
 }

@@ -1,5 +1,6 @@
 import type { Aliases, Item, Meta, Warbond } from './types'
 import { buildIndex, type ItemIndex } from './itemIndex'
+import { copy } from '../copy'
 
 export interface GameData {
   index: ItemIndex
@@ -17,7 +18,7 @@ export function assetUrl(path: string): string {
 
 async function fetchJson<T>(name: string): Promise<T> {
   const res = await fetch(`${BASE}data/${name}?v=${__BUILD_ID__}`)
-  if (!res.ok) throw new Error(`${name} 로드 실패 (${res.status})`)
+  if (!res.ok) throw new Error(copy.loadFailed(name, res.status))
   return res.json() as Promise<T>
 }
 

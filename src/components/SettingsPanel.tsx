@@ -2,8 +2,9 @@ import { useGameData } from '../data/GameDataContext'
 import { isNewItem } from '../data/newness'
 import { useStore } from '../store/useStore'
 import type { NameDisplay } from '../store/types'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { warbondColor } from '../data/warbondColors'
+import { warbondName } from '../data/labels'
 import NewBadge from './NewBadge'
 import styles from './SettingsPanel.module.css'
 
@@ -68,8 +69,8 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup, onS
         {toggle(settings.missingWarn, (v) => setSetting('missingWarn', v), copy.settingsMissing)}
       </div>
       <div className={styles.row}>
-        <span>{copy.settingsName}</span>
-        {seg<NameDisplay>(settings.nameDisplay, [['ko', copy.nameKo], ['both', copy.nameBoth], ['en', copy.nameEn]], (v) => setSetting('nameDisplay', v))}
+        <span>{copy.settingsLanguage}</span>
+        {seg<NameDisplay>(settings.nameDisplay, [['ko', copy.langKo], ['en', copy.langEn]], (v) => setSetting('nameDisplay', v))}
       </div>
       <div className={styles.row}>
         <span>{copy.settingsData}</span>
@@ -100,7 +101,7 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup, onS
             return (
               <button key={w.id} role="checkbox" aria-checked={has} className={[styles.chip, !has && styles.chipOff].filter(Boolean).join(' ')} style={{ '--wb': warbondColor(w.id) } as React.CSSProperties} onClick={() => toggleUnowned(w.id)}>
                 <i className={styles.swatch} aria-hidden />
-                {w.nameKo}
+                {warbondName(w)}
                 {freshBonds.has(w.id) && <NewBadge className={styles.chipNew} />}
               </button>
             )

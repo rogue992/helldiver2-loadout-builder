@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { parseImport } from '../share/json'
 import { DEFAULT_SETTINGS } from './types'
 import { sanitizeDraft, sanitizeLoadout, sanitizeLoadouts, sanitizeSettings } from './sanitize'
@@ -81,4 +81,9 @@ test('설정: 즐겨찾기는 종족마다 문자열 id만 중복 없이, 모르
 test('초안: 전선 미지정 표시는 true일 때만 남긴다', () => {
   assert.equal(sanitizeDraft({ ...valid, needsRace: true })?.needsRace, true)
   assert.equal(sanitizeDraft({ ...valid, needsRace: 'y' })?.needsRace, undefined)
+})
+
+test('설정: 예전 "한 + 영"(both) 표기는 한국어로', () => {
+  assert.equal(sanitizeSettings({ nameDisplay: 'both' }).nameDisplay, 'ko')
+  assert.equal(sanitizeSettings({ nameDisplay: 'en' }).nameDisplay, 'en')
 })

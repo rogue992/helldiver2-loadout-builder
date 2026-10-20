@@ -1,5 +1,5 @@
 import { useGameData } from '../data/GameDataContext'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './VersionTag.module.css'
 
 /** 화면 오른쪽 아래 버전. 앱 버전은 배포마다 오르고(vite.config.ts), 빌드 커밋 · 날짜 · 데이터 패치는 올리면 보인다 */

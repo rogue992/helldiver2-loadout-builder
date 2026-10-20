@@ -6,10 +6,10 @@ import { useGameData } from '../data/GameDataContext'
 import { factionName, raceInfo } from '../data/factions'
 import { assetUrl } from '../data/loadData'
 import { useStore } from '../store/useStore'
-import { isDefaultLoadout } from '../store/defaults'
+import { isDefaultLoadout, loadoutLabel } from '../store/defaults'
 import type { Loadout, Settings } from '../store/types'
 import { displayStamp, evaluate, stampState, type StampState } from '../rules/warnings'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import Icon from './Icon'
 import btn from './Buttons.module.css'
 import styles from './Sidebar.module.css'
@@ -144,10 +144,12 @@ interface RowProps {
 
 /** 복무 카드: 왼쪽 종족색 띠 · 이름 · 도장 뱃지 · 팩션 · 스트라타젬 4슬롯 첫 후보 · ⋯ 메뉴(복제 · 삭제). */
 const MENU_W = 110
-const BADGE: Partial<Record<StampState, { cls: string; label: string }>> = {
-  treason: { cls: styles.badgeTreason, label: copy.stampTreasonShort },
-  hold: { cls: styles.badgeHold, label: copy.stampHoldShort },
-  approved: { cls: styles.badgeOk, label: copy.stampApprovedShort },
+/** 도장 뱃지(전부 비면 없음). 문구는 그리는 순간 읽는다(화면 언어를 따라가게) */
+function badgeOf(stamp: StampState): { cls: string; label: string } | null {
+  if (stamp === 'treason') return { cls: styles.badgeTreason, label: copy.stampTreasonShort }
+  if (stamp === 'hold') return { cls: styles.badgeHold, label: copy.stampHoldShort }
+  if (stamp === 'approved') return { cls: styles.badgeOk, label: copy.stampApprovedShort }
+  return null
 }
 const MENU_H = 76
 
@@ -156,7 +158,7 @@ function Row({ loadout: l, active, settings, index, menuOpen: menu, onToggleMenu
   // 저장본이라 dirty는 없다. 기본 로드아웃은 항상 승인
   const stamp = useMemo(() => displayStamp(stampState(evaluate(l, index, settings)), { locked: isDefaultLoadout(l.id), dirty: false }), [l, index, settings])
   const thumbs = l.pools.map((p) => p[0] ?? null)
-  const badge = BADGE[stamp]
+  const badge = badgeOf(stamp)
   const moreRef = useRef<HTMLButtonElement>(null)
   // 메뉴는 viewport 기준 고정 위치로 띄운다: 목록 스크롤 영역을 늘리지 않고, 아래 공간이 없으면 위로 펼친다.
   const [pos, setPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 })
@@ -183,7 +185,7 @@ function Row({ loadout: l, active, settings, index, menuOpen: menu, onToggleMenu
       {/* 이미 열린 카드를 다시 눌러도 아무 일 없다(편집 중이어도 저장 안 한 변경 확인을 띄우지 않는다) */}
       <button className={styles.body} onClick={active ? undefined : onOpen} aria-current={active || undefined}>
         <span className={styles.t}>
-          <span className={styles.nm}>{l.name}</span>
+          <span className={styles.nm}>{loadoutLabel(l)}</span>
           {badge && <small className={[styles.badge, badge.cls].join(' ')}>{badge.label}</small>}
           <span className={styles.fac}>
             <i /> {factionName(l.race, l.faction)}
@@ -200,7 +202,7 @@ function Row({ loadout: l, active, settings, index, menuOpen: menu, onToggleMenu
           })}
         </span>
       </button>
-      <button ref={moreRef} className={styles.more} onClick={openMenu} onPointerDown={(e) => e.stopPropagation()} aria-haspopup="menu" aria-expanded={menu} aria-label={`${l.name} ${copy.menu}`}>
+      <button ref={moreRef} className={styles.more} onClick={openMenu} onPointerDown={(e) => e.stopPropagation()} aria-haspopup="menu" aria-expanded={menu} aria-label={`${loadoutLabel(l)} ${copy.menu}`}>
         ⋯
       </button>
       {menu && (

@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { LOADOUT_RACES, factionName, raceInfo, type LoadoutRace } from '../data/factions'
+import { LOADOUT_RACES, factionLabel, factionName, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
-import { isDefaultLoadout } from '../store/defaults'
+import { isDefaultLoadout, loadoutLabel } from '../store/defaults'
 import type { Warning, StampState } from '../rules/warnings'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import PermitFrame from './PermitFrame'
 import Stamp from './Stamp'
 import Broadcast from './Broadcast'
@@ -43,7 +43,8 @@ function describe(w: Warning): { title: string; verdict: string } {
   }
 }
 
-const LEVEL_LABEL = { hard: copy.levelHard, soft: copy.levelSoft, info: copy.levelInfo } as const
+/** 문구는 그리는 순간 읽는다(화면 언어를 따라가게) */
+const levelLabel = (level: Warning['level']) => ({ hard: copy.levelHard, soft: copy.levelSoft, info: copy.levelInfo })[level]
 
 /**
  * 발급일. 저장은 UTC ISO라 그대로 자르면 한국 시간 오전에는 하루 전 날짜가 되므로 로컬 날짜로 읽는다.
@@ -86,7 +87,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
       <div className={styles.ph} data-part="permit-head">
         <div className={styles.titles}>
           <h2>{copy.permitTitle}</h2>
-          <input className={styles.name} value={draft.name} readOnly={lockedAll} onChange={(e) => editDraft({ name: e.target.value })} aria-label={copy.loadoutName} title={lockedAll ? copy.defaultLocked : undefined} />
+          <input className={styles.name} value={lockedAll ? loadoutLabel(draft) : draft.name} readOnly={lockedAll} onChange={(e) => editDraft({ name: e.target.value })} aria-label={copy.loadoutName} title={lockedAll ? copy.defaultLocked : undefined} />
         </div>
         <div className={styles.no}>
           {serial}
@@ -110,7 +111,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
           )}
           {LOADOUT_RACES.map((r) => (
             <option key={r.id} value={r.id}>
-              {r.nameKo}
+              {raceLabel(r)}
             </option>
           ))}
         </select>
@@ -121,7 +122,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
           ) : (
             race.factions.map((f) => (
               <option key={f.id} value={f.id}>
-                {f.nameKo}
+                {factionLabel(f)}
               </option>
             ))
           )}
@@ -130,7 +131,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
 
       <div className={styles.status} data-part="permit-status">
         <Stamp state={stamp} theme={theme} stampKey={stampKey} />
-        <small>{pending ? copy.raceUnset : draft.race === 'all' ? race.nameKo : `${race.nameKo} · ${factionName(draft.race, draft.faction)}`}</small>
+        <small>{pending ? copy.raceUnset : draft.race === 'all' ? raceLabel(race) : `${raceLabel(race)} · ${factionName(draft.race, draft.faction)}`}</small>
       </div>
 
       <div className={styles.viol} data-part="permit-violations">
@@ -148,7 +149,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
           const d = describe(w)
           return (
             <div key={i} className={[styles.alert, styles[w.level]].join(' ')} data-part="alert">
-              <span className={styles.k}>{LEVEL_LABEL[w.level]}</span>
+              <span className={styles.k}>{levelLabel(w.level)}</span>
               <span className={styles.title}>{d.title}</span>
               {w.slots.length > 0 && (
                 <span className={styles.slots} aria-label={`${copy.slotLabel} ${w.slots.join(', ')}`}>

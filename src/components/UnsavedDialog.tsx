@@ -1,4 +1,4 @@
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import Icon from './Icon'
 import btn from './Buttons.module.css'
 import { useModal } from './useModal'
@@ -38,12 +38,17 @@ export default function UnsavedDialog({ draftName, targetName, changes, onSave, 
           </button>
         </header>
         <p className={styles.body}>
-          <b>{draftName}</b> {copy.dirtyLead}{' '}
+          {/* 이름 앞 · 뒤 조각은 언어마다 다르다(한국어는 이름이 먼저, 영어는 "Save before opening <이름>?") */}
+          {copy.dirtyLead[0]}
+          <b>{draftName}</b>
+          {copy.dirtyLead[1]}{' '}
           {isNew ? (
             copy.dirtyAskNew
           ) : (
             <>
-              <b>{targetName}</b> {copy.dirtyAskOpen}
+              {copy.dirtyAskOpen[0]}
+              <b>{targetName}</b>
+              {copy.dirtyAskOpen[1]}
             </>
           )}
           {changes.length > 0 && <small>{copy.dirtyChanges(more > 0 ? `${shown} ${copy.dirtyMore(more)}` : shown)}</small>}

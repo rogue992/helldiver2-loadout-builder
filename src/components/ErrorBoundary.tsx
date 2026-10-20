@@ -3,7 +3,7 @@ import { useStore } from '../store/useStore'
 import { sanitizeLoadouts, sanitizeSettings } from '../store/sanitize'
 import { STORAGE_KEY } from '../store/types'
 import { buildExport, downloadJson, downloadText, fileStamp } from '../share/json'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Loading.module.css'
 
 interface State {

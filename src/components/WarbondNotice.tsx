@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { KIND_LABEL, SOURCE_LABEL, STRAT_TYPE_LABEL, WARBOND_TYPE_LABEL, gearCaption } from '../data/labels'
+import { KIND_LABEL, SOURCE_LABEL, STRAT_TYPE_LABEL, WARBOND_TYPE_LABEL, gearCaption, passiveName, warbondName } from '../data/labels'
 import { assetUrl } from '../data/loadData'
 import { NEW_DAYS, isNewItem } from '../data/newness'
 import { noticeItems } from '../data/notice'
@@ -8,7 +8,7 @@ import type { Item, Warbond } from '../data/types'
 import { useItemName } from '../data/useItemName'
 import { warbondColor } from '../data/warbondColors'
 import { useStore } from '../store/useStore'
-import { copy } from '../copy/ko'
+import { copy, pick } from '../copy'
 import Icon from './Icon'
 import NewBadge from './NewBadge'
 import { useModal } from './useModal'
@@ -52,7 +52,10 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
     return caption ? `${KIND_LABEL[it.kind]} · ${caption}` : KIND_LABEL[it.kind]
   }
   // 함께 들어온 항목의 출처: 다른 채권이면 그 이름, 아니면 슈퍼 스토어 · 캠페인 등
-  const source = (it: Item) => (it.source === 'warbond' && it.warbondId ? warbondById.get(it.warbondId)?.nameKo ?? '' : SOURCE_LABEL[it.source])
+  const source = (it: Item) => {
+    const wb = it.source === 'warbond' && it.warbondId ? warbondById.get(it.warbondId) : undefined
+    return wb ? warbondName(wb) : SOURCE_LABEL[it.source]
+  }
   const card = (it: Item, i: number, tag?: string) => (
     <li key={it.id} className={styles.card} style={{ '--i': i } as React.CSSProperties}>
       <div className={[styles.pic, it.kind === 'stratagem' && styles.picStrat].filter(Boolean).join(' ')}>
@@ -64,7 +67,7 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
       {it.passive && (
         <span className={styles.passive}>
           <img src={assetUrl(it.passive.icon)} alt="" />
-          {it.passive.nameKo}
+          {passiveName(it.passive)}
         </span>
       )}
     </li>
@@ -77,7 +80,7 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
           <div className={styles.hazard} aria-hidden />
 
           <figure className={styles.art}>
-            <img src={assetUrl(warbond.cover)} alt={copy.noticeCover(warbond.nameKo)} />
+            <img src={assetUrl(warbond.cover)} alt={copy.noticeCover(warbondName(warbond))} />
             <div className={styles.artTop}>
               <span className={[styles.eyebrow, styles.glass].join(' ')}>
                 <i className={styles.beacon} aria-hidden />
@@ -88,9 +91,10 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
               </button>
             </div>
             <figcaption className={styles.artTitle}>
-              <h2 id="warbond-notice-title">{warbond.nameKo}</h2>
+              <h2 id="warbond-notice-title">{warbondName(warbond)}</h2>
+              {/* 한국어 화면은 제목 아래 영문 원제, 영어 화면은 제목이 원제라 종류만 */}
               <p>
-                {warbond.nameEn} <span className={styles.type}>{WARBOND_TYPE_LABEL[warbond.type]}</span>
+                {pick(warbond.nameEn, '')} <span className={styles.type}>{WARBOND_TYPE_LABEL[warbond.type]}</span>
               </p>
             </figcaption>
             {/* 수호부 도장. 텔레타이프는 LED + 글자(theme/teletype.css) */}

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { ThemeId } from '../store/types'
-import { copy, slogans, SLOGAN_EXEMPLARY } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Broadcast.module.css'
 
 // 줄무늬 띠가 흐르는 속도를 문구 양과 무관하게 맞춘다: 한 벌이 지나가는 시간을 글자 수(문구 사이 간격 몫 포함)에 비례시킨다
@@ -15,7 +15,7 @@ interface Props {
 
 /** 테마 슬롯: console = 상단 줄무늬 띠(스크롤), teletype = 허가서 머리의 타이핑 한 줄. */
 export default function Broadcast({ theme, exemplary = false }: Props) {
-  const lines = useMemo(() => (exemplary ? [SLOGAN_EXEMPLARY, ...slogans] : slogans), [exemplary])
+  const lines = useMemo(() => (exemplary ? [copy.sloganExemplary, ...copy.slogans] : [...copy.slogans]), [exemplary])
   const [i, setI] = useState(0)
   const [typed, setTyped] = useState('')
   const reduce = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches

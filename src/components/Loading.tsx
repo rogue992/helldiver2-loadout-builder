@@ -1,4 +1,4 @@
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Loading.module.css'
 
 interface Props {

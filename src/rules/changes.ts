@@ -1,5 +1,5 @@
 // 저장본과 초안의 차이를 사람이 읽는 이름으로. 저장 안 한 변경 확인 창의 "바꾼 곳"에 쓴다.
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { KIND_LABEL } from '../data/labels'
 import { sizesOf, type Loadout } from '../store/types'
 import { GEAR_ORDER } from './picker'

@@ -1,7 +1,7 @@
 // 브라우저 밖에서 들어오는 값(가져오기 파일 · 저장소 복원 · 다른 탭)의 형태 검증.
 // 화면은 여기를 통과한 값만 믿고 쓴다: 문자열 · 배열 · 범위가 어긋난 필드는 보정하고, 식별할 수 없는 항목은 버린다.
 import { LOADOUT_RACES, type LoadoutRace } from '../data/factions'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { DEFAULT_SETTINGS, THEME_IDS, emptyFavorites, sizesOf, type Draft, type Favorites, type Gear, type Loadout, type NameDisplay, type PoolSize, type PoolSizes, type Pools, type Settings } from './types'
 
 type Obj = Record<string, unknown>
@@ -11,7 +11,8 @@ const isStr = (v: unknown): v is string => typeof v === 'string'
 const isDate = (v: unknown): v is string => isStr(v) && !Number.isNaN(Date.parse(v))
 
 const GEAR_SLOTS = ['armor', 'primary', 'secondary', 'throwable'] as const
-const NAME_DISPLAYS: NameDisplay[] = ['ko', 'both', 'en']
+// 예전의 '한 + 영'(both) 같은 모르는 값은 기본(한국어)으로
+const NAME_DISPLAYS: NameDisplay[] = ['ko', 'en']
 const RACE_IDS = new Set<string>(LOADOUT_RACES.map((r) => r.id))
 
 function sanitizeSizes(v: unknown): PoolSizes | undefined {

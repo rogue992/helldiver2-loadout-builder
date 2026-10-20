@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadGameData, type GameData } from './data/loadData'
 import { GameDataProvider, useGameData } from './data/GameDataContext'
 import { hadSavedState, useStore, subscribeCrossTab } from './store/useStore'
-import { isDefaultLoadout } from './store/defaults'
+import { isDefaultLoadout, loadoutLabel } from './store/defaults'
 import type { Loadout, Settings } from './store/types'
 import type { LoadoutRace } from './data/factions'
 import { displayStamp, evaluate, stampState } from './rules/warnings'
@@ -11,7 +11,7 @@ import { latestWarbond, noticeDecision, readSeenNotice, writeSeenNotice } from '
 import type { Warbond } from './data/types'
 import { buildExport, downloadJson, fileStamp, importedSettings, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
 import { exportElementPng } from './export/image'
-import { copy } from './copy/ko'
+import { copy, setLang } from './copy'
 import Loading from './components/Loading'
 import TopBar from './components/TopBar'
 import Broadcast from './components/Broadcast'
@@ -35,11 +35,18 @@ export default function App() {
   const [state, setState] = useState<LoadState>({ status: 'loading' })
   const [attempt, setAttempt] = useState(0)
   const theme = useStore((s) => s.settings.theme)
+  const lang = useStore((s) => s.settings.nameDisplay)
   const applyAliases = useStore((s) => s.applyAliases)
+  // 그리기 전에 화면 언어를 맞춘다. 아래의 모든 문구 · 라벨 · 이름이 그리는 순간 이 값을 읽는다
+  setLang(lang)
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
   }, [theme])
+  useEffect(() => {
+    document.documentElement.lang = lang
+    document.title = copy.appName
+  }, [lang])
   useEffect(() => subscribeCrossTab(), [])
   useEffect(() => {
     let alive = true
@@ -60,7 +67,8 @@ export default function App() {
   return (
     <GameDataProvider value={state.data}>
       <ToastProvider>
-        <Shell />
+        {/* 언어가 바뀌면 화면 전체를 새 언어로 다시 그린다(문구를 기억해 둔 곳이 남지 않게) */}
+        <Shell key={lang} />
       </ToastProvider>
     </GameDataProvider>
   )
@@ -221,7 +229,7 @@ function Shell() {
   const onExportImage = async () => {
     if (!exportRef.current || !draft) return
     try {
-      const { fontFallback } = await exportElementPng(exportRef.current, `loadout-${draft.name}-${fileStamp()}.png`)
+      const { fontFallback } = await exportElementPng(exportRef.current, `loadout-${loadoutLabel(draft)}-${fileStamp()}.png`)
       notify(fontFallback ? copy.noticeFontFallback : copy.noticeImageSaved)
     } catch (e) {
       console.error(e)
@@ -254,6 +262,8 @@ function Shell() {
     setPending({ kind: 'replace', loadouts: b.loadouts, settings: importedSettings(b, useStore.getState().settings, 'replace') })
   }
 
+  const openTarget = pending?.kind === 'open' ? loadouts.find((l) => l.id === pending.id) : undefined
+
   return (
     <>
       {/* 상단 고정 영역: 진리부 방송(콘솔 테마) → 상단 바. 실제 높이를 재서 --chrome-h로 넘긴다(위 effect) */}
@@ -280,8 +290,8 @@ function Shell() {
       {pending?.kind === 'replace' && <ReeducationDialog body={copy.reeducationBody(copy.reeducationReplace)} onCancel={() => setPending(null)} onConfirm={() => run(pending)} />}
       {pending && pending.kind !== 'replace' && draft && (
         <UnsavedDialog
-          draftName={draft.name.trim() || copy.untitledLoadout}
-          targetName={pending.kind === 'open' ? loadouts.find((l) => l.id === pending.id)?.name ?? copy.untitledLoadout : null}
+          draftName={loadoutLabel(draft).trim() || copy.untitledLoadout}
+          targetName={pending.kind === 'open' ? (openTarget ? loadoutLabel(openTarget) : copy.untitledLoadout) : null}
           changes={changedParts(draft, loadouts.find((l) => l.id === draft.id))}
           onSave={() => saveThenRun(pending)}
           onDiscard={() => run(pending)}
@@ -329,7 +339,7 @@ function ImportDialog({ file, importSettings, onImportSettings, onClose, onMerge
       <div className={styles.importBox} role="dialog" aria-modal="true" aria-label={copy.importJson}>
         <h2>{copy.importJson}</h2>
         <p>
-          {file.loadouts.length}건 · 데이터 {file.dataVersion} · {file.exportedAt.slice(0, 10)}
+          {copy.importSummary(file.loadouts.length, file.dataVersion, file.exportedAt.slice(0, 10))}
         </p>
         {file.settings && (
           <label className={styles.check}>

@@ -1,5 +1,5 @@
 import { useGameData } from '../data/GameDataContext'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { useModal } from './useModal'
 import styles from './Credits.module.css'
 

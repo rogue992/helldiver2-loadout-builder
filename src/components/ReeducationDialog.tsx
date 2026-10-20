@@ -1,4 +1,4 @@
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import { useModal } from './useModal'
 import styles from './ReeducationDialog.module.css'
 

@@ -1,15 +1,15 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { ARMOR_CLASS_LABEL, KIND_LABEL, STRAT_TYPE_LABEL, STRAT_TYPE_ORDER, acquireLabel, gearCaption } from '../data/labels'
+import { ARMOR_CLASS_LABEL, KIND_LABEL, STRAT_TYPE_LABEL, STRAT_TYPE_ORDER, acquireLabel, gearCaption, weaponTypeLabel } from '../data/labels'
 import { assetUrl } from '../data/loadData'
 import type { Item, StratType } from '../data/types'
 import { useItemName } from '../data/useItemName'
 import { isNewItem } from '../data/newness'
-import { raceInfo } from '../data/factions'
+import { raceInfo, raceLabel } from '../data/factions'
 import { useStore } from '../store/useStore'
 import { sizesOf, type GearSlot, type PoolSize, type PoolSizes } from '../store/types'
 import { GEAR_ORDER, cellTarget, favoritesFirst, firstEmptyCell, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, showFavoriteGroup, targetAfterResize } from '../rules/picker'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import Icon from './Icon'
 import NewBadge from './NewBadge'
 import PoolSizeTray from './PoolSizeTray'
@@ -102,6 +102,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
   const ownedFirst = (items: Item[]) => [...items.filter((i) => !unownedReason(i)), ...items.filter((i) => unownedReason(i))]
   // 즐겨찾기: 허가서 종족의 목록. 각 묶음 안에서는 즐겨찾기 → 보유 → 미보유 순
   const race = raceInfo(draft?.race ?? 'all')
+  const raceName = raceLabel(race)
   const favSet = useMemo(() => new Set(settings.favorites[race.id]), [settings.favorites, race.id])
   // 별을 누르면 그 카드가 즐겨찾기 자리로 옮겨 가고 위 묶음 높이도 바뀐다. 누른 카드가 화면에서 같은 높이에 남도록
   // 바뀐 직후 그만큼 목록을 스크롤하고, 옮겨 간 카드를 잠깐 깜빡여 눈이 따라가게 한다.
@@ -133,7 +134,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
       ? [{ id: 'all', label: copy.all }, ...STRAT_TYPE_ORDER.filter((t) => index.stratByType.has(t)).map((t) => ({ id: t, label: STRAT_TYPE_LABEL[t] }))]
       : kind === 'armor'
         ? [{ id: 'all', label: copy.all }, ...(['light', 'medium', 'heavy'] as const).map((c) => ({ id: c, label: ARMOR_CLASS_LABEL[c] }))]
-        : [{ id: 'all', label: copy.all }, ...[...new Set(base.map((i) => i.weaponType).filter(Boolean))].map((w) => ({ id: w!, label: w! }))]
+        : [{ id: 'all', label: copy.all }, ...[...new Set(base.map((i) => i.weaponType).filter(Boolean))].map((w) => ({ id: w!, label: weaponTypeLabel(w!) }))]
 
   const list = base.filter((it) => {
     if (tab !== 'all') {
@@ -226,8 +227,8 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
           type="button"
           className={[styles.star, fav && styles.starOn].filter(Boolean).join(' ')}
           aria-pressed={fav}
-          aria-label={fav ? copy.favRemove(race.nameKo) : copy.favAdd(race.nameKo)}
-          title={fav ? copy.favRemove(race.nameKo) : copy.favAdd(race.nameKo)}
+          aria-label={fav ? copy.favRemove(raceName) : copy.favAdd(raceName)}
+          title={fav ? copy.favRemove(raceName) : copy.favAdd(raceName)}
           onClick={(e) => {
             const wrap = e.currentTarget.closest<HTMLElement>('[data-anchor]')
             if (wrap) anchor.current = { key: wrap.dataset.anchor!, top: wrap.getBoundingClientRect().top }
@@ -249,10 +250,10 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
         <header className={styles.hd}>
           <h2>{title}</h2>
           <input className={styles.search} value={q} onChange={(e) => setQ(e.target.value)} placeholder={copy.searchPlaceholder} autoFocus />
-          <span className={styles.favChip} title={copy.favCount(race.nameKo, favs.length)} aria-label={copy.favCount(race.nameKo, favs.length)} data-part="fav-chip">
+          <span className={styles.favChip} title={copy.favCount(raceName, favs.length)} aria-label={copy.favCount(raceName, favs.length)} data-part="fav-chip">
             <Icon name="star" stroke={1.5} />
             <span className={styles.favChipLabel}>
-              {race.nameKo} {copy.favorites}
+              {raceName} {copy.favorites}
             </span>
             <b>{favs.length}</b>
           </span>
@@ -363,7 +364,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
               <button key={t.id} role="tab" aria-selected={tab === t.id} className={[styles.tab, tab === t.id && styles.tabOn].filter(Boolean).join(' ')} onClick={() => setTab(t.id)}>
                 {t.label}
                 {freshTabs.has(t.id) && <span className={styles.tabNew} role="img" aria-label={copy.pickerNewHint} title={copy.pickerNewHint} />}
-                <FavCount n={nFav} label={copy.favCount(race.nameKo, nFav)} />
+                <FavCount n={nFav} label={copy.favCount(raceName, nFav)} />
               </button>
             )
           })}
@@ -379,7 +380,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                 {copy.favorites}
                 <span className={styles.raceChip}>
                   <i aria-hidden />
-                  {race.nameKo}
+                  {raceName}
                 </span>
                 <small>{favList.length}</small>
               </h3>
@@ -389,7 +390,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                 ) : (
                   <p className={styles.favHint}>
                     <Icon name="star" stroke={1.5} />
-                    {copy.favHint(race.nameKo)}
+                    {copy.favHint(raceName)}
                   </p>
                 )}
               </div>
@@ -402,7 +403,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                 {g.label && (
                   <h3 className={styles.groupTitle} data-part="picker-group">
                     {g.label} <small>{g.items.length}</small>
-                    <FavCount n={nFav} label={copy.favCount(race.nameKo, nFav)} />
+                    <FavCount n={nFav} label={copy.favCount(raceName, nFav)} />
                   </h3>
                 )}
                 <div className={styles.grid}>{g.items.map((it) => card(it, acquireLabel(it, warbondById), g.key))}</div>

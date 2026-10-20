@@ -1,5 +1,5 @@
 import type { PoolSize } from '../store/types'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './PoolSizeTray.module.css'
 
 const SIZES: PoolSize[] = [1, 2, 3, 4]

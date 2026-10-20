@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { KIND_LABEL, STRAT_TYPE_LABEL, acquireLabel, gearCaption } from '../data/labels'
+import { KIND_LABEL, STRAT_TYPE_LABEL, acquireLabel, gearCaption, passiveName } from '../data/labels'
 import { assetUrl } from '../data/loadData'
 import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
@@ -10,7 +10,7 @@ import { sizesOf, type GearSlot as GearSlotKey } from '../store/types'
 import type { LoadoutRace } from '../data/factions'
 import type { Warning } from '../rules/warnings'
 import { cellTarget } from '../rules/picker'
-import { copy } from '../copy/ko'
+import { copy } from '../copy'
 import Icon from './Icon'
 import btn from './Buttons.module.css'
 import Tile from './Tile'
@@ -88,10 +88,10 @@ export default function Builder({ warnings, onAssignRace }: Props) {
           {item && (
             <span className={styles.nm}>
               {name(item)}
-              {withSub && <small>{slot === 'armor' ? item.passive?.nameKo ?? '' : acquireLabel(item, warbondById)}</small>}
+              {withSub && <small>{slot === 'armor' ? (item.passive ? passiveName(item.passive) : '') : acquireLabel(item, warbondById)}</small>}
             </span>
           )}
-          {slot === 'armor' && item?.passive?.icon && <img className={styles.pass} src={assetUrl(item.passive.icon)} alt={item.passive.nameKo} title={item.passive.nameKo} />}
+          {slot === 'armor' && item?.passive?.icon && <img className={styles.pass} src={assetUrl(item.passive.icon)} alt={passiveName(item.passive)} title={passiveName(item.passive)} />}
         </button>
       </div>
     )

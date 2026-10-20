@@ -37,7 +37,8 @@ export interface Draft extends Loadout {
   needsRace?: boolean
 }
 
-export type NameDisplay = 'ko' | 'both' | 'en'
+/** 화면 언어(아이템 이름 포함). 저장 키는 예전 이름(nameDisplay) 그대로 */
+export type NameDisplay = 'ko' | 'en'
 /** 종족별 즐겨찾기 아이템 id. 'all'은 종족 무관 허가서용 */
 export type Favorites = Record<LoadoutRace, string[]>
 export type ThemeId = 'console' | 'teletype'

@@ -1,5 +1,5 @@
 import { createContext, useCallback, useContext, useMemo, useRef, useState, type ReactNode } from 'react'
-import { copy, slogans } from '../copy/ko'
+import { copy } from '../copy'
 import styles from './Toast.module.css'
 
 interface Toast {
@@ -34,7 +34,7 @@ export function ToastProvider({ children }: { children: ReactNode }) {
   const seq = useRef(0)
   const notify = useCallback((message: string, action?: Toast['action']) => {
     const id = ++seq.current
-    const t: Toast = { id, message, slogan: slogans[Math.floor(Math.random() * slogans.length)], serial: serial(), action }
+    const t: Toast = { id, message, slogan: copy.slogans[Math.floor(Math.random() * copy.slogans.length)], serial: serial(), action }
     setList((l) => [...l, t])
     setTimeout(() => setList((l) => l.filter((x) => x.id !== id)), 5000)
   }, [])

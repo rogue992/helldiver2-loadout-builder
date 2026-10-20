@@ -122,6 +122,18 @@ function remapLoadout(l: Loadout, aliases: Aliases): Loadout {
   }
 }
 
+/**
+ * 이 브라우저에 저장 기록이 있었는지. 앱이 처음 무엇이든 저장하기 전(스토어를 만들기 전)에 잰다.
+ * 처음 온 사람에게는 신규 채권 공고를 띄우지 않는 데 쓴다.
+ */
+export const hadSavedState = (() => {
+  try {
+    return localStorage.getItem(STORAGE_KEY) !== null
+  } catch {
+    return false
+  }
+})()
+
 export const useStore = create<Store>()(
   persist(
     (set, get) => ({

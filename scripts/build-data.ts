@@ -105,7 +105,7 @@ function main() {
       warbondPages.set(w._pageName, id)
       const nameKo = ko.warbonds[id]
       if (!nameKo) missingKo.push(`warbond:${id}`)
-      return { id, nameKo: nameKo ?? w.title, nameEn: w.title, order: i, releaseDate: w.date, type: w.type.toLowerCase() as Warbond['type'] }
+      return { id, nameKo: nameKo ?? w.title, nameEn: w.title, order: i, releaseDate: w.date, type: w.type.toLowerCase() as Warbond['type'], cover: `icons/warbond/${id}.webp` }
     })
 
   // ── 패시브 ──

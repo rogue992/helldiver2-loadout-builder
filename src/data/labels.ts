@@ -1,5 +1,4 @@
-import { copy } from '../copy/ko'
-import type { Item, Kind, Source, StratType, Warbond } from './types'
+import type { Item, Kind, Source, StratType, Warbond, WarbondType } from './types'
 
 export const KIND_LABEL: Record<Kind, string> = {
   primary: '주무기',
@@ -45,18 +44,21 @@ export const SOURCE_LABEL: Record<Source, string> = {
   unknown: '출처 미확인',
 }
 
+export const WARBOND_TYPE_LABEL: Record<WarbondType, string> = {
+  standard: '기본 채권',
+  premium: '프리미엄 채권',
+  legendary: '레전더리 채권',
+}
+
 export const ARMOR_CLASS_LABEL = {
   light: '경량',
   medium: '일반',
   heavy: '중량',
 } as const
 
-/** 획득처 한 줄: "채권명 · N페이지", 슈퍼 스토어는 그 이름. 기본 지급 등은 빈 문자열 */
+/** 획득처 한 줄: 채권 이름(몇 페이지인지는 보이지 않는다), 슈퍼 스토어는 그 이름. 기본 지급 등은 빈 문자열 */
 export function acquireLabel(item: Item, warbondById: Map<string, Warbond>): string {
-  if (item.source === 'warbond' && item.warbondId) {
-    const wb = warbondById.get(item.warbondId)
-    return wb ? `${wb.nameKo}${item.warbondPage ? ` · ${copy.warbondPage(item.warbondPage)}` : ''}` : ''
-  }
+  if (item.source === 'warbond' && item.warbondId) return warbondById.get(item.warbondId)?.nameKo ?? ''
   return item.source === 'superstore' ? SOURCE_LABEL.superstore : ''
 }
 

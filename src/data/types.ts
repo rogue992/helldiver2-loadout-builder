@@ -57,6 +57,8 @@ export interface Warbond {
   order: number
   releaseDate: string
   type: WarbondType
+  /** 채권 표지(wiki 표지 이미지 → webp). 신규 채권 공고에 쓴다 */
+  cover: string
 }
 
 export interface Meta {

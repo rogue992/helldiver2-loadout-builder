@@ -21,10 +21,9 @@
 .row > span:first-child {
   white-space: nowrap;
 }
-/* 설명이 붙는 설정: 이름은 한 줄, 설명은 줄바꿈 */
+/* 설명이 붙는 설정: 이름 한 줄 + 설명 한 줄(넘치면 말줄임) */
 .row > .label:first-child {
   min-width: 0;
-  white-space: normal;
 }
 .label small {
   display: block;
@@ -32,7 +31,8 @@
   color: var(--muted);
   font-size: 11.5px;
   line-height: 1.45;
-  word-break: keep-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .rowOff {
   opacity: 0.5;
@@ -123,14 +123,34 @@
   flex-wrap: wrap;
   gap: 4px;
 }
+/* 보유 채권 칩: 채권 표지 색(--wb, 없으면 강조색)으로 테두리 · 바탕 · 앞 점 */
 .chip {
+  --wb: var(--acc);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 2px 8px;
-  border: 1px var(--bstyle) var(--acc);
+  border: 1px var(--bstyle) color-mix(in srgb, var(--wb) 65%, transparent);
   border-radius: var(--r);
   font-size: 11.5px;
-  background: var(--acc-soft);
+  background: color-mix(in srgb, var(--wb) 14%, var(--bg2));
   color: var(--fg);
   font-weight: 600;
+  transition:
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease),
+    opacity 0.3s var(--ease);
+}
+.chip:hover {
+  border-color: var(--wb);
+}
+.swatch {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--wb);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--wb) 60%, transparent);
 }
 .chipOff {
   border-color: var(--line);
@@ -139,9 +159,38 @@
   text-decoration: line-through;
   font-weight: 400;
 }
+.chipOff .swatch {
+  background: var(--muted);
+  box-shadow: none;
+}
 .chipNew {
-  margin-left: 6px;
-  vertical-align: 1px;
+  margin-left: 0;
+}
+/* 최신 채권 공고 다시 보기: 보유 채권 머리 오른쪽 */
+.noticeBtn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 2px 10px 2px 8px;
+  border: 1px var(--bstyle) color-mix(in srgb, var(--yellow) 55%, transparent);
+  border-radius: var(--r-pill);
+  font: 600 11.5px var(--font-display);
+  color: var(--yellow);
+  transition:
+    border-color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+.noticeBtn:hover {
+  border-color: var(--yellow);
+  background: color-mix(in srgb, var(--yellow) 10%, transparent);
+}
+.noticeBtn i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 8px var(--yellow);
 }
 .actions {
   grid-column: 1 / -1;

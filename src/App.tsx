@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadGameData, type GameData } from './data/loadData'
 import { GameDataProvider, useGameData } from './data/GameDataContext'
-import { useStore, subscribeCrossTab } from './store/useStore'
+import { hadSavedState, useStore, subscribeCrossTab } from './store/useStore'
 import { isDefaultLoadout } from './store/defaults'
 import type { Loadout, Settings } from './store/types'
 import type { LoadoutRace } from './data/factions'
 import { displayStamp, evaluate, stampState } from './rules/warnings'
 import { changedParts } from './rules/changes'
+import { latestWarbond, noticeDecision, readSeenNotice, writeSeenNotice } from './data/notice'
+import type { Warbond } from './data/types'
 import { buildExport, downloadJson, fileStamp, importedSettings, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
 import { exportElementPng } from './export/image'
 import { copy } from './copy/ko'
@@ -20,6 +22,7 @@ import Permit from './components/Permit'
 import BriefingView from './components/BriefingView'
 import ReeducationDialog from './components/ReeducationDialog'
 import UnsavedDialog from './components/UnsavedDialog'
+import WarbondNotice from './components/WarbondNotice'
 import Credits from './components/Credits'
 import VersionTag from './components/VersionTag'
 import { ToastProvider, useToast } from './components/Toast'
@@ -89,6 +92,8 @@ function Shell() {
   const [pending, setPending] = useState<Pending | null>(null)
   const [importFile, setImportFile] = useState<ReturnType<typeof parseImport>>(null)
   const [importSettings, setImportSettings] = useState(false)
+  // 신규 채권 공고. 최신 채권을 이 브라우저에서 처음 볼 때 한 번(auto), 설정에서 다시 열 수 있다(replay)
+  const [notice, setNotice] = useState<{ warbond: Warbond; mode: 'auto' | 'replay' } | null>(null)
   const exportRef = useRef<HTMLDivElement>(null)
   const chromeRef = useRef<HTMLDivElement>(null)
 
@@ -113,6 +118,23 @@ function Shell() {
     if (first) openLoadout(first.id)
     else startNew()
   }, [draft, loadouts, openLoadout, startNew])
+
+  // 처음 보는 최신 채권이면 공고를 띄운다. 브리핑 뷰로 바로 열린 경우(세컨드 모니터 등)는 다음 방문으로 미룬다
+  useEffect(() => {
+    const latest = latestWarbond(data.warbonds)
+    if (!latest || location.hash.startsWith('#/briefing')) return
+    const decision = noticeDecision(latest.id, readSeenNotice(), hadSavedState)
+    if (decision === 'show') setNotice({ warbond: latest, mode: 'auto' })
+    else if (decision === 'mark') writeSeenNotice(latest.id)
+  }, [data.warbonds])
+  const showLatestNotice = () => {
+    const latest = latestWarbond(data.warbonds)
+    if (latest) setNotice({ warbond: latest, mode: 'replay' })
+  }
+  const closeNotice = () => {
+    if (notice) writeSeenNotice(notice.warbond.id)
+    setNotice(null)
+  }
 
   // 해시 라우팅: #/briefing/{id|draft}
   useEffect(() => {
@@ -239,7 +261,7 @@ function Shell() {
         {theme === 'console' && <Broadcast theme="console" exemplary={stamp === 'approved'} />}
         <TopBar onOpenCredits={() => setCredits(true)} />
       </div>
-      {ui.settingsOpen && <SettingsPanel onExport={onExport} onImport={onImport} onRestoreBackup={onRestoreBackup} />}
+      {ui.settingsOpen && <SettingsPanel onExport={onExport} onImport={onImport} onRestoreBackup={onRestoreBackup} onShowNotice={showLatestNotice} />}
       <div className={[styles.app, !ui.sidebarOpen && styles.folded].filter(Boolean).join(' ')}>
         {/* 왼쪽 서랍: 상단 바의 ☰ · "저장된 로드아웃" 머리와 같은 기둥으로 이어진다 */}
         <Sidebar onOpen={(id) => guard(id ? { kind: 'open', id } : { kind: 'new' })} onDuplicate={onDuplicateInList} onDelete={onDelete} />
@@ -253,6 +275,7 @@ function Shell() {
       </div>
       <VersionTag />
       {credits && <Credits onClose={() => setCredits(false)} />}
+      {notice && <WarbondNotice warbond={notice.warbond} mode={notice.mode} onClose={closeNotice} />}
       {briefing && <BriefingView loadout={briefing} onClose={() => (location.hash = '')} />}
       {pending?.kind === 'replace' && <ReeducationDialog body={copy.reeducationBody(copy.reeducationReplace)} onCancel={() => setPending(null)} onConfirm={() => run(pending)} />}
       {pending && pending.kind !== 'replace' && draft && (

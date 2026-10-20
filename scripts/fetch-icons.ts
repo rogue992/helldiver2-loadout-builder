@@ -1,12 +1,13 @@
 // public/data/items.json을 읽어 없는 아이콘만 내려받는다.
 // 스트라타젬: nvigneux SVG(정규화 매칭 + 수동표), 없으면 wiki SVG 임시 폴백(icon-fallbacks.json에 기록해 매 실행 재시도).
 // 무기 · 방어구: wiki 렌더 → 투명 여백 제거(무기) / 상체 정사각 크롭(방어구, SES 프레이밍) → webp(원본 · card 200 · thumb 64). 패시브: wiki SVG → webp 64.
+// 채권 표지: wiki 표지 → webp 폭 1200(신규 채권 공고 머리 그림).
 // 아이템 하나가 실패해도 나머지는 계속 만들고 끝에 실패 목록을 보고한다. 위키 429만 즉시 중단한다.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
-import type { Item as DataItem } from '../src/data/types.ts'
+import type { Item as DataItem, Warbond } from '../src/data/types.ts'
 import { download, imageInfos, USER_AGENT } from './lib/cargo.ts'
 import { readJson } from './lib/overrides.ts'
-import { normKey, stripModelCode } from './lib/slug.ts'
+import { normKey, slugify, stripModelCode } from './lib/slug.ts'
 import { loadRaw } from './lib/raw.ts'
 import { NVIGNEUX_MANUAL } from './lib/strat-map.ts'
 import { svgIssues } from './lib/svg.ts'
@@ -193,11 +194,33 @@ async function passives(items: Item[]) {
   console.log(`패시브 아이콘: ${done}건 새로 생성`)
 }
 
+async function covers(warbonds: Warbond[]) {
+  const raw = loadRaw()
+  const imageOf = new Map(raw.tables.Warbonds.map((w) => [slugify(w._pageName), w.image]))
+  const todo = warbonds.filter((w) => !existsSync(`public/${w.cover}`))
+  const infos = await imageInfos(todo.map((w) => imageOf.get(w.id) ?? ''), 1200)
+  let done = 0
+  for (const w of todo) {
+    const info = infos.get(imageOf.get(w.id) ?? '')
+    if (!info) {
+      failures.push(`채권 표지 없음: ${w.nameEn}`)
+      continue
+    }
+    const ok = await attempt(`표지 ${w.nameEn}`, async () => {
+      save(`public/${w.cover}`, await toWebp(await download(info.thumbUrl ?? info.url), { width: 1200, quality: 78 }))
+    })
+    if (ok) done++
+  }
+  console.log(`채권 표지: ${done}건 새로 생성`)
+}
+
 async function main() {
   const items = JSON.parse(readFileSync('public/data/items.json', 'utf8')) as Item[]
+  const warbonds = JSON.parse(readFileSync('public/data/warbonds.json', 'utf8')) as Warbond[]
   await stratagems(items)
   await gearAndArmor(items)
   await passives(items)
+  await covers(warbonds)
   if (failures.length) {
     console.error(`\nicons:fetch 실패 목록 ${failures.length}건:`)
     for (const f of failures) console.error('  ' + f)

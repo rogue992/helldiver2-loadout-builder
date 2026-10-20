@@ -28,3 +28,42 @@
 :root[data-theme='teletype'] [data-part='notice'] {
   font-family: var(--mono);
 }
+/* 신규 채권 공고의 수호부 도장: 회전 도장 대신 LED + 글자(앱 도장과 같은 문법) */
+:root[data-theme='teletype'] [data-part='notice-stamp'] {
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-items: start;
+  gap: 3px 9px;
+  padding: 6px 11px;
+  border: 1px dashed var(--yellow);
+  border-radius: 0;
+  outline: 0;
+  background: color-mix(in srgb, var(--bg) 78%, transparent);
+  transform: none;
+  -webkit-mask: none;
+  mask: none;
+  animation: tty-in 0.3s steps(3) 0.5s both;
+}
+:root[data-theme='teletype'] [data-part='notice-stamp'] b {
+  font-size: 16px;
+}
+:root[data-theme='teletype'] [data-part='notice-stamp'] i {
+  display: block;
+  grid-row: span 2;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 10px var(--yellow);
+  animation: tty-blink 1s steps(1) infinite;
+}
+@keyframes tty-in {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes tty-blink {
+  50% {
+    opacity: 0;
+  }
+}

@@ -3,6 +3,7 @@ import { isNewItem } from '../data/newness'
 import { useStore } from '../store/useStore'
 import type { NameDisplay } from '../store/types'
 import { copy } from '../copy/ko'
+import { warbondColor } from '../data/warbondColors'
 import NewBadge from './NewBadge'
 import styles from './SettingsPanel.module.css'
 
@@ -10,10 +11,12 @@ interface Props {
   onExport: () => void
   onImport: () => void
   onRestoreBackup: () => void
+  /** 최신 채권의 신규 채권 공고를 다시 연다 */
+  onShowNotice: () => void
 }
 
-/** 상단 설정 패널: 경고 4 · 이름 표기 · 보유 채권 + JSON 입출력 · 백업 복원. 테마는 상단 바에서. */
-export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: Props) {
+/** 상단 설정 패널: 경고 4 · 이름 표기 · 보유 채권(채권마다 표지 색, 최신 채권 공고 다시 보기) + JSON 입출력 · 백업 복원. 테마는 상단 바에서. */
+export default function SettingsPanel({ onExport, onImport, onRestoreBackup, onShowNotice }: Props) {
   const settings = useStore((s) => s.settings)
   const setSetting = useStore((s) => s.setSetting)
   const toggleUnowned = useStore((s) => s.toggleUnownedWarbond)
@@ -37,22 +40,22 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
   const toggle = (value: boolean, onPick: (v: boolean) => void, label: string, disabled = false) => (
     <button role="switch" aria-checked={value} aria-label={label} disabled={disabled} className={[styles.toggle, value && styles.toggleOn].filter(Boolean).join(' ')} onClick={() => onPick(!value)} />
   )
-  /** 이름 아래 한 줄 설명이 붙는 설정 이름 */
+  /** 이름 아래 한 줄 설명이 붙는 설정 이름. 설명은 한 줄을 넘지 않는다(좁으면 말줄임, 전체는 title) */
   const label = (name: string, hint: string) => (
     <span className={styles.label}>
       {name}
-      <small>{hint}</small>
+      <small title={hint}>{hint}</small>
     </span>
   )
 
   return (
     <section className={styles.panel} data-part="settings" aria-label={copy.settings}>
       <div className={styles.row}>
-        <span>{copy.settingsEagle}</span>
+        {label(copy.settingsEagle, copy.settingsEagleHint)}
         {seg(String(settings.eagleThreshold), [['3', copy.settingsEagleN(3)], ['2', copy.settingsEagleN(2)]], (v) => setSetting('eagleThreshold', Number(v) as 2 | 3))}
       </div>
       <div className={styles.row}>
-        <span>{copy.settingsBackpack}</span>
+        {label(copy.settingsBackpack, copy.settingsBackpackHint)}
         {toggle(settings.backpackWarn, (v) => setSetting('backpackWarn', v), copy.settingsBackpack)}
       </div>
       {/* 중복 경고를 끄면 의미가 없어 흐리게 둔다 */}
@@ -86,12 +89,17 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
               {copy.warbondsReset}
             </button>
           </span>
+          <button className={styles.noticeBtn} onClick={onShowNotice} title={copy.settingsNoticeHint}>
+            <i aria-hidden />
+            {copy.settingsNotice}
+          </button>
         </div>
         <div className={styles.chips}>
           {warbonds.map((w) => {
             const has = !unowned.has(w.id)
             return (
-              <button key={w.id} role="checkbox" aria-checked={has} className={[styles.chip, !has && styles.chipOff].filter(Boolean).join(' ')} onClick={() => toggleUnowned(w.id)}>
+              <button key={w.id} role="checkbox" aria-checked={has} className={[styles.chip, !has && styles.chipOff].filter(Boolean).join(' ')} style={{ '--wb': warbondColor(w.id) } as React.CSSProperties} onClick={() => toggleUnowned(w.id)}>
+                <i className={styles.swatch} aria-hidden />
                 {w.nameKo}
                 {freshBonds.has(w.id) && <NewBadge className={styles.chipNew} />}
               </button>

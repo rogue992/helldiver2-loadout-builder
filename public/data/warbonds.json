@@ -5,7 +5,8 @@
     "nameEn": "Helldivers Mobilize!",
     "order": 0,
     "releaseDate": "2024-02-08",
-    "type": "standard"
+    "type": "standard",
+    "cover": "icons/warbond/helldivers-mobilize-warbond.webp"
   },
   {
     "id": "steeled-veterans-premium-warbond",
@@ -13,7 +14,8 @@
     "nameEn": "Steeled Veterans",
     "order": 1,
     "releaseDate": "2024-02-08",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/steeled-veterans-premium-warbond.webp"
   },
   {
     "id": "cutting-edge-premium-warbond",
@@ -21,7 +23,8 @@
     "nameEn": "Cutting Edge",
     "order": 2,
     "releaseDate": "2024-03-14",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/cutting-edge-premium-warbond.webp"
   },
   {
     "id": "democratic-detonation-premium-warbond",
@@ -29,7 +32,8 @@
     "nameEn": "Democratic Detonation",
     "order": 3,
     "releaseDate": "2024-04-11",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/democratic-detonation-premium-warbond.webp"
   },
   {
     "id": "polar-patriots-premium-warbond",
@@ -37,7 +41,8 @@
     "nameEn": "Polar Patriots",
     "order": 4,
     "releaseDate": "2024-05-09",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/polar-patriots-premium-warbond.webp"
   },
   {
     "id": "viper-commandos-premium-warbond",
@@ -45,7 +50,8 @@
     "nameEn": "Viper Commandos",
     "order": 5,
     "releaseDate": "2024-06-13",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/viper-commandos-premium-warbond.webp"
   },
   {
     "id": "freedom-s-flame-premium-warbond",
@@ -53,7 +59,8 @@
     "nameEn": "Freedom's Flame",
     "order": 6,
     "releaseDate": "2024-08-08",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/freedom-s-flame-premium-warbond.webp"
   },
   {
     "id": "chemical-agents-premium-warbond",
@@ -61,7 +68,8 @@
     "nameEn": "Chemical Agents",
     "order": 7,
     "releaseDate": "2024-09-19",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/chemical-agents-premium-warbond.webp"
   },
   {
     "id": "truth-enforcers-premium-warbond",
@@ -69,7 +77,8 @@
     "nameEn": "Truth Enforcers",
     "order": 8,
     "releaseDate": "2024-10-31",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/truth-enforcers-premium-warbond.webp"
   },
   {
     "id": "urban-legends-premium-warbond",
@@ -77,7 +86,8 @@
     "nameEn": "Urban Legends",
     "order": 9,
     "releaseDate": "2024-12-13",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/urban-legends-premium-warbond.webp"
   },
   {
     "id": "servants-of-freedom-premium-warbond",
@@ -85,7 +95,8 @@
     "nameEn": "Servants of Freedom",
     "order": 10,
     "releaseDate": "2025-02-06",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/servants-of-freedom-premium-warbond.webp"
   },
   {
     "id": "borderline-justice-premium-warbond",
@@ -93,7 +104,8 @@
     "nameEn": "Borderline Justice",
     "order": 11,
     "releaseDate": "2025-03-20",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/borderline-justice-premium-warbond.webp"
   },
   {
     "id": "masters-of-ceremony-premium-warbond",
@@ -101,7 +113,8 @@
     "nameEn": "Masters of Ceremony",
     "order": 12,
     "releaseDate": "2025-05-15",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/masters-of-ceremony-premium-warbond.webp"
   },
   {
     "id": "force-of-law-premium-warbond",
@@ -109,7 +122,8 @@
     "nameEn": "Force of Law",
     "order": 13,
     "releaseDate": "2025-06-12",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/force-of-law-premium-warbond.webp"
   },
   {
     "id": "control-group-premium-warbond",
@@ -117,7 +131,8 @@
     "nameEn": "Control Group",
     "order": 14,
     "releaseDate": "2025-07-17",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/control-group-premium-warbond.webp"
   },
   {
     "id": "obedient-democracy-support-troopers-legendary-warbond",
@@ -125,7 +140,8 @@
     "nameEn": "Obedient Democracy Support Troopers",
     "order": 15,
     "releaseDate": "2025-08-26",
-    "type": "legendary"
+    "type": "legendary",
+    "cover": "icons/warbond/obedient-democracy-support-troopers-legendary-warbond.webp"
   },
   {
     "id": "dust-devils-premium-warbond",
@@ -133,7 +149,8 @@
     "nameEn": "Dust Devils",
     "order": 16,
     "releaseDate": "2025-09-04",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/dust-devils-premium-warbond.webp"
   },
   {
     "id": "python-commandos-premium-warbond",
@@ -141,7 +158,8 @@
     "nameEn": "Python Commandos",
     "order": 17,
     "releaseDate": "2025-12-02",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/python-commandos-premium-warbond.webp"
   },
   {
     "id": "righteous-revenants-legendary-warbond",
@@ -149,7 +167,8 @@
     "nameEn": "Righteous Revenants",
     "order": 18,
     "releaseDate": "2025-12-18",
-    "type": "legendary"
+    "type": "legendary",
+    "cover": "icons/warbond/righteous-revenants-legendary-warbond.webp"
   },
   {
     "id": "redacted-regiment-premium-warbond",
@@ -157,7 +176,8 @@
     "nameEn": "Redacted Regiment",
     "order": 19,
     "releaseDate": "2026-01-22",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/redacted-regiment-premium-warbond.webp"
   },
   {
     "id": "siege-breakers-premium-warbond",
@@ -165,7 +185,8 @@
     "nameEn": "Siege Breakers",
     "order": 20,
     "releaseDate": "2026-02-03",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/siege-breakers-premium-warbond.webp"
   },
   {
     "id": "entrenched-division-premium-warbond",
@@ -173,7 +194,8 @@
     "nameEn": "Entrenched Division",
     "order": 21,
     "releaseDate": "2026-03-17",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/entrenched-division-premium-warbond.webp"
   },
   {
     "id": "exo-experts-premium-warbond",
@@ -181,7 +203,8 @@
     "nameEn": "Exo Experts",
     "order": 22,
     "releaseDate": "2026-04-28",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/exo-experts-premium-warbond.webp"
   },
   {
     "id": "castellan-s-creed-legendary-warbond",
@@ -189,7 +212,8 @@
     "nameEn": "Castellan's Creed",
     "order": 23,
     "releaseDate": "2026-08-12",
-    "type": "legendary"
+    "type": "legendary",
+    "cover": "icons/warbond/castellan-s-creed-legendary-warbond.webp"
   },
   {
     "id": "ironclad-democracy-premium-warbond",
@@ -197,6 +221,7 @@
     "nameEn": "Ironclad Democracy",
     "order": 24,
     "releaseDate": "2026-09-22",
-    "type": "premium"
+    "type": "premium",
+    "cover": "icons/warbond/ironclad-democracy-premium-warbond.webp"
   }
 ]

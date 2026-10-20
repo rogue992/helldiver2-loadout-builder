@@ -1,0 +1,741 @@
+/* 수호부 보급 공고(신규 채권). 이중 테두리 쟁반 안에 표지 · 구성품 · 조작 줄. 채권 색(--wb)은 구성품 표식 · 종류 알약에만 */
+.backdrop {
+  --slam: cubic-bezier(0.2, 1.4, 0.4, 1);
+  /* 도장 잉크 얼룩: 노이즈 알파로 군데군데 빈다 */
+  --ink: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4.6 3.35'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: color-mix(in srgb, #01050b 62%, transparent);
+  backdrop-filter: blur(4px) saturate(0.8);
+  -webkit-backdrop-filter: blur(4px) saturate(0.8);
+}
+.run {
+  animation: fade 0.5s var(--ease) both;
+}
+.closing {
+  animation: fade 0.28s var(--ease) reverse both;
+}
+.closing .shell {
+  animation: sink 0.28s var(--ease) both;
+}
+
+/* 이중 테두리: 바깥 쟁반(노란 머리카락선 + 은은한 빛) 안에 패널이 앉는다 */
+.shell {
+  --shell-r: calc(var(--r-soft) * 3);
+  --pad: 6px;
+  position: relative;
+  display: flex;
+  width: min(1060px, 100%);
+  max-height: calc(100dvh - 48px);
+  padding: var(--pad);
+  border: 1px var(--bstyle) color-mix(in srgb, var(--yellow) 30%, transparent);
+  border-radius: var(--shell-r);
+  background: color-mix(in srgb, var(--yellow) 5%, color-mix(in srgb, var(--panel) 45%, transparent));
+  box-shadow:
+    0 0 90px -30px color-mix(in srgb, var(--yellow) 42%, transparent),
+    0 60px 120px -50px rgba(0, 0, 0, 0.8);
+}
+.run .shell {
+  animation: rise 0.8s var(--ease) both;
+}
+.core {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: calc(var(--shell-r) - var(--pad));
+  background: var(--panel);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 0 0 1px color-mix(in srgb, var(--line) 75%, transparent);
+}
+.hazard {
+  flex: none;
+  height: 7px;
+  background: var(--hazard-bg) var(--hazard);
+  border-bottom: 1px solid color-mix(in srgb, var(--yellow) 65%, transparent);
+}
+
+/* 표지: 위는 어둡게(버튼), 아래는 패널색으로 녹아 제목이 얹힌다 */
+.art {
+  position: relative;
+  flex: none;
+  height: clamp(178px, 31vh, 318px);
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+.art > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+}
+.run .art > img {
+  animation: settle 2s var(--ease) both;
+}
+.art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 12, 0.5) 0%, transparent 30%),
+    linear-gradient(0deg, var(--panel) 0%, color-mix(in srgb, var(--panel) 74%, transparent) 20%, transparent 60%);
+}
+.artTop {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  left: 16px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.glass {
+  border: 1px var(--bstyle) rgba(255, 255, 255, 0.14);
+  background: color-mix(in srgb, var(--bg) 52%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  height: 28px;
+  padding: 0 13px 0 11px;
+  border-radius: var(--r-pill);
+  font: 600 12.5px var(--font-display);
+  letter-spacing: 0.08em;
+  color: var(--fg);
+}
+.beacon {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 10px var(--yellow);
+}
+.beacon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--yellow);
+  border-radius: 50%;
+  opacity: 0;
+  animation: ping 2.6s var(--ease) 1.4s infinite;
+}
+.close {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  color: var(--fg);
+  font-size: 17px;
+  transition:
+    transform 0.5s var(--ease),
+    background-color 0.4s var(--ease),
+    border-color 0.4s var(--ease);
+}
+.close:hover {
+  transform: rotate(90deg);
+  border-color: color-mix(in srgb, var(--yellow) 60%, transparent);
+  background: color-mix(in srgb, var(--bg) 80%, transparent);
+}
+.close:active {
+  transform: rotate(90deg) scale(0.92);
+}
+.artTitle {
+  position: absolute;
+  z-index: 2;
+  left: 26px;
+  right: 230px;
+  bottom: 16px;
+}
+.run .artTitle {
+  animation: up 0.9s var(--ease) 0.2s both;
+}
+.artTitle h2 {
+  font: 700 46px/1.02 var(--font-display);
+  letter-spacing: 0.01em;
+  color: var(--fg);
+  text-shadow: 0 2px 26px rgba(0, 0, 0, 0.6);
+}
+.artTitle p {
+  margin: 9px 0 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font: 600 14px var(--font-display);
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.type {
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 8px;
+  border: 1px var(--bstyle) color-mix(in srgb, var(--wb) 70%, transparent);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--wb) 14%, transparent);
+  color: var(--fg);
+  font: 700 11px var(--font-display);
+  letter-spacing: 0.1em;
+}
+
+/* 수호부 도장: 표지 오른쪽 아래에 쾅. 텔레타이프 모양은 theme/teletype.css */
+.stamp {
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  bottom: 22px;
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 9px 16px 8px;
+  border: 2.5px solid var(--yellow);
+  border-radius: 4px;
+  outline: 1px solid color-mix(in srgb, var(--yellow) 60%, transparent);
+  outline-offset: 3px;
+  background: color-mix(in srgb, var(--bg) 30%, transparent);
+  color: var(--yellow);
+  transform: rotate(-8deg);
+  -webkit-mask: var(--ink) center / 160px;
+  mask: var(--ink) center / 160px;
+}
+.run .stamp {
+  animation: slam 0.42s var(--slam) 0.62s both;
+}
+.stamp b {
+  font: 800 22px/1 var(--font-display);
+  letter-spacing: 0.1em;
+}
+.stamp small {
+  font: 600 10.5px/1 var(--mono);
+  letter-spacing: 0.14em;
+}
+.led {
+  display: none;
+}
+
+/* 본문: 구성품 진열 */
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  padding: 4px 24px 22px;
+}
+.shelfHd {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.shelfHd h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 15.5px var(--font-display);
+  letter-spacing: 0.04em;
+  color: var(--fg);
+}
+.shelfHd h3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: var(--mark, var(--wb));
+  box-shadow: 0 0 10px color-mix(in srgb, var(--mark, var(--wb)) 70%, transparent);
+}
+.extra {
+  --mark: var(--acc);
+}
+.count {
+  min-width: 22px;
+  height: 20px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 7px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  font: 600 11px var(--mono);
+  color: var(--muted);
+}
+.note {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 500 12px var(--font-body);
+  color: var(--muted);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 7), minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* 카드도 이중 테두리: 카드(쟁반) 안에 이미지 우물이 한 단 들어가 앉는다 */
+.card {
+  --card-r: calc(var(--r-soft) * 1.5);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 5px 5px 10px;
+  border: 1px var(--bstyle) var(--box-line);
+  border-radius: var(--card-r);
+  background: var(--box);
+  transition:
+    transform 0.5s var(--ease),
+    border-color 0.5s var(--ease),
+    opacity 0.5s var(--ease),
+    filter 0.5s var(--ease);
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--acc);
+}
+.run .card {
+  animation: up 0.7s var(--ease) calc(0.34s + var(--i) * 45ms) both;
+}
+.pic {
+  position: relative;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 4px;
+  border-radius: calc(var(--card-r) - 5px);
+  background:
+    radial-gradient(ellipse at 50% 125%, color-mix(in srgb, var(--acc) 13%, transparent), transparent 70%),
+    var(--tile);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.04),
+    inset 0 0 0 1px color-mix(in srgb, var(--box-line) 55%, transparent);
+}
+.pic img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.45));
+}
+/* 스트라타젬 아이콘은 정사각 SVG라 무기 렌더보다 작게 */
+.picStrat img {
+  height: 50px;
+}
+.tag {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 6px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--bg) 72%, transparent);
+  color: var(--muted);
+  font: 700 9.5px var(--font-display);
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+.card b {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 4px;
+  font: 600 13.5px/1.25 var(--font-display);
+  color: var(--fg);
+}
+.card small {
+  padding: 0 4px;
+  font: 500 11.5px/1.3 var(--font-body);
+  color: var(--muted);
+}
+.passive {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: -2px 4px 0;
+  font: 600 11px/1.3 var(--font-body);
+  color: var(--acc);
+}
+.passive img {
+  flex: none;
+  width: 15px;
+  height: 15px;
+}
+/* 미보유: 선택 창의 미보유 카드와 같은 흐림 */
+.unowned .card {
+  opacity: 0.42;
+  filter: saturate(0.6);
+}
+
+/* 둘째 줄: 함께 들어온 항목 3칸 + 오른쪽 조작. 함께 들어온 항목이 없으면 조작만 오른쪽에 */
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  column-gap: 10px;
+  align-items: end;
+}
+.row2 > .extra {
+  grid-column: span 3;
+}
+.row2 > .extra .cards {
+  --cols: 3;
+}
+.act {
+  grid-column: 4 / -1;
+  display: grid;
+  justify-items: end;
+  gap: 9px;
+  padding-left: 18px;
+}
+.actWide {
+  grid-column: 1 / -1;
+  padding-left: 0;
+}
+.actWide .tray {
+  width: min(100%, 560px);
+}
+.run .act {
+  animation: up 0.8s var(--ease) 0.7s both;
+}
+/* 조작 쟁반: 알약 버튼이 홈에 끼워진 모양(쟁반 반지름 = 버튼 반지름 + 안쪽 여백) */
+.tray {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 7px 7px 7px 16px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--bg2) 85%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+.own {
+  min-width: 0;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+}
+.switch {
+  flex: none;
+  position: relative;
+  width: 38px;
+  height: 22px;
+  border: 1px var(--bstyle) var(--box-line);
+  border-radius: var(--r-pill);
+  background: var(--line);
+  transition:
+    background-color 0.45s var(--ease),
+    border-color 0.45s var(--ease);
+}
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--r-pill);
+  background: var(--muted);
+  transition:
+    transform 0.5s var(--ease),
+    background-color 0.45s var(--ease);
+}
+.own[aria-checked='true'] .switch {
+  border-color: var(--yellow);
+  background: var(--yellow);
+}
+.own[aria-checked='true'] .switch::after {
+  transform: translateX(16px);
+  background: var(--on-yellow);
+}
+.ownTxt {
+  display: grid;
+  line-height: 1.25;
+}
+.ownTxt b {
+  font: 600 14.5px var(--font-display);
+  letter-spacing: 0.03em;
+}
+.ownTxt small {
+  font: 500 11.5px var(--font-body);
+  color: var(--muted);
+}
+.cta {
+  flex: none;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 6px 0 22px;
+  border-radius: var(--r-pill);
+  background: var(--yellow);
+  color: var(--on-yellow);
+  font: 700 15.5px var(--font-display);
+  letter-spacing: 0.04em;
+  box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--yellow) 70%, transparent);
+  transition:
+    transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+.cta:hover {
+  box-shadow: 0 18px 34px -14px color-mix(in srgb, var(--yellow) 90%, transparent);
+}
+.cta:active {
+  transform: scale(0.98);
+}
+.ctaIc {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-pill);
+  background: var(--on-yellow);
+  color: var(--yellow);
+  font-size: 16px;
+  transition: transform 0.5s var(--ease);
+}
+.cta:hover .ctaIc {
+  transform: translate(2px, -1px) scale(1.06);
+}
+.once {
+  margin: 0;
+  padding-right: 8px;
+  font: 500 11.5px var(--font-body);
+  color: var(--muted);
+  text-align: right;
+}
+
+/* 낮은 화면: 표지를 줄여 조작 줄까지 한 화면에 */
+@media (max-height: 800px) and (min-width: 1001px) {
+  .art {
+    height: clamp(150px, 24vh, 318px);
+  }
+  /* 띠처럼 얇아지면 아래쪽을 보여 채권 이름판이 도장 위로 올라가게 */
+  .art > img {
+    object-position: 50% 64%;
+  }
+}
+
+/* 중간 폭: 4칸. 조작 줄은 본문 스크롤 바닥에 붙어 늘 보인다 */
+@media (max-width: 1000px) {
+  .backdrop {
+    padding-bottom: 68px;
+  }
+  .shell {
+    width: min(780px, 100%);
+    max-height: calc(100dvh - 92px);
+  }
+  .cards {
+    --cols: 4;
+  }
+  .body {
+    padding-bottom: 0;
+  }
+  .row2 {
+    display: contents;
+  }
+  .row2 > .extra,
+  .act {
+    grid-column: auto;
+  }
+  .row2 > .extra .cards {
+    --cols: 4;
+  }
+  .act {
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
+    margin: 0 -24px;
+    padding: 16px 24px;
+    background: linear-gradient(180deg, transparent, var(--panel) 24%);
+  }
+  .actWide .tray {
+    width: 100%;
+  }
+}
+
+/* 폰: 아래에서 올라오는 시트. 전체가 스크롤되고 조작 줄만 바닥에 붙는다 */
+@media (max-width: 640px) {
+  .backdrop {
+    place-items: end stretch;
+    padding: 56px 0 0;
+  }
+  .shell {
+    --pad: 5px;
+    width: 100%;
+    max-height: calc(100dvh - 56px);
+    padding-bottom: 0;
+    border-bottom: 0;
+    border-radius: var(--shell-r) var(--shell-r) 0 0;
+  }
+  .run .shell {
+    animation-name: sheet;
+  }
+  .core {
+    overflow: auto;
+    overscroll-behavior: contain;
+    border-radius: calc(var(--shell-r) - var(--pad)) calc(var(--shell-r) - var(--pad)) 0 0;
+  }
+  .art {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+  .artTitle {
+    left: 18px;
+    right: 18px;
+    bottom: 12px;
+  }
+  .artTitle h2 {
+    font-size: 28px;
+  }
+  .artTitle p {
+    margin-top: 6px;
+    font-size: 13px;
+  }
+  .stamp {
+    right: 14px;
+    bottom: 50px;
+    gap: 3px;
+    padding: 5px 9px 4px;
+    outline-offset: 2px;
+  }
+  .stamp b {
+    font-size: 14px;
+  }
+  .stamp small {
+    font-size: 8px;
+    letter-spacing: 0.08em;
+  }
+  .body {
+    overflow: visible;
+    padding: 2px 14px 0;
+    gap: 18px;
+  }
+  .shelfHd {
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+  .cards {
+    --cols: 3;
+    gap: 8px;
+  }
+  .row2 > .extra .cards {
+    --cols: 3;
+  }
+  .pic {
+    height: 78px;
+  }
+  .card b {
+    font-size: 12.5px;
+  }
+  .act {
+    margin: 0 -14px;
+    padding: 14px 14px calc(14px + env(safe-area-inset-bottom, 0px));
+    background: linear-gradient(180deg, transparent, var(--panel) 26%);
+    justify-items: stretch;
+  }
+  .tray {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+    border-radius: calc(var(--r-soft) * 2.5);
+  }
+  .own {
+    width: 100%;
+  }
+  .cta {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .once {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+}
+@keyframes sheet {
+  from {
+    opacity: 0.4;
+    transform: translateY(60%);
+  }
+}
+@keyframes sink {
+  to {
+    opacity: 0;
+    transform: translateY(14px) scale(0.985);
+  }
+}
+@keyframes settle {
+  from {
+    transform: scale(1.08);
+  }
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+@keyframes slam {
+  0% {
+    opacity: 0;
+    transform: scale(1.9) rotate(-22deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.94) rotate(-8deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-8deg);
+  }
+}
+@keyframes ping {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.5);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.9);
+  }
+}

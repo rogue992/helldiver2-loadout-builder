@@ -36,6 +36,10 @@ function describe(w: Warning): { title: string; verdict: string } {
       return { title: hard ? copy.warnTitle.eagle(w.count ?? 0) : copy.warnTitle.eagleSoft(w.count ?? 0), verdict: hard ? copy.warnVerdict.eagleHard : copy.warnVerdict.eagleSoft }
     case 'empty':
       return { title: copy.warnTitle.empty(w.count ?? 0), verdict: copy.warnVerdict.empty }
+    case 'no_backpack':
+      return { title: w.missing === 'maybe' ? copy.warnTitle.noBackpackMaybe : copy.warnTitle.noBackpack, verdict: copy.warnVerdict.missing }
+    case 'no_support_weapon':
+      return { title: w.missing === 'maybe' ? copy.warnTitle.noSupportMaybe : copy.warnTitle.noSupport, verdict: copy.warnVerdict.missing }
   }
 }
 
@@ -69,6 +73,9 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
   const hard = warnings.filter((w) => w.level === 'hard').length
   // 기본 로드아웃(수호부 지급)은 어떤 것도 바꿀 수 없다. 복제만 열어 둔다. 빈 슬롯도 지급 구성의 일부라 안내하지 않는다
   const lockedAll = isDefaultLoadout(draft.id)
+  // 전선 미지정: 종족을 고르기 전이라 아직 목록에 없다. 저장 · 복제 · 초기화 · 이미지로 남길 것이 없다.
+  // 종족은 빌더 위 관문에서만 고른다(select는 키보드로 훑기만 해도 change가 나 바로 발급되므로 표시만)
+  const pending = !!draft.needsRace
   const day = issuedOn(draft.createdAt, lockedAll)
   const serial = `No. SE-${day.y.slice(2)}${day.m}${day.d}`
   const shown = lockedAll ? warnings.filter((w) => w.code !== 'empty') : warnings
@@ -90,7 +97,17 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
 
       <div className={styles.kv} data-part="permit-kv">
         <span>{copy.race}</span>
-        <select value={draft.race} disabled={lockedAll} onChange={(e) => editDraft({ race: e.target.value as LoadoutRace, faction: 'default' })}>
+        <select
+          value={pending ? '' : draft.race}
+          disabled={lockedAll || pending}
+          className={pending ? styles.need : undefined}
+          onChange={(e) => editDraft({ race: e.target.value as LoadoutRace, faction: 'default' })}
+        >
+          {pending && (
+            <option value="" disabled>
+              {copy.raceNeeded}
+            </option>
+          )}
           {LOADOUT_RACES.map((r) => (
             <option key={r.id} value={r.id}>
               {r.nameKo}
@@ -98,18 +115,22 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
           ))}
         </select>
         <span>{copy.faction}</span>
-        <select value={draft.faction} disabled={lockedAll} onChange={(e) => editDraft({ faction: e.target.value })}>
-          {race.factions.map((f) => (
-            <option key={f.id} value={f.id}>
-              {f.nameKo}
-            </option>
-          ))}
+        <select value={pending ? '' : draft.faction} disabled={lockedAll || pending} onChange={(e) => editDraft({ faction: e.target.value })}>
+          {pending ? (
+            <option value="">-</option>
+          ) : (
+            race.factions.map((f) => (
+              <option key={f.id} value={f.id}>
+                {f.nameKo}
+              </option>
+            ))
+          )}
         </select>
       </div>
 
       <div className={styles.status} data-part="permit-status">
         <Stamp state={stamp} theme={theme} stampKey={stampKey} />
-        <small>{draft.race === 'all' ? race.nameKo : `${race.nameKo} · ${factionName(draft.race, draft.faction)}`}</small>
+        <small>{pending ? copy.raceUnset : draft.race === 'all' ? race.nameKo : `${race.nameKo} · ${factionName(draft.race, draft.faction)}`}</small>
       </div>
 
       <div className={styles.viol} data-part="permit-violations">
@@ -143,18 +164,18 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
       </div>
 
       <div className={styles.btns} data-part="permit-buttons" data-export="skip">
-        <button className={[btn.pill, styles.primary].join(' ')} onClick={onSave} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+        <button className={[btn.pill, styles.primary].join(' ')} onClick={onSave} disabled={lockedAll || pending} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.save}
           <span className={[btn.pillIc, styles.ic].join(' ')}>
             <Icon name="arrow" stroke={1.8} />
           </span>
         </button>
         <div className={styles.row}>
-          <button className={btn.pill} onClick={onDuplicate}>
+          <button className={btn.pill} onClick={onDuplicate} disabled={pending}>
             <Icon name="copy" />
             {copy.duplicate}
           </button>
-          <button className={btn.pill} onClick={onExportImage}>
+          <button className={btn.pill} onClick={onExportImage} disabled={pending}>
             <Icon name="image" />
             {copy.image}
           </button>
@@ -163,7 +184,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
             {copy.briefing}
           </button>
         </div>
-        <button className={[btn.pill, styles.reset].join(' ')} onClick={() => setConfirmReset(true)} disabled={lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+        <button className={[btn.pill, styles.reset].join(' ')} onClick={() => setConfirmReset(true)} disabled={lockedAll || pending} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.reset}
           <span className={[btn.pillIc, styles.ic].join(' ')}>
             <Icon name="reset" />

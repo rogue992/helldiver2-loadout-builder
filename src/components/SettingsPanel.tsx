@@ -12,7 +12,7 @@ interface Props {
   onRestoreBackup: () => void
 }
 
-/** 상단 설정 패널: 경고 3 · 이름 표기 · 보유 채권 + JSON 입출력 · 백업 복원. 테마는 상단 바에서. */
+/** 상단 설정 패널: 경고 4 · 이름 표기 · 보유 채권 + JSON 입출력 · 백업 복원. 테마는 상단 바에서. */
 export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: Props) {
   const settings = useStore((s) => s.settings)
   const setSetting = useStore((s) => s.setSetting)
@@ -34,8 +34,15 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
       ))}
     </span>
   )
-  const toggle = (value: boolean, onPick: (v: boolean) => void, label: string) => (
-    <button role="switch" aria-checked={value} aria-label={label} className={[styles.toggle, value && styles.toggleOn].filter(Boolean).join(' ')} onClick={() => onPick(!value)} />
+  const toggle = (value: boolean, onPick: (v: boolean) => void, label: string, disabled = false) => (
+    <button role="switch" aria-checked={value} aria-label={label} disabled={disabled} className={[styles.toggle, value && styles.toggleOn].filter(Boolean).join(' ')} onClick={() => onPick(!value)} />
+  )
+  /** 이름 아래 한 줄 설명이 붙는 설정 이름 */
+  const label = (name: string, hint: string) => (
+    <span className={styles.label}>
+      {name}
+      <small>{hint}</small>
+    </span>
   )
 
   return (
@@ -48,9 +55,14 @@ export default function SettingsPanel({ onExport, onImport, onRestoreBackup }: P
         <span>{copy.settingsBackpack}</span>
         {toggle(settings.backpackWarn, (v) => setSetting('backpackWarn', v), copy.settingsBackpack)}
       </div>
+      {/* 중복 경고를 끄면 의미가 없어 흐리게 둔다 */}
+      <div className={[styles.row, !settings.backpackWarn && styles.rowOff].filter(Boolean).join(' ')}>
+        {label(copy.settingsDisposable, copy.settingsDisposableHint)}
+        {toggle(settings.excludeDisposable, (v) => setSetting('excludeDisposable', v), copy.settingsDisposable, !settings.backpackWarn)}
+      </div>
       <div className={styles.row}>
-        <span>{copy.settingsDisposable}</span>
-        {toggle(settings.excludeDisposable, (v) => setSetting('excludeDisposable', v), copy.settingsDisposable)}
+        {label(copy.settingsMissing, copy.settingsMissingHint)}
+        {toggle(settings.missingWarn, (v) => setSetting('missingWarn', v), copy.settingsMissing)}
       </div>
       <div className={styles.row}>
         <span>{copy.settingsName}</span>

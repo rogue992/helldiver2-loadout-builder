@@ -21,6 +21,25 @@
 .row > span:first-child {
   white-space: nowrap;
 }
+/* 설명이 붙는 설정: 이름은 한 줄, 설명은 줄바꿈 */
+.row > .label:first-child {
+  min-width: 0;
+  white-space: normal;
+}
+.label small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 11.5px;
+  line-height: 1.45;
+  word-break: keep-all;
+}
+.rowOff {
+  opacity: 0.5;
+}
+.toggle:disabled {
+  cursor: not-allowed;
+}
 .meta {
   font-size: 12px;
   color: var(--muted);

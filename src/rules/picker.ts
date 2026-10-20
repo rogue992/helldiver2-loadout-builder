@@ -39,6 +39,31 @@ export function nextPoolTarget(pools: Pools, sizes: PoolSizes, from: number): Po
   return null
 }
 
+/**
+ * 칸 수를 바꾼 뒤의 대상(pools · sizes는 바꾼 뒤 값). 늘렸으면 그 슬롯의 첫 빈 칸이 바로 대상,
+ * 줄였으면 대상이 그 슬롯일 때만 남은 칸 안으로 당긴다(다른 슬롯이 대상이면 그대로).
+ */
+export function targetAfterResize(pools: Pools, sizes: PoolSizes, slotIndex: number, target: PoolTarget, grew: boolean): PoolTarget {
+  const size = sizes[slotIndex]
+  const empty = firstEmptyCell(pools[slotIndex], size)
+  if (grew) return { slotIndex, cell: empty ?? size - 1 }
+  if (target.slotIndex !== slotIndex) return target
+  return { slotIndex, cell: Math.min(target.cell, empty ?? size - 1) }
+}
+
+/** 즐겨찾기를 앞으로. 즐겨찾기끼리 · 나머지끼리는 원래 순서를 지킨다 */
+export function favoritesFirst<T extends { id: string }>(items: T[], fav: Set<string>): T[] {
+  return [...items.filter((i) => fav.has(i.id)), ...items.filter((i) => !fav.has(i.id))]
+}
+
+/**
+ * 전체 탭 맨 위 즐겨찾기 묶음을 보일지. 보이는 목록에 즐겨찾기가 있으면 보이고,
+ * 즐겨찾기가 하나도 없으면 별 안내로 보이되 검색 중에는 숨긴다(검색에 맞는 즐겨찾기가 없을 때도 숨긴다).
+ */
+export function showFavoriteGroup(tab: string, matched: number, total: number, searching: boolean): boolean {
+  return tab === 'all' && (matched > 0 || (total === 0 && !searching))
+}
+
 /** from 다음 장비부터 한 바퀴 돌며 빈 장비. 전부 찼으면 null(방금 채운 from 자신은 보지 않는다) */
 export function nextGearTarget(gear: Gear, from: GearSlot): GearSlot | null {
   const at = GEAR_ORDER.indexOf(from)

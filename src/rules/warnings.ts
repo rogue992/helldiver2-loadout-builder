@@ -1,10 +1,10 @@
 // 경고 규칙과 도장 상태. React 의존 없는 순수 함수. 입력: 로드아웃 + 아이템 인덱스 + 설정.
-import type { ItemIndex } from '../data/loadData'
+import type { ItemIndex } from '../data/itemIndex'
 import type { Item, RuleTag } from '../data/types'
 import type { Loadout, Settings } from '../store/types'
 
 export type WarningLevel = 'hard' | 'soft' | 'info'
-export type WarningCode = 'backpack' | 'support_weapon' | 'eagle' | 'empty'
+export type WarningCode = 'backpack' | 'support_weapon' | 'eagle' | 'empty' | 'no_backpack' | 'no_support_weapon'
 
 export interface Warning {
   level: WarningLevel
@@ -15,6 +15,8 @@ export interface Warning {
   itemIds: string[]
   /** 이글: 위반이면 반드시 겹치는 슬롯 수, 주의면 최대 겹칠 수 있는 슬롯 수 · empty: 비어 있는 슬롯 수(스트라타젬 + 장비) */
   count?: number
+  /** 없음 판정: none = 어느 후보에도 없음, maybe = 고르기에 따라 빠질 수 있음(slots = 그것을 줄 수 있는 슬롯) */
+  missing?: 'none' | 'maybe'
 }
 
 /** none = 전부 비어 있음(도장 없음), treason = 위반 있음, hold = 빈 슬롯 있음, approved = 완전 배정 + 위반 없음 */
@@ -58,6 +60,22 @@ function evaluateTag(
   return { level: null, slots: [], itemIds: [], max }
 }
 
+/**
+ * 배낭 · 지원무기가 반드시 들어가는지. 4슬롯이 다 찬 뒤에만 본다(채우는 중에는 미배정이 알린다).
+ * 후보 전부가 해당 태그인 슬롯이 하나라도 있으면 반드시 들어가므로 판정 없음.
+ */
+function evaluateMissing(pools: string[][], index: ItemIndex, tag: RuleTag): { missing: 'none' | 'maybe'; slots: number[] } | null {
+  // 원래 후보 id로 본다: 데이터에서 사라진 아이템도 찬 칸이고, 태그가 없는 후보로 센다
+  const tagged = (id: string) => {
+    const it = index.byId.get(id)
+    return !!it && has(it, tag)
+  }
+  if (pools.some((p) => p.length === 0)) return null
+  if (pools.some((p) => p.every(tagged))) return null
+  const slots = pools.flatMap((p, idx) => (p.some(tagged) ? [idx + 1] : []))
+  return { missing: slots.length ? 'maybe' : 'none', slots }
+}
+
 export function emptyCount(loadout: Loadout): number {
   const emptyPools = loadout.pools.filter((p) => p.length === 0).length
   const emptyGear = Object.values(loadout.gear).filter((g) => !g).length
@@ -78,6 +96,14 @@ export function evaluate(loadout: Loadout, index: ItemIndex, settings: Settings)
   const eagle = evaluateTag(pools, 'eagle', settings.eagleThreshold)
   // 위반은 반드시 겹치는 슬롯 수(표시되는 슬롯 칩과 같다), 주의는 최대 겹칠 수 있는 수
   if (eagle.level) out.push({ level: eagle.level, code: 'eagle', slots: eagle.slots, itemIds: eagle.itemIds, count: eagle.level === 'hard' ? eagle.slots.length : eagle.max })
+
+  // 없음은 주의만. 배낭형 지원무기는 배낭이자 지원무기, 일회용도 지원무기로 친다(중복 판정의 일회용 제외 설정과 무관)
+  if (settings.missingWarn) {
+    const nb = evaluateMissing(loadout.pools, index, 'backpack')
+    if (nb) out.push({ level: 'soft', code: 'no_backpack', slots: nb.slots, itemIds: [], missing: nb.missing })
+    const ns = evaluateMissing(loadout.pools, index, 'support_weapon')
+    if (ns) out.push({ level: 'soft', code: 'no_support_weapon', slots: ns.slots, itemIds: [], missing: ns.missing })
+  }
 
   const empty = emptyCount(loadout)
   if (empty > 0) out.push({ level: 'info', code: 'empty', slots: [], itemIds: [], count: empty })

@@ -33,9 +33,13 @@ export interface Loadout {
 
 export interface Draft extends Loadout {
   dirty: boolean
+  /** 전선 미지정: 신규 배정 직후 종족을 고르기 전. 아직 목록에 없고, 종족을 고르면 그때 발급된다 */
+  needsRace?: boolean
 }
 
 export type NameDisplay = 'ko' | 'both' | 'en'
+/** 종족별 즐겨찾기 아이템 id. 'all'은 종족 무관 허가서용 */
+export type Favorites = Record<LoadoutRace, string[]>
 export type ThemeId = 'console' | 'teletype'
 export const THEME_IDS: ThemeId[] = ['console', 'teletype']
 
@@ -43,21 +47,28 @@ export interface Settings {
   eagleThreshold: 2 | 3
   backpackWarn: boolean
   excludeDisposable: boolean
+  /** 배낭 · 지원무기가 없거나 고르기에 따라 빠질 수 있으면 주의 */
+  missingWarn: boolean
   nameDisplay: NameDisplay
   theme: ThemeId
   /** 미보유 채권 id. 비어 있으면 전부 보유. 새 채권은 자동으로 보유. */
   unownedWarbonds: string[]
   includeSuperstore: boolean
+  favorites: Favorites
 }
+
+export const emptyFavorites = (): Favorites => ({ all: [], terminid: [], automaton: [], illuminate: [] })
 
 export const DEFAULT_SETTINGS: Settings = {
   eagleThreshold: 3,
   backpackWarn: true,
   excludeDisposable: true,
+  missingWarn: true,
   nameDisplay: 'ko',
   theme: 'console',
   unownedWarbonds: [],
   includeSuperstore: true,
+  favorites: emptyFavorites(),
 }
 
 export interface PersistedState {

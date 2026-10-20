@@ -6,7 +6,8 @@ import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
 import { useStore } from '../store/useStore'
 import { isDefaultLoadout } from '../store/defaults'
-import { sizesOf, type GearSlot as GearSlotKey, type PoolSize } from '../store/types'
+import { sizesOf, type GearSlot as GearSlotKey } from '../store/types'
+import type { LoadoutRace } from '../data/factions'
 import type { Warning } from '../rules/warnings'
 import { cellTarget } from '../rules/picker'
 import { copy } from '../copy/ko'
@@ -14,19 +15,22 @@ import Icon from './Icon'
 import btn from './Buttons.module.css'
 import Tile from './Tile'
 import PickerModal, { type PickerTarget } from './PickerModal'
+import PoolSizeTray from './PoolSizeTray'
+import RaceGate from './RaceGate'
 import styles from './Builder.module.css'
 
 interface Props {
   warnings: Warning[]
+  /** 전선 미지정 허가서의 관문에서 종족을 고를 때 */
+  onAssignRace: (race: LoadoutRace) => void
 }
-
-const SIZES: PoolSize[] = [1, 2, 3, 4]
 
 /**
  * 스트라타젬 4슬롯(슬롯마다 후보 칸 1~4) + 개인 장비 4(단일 선택). 모든 편집은 draft에만.
  * 칸이나 타일을 누르면 그 슬롯을 대상으로 선택 창이 열리고(SES 방식), 해제는 타일 · 캡션의 작은 ×.
+ * 전선 미지정 허가서는 종족을 고를 때까지 관문이 덮고 아무것도 누를 수 없다.
  */
-export default function Builder({ warnings }: Props) {
+export default function Builder({ warnings, onAssignRace }: Props) {
   const draft = useStore((s) => s.draft)
   const setPool = useStore((s) => s.setPool)
   const setPoolSize = useStore((s) => s.setPoolSize)
@@ -53,6 +57,8 @@ export default function Builder({ warnings }: Props) {
   const sizes = sizesOf(draft)
   // 기본 로드아웃(수호부 지급)은 고정: 후보 · 칸 수 · 장비 어느 것도 바꾸지 못한다
   const locked = isDefaultLoadout(draft.id)
+  const pending = !!draft.needsRace
+  const inert = locked || pending
 
   const poolTypeLabel = (ids: string[]) => {
     const types = new Set(ids.map((id) => index.byId.get(id)?.stratType).filter(Boolean))
@@ -61,8 +67,8 @@ export default function Builder({ warnings }: Props) {
 
   const gearItem = (slot: GearSlotKey): Item | null => (draft.gear[slot] ? index.byId.get(draft.gear[slot]!) ?? null : null)
   // 칸 단위로 연다: 찬 타일을 누르면 그 칸이 교체 대상, 빈 칸은 어느 것을 눌러도 첫 빈 칸이 채울 대상
-  const openPool = (i: number, cell: number) => !locked && setPicker({ kind: 'pool', slotIndex: i, cell: cellTarget(draft.pools[i], cell) })
-  const openGear = (slot: GearSlotKey) => !locked && setPicker({ kind: 'gear', slot })
+  const openPool = (i: number, cell: number) => !inert && setPicker({ kind: 'pool', slotIndex: i, cell: cellTarget(draft.pools[i], cell) })
+  const openGear = (slot: GearSlotKey) => !inert && setPicker({ kind: 'gear', slot })
 
   const gearBox = (slot: GearSlotKey, boxCls: string | false, renderCls: string | false, tileShape: 'torso' | 'wide' | 'square', withSub: boolean) => {
     const item = gearItem(slot)
@@ -71,13 +77,13 @@ export default function Builder({ warnings }: Props) {
         <div className={styles.cap}>
           <b>{KIND_LABEL[slot]}</b>
           <span className={styles.types}>{item ? gearCaption(item) : ''}</span>
-          {item && !locked && (
+          {item && !inert && (
             <button type="button" className={[btn.clearX, styles.clear].join(' ')} onClick={() => setGear(slot, null)} aria-label={`${KIND_LABEL[slot]} ${copy.clear}`} title={copy.clear}>
               <Icon name="x" stroke={2.4} />
             </button>
           )}
         </div>
-        <button type="button" className={[styles.render, renderCls].filter(Boolean).join(' ')} disabled={locked} onClick={() => openGear(slot)} data-part="render">
+        <button type="button" className={[styles.render, renderCls].filter(Boolean).join(' ')} disabled={inert} onClick={() => openGear(slot)} data-part="render">
           {item ? <Tile key={item.id} item={item} shape={tileShape} className={styles.renderTile} /> : <span className={styles.empty}>{locked ? copy.lockedCell : copy.emptyCell}</span>}
           {item && (
             <span className={styles.nm}>
@@ -92,7 +98,7 @@ export default function Builder({ warnings }: Props) {
   }
 
   return (
-    <div className={[styles.builder, locked && styles.locked].filter(Boolean).join(' ')}>
+    <div className={[styles.builder, inert && styles.inert, pending && styles.gated].filter(Boolean).join(' ')}>
       <section className={styles.sec}>
         <h2 data-part="section-title">{copy.stratagems}</h2>
         <div className={styles.strats}>
@@ -106,28 +112,22 @@ export default function Builder({ warnings }: Props) {
                 <div className={styles.cap}>
                   <b>{i + 1}</b>
                   <span className={styles.types}>{poolTypeLabel(pool)}</span>
-                  <span className={styles.sizeSel} role="radiogroup" aria-label={`${copy.pickerStrat(i + 1)} ${copy.poolSize}`} data-part="size-select">
-                    {SIZES.map((n) => (
-                      <button key={n} type="button" role="radio" aria-checked={size === n} className={size === n ? styles.sizeOn : ''} disabled={locked} onClick={() => setPoolSize(i, n)} title={n === 1 ? copy.poolSize : copy.pickOf(n)}>
-                        {n}
-                      </button>
-                    ))}
-                  </span>
+                  <PoolSizeTray slotIndex={i} size={size} disabled={inert} onChange={(n) => setPoolSize(i, n)} />
                 </div>
                 <div className={size === 1 ? styles.one : styles.grid2}>
                   {cells.map((id, k) =>
                     id ? (
                       <span key={id} className={styles.cell}>
-                        <Tile item={index.byId.get(id) ?? null} missingId={id} shape={size === 1 ? 'fixed' : 'square'} mark={markOf.get(id) ?? 'none'} onClick={locked ? undefined : () => openPool(i, k)} />
-                        {!locked && (
+                        <Tile item={index.byId.get(id) ?? null} missingId={id} shape={size === 1 ? 'fixed' : 'square'} mark={markOf.get(id) ?? 'none'} onClick={inert ? undefined : () => openPool(i, k)} />
+                        {!inert && (
                           <button type="button" className={[btn.clearX, styles.x].join(' ')} onClick={() => setPool(i, pool.filter((x) => x !== id))} aria-label={`${index.byId.get(id) ? name(index.byId.get(id)!) : id} ${copy.clear}`} title={copy.clear} data-part="clear-candidate">
                             <Icon name="x" stroke={2.4} />
                           </button>
                         )}
                       </span>
                     ) : (
-                      <button key={`e${k}`} type="button" className={[styles.emptyCell, size === 1 && styles.emptyOne].filter(Boolean).join(' ')} disabled={locked} onClick={() => openPool(i, k)} aria-label={`${copy.pickerStrat(i + 1)} ${locked ? copy.lockedCell : copy.emptyCell}`} data-part="empty-cell">
-                        {!locked && (
+                      <button key={`e${k}`} type="button" className={[styles.emptyCell, size === 1 && styles.emptyOne].filter(Boolean).join(' ')} disabled={inert} onClick={() => openPool(i, k)} aria-label={`${copy.pickerStrat(i + 1)} ${locked ? copy.lockedCell : copy.emptyCell}`} data-part="empty-cell">
+                        {!inert && (
                           <span className={styles.emptyIc}>
                             <Icon name="plus" stroke={1.8} />
                           </span>
@@ -155,6 +155,7 @@ export default function Builder({ warnings }: Props) {
         </div>
       </section>
 
+      {pending && <RaceGate onAssign={onAssignRace} />}
       {picker && <PickerModal target={picker} onTarget={setPicker} onClose={() => setPicker(null)} />}
     </div>
   )

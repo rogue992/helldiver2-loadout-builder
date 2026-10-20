@@ -24,6 +24,7 @@ interface Props {
  * 저장 목록: 종족·팩션 필터, 드래그 정렬, 클릭 → 열기(draft dirty면 확인은 상위에서).
  * 접기/펼치기는 상단 바의 ☰가 담당한다(접히면 이 컴포넌트는 렌더되지 않음).
  * 카드의 ⋯ 메뉴에 복제 · 삭제(확인 없이 바로, 되돌리기 토스트가 안전장치). 열기는 카드 자체를 누른다.
+ * 전선 미지정 허가서(신규 배정 직후, 아직 목록 밖)는 맨 아래에 점선 카드로 보이고, 종족을 고르면 정식 카드가 된다.
  */
 export default function Sidebar({ onOpen, onDuplicate, onDelete }: Props) {
   const loadouts = useStore((s) => s.loadouts)
@@ -93,6 +94,7 @@ export default function Sidebar({ onOpen, onDuplicate, onDelete }: Props) {
             ))}
           </SortableContext>
         </DndContext>
+        {draft?.needsRace && <PendingRow name={draft.name} />}
       </div>
       <button className={[btn.pill, styles.new].join(' ')} onClick={() => onOpen('')}>
         {copy.newLoadout}
@@ -101,6 +103,30 @@ export default function Sidebar({ onOpen, onDuplicate, onDelete }: Props) {
         </span>
       </button>
     </aside>
+  )
+}
+
+/** 전선 미지정 허가서: 종족이 없어 색 띠가 점선이고, 정렬 · 메뉴가 없다(목록에 들어가기 전) */
+function PendingRow({ name }: { name: string }) {
+  return (
+    <div className={[styles.item, styles.on, styles.pending].join(' ')} data-part="loadout-item" aria-current="true">
+      <span aria-hidden />
+      <span className={styles.body}>
+        <span className={styles.t}>
+          <span className={styles.nm}>{name}</span>
+          <small className={[styles.badge, styles.badgeUnset].join(' ')}>{copy.raceUnsetShort}</small>
+          <span className={styles.fac}>
+            <i /> {copy.raceUnset}
+          </span>
+        </span>
+        <span className={styles.icons}>
+          {[0, 1, 2, 3].map((i) => (
+            <span key={i} className={[styles.thumb, styles.thumbEmpty].join(' ')} />
+          ))}
+        </span>
+      </span>
+      <span aria-hidden />
+    </div>
   )
 }
 
@@ -154,7 +180,7 @@ function Row({ loadout: l, active, settings, index, menuOpen: menu, onToggleMenu
       <button className={styles.grip} {...attributes} {...listeners} aria-label={copy.dragHint}>
         <i aria-hidden />
       </button>
-      {/* 이미 열린 카드를 다시 눌러도 아무 일 없다(편집 중이면 "버리고 계속" 확인이 뜨던 것을 막는다) */}
+      {/* 이미 열린 카드를 다시 눌러도 아무 일 없다(편집 중이어도 저장 안 한 변경 확인을 띄우지 않는다) */}
       <button className={styles.body} onClick={active ? undefined : onOpen} aria-current={active || undefined}>
         <span className={styles.t}>
           <span className={styles.nm}>{l.name}</span>

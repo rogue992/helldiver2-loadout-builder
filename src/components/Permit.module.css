@@ -56,6 +56,20 @@
   opacity: 0.7;
   cursor: default;
 }
+/* 전선 미지정: 종족 칸이 호박색으로 깜빡이며 고르기를 기다린다 */
+.kv select.need,
+.kv select.need:disabled {
+  opacity: 1;
+  border: 1px solid var(--warn);
+  background: var(--warn-soft);
+  color: var(--warn-fg);
+  animation: need 1.6s var(--ease) infinite;
+}
+@keyframes need {
+  50% {
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--warn) 25%, transparent);
+  }
+}
 .btns button:disabled {
   opacity: 0.35;
   cursor: not-allowed;

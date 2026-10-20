@@ -71,3 +71,14 @@ test('가져오기: 형식이 아니거나 깨진 로드아웃이 하나라도 �
   assert.equal(ok.exportedAt, '')
   assert.equal(ok.settings?.theme, 'console')
 })
+
+test('설정: 즐겨찾기는 종족마다 문자열 id만 중복 없이, 모르는 종족 키는 버린다', () => {
+  const s = sanitizeSettings({ favorites: { terminid: ['a', 'a', 3, 'b'], martian: ['x'], all: 'no' }, missingWarn: 'yes' })
+  assert.deepEqual(s.favorites, { all: [], terminid: ['a', 'b'], automaton: [], illuminate: [] })
+  assert.equal(s.missingWarn, true)
+})
+
+test('초안: 전선 미지정 표시는 true일 때만 남긴다', () => {
+  assert.equal(sanitizeDraft({ ...valid, needsRace: true })?.needsRace, true)
+  assert.equal(sanitizeDraft({ ...valid, needsRace: 'y' })?.needsRace, undefined)
+})

@@ -22,18 +22,18 @@ export const STRAT_TYPE_LABEL: Record<StratType, string> = {
   vehicle: '탑승물',
 }
 
-/** 피커 모달 탭 순서. 게임 내 분류(공격 → 지원 → 방어) 순. */
+/** 선택 창의 종류 탭 · 묶음 순서. 나무위키 스트라타젬 문서의 장 순서(공격 → 방어 → 보급). 묶음 안 순서는 stratOrder.ts */
 export const STRAT_TYPE_ORDER: StratType[] = [
   'orbital_strike',
   'orbital_barrage',
   'eagle',
+  'sentry',
+  'emplacement',
   'support_weapon',
   'support_backpack',
   'disposable',
   'backpack',
   'vehicle',
-  'sentry',
-  'emplacement',
 ]
 
 export const SOURCE_LABEL: Record<Source, string> = {

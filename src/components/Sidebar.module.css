@@ -125,6 +125,21 @@
   color: var(--ok-fg);
   border-color: var(--ok);
 }
+.badgeUnset {
+  color: var(--muted);
+  border-color: var(--line);
+}
+/* 전선 미지정 카드: 종족색 대신 점선 띠 */
+.pending {
+  border-left: 4px dashed var(--muted);
+  animation: rise 0.45s var(--ease);
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
 .fac {
   margin-left: auto;
   font-size: 11px;

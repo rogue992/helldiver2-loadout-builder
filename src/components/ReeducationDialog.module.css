@@ -38,16 +38,10 @@
   gap: 8px;
   justify-content: flex-end;
 }
-.cancel,
 .confirm {
   padding: 8px 14px;
   border-radius: var(--r);
   font: 600 14px var(--font-display);
-}
-.cancel {
-  border: 1px var(--bstyle) var(--line);
-}
-.confirm {
   background: var(--danger);
   color: #fff;
   border: 1px solid var(--danger);

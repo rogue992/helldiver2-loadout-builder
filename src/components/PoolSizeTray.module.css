@@ -1,0 +1,43 @@
+/* 후보 칸 수 선택: 작은 트레이 안의 원 4개 */
+.tray {
+  display: inline-flex;
+  flex: none;
+  padding: 1px;
+  border: 1px var(--bstyle) color-mix(in srgb, var(--acc) 14%, transparent);
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--acc) 4%, transparent);
+}
+.tray button {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--r-pill);
+  font: 600 10.5px/1 var(--font-display);
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+  transition:
+    transform 0.3s var(--ease),
+    color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+.tray button:hover:not(:disabled) {
+  color: var(--fg);
+  background: color-mix(in srgb, var(--acc) 12%, transparent);
+}
+.tray button:active:not(:disabled) {
+  transform: scale(0.9);
+}
+.tray button:disabled {
+  cursor: default;
+}
+.tray .on,
+.tray .on:hover:not(:disabled) {
+  background: var(--acc);
+  color: var(--bg2);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--acc) 18%, transparent);
+}
+.large button {
+  width: 18px;
+  height: 18px;
+  font-size: 11px;
+}

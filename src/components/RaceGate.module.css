@@ -1,0 +1,127 @@
+/* 빌더 전체를 덮는 관문. 카드는 화면을 따라 내려와(sticky) 긴 빌더에서도 보인다 */
+.gate {
+  position: absolute;
+  inset: -6px;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 72px;
+  background: color-mix(in srgb, var(--bg) 70%, transparent);
+  animation: fade 0.3s var(--ease);
+}
+.card {
+  position: sticky;
+  top: calc(var(--chrome-h) + 72px);
+  width: min(470px, calc(100% - 24px));
+  padding: 20px 22px 18px;
+  background: var(--panel);
+  border: 1px var(--bstyle) color-mix(in srgb, var(--warn) 60%, transparent);
+  border-radius: calc(var(--r-soft) * 1.5);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.9);
+  text-align: center;
+  animation: rise 0.45s var(--ease);
+}
+.k {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 9px;
+  border: 1px solid var(--warn);
+  border-radius: var(--r-pill);
+  background: var(--warn-soft);
+  color: var(--warn-fg);
+  font: 700 11px var(--font-display);
+  letter-spacing: 0.12em;
+}
+.k i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--warn);
+  animation: blink 1s steps(1) infinite;
+}
+.card h3 {
+  margin-top: 10px;
+  font: 700 21px/1.2 var(--font-display);
+}
+.card p {
+  margin: 6px auto 14px;
+  max-width: 36ch;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+.races {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.races button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 6px 11px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-soft);
+  background: var(--bg2);
+  font: 700 15px var(--font-display);
+  transition:
+    transform 0.4s var(--ease),
+    border-color 0.3s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+.races button i {
+  width: 22px;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--rc);
+}
+.races button small {
+  font: 500 11px var(--font-display);
+  color: var(--muted);
+}
+.races button:hover,
+.races button:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--rc);
+  box-shadow: 0 14px 24px -16px color-mix(in srgb, var(--rc) 85%, transparent);
+}
+.races button:active {
+  transform: translateY(0) scale(0.98);
+}
+.any {
+  margin-top: 12px;
+  padding-bottom: 1px;
+  border-bottom: 1px dashed var(--line);
+  color: var(--muted);
+  font: 600 12.5px var(--font-display);
+}
+.any:hover {
+  color: var(--fg);
+}
+@media (max-width: 520px) {
+  .gate {
+    padding-top: 24px;
+  }
+  .races button {
+    font-size: 13.5px;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

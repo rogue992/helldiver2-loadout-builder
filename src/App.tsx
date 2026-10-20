@@ -4,8 +4,10 @@ import { GameDataProvider, useGameData } from './data/GameDataContext'
 import { useStore, subscribeCrossTab } from './store/useStore'
 import { isDefaultLoadout } from './store/defaults'
 import type { Loadout, Settings } from './store/types'
+import type { LoadoutRace } from './data/factions'
 import { displayStamp, evaluate, stampState } from './rules/warnings'
-import { buildExport, downloadJson, fileStamp, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
+import { changedParts } from './rules/changes'
+import { buildExport, downloadJson, fileStamp, importedSettings, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
 import { exportElementPng } from './export/image'
 import { copy } from './copy/ko'
 import Loading from './components/Loading'
@@ -17,6 +19,7 @@ import Builder from './components/Builder'
 import Permit from './components/Permit'
 import BriefingView from './components/BriefingView'
 import ReeducationDialog from './components/ReeducationDialog'
+import UnsavedDialog from './components/UnsavedDialog'
 import Credits from './components/Credits'
 import VersionTag from './components/VersionTag'
 import { ToastProvider, useToast } from './components/Toast'
@@ -70,7 +73,7 @@ function Shell() {
   const loadouts = useStore((s) => s.loadouts)
   const ui = useStore((s) => s.ui)
   const startNew = useStore((s) => s.startNew)
-  const createLoadout = useStore((s) => s.createLoadout)
+  const assignRace = useStore((s) => s.assignRace)
   const openLoadout = useStore((s) => s.openLoadout)
   const saveDraft = useStore((s) => s.saveDraft)
   const duplicateLoadout = useStore((s) => s.duplicateLoadout)
@@ -126,18 +129,22 @@ function Shell() {
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  /** dirty draft를 버리는 동작은 확인을 거친다. */
+  /**
+   * 저장 안 한 편집이 있으면 확인을 거친다. 전선 미지정 허가서는 아직 발급 전이라 묻지 않고 버린다.
+   * 수정 표시가 있어도 저장본과 실제로 다른 곳이 없으면(고쳤다 되돌림 등) 묻지 않는다. 저장본이 없는 초안은 묻는다.
+   */
   const guard = (p: Pending) => {
-    if (useStore.getState().draft?.dirty) setPending(p)
+    const { draft: d, loadouts: list } = useStore.getState()
+    const saved = d ? list.find((l) => l.id === d.id) : undefined
+    const changed = !!d?.dirty && !d.needsRace && (!saved || changedParts(d, saved).length > 0)
+    if (changed) setPending(p)
     else run(p)
   }
   const run = (p: Pending) => {
     setPending(null)
     if (p.kind === 'open') openLoadout(p.id)
-    else if (p.kind === 'new') {
-      createLoadout()
-      notify(copy.noticeCreated)
-    } else if (p.kind === 'replace') {
+    else if (p.kind === 'new') startNew()
+    else if (p.kind === 'replace') {
       const backup = buildExport(useStore.getState().loadouts, useStore.getState().settings, data.meta.version)
       saveBackup(backup)
       downloadJson(backup, 'hd2lb-backup')
@@ -151,6 +158,16 @@ function Shell() {
     if (!saved) return
     setStampKey((k) => k + 1)
     notify(copy.noticeSaved)
+  }
+  /** 확인 창의 저장 후 이동 · 발급: 저장 버튼과 같이 저장(통지 포함)한 뒤 이어서 간다 */
+  const saveThenRun = (p: Pending) => {
+    if (!saveDraft()) return
+    notify(copy.noticeSaved)
+    run(p)
+  }
+  /** 전선 미지정 허가서에 종족을 정하면 목록에 발급된다 */
+  const onAssignRace = (race: LoadoutRace) => {
+    if (assignRace(race)) notify(copy.noticeCreated)
   }
   const onDuplicate = () => {
     // 기본 로드아웃은 저장할 것이 없으니(고정) 그대로 복제
@@ -212,10 +229,8 @@ function Shell() {
       return
     }
     // 전체 교체라 초안 상태와 무관하게 항상 재교육 동의서를 거친다
-    setPending({ kind: 'replace', loadouts: b.loadouts, settings: b.settings })
+    setPending({ kind: 'replace', loadouts: b.loadouts, settings: importedSettings(b, useStore.getState().settings, 'replace') })
   }
-
-  const pendingBody = pending?.kind === 'replace' ? copy.reeducationBody(copy.reeducationReplace) : copy.dirtyBody
 
   return (
     <>
@@ -231,7 +246,7 @@ function Shell() {
         {/* 이미지 내보내기는 슬롯과 허가서를 함께 찍는다(허가서 버튼 줄은 data-export="skip"으로 빠진다) */}
         <div className={styles.content} ref={exportRef}>
           <main className={styles.main}>
-            <Builder warnings={warnings} />
+            <Builder warnings={warnings} onAssignRace={onAssignRace} />
           </main>
           <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} onSave={onSave} onDuplicate={onDuplicate} onExportImage={onExportImage} onBriefing={onBriefing} onDelete={onDelete} />
         </div>
@@ -239,14 +254,15 @@ function Shell() {
       <VersionTag />
       {credits && <Credits onClose={() => setCredits(false)} />}
       {briefing && <BriefingView loadout={briefing} onClose={() => (location.hash = '')} />}
-      {pending && (
-        <ReeducationDialog
-          title={pending.kind === 'replace' ? copy.reeducationTitle : copy.dirtyTitle}
-          body={pendingBody}
-          confirmLabel={pending.kind === 'replace' ? copy.agree : copy.discardAndContinue}
-          cancelLabel={pending.kind === 'replace' ? undefined : copy.keepEditing}
+      {pending?.kind === 'replace' && <ReeducationDialog body={copy.reeducationBody(copy.reeducationReplace)} onCancel={() => setPending(null)} onConfirm={() => run(pending)} />}
+      {pending && pending.kind !== 'replace' && draft && (
+        <UnsavedDialog
+          draftName={draft.name.trim() || copy.untitledLoadout}
+          targetName={pending.kind === 'open' ? loadouts.find((l) => l.id === pending.id)?.name ?? copy.untitledLoadout : null}
+          changes={changedParts(draft, loadouts.find((l) => l.id === draft.id))}
+          onSave={() => saveThenRun(pending)}
+          onDiscard={() => run(pending)}
           onCancel={() => setPending(null)}
-          onConfirm={() => run(pending)}
         />
       )}
       {importFile && (
@@ -258,14 +274,15 @@ function Shell() {
           onMerge={() => {
             // 병합은 열린 초안을 건드리지 않는다. 설정은 설정만 바꾼다
             mergeLoadouts(importFile.loadouts)
-            if (importSettings && importFile.settings) setSettings(importFile.settings)
+            const s = importSettings ? importedSettings(importFile, useStore.getState().settings, 'merge') : undefined
+            if (s) setSettings(s)
             notify(copy.noticeImported(importFile.loadouts.length))
             setImportFile(null)
           }}
           onReplace={() => {
             const f = importFile
             setImportFile(null)
-            setPending({ kind: 'replace', loadouts: f.loadouts, settings: importSettings ? f.settings : undefined })
+            setPending({ kind: 'replace', loadouts: f.loadouts, settings: importSettings ? importedSettings(f, useStore.getState().settings, 'replace') : undefined })
           }}
         />
       )}

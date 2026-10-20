@@ -1,0 +1,126 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-dialog);
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+.dialog {
+  width: min(470px, 100%);
+  background: var(--panel);
+  border: 1.5px var(--bstyle) var(--yellow);
+  border-radius: var(--r);
+  padding: 14px 16px 16px;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.8);
+  animation: rise 0.4s var(--ease);
+}
+.hd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hd h2 {
+  font: 700 16px var(--font-display);
+  letter-spacing: 0.06em;
+  color: var(--yellow);
+}
+.close {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  color: var(--muted);
+  font-size: 11px;
+}
+.close:hover {
+  color: var(--fg);
+}
+.body {
+  margin: 12px 0 16px;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+.body b {
+  font-weight: 700;
+}
+.body small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.gap {
+  flex: 1;
+}
+/* 버리기: 위험 글자 버튼, 기본 버튼에서 멀리(왼쪽) */
+.discard {
+  padding: 8px 4px;
+  border-bottom: 1px dashed transparent;
+  color: var(--danger-fg);
+  font: 600 14px var(--font-display);
+  opacity: 0.85;
+  transition:
+    opacity 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+.discard:hover {
+  opacity: 1;
+  border-bottom-color: var(--danger);
+}
+.keep {
+  height: 40px;
+  padding: 0 14px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  font: 600 14px var(--font-display);
+  transition: border-color 0.3s var(--ease);
+}
+.keep:hover {
+  border-color: var(--box-line);
+}
+.save {
+  height: 40px;
+  background: var(--yellow);
+  color: var(--on-yellow);
+  border-color: var(--yellow);
+  font-weight: 700;
+  box-shadow: 0 14px 28px -16px color-mix(in srgb, var(--yellow) 55%, transparent);
+}
+.ic {
+  background: var(--on-yellow);
+  color: var(--yellow);
+}
+.save:hover .ic {
+  transform: translate(1px, -1px) scale(1.05);
+}
+@media (max-width: 420px) {
+  .gap {
+    display: none;
+  }
+  .discard {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+  .keep,
+  .save {
+    flex: 1;
+    justify-content: center;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+}

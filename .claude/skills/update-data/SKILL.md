@@ -35,6 +35,7 @@ CI는 데이터 스크립트를 돌리지 않는다.
    - `warbondId` / `warbondPage`: Cargo `source`에서 자동 판정되면 생략. `unknownSource`만 판단.
    - 스트라타젬 `stratType`: 자동 판정(`Orbital` + `Barrage`, `traits`의 `Expendable` · `Backpack`)과 다르면 `data/overrides/manual.json`에 `{ "stratType": "..." }`. 근거는 `api.php?action=parse&page=<페이지명>&prop=wikitext`로 1회 조회해 인용.
    - 기록 위치: `data/overrides/ko.json`의 `items[id].nameKo`, `passives[영문]`, `warbonds[id]`.
+   - 새 스트라타젬은 선택 창 순서표 `src/data/stratOrder.ts`에도 id를 넣는다. 자리는 나무위키 HELLDIVERS 2/스트라타젬의 공격 · 방어 · 보급 문서 목차에서 그 항목이 놓인 곳(같은 종류 묶음 안). id가 바뀐(rename) 스트라타젬은 순서표의 id도 고친다. 빠지면 `npm test`의 순서표 검사가 실패한다.
 5. **산출물 생성**: `npm run data:build -- --assign-n --label <패치 버전>` (예: `01.007.002`)
    - 신규 아이템에 `n`이 배정되고 `public/data/*.json`, `data/registry.json`, `data/CHANGELOG.md`가 갱신된다.
    - 번호를 받은 날이 `registry.added`에 남고 `items.json`의 `addedAt`이 된다. 앱은 그날부터 30일 동안 NEW로 표시한다(`src/data/newness.ts`). rename을 놓치면 이름만 바뀐 아이템도 새 번호와 NEW를 받으니 2단계 rename 확인을 먼저 끝낸다.

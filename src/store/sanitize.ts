@@ -2,7 +2,7 @@
 // 화면은 여기를 통과한 값만 믿고 쓴다: 문자열 · 배열 · 범위가 어긋난 필드는 보정하고, 식별할 수 없는 항목은 버린다.
 import { LOADOUT_RACES, type LoadoutRace } from '../data/factions'
 import { copy } from '../copy/ko'
-import { DEFAULT_SETTINGS, THEME_IDS, sizesOf, type Draft, type Gear, type Loadout, type NameDisplay, type PoolSize, type PoolSizes, type Pools, type Settings } from './types'
+import { DEFAULT_SETTINGS, THEME_IDS, emptyFavorites, sizesOf, type Draft, type Favorites, type Gear, type Loadout, type NameDisplay, type PoolSize, type PoolSizes, type Pools, type Settings } from './types'
 
 type Obj = Record<string, unknown>
 
@@ -66,7 +66,19 @@ export function sanitizeLoadouts(raw: unknown): Loadout[] {
 export function sanitizeDraft(raw: unknown): Draft | null {
   const l = sanitizeLoadout(raw)
   if (!l) return null
-  return { ...l, sizes: sizesOf(l), dirty: isObj(raw) && raw.dirty === true }
+  const needsRace = isObj(raw) && raw.needsRace === true
+  return { ...l, sizes: sizesOf(l), dirty: isObj(raw) && raw.dirty === true, ...(needsRace ? { needsRace } : {}) }
+}
+
+/** 종족마다 문자열 id만, 중복 없이. 모르는 종족 키는 버린다 */
+function sanitizeFavorites(v: unknown): Favorites {
+  const out = emptyFavorites()
+  if (!isObj(v)) return out
+  for (const race of Object.keys(out) as LoadoutRace[]) {
+    const list = v[race]
+    if (Array.isArray(list)) out[race] = [...new Set(list.filter(isStr))]
+  }
+  return out
 }
 
 /** 설정은 필드마다 보정한다. 모르는 값은 기본값으로. */
@@ -78,9 +90,11 @@ export function sanitizeSettings(raw: unknown): Settings {
     eagleThreshold: s.eagleThreshold === 2 || s.eagleThreshold === 3 ? s.eagleThreshold : d.eagleThreshold,
     backpackWarn: bool('backpackWarn', d.backpackWarn),
     excludeDisposable: bool('excludeDisposable', d.excludeDisposable),
+    missingWarn: bool('missingWarn', d.missingWarn),
     nameDisplay: NAME_DISPLAYS.includes(s.nameDisplay as NameDisplay) ? (s.nameDisplay as NameDisplay) : d.nameDisplay,
     theme: THEME_IDS.includes(s.theme as Settings['theme']) ? (s.theme as Settings['theme']) : d.theme,
     unownedWarbonds: Array.isArray(s.unownedWarbonds) ? [...new Set(s.unownedWarbonds.filter(isStr))] : [],
     includeSuperstore: bool('includeSuperstore', d.includeSuperstore),
+    favorites: sanitizeFavorites(s.favorites),
   }
 }

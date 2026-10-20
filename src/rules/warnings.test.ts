@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import type { Item, RuleTag } from '../data/types'
-import type { ItemIndex } from '../data/loadData'
+import type { ItemIndex } from '../data/itemIndex'
 import { DEFAULT_SETTINGS, type Gear, type Loadout, type Pools, type Settings } from '../store/types'
 import { displayStamp, evaluate, stampState } from './warnings'
 
@@ -59,4 +59,40 @@ test('표시 도장: 저장 전 승인은 보류, 고정 로드아웃은 항상 
   assert.equal(displayStamp('approved', { locked: false, dirty: true }), 'hold')
   assert.equal(displayStamp('treason', { locked: false, dirty: true }), 'treason')
   assert.equal(displayStamp('hold', { locked: true, dirty: false }), 'approved')
+})
+
+test('배낭 · 지원무기 없음: 4슬롯이 다 찼는데 어느 후보에도 없으면 주의(슬롯 칩 없음)', () => {
+  const pools = [['orb'], ['orb2'], ['e1'], ['e2']]
+  const nb = find(pools, 'no_backpack')
+  assert.equal(nb?.level, 'soft')
+  assert.equal(nb?.missing, 'none')
+  assert.deepEqual(nb?.slots, [])
+  assert.equal(find(pools, 'no_support_weapon')?.missing, 'none')
+})
+
+test('배낭 · 지원무기 없음: 고르기에 따라 빠질 수 있으면 미확정, 그것을 줄 수 있는 슬롯을 단다', () => {
+  const pools = [['rr', 'orb'], ['orb2'], ['e1'], ['e2']]
+  assert.deepEqual(find(pools, 'no_backpack')?.slots, [1])
+  assert.equal(find(pools, 'no_backpack')?.missing, 'maybe')
+  assert.equal(find(pools, 'no_support_weapon')?.missing, 'maybe')
+})
+
+test('배낭 · 지원무기 없음: 배낭형 지원무기 하나로 둘 다 채우고, 일회용은 설정과 무관하게 지원무기다', () => {
+  assert.equal(find([['rr'], ['orb'], ['e1'], ['e2']], 'no_backpack'), undefined)
+  assert.equal(find([['rr'], ['orb'], ['e1'], ['e2']], 'no_support_weapon'), undefined)
+  assert.equal(find([['eat'], ['orb'], ['e1'], ['e2']], 'no_support_weapon'), undefined)
+})
+
+test('배낭 · 지원무기 없음: 빈 슬롯이 있거나 설정을 끄면 판정하지 않는다', () => {
+  assert.equal(find([['orb'], [], ['e1'], ['e2']], 'no_backpack'), undefined)
+  assert.equal(find([['orb'], ['orb2'], ['e1'], ['e2']], 'no_backpack', { ...DEFAULT_SETTINGS, missingWarn: false }), undefined)
+})
+
+test('배낭 · 지원무기 없음: 데이터에서 사라진 아이템도 찬 칸이고, 태그 없는 후보로 센다', () => {
+  // 사라진 아이템뿐인 슬롯이 있어도 판정한다
+  assert.equal(find([['gone'], ['orb'], ['e1'], ['e2']], 'no_backpack')?.missing, 'none')
+  // [사라진 것, 무반동포] 슬롯은 반드시 배낭이 아니라 고르기에 따라
+  const w = find([['gone', 'rr'], ['orb'], ['e1'], ['e2']], 'no_backpack')
+  assert.equal(w?.missing, 'maybe')
+  assert.deepEqual(w?.slots, [1])
 })

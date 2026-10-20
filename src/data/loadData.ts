@@ -1,11 +1,5 @@
-import type { Aliases, Item, Kind, Meta, StratType, Warbond } from './types'
-
-export interface ItemIndex {
-  items: Item[]
-  byId: Map<string, Item>
-  byKind: Record<Kind, Item[]>
-  stratByType: Map<StratType, Item[]>
-}
+import type { Aliases, Item, Meta, Warbond } from './types'
+import { buildIndex, type ItemIndex } from './itemIndex'
 
 export interface GameData {
   index: ItemIndex
@@ -25,21 +19,6 @@ async function fetchJson<T>(name: string): Promise<T> {
   const res = await fetch(`${BASE}data/${name}?v=${__BUILD_ID__}`)
   if (!res.ok) throw new Error(`${name} 로드 실패 (${res.status})`)
   return res.json() as Promise<T>
-}
-
-export function buildIndex(items: Item[]): ItemIndex {
-  const byKind: Record<Kind, Item[]> = { primary: [], secondary: [], throwable: [], armor: [], stratagem: [] }
-  const stratByType = new Map<StratType, Item[]>()
-  for (const it of items) {
-    byKind[it.kind].push(it)
-    if (it.stratType) stratByType.set(it.stratType, [...(stratByType.get(it.stratType) ?? []), it])
-  }
-  return {
-    items,
-    byId: new Map(items.map((i) => [i.id, i])),
-    byKind,
-    stratByType,
-  }
 }
 
 export async function loadGameData(): Promise<GameData> {

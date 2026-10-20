@@ -22,6 +22,7 @@ const PATHS = {
   doc: <path d="M7 3h7l5 5v13H7V3Zm7 0v5h5M10 13h6M10 17h6" />,
   reset: <path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v5h5" />,
   trash: <path d="M5 7h14M9 7V4h6v3M7 7l1 13h8l1-13M10 11v6M14 11v6" />,
+  star: <path d="M12 3.8l2.5 5.1 5.6.8-4 3.9.9 5.6L12 16.6l-5 2.6.9-5.6-4-3.9 5.6-.8z" />,
 } satisfies Record<string, ReactNode>
 
 export type IconName = keyof typeof PATHS

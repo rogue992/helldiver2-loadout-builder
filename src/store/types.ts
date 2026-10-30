@@ -41,8 +41,9 @@ export interface Draft extends Loadout {
 export type NameDisplay = 'ko' | 'en'
 /** 종족별 즐겨찾기 아이템 id. 'all'은 종족 무관 허가서용 */
 export type Favorites = Record<LoadoutRace, string[]>
-export type ThemeId = 'console' | 'teletype'
-export const THEME_IDS: ThemeId[] = ['console', 'teletype']
+/** 테마는 하나뿐이다. 다른 값으로 저장된 것은 들어올 때 console로 바뀐다(sanitize) */
+export type ThemeId = 'console'
+export const THEME_IDS: ThemeId[] = ['console']
 
 export interface Settings {
   eagleThreshold: 2 | 3

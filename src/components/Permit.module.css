@@ -56,19 +56,14 @@
   opacity: 0.7;
   cursor: default;
 }
-/* 전선 미지정: 종족 칸이 호박색으로 깜빡이며 고르기를 기다린다 */
+/* 전선 미지정: 종족 칸이 호박색으로 고르기를 기다린다 */
 .kv select.need,
 .kv select.need:disabled {
   opacity: 1;
   border: 1px solid var(--warn);
   background: var(--warn-soft);
   color: var(--warn-fg);
-  animation: need 1.6s var(--ease) infinite;
-}
-@keyframes need {
-  50% {
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--warn) 25%, transparent);
-  }
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--warn) 25%, transparent);
 }
 .btns button:disabled {
   opacity: 0.35;
@@ -196,7 +191,7 @@
   color: var(--ok-fg);
   border-color: var(--ok);
 }
-/* 버튼: 알약(Buttons.module.css). 저장 · 초기화 · 삭제는 오른쪽에 원형 아이콘 칩, 복제 · 이미지 · 브리핑은 앞에 선 아이콘 */
+/* 버튼: 알약(Buttons.module.css). 저장은 오른쪽에 원형 아이콘 칩, 아래 줄 복제 · 초기화 · 삭제는 앞에 선 아이콘 */
 .btns {
   padding: 12px 12px 14px;
   display: flex;
@@ -245,7 +240,7 @@
 .row button:hover:not(:disabled) svg {
   color: var(--fg);
 }
-/* 초기화: 주의(호박색) 톤. 삭제: 위험(붉은색) 톤 */
+/* 초기화: 주의(호박색) 톤. 삭제: 위험(붉은색) 톤. 아이콘도 글자색을 따른다 */
 .btns .reset {
   color: var(--warn-fg);
   border-color: color-mix(in srgb, var(--warn) 45%, transparent);
@@ -253,9 +248,6 @@
 }
 .btns .reset:hover:not(:disabled) {
   border-color: var(--warn);
-}
-.reset .ic {
-  background: color-mix(in srgb, var(--warn) 16%, transparent);
 }
 .btns .danger {
   color: var(--danger-fg);
@@ -265,6 +257,9 @@
 .btns .danger:hover:not(:disabled) {
   border-color: var(--danger);
 }
-.danger .ic {
-  background: color-mix(in srgb, var(--danger) 16%, transparent);
+.row .reset svg,
+.row .danger svg,
+.row .reset:hover:not(:disabled) svg,
+.row .danger:hover:not(:disabled) svg {
+  color: currentColor;
 }

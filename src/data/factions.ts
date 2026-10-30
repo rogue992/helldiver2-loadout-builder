@@ -18,12 +18,18 @@ export interface RaceInfo {
   factions: Faction[]
 }
 
-/** 종족 무관 로드아웃. 팩션 구분이 없으므로 팩션 표기도 "전체" */
+/**
+ * 팩션 지정 안 함(종족 공통). 그 종족의 어느 팩션을 골라도 목록에 보인다.
+ * 저장 값은 예전 "기본" 팩션 id 그대로라, 기본으로 저장해 둔 로드아웃이 그대로 종족 공통이 된다
+ */
+export const NO_FACTION = 'default'
+
+/** 종족 무관 로드아웃. 팩션 구분이 없다 */
 export const RACE_ALL: RaceInfo = {
   id: 'all',
   nameKo: '전체',
   nameEn: 'All',
-  factions: [{ id: 'default', nameKo: '전체', nameEn: 'All' }],
+  factions: [],
 }
 
 export const RACES: RaceInfo[] = [
@@ -32,7 +38,6 @@ export const RACES: RaceInfo[] = [
     nameKo: '테르미니드',
     nameEn: 'Terminids',
     factions: [
-      { id: 'default', nameKo: '기본', nameEn: 'Standard' },
       { id: 'predator', nameKo: '프레데터 변종', nameEn: 'Predator Strain' },
       { id: 'spore-burst', nameKo: '스포어 버스트 변종', nameEn: 'Spore Burst Strain' },
       { id: 'rupture', nameKo: '럽처 변종', nameEn: 'Rupture Strain' },
@@ -43,7 +48,6 @@ export const RACES: RaceInfo[] = [
     nameKo: '오토마톤',
     nameEn: 'Automatons',
     factions: [
-      { id: 'default', nameKo: '기본', nameEn: 'Standard' },
       { id: 'jet-brigade', nameKo: '제트 여단', nameEn: 'Jet Brigade' },
       { id: 'incineration-corps', nameKo: '소각대', nameEn: 'Incineration Corps' },
       { id: 'cyborg-legion', nameKo: '사이보그', nameEn: 'Cyborg Legion' },
@@ -54,7 +58,6 @@ export const RACES: RaceInfo[] = [
     nameKo: '일루미닛',
     nameEn: 'Illuminate',
     factions: [
-      { id: 'default', nameKo: '기본', nameEn: 'Standard' },
       { id: 'mindless-masses', nameKo: '무분별한 대중', nameEn: 'Mindless Masses' },
       { id: 'appropriators', nameKo: '적임자', nameEn: 'Appropriators' },
       { id: 'vote-snatchers', nameKo: '보트 스내처', nameEn: 'Vote Snatchers' },
@@ -77,7 +80,8 @@ export function raceInfo(race: LoadoutRace): RaceInfo {
 export const raceLabel = (r: Pick<RaceInfo, 'nameKo' | 'nameEn'>): string => pick(r.nameKo, r.nameEn)
 export const factionLabel = (f: Pick<Faction, 'nameKo' | 'nameEn'>): string => pick(f.nameKo, f.nameEn)
 
+/** 목록 카드 표기: 팩션을 정하지 않았으면 종족 이름 */
 export function factionName(race: LoadoutRace, factionId: string): string {
   const f = raceInfo(race).factions.find((x) => x.id === factionId)
-  return f ? factionLabel(f) : factionId
+  return f ? factionLabel(f) : raceLabel(raceInfo(race))
 }

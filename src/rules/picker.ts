@@ -56,14 +56,6 @@ export function favoritesFirst<T extends { id: string }>(items: T[], fav: Set<st
   return [...items.filter((i) => fav.has(i.id)), ...items.filter((i) => !fav.has(i.id))]
 }
 
-/**
- * 전체 탭 맨 위 즐겨찾기 묶음을 보일지. 보이는 목록에 즐겨찾기가 있으면 보이고,
- * 즐겨찾기가 하나도 없으면 별 안내로 보이되 검색 중에는 숨긴다(검색에 맞는 즐겨찾기가 없을 때도 숨긴다).
- */
-export function showFavoriteGroup(tab: string, matched: number, total: number, searching: boolean): boolean {
-  return tab === 'all' && (matched > 0 || (total === 0 && !searching))
-}
-
 /** from 다음 장비부터 한 바퀴 돌며 빈 장비. 전부 찼으면 null(방금 채운 from 자신은 보지 않는다) */
 export function nextGearTarget(gear: Gear, from: GearSlot): GearSlot | null {
   const at = GEAR_ORDER.indexOf(from)

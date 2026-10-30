@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import type { Pools, PoolSizes } from '../store/types'
-import { cellTarget, favoritesFirst, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, showFavoriteGroup, targetAfterResize } from './picker'
+import { cellTarget, favoritesFirst, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, targetAfterResize } from './picker'
 
 test('앞쪽 후보를 빼고 고르면 빈 칸에 들어간다(다른 후보를 덮어쓰지 않는다)', () => {
   const { pool, cell } = removeFromPool(['A', 'B', 'C'], 0)
@@ -42,12 +42,4 @@ test('칸 수를 바꾼 뒤: 늘리면 그 슬롯 첫 빈 칸, 줄이면 대상 
 test('즐겨찾기 먼저: 즐겨찾기끼리 · 나머지끼리 원래 순서를 지킨다', () => {
   const items = ['a', 'b', 'c', 'd', 'e'].map((id) => ({ id }))
   assert.deepEqual(favoritesFirst(items, new Set(['d', 'b'])).map((i) => i.id), ['b', 'd', 'a', 'c', 'e'])
-})
-
-test('맨 위 즐겨찾기 묶음: 맞는 즐겨찾기가 있으면, 하나도 없으면 검색 중이 아닐 때만(안내), 전체 탭에서만', () => {
-  assert.equal(showFavoriteGroup('all', 2, 5, false), true)
-  assert.equal(showFavoriteGroup('all', 0, 0, false), true)
-  assert.equal(showFavoriteGroup('all', 0, 0, true), false)
-  assert.equal(showFavoriteGroup('all', 0, 5, true), false)
-  assert.equal(showFavoriteGroup('eagle', 2, 5, false), false)
 })

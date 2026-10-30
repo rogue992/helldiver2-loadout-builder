@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { LOADOUT_RACES, factionLabel, factionName, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
+import { LOADOUT_RACES, NO_FACTION, factionLabel, factionName, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
 import { isDefaultLoadout, loadoutLabel } from '../store/defaults'
 import type { Warning, StampState } from '../rules/warnings'
@@ -18,8 +18,6 @@ interface Props {
   stampKey: number
   onSave: () => void
   onDuplicate: () => void
-  onExportImage: () => void
-  onBriefing: () => void
   /** 열린 로드아웃을 목록에서 바로 삭제(되돌리기 토스트는 상위에서) */
   onDelete: (id: string) => void
 }
@@ -61,11 +59,10 @@ function issuedOn(iso: string, fixed: boolean): { y: string; m: string; d: strin
 }
 
 /** 수호부 출격 허가서: 이름 · 종족/팩션 · 도장 · 위반 사항 · 버튼. 저장은 draft → loadouts. */
-export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate, onExportImage, onBriefing, onDelete }: Props) {
+export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate, onDelete }: Props) {
   const draft = useStore((s) => s.draft)
   const editDraft = useStore((s) => s.editDraft)
   const clearDraft = useStore((s) => s.clearDraft)
-  const theme = useStore((s) => s.settings.theme)
   const saved = useStore((s) => (s.draft ? s.loadouts.some((l) => l.id === s.draft!.id) : false))
   const [confirmReset, setConfirmReset] = useState(false)
 
@@ -74,7 +71,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
   const hard = warnings.filter((w) => w.level === 'hard').length
   // 기본 로드아웃(수호부 지급)은 어떤 것도 바꿀 수 없다. 복제만 열어 둔다. 빈 슬롯도 지급 구성의 일부라 안내하지 않는다
   const lockedAll = isDefaultLoadout(draft.id)
-  // 전선 미지정: 종족을 고르기 전이라 아직 목록에 없다. 저장 · 복제 · 초기화 · 이미지로 남길 것이 없다.
+  // 전선 미지정: 종족을 고르기 전이라 아직 목록에 없다. 저장 · 복제 · 초기화할 것이 없다.
   // 종족은 빌더 위 관문에서만 고른다(select는 키보드로 훑기만 해도 change가 나 바로 발급되므로 표시만)
   const pending = !!draft.needsRace
   const day = issuedOn(draft.createdAt, lockedAll)
@@ -82,8 +79,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
   const shown = lockedAll ? warnings.filter((w) => w.code !== 'empty') : warnings
 
   return (
-    <PermitFrame theme={theme} className={styles.permit}>
-      {theme === 'teletype' && <Broadcast theme="teletype" exemplary={stamp === 'approved'} />}
+    <PermitFrame className={styles.permit}>
       <div className={styles.ph} data-part="permit-head">
         <div className={styles.titles}>
           <h2>{copy.permitTitle}</h2>
@@ -96,13 +92,15 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
         </div>
       </div>
 
+      <Broadcast exemplary={stamp === 'approved'} />
+
       <div className={styles.kv} data-part="permit-kv">
         <span>{copy.race}</span>
         <select
           value={pending ? '' : draft.race}
           disabled={lockedAll || pending}
           className={pending ? styles.need : undefined}
-          onChange={(e) => editDraft({ race: e.target.value as LoadoutRace, faction: 'default' })}
+          onChange={(e) => editDraft({ race: e.target.value as LoadoutRace, faction: NO_FACTION })}
         >
           {pending && (
             <option value="" disabled>
@@ -120,18 +118,21 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
           {pending ? (
             <option value="">-</option>
           ) : (
-            race.factions.map((f) => (
-              <option key={f.id} value={f.id}>
-                {factionLabel(f)}
-              </option>
-            ))
+            <>
+              <option value={NO_FACTION}>{draft.race === 'all' ? copy.all : copy.factionAny}</option>
+              {race.factions.map((f) => (
+                <option key={f.id} value={f.id}>
+                  {factionLabel(f)}
+                </option>
+              ))}
+            </>
           )}
         </select>
       </div>
 
       <div className={styles.status} data-part="permit-status">
-        <Stamp state={stamp} theme={theme} stampKey={stampKey} />
-        <small>{pending ? copy.raceUnset : draft.race === 'all' ? raceLabel(race) : `${raceLabel(race)} · ${factionName(draft.race, draft.faction)}`}</small>
+        <Stamp state={stamp} stampKey={stampKey} />
+        <small>{pending ? copy.raceUnset : draft.race === 'all' ? raceLabel(race) : `${raceLabel(race)} · ${draft.faction === NO_FACTION ? copy.factionAnyShort : factionName(draft.race, draft.faction)}`}</small>
       </div>
 
       <div className={styles.viol} data-part="permit-violations">
@@ -164,7 +165,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
         })}
       </div>
 
-      <div className={styles.btns} data-part="permit-buttons" data-export="skip">
+      <div className={styles.btns} data-part="permit-buttons">
         <button className={[btn.pill, styles.primary].join(' ')} onClick={onSave} disabled={lockedAll || pending} title={lockedAll ? copy.defaultLocked : undefined}>
           {copy.save}
           <span className={[btn.pillIc, styles.ic].join(' ')}>
@@ -176,28 +177,16 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
             <Icon name="copy" />
             {copy.duplicate}
           </button>
-          <button className={btn.pill} onClick={onExportImage} disabled={pending}>
-            <Icon name="image" />
-            {copy.image}
+          <button className={[btn.pill, styles.reset].join(' ')} onClick={() => setConfirmReset(true)} disabled={lockedAll || pending} title={lockedAll ? copy.defaultLocked : undefined}>
+            <Icon name="reset" />
+            {copy.reset}
           </button>
-          <button className={btn.pill} onClick={onBriefing}>
-            <Icon name="doc" />
-            {copy.briefing}
+          {/* 확인 없이 바로 삭제(되돌리기 토스트가 안전장치). 기본 로드아웃과 아직 목록에 없는 초안은 삭제 불가 */}
+          <button className={[btn.pill, styles.danger].join(' ')} onClick={() => onDelete(draft.id)} disabled={!saved || lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
+            <Icon name="trash" />
+            {copy.delete}
           </button>
         </div>
-        <button className={[btn.pill, styles.reset].join(' ')} onClick={() => setConfirmReset(true)} disabled={lockedAll || pending} title={lockedAll ? copy.defaultLocked : undefined}>
-          {copy.reset}
-          <span className={[btn.pillIc, styles.ic].join(' ')}>
-            <Icon name="reset" />
-          </span>
-        </button>
-        {/* 확인 없이 바로 삭제(되돌리기 토스트가 안전장치). 기본 로드아웃과 아직 목록에 없는 초안은 삭제 불가 */}
-        <button className={[btn.pill, styles.danger].join(' ')} onClick={() => onDelete(draft.id)} disabled={!saved || lockedAll} title={lockedAll ? copy.defaultLocked : undefined}>
-          {copy.delete}
-          <span className={[btn.pillIc, styles.ic].join(' ')}>
-            <Icon name="trash" />
-          </span>
-        </button>
       </div>
 
       {confirmReset && (

@@ -6,8 +6,8 @@ import { RAW_PATH, type RawSnapshot } from './lib/raw.ts'
 const TABLES: Record<string, string[]> = {
   Stratagems: ['_pageName', 'image', 'stratagem_type', 'permit_type', 'traits', 'base_cooldown', 'source'],
   Weapons: ['_pageName', 'image', 'weapon_category', 'weapon_type', 'source', 'cost'],
-  Armor: ['_pageName', 'image', 'type', 'passive', 'source', 'cost'],
-  Armor_Passive: ['_pageName', 'image'],
+  Armor: ['_pageName', 'image', 'type', 'passive', 'source', 'cost', 'armor', 'speed', 'stam_regen'],
+  Armor_Passive: ['_pageName', 'image', 'description'],
   Warbonds: ['_pageName', 'title', 'image', 'date', 'type'],
 }
 

@@ -39,7 +39,6 @@
   height: 6px;
   border-radius: 50%;
   background: var(--warn);
-  animation: blink 1s steps(1) infinite;
 }
 .card h3 {
   margin-top: 10px;
@@ -118,10 +117,5 @@
   from {
     opacity: 0;
     transform: translateY(12px) scale(0.98);
-  }
-}
-@keyframes blink {
-  50% {
-    opacity: 0;
   }
 }

@@ -63,6 +63,16 @@ export default function Credits({ onClose }: Props) {
             <li>
               <i className={styles.medal} aria-hidden />
               <div>
+                <a href="https://github.com/helldivers-2/api" target="_blank" rel="noopener">
+                  helldivers-2 / api
+                </a>
+                <b>{copy.creditsWar}</b>
+                <small>{copy.creditsWarNote}</small>
+              </div>
+            </li>
+            <li>
+              <i className={styles.medal} aria-hidden />
+              <div>
                 <a href="https://ses-csd.vercel.app/" target="_blank" rel="noopener">
                   {copy.creditsSesName}
                 </a>

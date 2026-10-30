@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync, existsSync, renameSync, mkdirSync } from '
 import type { Item, Kind, Meta, RuleTag, Source, StratType, Warbond } from '../src/data/types.ts'
 import { loadRaw, targetArmor, targetStratagems, targetWeapons, WEAPON_CATEGORY_TO_KIND } from './lib/raw.ts'
 import { itemId, slugify } from './lib/slug.ts'
-import { firstLink, hasWord, replaceEmDash, stripMarkup, warbondPageOf } from './lib/wikitext.ts'
+import { effectLines, firstLink, hasWord, replaceEmDash, stripMarkup, warbondPageOf } from './lib/wikitext.ts'
 import { KO_PATH, readJson, resolveAliasId, type KoOverrides } from './lib/overrides.ts'
 import type { CargoRow } from './lib/cargo.ts'
 
@@ -110,6 +110,14 @@ function main() {
 
   // ── 패시브 ──
   const passiveIcon = new Map(raw.tables.Armor_Passive.map((p) => [p._pageName, `icons/passive/${slugify(p._pageName)}.webp`]))
+  const passiveEffects = new Map(raw.tables.Armor_Passive.map((p) => {
+    const en = effectLines(p.description ?? '').map(replaceEmDash)
+    const tr = ko.passiveEffects?.[p._pageName]
+    if (!tr) missingKo.push(`passive-effects:${p._pageName}`)
+    else if (tr.length !== en.length) warnings.push(`패시브 효과 번역 줄 수가 원문과 다름(원문이 바뀌었을 수 있음): ${p._pageName} ${tr.length}/${en.length}`)
+    return [p._pageName, { effectsKo: tr && tr.length === en.length ? tr : en, effectsEn: en }]
+  }))
+  const num = (v: string | undefined) => (v !== undefined && /^\d+$/.test(v.trim()) ? Number(v) : null)
 
   // ── 아이템 ──
   const items: Item[] = []
@@ -152,12 +160,15 @@ function main() {
     if (passiveEn) {
       const nameKo = ko.passives[passiveEn]
       if (!nameKo) missingKo.push(`passive:${passiveEn}`)
-      passive = { nameKo: nameKo ?? passiveEn, nameEn: passiveEn, icon: passiveIcon.get(passiveEn) ?? '' }
+      passive = { nameKo: nameKo ?? passiveEn, nameEn: passiveEn, icon: passiveIcon.get(passiveEn) ?? '', ...(passiveEffects.get(passiveEn) ?? { effectsKo: [], effectsEn: [] }) }
       if (!passiveIcon.has(passiveEn)) warnings.push(`패시브 아이콘 없음: ${passiveEn} (${b.id})`)
     }
     const cls = row.type?.toLowerCase()
+    const [armor, speed, stamina] = [num(row.armor), num(row.speed), num(row.stam_regen)]
+    if (armor === null || speed === null || stamina === null) warnings.push(`방어구 수치 없음: ${b.id}`)
     items.push({
       ...b, armorClass: cls === 'light' || cls === 'medium' || cls === 'heavy' ? cls : null, passive,
+      ...(armor !== null && speed !== null && stamina !== null ? { armorStats: { armor, speed, stamina } } : {}),
       icon: `icons/armor/${b.id}.webp`, card: `icons/armor-card/${b.id}.webp`, thumb: `icons/armor-thumb/${b.id}.webp`,
     })
   }
@@ -179,7 +190,7 @@ function main() {
     if (it.n >= 0) { if (ns.has(it.n)) errors.push(`n 중복: ${it.n} (${it.id})`); ns.add(it.n) }
     if (it.warbondId && !warbonds.some((w) => w.id === it.warbondId)) errors.push(`warbondId 없음: ${it.warbondId} (${it.id})`)
     if ((it.kind === 'stratagem') !== (it.stratType !== undefined)) errors.push(`stratType 불일치: ${it.id}`)
-    for (const v of [it.nameKo, it.weaponType ?? '', it.passive?.nameKo ?? '']) if (v.includes(EM)) errors.push(`em dash: ${it.id} "${v}"`)
+    for (const v of [it.nameKo, it.weaponType ?? '', it.passive?.nameKo ?? '', ...(it.passive?.effectsKo ?? [])]) if (v.includes(EM)) errors.push(`em dash: ${it.id} "${v}"`)
     if (!dryRun && !existsSync(`public/${it.icon}`)) warnings.push(`아이콘 파일 없음: ${it.icon}`)
   }
   for (const w of warbonds) if (w.nameKo.includes(EM)) errors.push(`em dash: warbond ${w.id}`)

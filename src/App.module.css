@@ -1,4 +1,4 @@
-/* 상단 고정 영역(방송 띠 + 상단 바). 아래 sticky 요소들은 --chrome-h 만큼 내려 붙는다 */
+/* 상단 고정 영역(상단 바). 아래 sticky 요소들은 --chrome-h 만큼 내려 붙는다 */
 .chrome {
   position: sticky;
   top: 0;

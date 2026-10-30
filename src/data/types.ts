@@ -24,6 +24,16 @@ export interface Passive {
   nameKo: string
   nameEn: string
   icon: string
+  /** 효과 한 줄씩. 한국어는 번역 표(data/overrides/ko.json)에 없으면 영어 원문으로 채운다 */
+  effectsKo: string[]
+  effectsEn: string[]
+}
+
+/** 방어구 수치(위키 표 그대로). 방어 · 속도 · 스태미나 회복 */
+export interface ArmorStats {
+  armor: number
+  speed: number
+  stamina: number
 }
 
 export interface Item {
@@ -44,6 +54,8 @@ export interface Item {
   weaponType: string | null
   armorClass: ArmorClass | null
   passive: Passive | null
+  /** 방어구만. 위키 표에 수치가 없으면 빠진다 */
+  armorStats?: ArmorStats
   /** 데이터에 처음 들어온 날(YYYY-MM-DD). 첫 수집분에는 없다. NEW 표시의 기준 */
   addedAt?: string
 }

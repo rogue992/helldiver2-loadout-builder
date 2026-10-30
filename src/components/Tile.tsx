@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type MouseEvent, type PointerEvent } from 'react'
+import { useRef, useState, type MouseEvent, type PointerEvent } from 'react'
 import { assetUrl } from '../data/loadData'
 import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
@@ -21,72 +21,25 @@ interface Props {
   className?: string
 }
 
-const LONG_PRESS_MS = 500
-
 export function wikiUrl(item: Item): string {
   return `https://helldivers.wiki.gg/wiki/${encodeURIComponent(item.wikiPage.replace(/ /g, '_'))}`
 }
 
-/**
- * 아이템 타일. wiki 열기: 마우스는 우클릭, 터치 · 펜은 길게 누른 뒤 손을 뗄 때.
- * 터치에서 손을 떼는 순간이 브라우저가 새 창을 허용하는 사용자 동작이라, 타이머가 아니라 그때 연다.
- * 길게 누른 뒤 따라오는 click은 삼켜 부모 버튼(선택 창 열기 등)이 함께 눌리지 않게 한다.
- */
+/** 아이템 타일. 마우스 우클릭으로 wiki를 연다. 터치의 길게 누르기(안드로이드는 contextmenu가 온다)로는 열지 않는다. */
 export default function Tile({ item, missingId, shape = 'square', size = 'icon', mark = 'none', onClick, className }: Props) {
   const name = useItemName()
   // 실패한 이미지 주소. 같은 칸에서 다른 아이템으로 바뀌면 새 주소라 다시 시도한다
   const [brokenSrc, setBrokenSrc] = useState<string | null>(null)
-  const timer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pressType = useRef('')
-  const longPressed = useRef(false)
-  const swallowClick = useRef(false)
-
-  const clearTimer = () => {
-    if (timer.current) clearTimeout(timer.current)
-    timer.current = null
-  }
-  useEffect(() => clearTimer, [])
-
-  const open = () => item && window.open(wikiUrl(item), '_blank', 'noopener')
 
   const onContextMenu = (e: MouseEvent) => {
     if (!item) return
     e.preventDefault()
-    // 터치 길게 누르기에서도 contextmenu가 온다(안드로이드). 그쪽은 손을 뗄 때 연다
     if (pressType.current === 'touch' || pressType.current === 'pen') return
-    open()
+    window.open(wikiUrl(item), '_blank', 'noopener')
   }
   const onPointerDown = (e: PointerEvent) => {
     pressType.current = e.pointerType
-    longPressed.current = false
-    swallowClick.current = false
-    clearTimer()
-    if (!item || e.pointerType === 'mouse' || e.button !== 0) return
-    timer.current = setTimeout(() => {
-      longPressed.current = true
-      timer.current = null
-    }, LONG_PRESS_MS)
-  }
-  const onPointerUp = () => {
-    clearTimer()
-    if (longPressed.current) {
-      longPressed.current = false
-      swallowClick.current = true
-      open()
-    }
-  }
-  const cancelPress = () => {
-    clearTimer()
-    longPressed.current = false
-  }
-  const onTileClick = (e: MouseEvent) => {
-    if (swallowClick.current) {
-      swallowClick.current = false
-      e.preventDefault()
-      e.stopPropagation()
-      return
-    }
-    onClick?.()
   }
 
   const label = item ? name(item) : missingId ? copy.deletedItem : ''
@@ -106,10 +59,7 @@ export default function Tile({ item, missingId, shape = 'square', size = 'icon',
     'aria-label': label,
     onContextMenu,
     onPointerDown,
-    onPointerUp,
-    onPointerLeave: cancelPress,
-    onPointerCancel: cancelPress,
-    onClick: onTileClick,
+    onClick,
   }
 
   if (!onClick) {

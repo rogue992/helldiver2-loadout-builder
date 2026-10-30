@@ -97,7 +97,7 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
                 {pick(warbond.nameEn, '')} <span className={styles.type}>{WARBOND_TYPE_LABEL[warbond.type]}</span>
               </p>
             </figcaption>
-            {/* 수호부 도장. 텔레타이프는 LED + 글자(theme/teletype.css) */}
+            {/* 수호부 도장 */}
             <div className={styles.stamp} aria-hidden data-part="notice-stamp">
               <i className={styles.led} />
               <b>{copy.noticeStamp}</b>

@@ -9,17 +9,14 @@ import { displayStamp, evaluate, stampState } from './rules/warnings'
 import { changedParts } from './rules/changes'
 import { latestWarbond, noticeDecision, readSeenNotice, writeSeenNotice } from './data/notice'
 import type { Warbond } from './data/types'
-import { buildExport, downloadJson, fileStamp, importedSettings, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
-import { exportElementPng } from './export/image'
+import { buildExport, downloadJson, importedSettings, loadBackup, parseImport, pickFile, saveBackup } from './share/json'
 import { copy, setLang } from './copy'
 import Loading from './components/Loading'
 import TopBar from './components/TopBar'
-import Broadcast from './components/Broadcast'
 import SettingsPanel from './components/SettingsPanel'
 import Sidebar from './components/Sidebar'
 import Builder from './components/Builder'
 import Permit from './components/Permit'
-import BriefingView from './components/BriefingView'
 import ReeducationDialog from './components/ReeducationDialog'
 import UnsavedDialog from './components/UnsavedDialog'
 import WarbondNotice from './components/WarbondNotice'
@@ -79,7 +76,6 @@ type Pending = { kind: 'open'; id: string } | { kind: 'new' } | { kind: 'replace
 function Shell() {
   const data = useGameData()
   const settings = useStore((s) => s.settings)
-  const theme = settings.theme
   const draft = useStore((s) => s.draft)
   const loadouts = useStore((s) => s.loadouts)
   const ui = useStore((s) => s.ui)
@@ -96,16 +92,14 @@ function Shell() {
   const { notify } = useToast()
   const [stampKey, setStampKey] = useState(0)
   const [credits, setCredits] = useState(false)
-  const [briefing, setBriefing] = useState<Loadout | null>(null)
   const [pending, setPending] = useState<Pending | null>(null)
   const [importFile, setImportFile] = useState<ReturnType<typeof parseImport>>(null)
   const [importSettings, setImportSettings] = useState(false)
   // 신규 채권 공고. 최신 채권을 이 브라우저에서 처음 볼 때 한 번(auto), 설정에서 다시 열 수 있다(replay)
   const [notice, setNotice] = useState<{ warbond: Warbond; mode: 'auto' | 'replay' } | null>(null)
-  const exportRef = useRef<HTMLDivElement>(null)
   const chromeRef = useRef<HTMLDivElement>(null)
 
-  // 상단 고정 영역(방송 띠 + 상단 바)의 실제 높이를 --chrome-h로. 테마 · 줄바꿈에 따라 달라져도 서랍 · 허가서 sticky 위치가 맞는다.
+  // 상단 고정 영역(상단 바)의 실제 높이를 --chrome-h로. 줄바꿈에 따라 달라져도 서랍 · 허가서 sticky 위치가 맞는다.
   useEffect(() => {
     const el = chromeRef.current
     if (!el) return
@@ -127,10 +121,10 @@ function Shell() {
     else startNew()
   }, [draft, loadouts, openLoadout, startNew])
 
-  // 처음 보는 최신 채권이면 공고를 띄운다. 브리핑 뷰로 바로 열린 경우(세컨드 모니터 등)는 다음 방문으로 미룬다
+  // 처음 보는 최신 채권이면 공고를 띄운다
   useEffect(() => {
     const latest = latestWarbond(data.warbonds)
-    if (!latest || location.hash.startsWith('#/briefing')) return
+    if (!latest) return
     const decision = noticeDecision(latest.id, readSeenNotice(), hadSavedState)
     if (decision === 'show') setNotice({ warbond: latest, mode: 'auto' })
     else if (decision === 'mark') writeSeenNotice(latest.id)
@@ -143,21 +137,6 @@ function Shell() {
     if (notice) writeSeenNotice(notice.warbond.id)
     setNotice(null)
   }
-
-  // 해시 라우팅: #/briefing/{id|draft}
-  useEffect(() => {
-    const onHash = () => {
-      const m = /^#\/briefing\/(.+)$/.exec(location.hash)
-      if (m) {
-        const target = m[1] === 'draft' ? useStore.getState().draft : useStore.getState().loadouts.find((l) => l.id === m[1])
-        if (target) setBriefing(target)
-        else history.replaceState(null, '', location.pathname)
-      } else setBriefing(null)
-    }
-    window.addEventListener('hashchange', onHash)
-    onHash()
-    return () => window.removeEventListener('hashchange', onHash)
-  }, [])
 
   /**
    * 저장 안 한 편집이 있으면 확인을 거친다. 전선 미지정 허가서는 아직 발급 전이라 묻지 않고 버린다.
@@ -226,19 +205,6 @@ function Shell() {
   const onDuplicateInList = (id: string) => {
     if (duplicateLoadout(id)) notify(copy.noticeDuplicated)
   }
-  const onExportImage = async () => {
-    if (!exportRef.current || !draft) return
-    try {
-      const { fontFallback } = await exportElementPng(exportRef.current, `loadout-${loadoutLabel(draft)}-${fileStamp()}.png`)
-      notify(fontFallback ? copy.noticeFontFallback : copy.noticeImageSaved)
-    } catch (e) {
-      console.error(e)
-      notify(copy.noticeImageFailed)
-    }
-  }
-  const onBriefing = () => {
-    if (draft) location.hash = '#/briefing/draft'
-  }
   const onExport = () => downloadJson(buildExport(loadouts, settings, data.meta.version))
   const onImport = async () => {
     const text = await pickFile()
@@ -266,27 +232,24 @@ function Shell() {
 
   return (
     <>
-      {/* 상단 고정 영역: 진리부 방송(콘솔 테마) → 상단 바. 실제 높이를 재서 --chrome-h로 넘긴다(위 effect) */}
+      {/* 상단 고정 영역(상단 바). 실제 높이를 재서 --chrome-h로 넘긴다(위 effect) */}
       <div className={styles.chrome} ref={chromeRef}>
-        {theme === 'console' && <Broadcast theme="console" exemplary={stamp === 'approved'} />}
         <TopBar onOpenCredits={() => setCredits(true)} />
       </div>
       {ui.settingsOpen && <SettingsPanel onExport={onExport} onImport={onImport} onRestoreBackup={onRestoreBackup} onShowNotice={showLatestNotice} />}
       <div className={[styles.app, !ui.sidebarOpen && styles.folded].filter(Boolean).join(' ')}>
         {/* 왼쪽 서랍: 상단 바의 ☰ · "저장된 로드아웃" 머리와 같은 기둥으로 이어진다 */}
         <Sidebar onOpen={(id) => guard(id ? { kind: 'open', id } : { kind: 'new' })} onDuplicate={onDuplicateInList} onDelete={onDelete} />
-        {/* 이미지 내보내기는 슬롯과 허가서를 함께 찍는다(허가서 버튼 줄은 data-export="skip"으로 빠진다) */}
-        <div className={styles.content} ref={exportRef}>
+        <div className={styles.content}>
           <main className={styles.main}>
             <Builder warnings={warnings} onAssignRace={onAssignRace} />
           </main>
-          <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} onSave={onSave} onDuplicate={onDuplicate} onExportImage={onExportImage} onBriefing={onBriefing} onDelete={onDelete} />
+          <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} onSave={onSave} onDuplicate={onDuplicate} onDelete={onDelete} />
         </div>
       </div>
       <VersionTag />
       {credits && <Credits onClose={() => setCredits(false)} />}
       {notice && <WarbondNotice warbond={notice.warbond} mode={notice.mode} onClose={closeNotice} />}
-      {briefing && <BriefingView loadout={briefing} onClose={() => (location.hash = '')} />}
       {pending?.kind === 'replace' && <ReeducationDialog body={copy.reeducationBody(copy.reeducationReplace)} onCancel={() => setPending(null)} onConfirm={() => run(pending)} />}
       {pending && pending.kind !== 'replace' && draft && (
         <UnsavedDialog

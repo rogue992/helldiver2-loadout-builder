@@ -1,0 +1,13 @@
+{
+  "name": "로드아웃 빌더",
+  "short_name": "로드아웃 빌더",
+  "start_url": ".",
+  "display": "browser",
+  "background_color": "#08111d",
+  "theme_color": "#08111d",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

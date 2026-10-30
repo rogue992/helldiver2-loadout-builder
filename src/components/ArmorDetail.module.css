@@ -1,0 +1,153 @@
+/* 방어구 상세: 선택 창 목록 오른쪽 기둥. 폰 폭에서는 목록 아래 낮은 한 덩어리 */
+.panel {
+  flex: none;
+  width: 260px;
+  min-height: 0;
+  border-left: 1px var(--bstyle) var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--box-line) transparent;
+}
+.hint {
+  margin: auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pic {
+  aspect-ratio: 1;
+  border: 2px solid var(--tile-line);
+  border-radius: var(--r);
+  background: linear-gradient(180deg, var(--tile) 0%, var(--bg2) 100%);
+  overflow: hidden;
+}
+.pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+}
+.titles h4 {
+  font: 700 18px/1.15 var(--font-display);
+  color: var(--fg);
+}
+.titles small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.stats {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+}
+.stat {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+.stat dt {
+  font: 600 12px var(--font-display);
+  color: var(--muted);
+}
+.stat dd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.bar {
+  flex: 1;
+  height: 6px;
+  border-radius: var(--r-pill);
+  background: var(--bg2);
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--acc);
+}
+.stat b {
+  min-width: 28px;
+  text-align: right;
+  font: 700 13px var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+.passive {
+  padding: 10px 12px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-soft);
+  background: var(--box);
+}
+.pTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 14px var(--font-display);
+  color: var(--yellow);
+}
+.pTitle img {
+  width: 26px;
+  height: 26px;
+}
+.passive ul {
+  margin: 8px 0 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 4px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--fg);
+}
+/* 낮은 화면: 큰 그림이 효과 줄을 밀어내지 않게 그림을 작게 이름 옆으로 */
+@media (max-height: 760px) {
+  .head {
+    flex-direction: row;
+    align-items: center;
+  }
+  .pic {
+    width: 84px;
+    flex: none;
+  }
+}
+/* 폰 폭: 그림을 작게 옆에 두고 한 덩어리로 낮게 */
+@media (max-width: 720px) {
+  .panel {
+    width: auto;
+    max-height: 40%;
+    border-left: 0;
+    border-top: 1px var(--bstyle) var(--line);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 10px;
+  }
+  .head {
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1 100%;
+  }
+  .pic {
+    width: 56px;
+    flex: none;
+  }
+  .stats {
+    flex: 1 1 100%;
+  }
+  .passive {
+    flex: 1 1 100%;
+  }
+}

@@ -1,33 +1,28 @@
 import { useEffect, useRef } from 'react'
 import { LOADOUT_RACES, factionLabel, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
-import type { ThemeId } from '../store/types'
 import { copy } from '../copy'
+import AppIcon from './AppIcon'
 import Icon from './Icon'
+import WarButton from './WarButton'
 import styles from './TopBar.module.css'
 
 interface Props {
   onOpenCredits: () => void
 }
 
-const THEMES: ThemeId[] = ['console', 'teletype']
-/** 문구는 그리는 순간 읽는다(화면 언어를 따라가게) */
-const themeLabel = (id: ThemeId) => (id === 'console' ? copy.themeConsole : copy.themeTeletype)
-
 /**
- * 상단 바 1줄: [서랍 머리 ☰ + 저장된 로드아웃] · 브랜드 · 종족 세그먼트 · 팩션 칩 · 테마 · 크레딧/설정.
+ * 상단 바 1줄: [서랍 머리 ☰ + 저장된 로드아웃] · 브랜드 · 종족 알약(고른 종족 안에 팩션 칩) · 전황 · 크레딧/설정.
  * 서랍 머리는 아래 목록 패널과 같은 폭(--drawer-w) · 배경 · 오른쪽 경계선을 써서 한 기둥으로 이어진다. 접히면 ☰만 남는다.
  * 넓은 화면은 한 줄: 폭이 모자라면 팩션 칩 줄만 줄어들어 가로로 밀어 보고(마우스 휠도 가로로), 넘친 쪽 끝은 흐리게 보인다.
- * 한 줄이 안 들어가는 폭에서는 2단(종족 탭 · 팩션 칩이 아랫단), 폰 폭에서는 감긴다. 기준 폭은 TopBar.module.css.
+ * 한 줄이 안 들어가는 폭에서는 2단(종족 알약이 아랫단), 폰 폭에서는 감긴다. 기준 폭은 TopBar.module.css.
  */
 export default function TopBar({ onOpenCredits }: Props) {
   const ui = useStore((s) => s.ui)
   const setUi = useStore((s) => s.setUi)
   const count = useStore((s) => s.loadouts.length)
-  const theme = useStore((s) => s.settings.theme)
-  const setSetting = useStore((s) => s.setSetting)
   const race = ui.race === 'all' ? null : raceInfo(ui.race)
-  const chipsRef = useRef<HTMLDivElement>(null)
+  const chipsRef = useRef<HTMLSpanElement>(null)
 
   // 팩션 칩 줄: 넘칠 때만 오른쪽 끝을 흐리고(끝까지 밀면 걷힌다), 세로 휠을 가로 스크롤로 옮긴다.
   // 종족이 바뀌면 같은 줄이 재사용되므로 맨 앞(선택된 전체 칩)으로 되돌린다.
@@ -90,56 +85,50 @@ export default function TopBar({ onOpenCredits }: Props) {
       </div>
 
       <div className={styles.brand}>
-        <span className={styles.seal} aria-hidden>
-          SE
+        <span className={styles.seal}>
+          <AppIcon />
         </span>
         <h1>{copy.appName}</h1>
       </div>
 
+      {/* 고른 종족의 알약이 길어지며 그 안에 팩션 칩이 펼쳐진다. 칩 줄만 줄어들 수 있고 넘치면 가로로 민다 */}
       <div className={styles.races} role="tablist" aria-label={copy.race} data-part="race-tabs">
-        {LOADOUT_RACES.map((r) => (
-          <button
-            key={r.id}
-            role="tab"
-            aria-selected={ui.race === r.id}
-            className={ui.race === r.id ? styles.on : ''}
-            style={{ '--dot': `var(--race-${r.id})` } as React.CSSProperties}
-            onClick={() => pickRace(r.id)}
-          >
-            <i /> {raceLabel(r)}
-          </button>
-        ))}
+        {LOADOUT_RACES.map((r) => {
+          const on = ui.race === r.id
+          const tab = (
+            <button
+              key={r.id}
+              role="tab"
+              aria-selected={on}
+              className={on ? styles.on : ''}
+              style={{ '--dot': `var(--race-${r.id})` } as React.CSSProperties}
+              onClick={() => pickRace(r.id)}
+            >
+              <i /> {raceLabel(r)}
+            </button>
+          )
+          if (!on || !race) return tab
+          return (
+            <span key={r.id} className={styles.grp} style={{ '--dot': `var(--race-${r.id})` } as React.CSSProperties}>
+              {tab}
+              <span className={styles.grpSep} aria-hidden />
+              <span ref={chipsRef} className={styles.chips} role="group" aria-label={copy.faction}>
+                <button aria-pressed={ui.faction === 'all'} className={[styles.chip, ui.faction === 'all' && styles.chipOn].filter(Boolean).join(' ')} onClick={() => setUi({ faction: 'all' })}>
+                  {copy.all}
+                </button>
+                {race.factions.map((f) => (
+                  <button key={f.id} aria-pressed={ui.faction === f.id} className={[styles.chip, ui.faction === f.id && styles.chipOn].filter(Boolean).join(' ')} onClick={() => setUi({ faction: f.id })}>
+                    {factionLabel(f)}
+                  </button>
+                ))}
+              </span>
+            </span>
+          )
+        })}
       </div>
 
-      {race && (
-        <>
-          <span className={styles.sep} aria-hidden />
-          <span className={styles.k}>{copy.faction}</span>
-          <div ref={chipsRef} className={styles.chips} role="tablist" aria-label={copy.faction}>
-            <button role="tab" aria-selected={ui.faction === 'all'} className={[styles.chip, ui.faction === 'all' && styles.chipOn].filter(Boolean).join(' ')} onClick={() => setUi({ faction: 'all' })}>
-              {copy.all}
-            </button>
-            {race.factions.map((f) => (
-              <button key={f.id} role="tab" aria-selected={ui.faction === f.id} className={[styles.chip, ui.faction === f.id && styles.chipOn].filter(Boolean).join(' ')} onClick={() => setUi({ faction: f.id })}>
-                {factionLabel(f)}
-              </button>
-            ))}
-          </div>
-        </>
-      )}
-
       <div className={styles.right}>
-        {/* 테마: 각 테마 화면의 축소판(상단 바 · 목록 · 본문). 텍스트 버튼(크레딧 · 설정)과 구분 */}
-        <span className={styles.themes} role="radiogroup" aria-label={copy.settingsTheme} data-part="theme-select">
-          {THEMES.map((t) => (
-            <button key={t} role="radio" aria-checked={theme === t} className={[styles.scr, styles[`scr_${t}`], theme === t && styles.scrOn].filter(Boolean).join(' ')} onClick={() => setSetting('theme', t)} title={themeLabel(t)} aria-label={themeLabel(t)}>
-              <i className={styles.scrTop} aria-hidden />
-              <i className={styles.scrSide} aria-hidden />
-              <i className={styles.scrMain} aria-hidden />
-            </button>
-          ))}
-        </span>
-        <span className={styles.sep} aria-hidden />
+        <WarButton />
         <button className={styles.btn} onClick={onOpenCredits}>
           {copy.credits}
         </button>

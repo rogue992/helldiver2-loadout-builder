@@ -61,8 +61,9 @@ export default function Builder({ warnings, onAssignRace }: Props) {
   const inert = locked || pending
 
   const poolTypeLabel = (ids: string[]) => {
-    const types = new Set(ids.map((id) => index.byId.get(id)?.stratType).filter(Boolean))
-    return [...types].map((t) => STRAT_TYPE_LABEL[t!]).join(' · ')
+    // 이름표로 겹침을 지운다(궤도 타격 · 폭격은 같은 이름표)
+    const labels = new Set(ids.map((id) => index.byId.get(id)?.stratType).flatMap((t) => (t ? [STRAT_TYPE_LABEL[t]] : [])))
+    return [...labels].join(' · ')
   }
 
   const gearItem = (slot: GearSlotKey): Item | null => (draft.gear[slot] ? index.byId.get(draft.gear[slot]!) ?? null : null)

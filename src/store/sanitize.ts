@@ -1,6 +1,6 @@
 // 브라우저 밖에서 들어오는 값(가져오기 파일 · 저장소 복원 · 다른 탭)의 형태 검증.
 // 화면은 여기를 통과한 값만 믿고 쓴다: 문자열 · 배열 · 범위가 어긋난 필드는 보정하고, 식별할 수 없는 항목은 버린다.
-import { LOADOUT_RACES, type LoadoutRace } from '../data/factions'
+import { LOADOUT_RACES, NO_FACTION, type LoadoutRace } from '../data/factions'
 import { copy } from '../copy'
 import { DEFAULT_SETTINGS, THEME_IDS, emptyFavorites, sizesOf, type Draft, type Favorites, type Gear, type Loadout, type NameDisplay, type PoolSize, type PoolSizes, type Pools, type Settings } from './types'
 
@@ -27,7 +27,7 @@ export function sanitizeLoadout(raw: unknown, fallbackOrder = 0): Loadout | null
 
   const race: LoadoutRace = isStr(raw.race) && RACE_IDS.has(raw.race) ? (raw.race as LoadoutRace) : 'all'
   const factions = LOADOUT_RACES.find((r) => r.id === race)!.factions
-  const faction = isStr(raw.faction) && factions.some((f) => f.id === raw.faction) ? raw.faction : 'default'
+  const faction = isStr(raw.faction) && factions.some((f) => f.id === raw.faction) ? raw.faction : NO_FACTION
   const g = isObj(raw.gear) ? raw.gear : {}
   const gear = {} as Gear
   for (const s of GEAR_SLOTS) gear[s] = isStr(g[s]) && g[s] ? (g[s] as string) : null

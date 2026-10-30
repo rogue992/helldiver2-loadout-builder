@@ -7,11 +7,11 @@
   place-items: center;
   padding: 16px;
 }
-/* 창 크기는 내용과 무관하게 고정: 목록이 짧거나 탭이 바뀌어도 머리 · 슬롯 줄 · 버튼이 오르내리지 않는다.
-   --sq = 대상 슬롯 타일 한 변. 좁거나 낮은 화면에서는 4개가 한 줄에 다 보이도록 줄인다(아래 미디어 쿼리) */
+/* 창 크기는 내용과 무관하게 고정: 목록이 짧거나 탭이 바뀌어도 머리 · 슬롯 · 버튼이 오르내리지 않는다.
+   --pk = 슬롯에 고른 그림 한 변(고른 개수와 상관없이 같다), --pk-gap = 그림 사이 간격 */
 .modal {
-  --sq: 148px;
-  --sq-gap: 22px;
+  --pk: 60px;
+  --pk-gap: 6px;
   width: min(1100px, 100%);
   height: min(92vh, 980px);
   display: flex;
@@ -28,10 +28,34 @@
   padding: 12px 14px;
   border-bottom: 1px var(--bstyle) var(--line);
 }
-.hd h2 {
-  font: 600 16px var(--font-display);
-  color: var(--yellow);
+/* 스트라타젬 ↔ 개인 장비 전환 토글: 고른 쪽이 노란 알약 */
+.switch {
+  flex: none;
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px var(--bstyle) var(--line);
+  border-radius: var(--r-pill);
+  background: var(--bg2);
+}
+.switchBtn {
+  height: 28px;
+  padding: 0 14px;
+  border-radius: var(--r-pill);
+  font: 600 14px var(--font-display);
+  color: var(--muted);
   white-space: nowrap;
+  transition:
+    color 0.3s var(--ease),
+    background-color 0.3s var(--ease);
+}
+.switchBtn:hover {
+  color: var(--fg);
+}
+.switchOn,
+.switchOn:hover {
+  background: var(--yellow);
+  color: var(--on-yellow);
 }
 .search {
   flex: 1;
@@ -88,85 +112,98 @@
   transform: scale(0.94);
 }
 
-/* 대상 슬롯 줄(SES식): 가운데 모은 정사각 큰 타일 4개. 현재 대상은 노란 테두리 · 빛 · 아래 점 */
-.slots {
-  display: flex;
-  justify-content: center;
-  gap: var(--sq-gap);
-  padding: 12px 14px 2px;
-  border-bottom: 1px var(--bstyle) var(--line);
-}
-.slot {
-  position: relative;
-  width: var(--sq);
+/* 왼쪽 기둥: 위에 대상 슬롯 2×2, 아래 종류 메뉴(2단). 오른쪽 목록은 창 높이를 다 쓴다 */
+.side {
   flex: none;
+  width: 340px;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding: 0 0 12px;
-  color: var(--fg);
+  border-right: 1px var(--bstyle) var(--line);
+}
+.slots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px var(--bstyle) var(--line);
+}
+/* 슬롯 상자: 위에 슬롯 번호 · 칸 수 트레이, 아래에 고른 그림. 현재 대상은 노란 테두리 */
+.slot {
+  position: relative;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px 10px 10px;
+  border: 1px var(--bstyle) var(--box-line);
+  border-radius: var(--r);
+  background: var(--box);
+  color: var(--fg);
   cursor: pointer;
-  background: none;
-  border: 0;
+  transition: border-color 0.15s;
+}
+.slot:hover {
+  border-color: var(--acc);
+}
+.slotOn,
+.slotOn:hover {
+  border-color: var(--yellow);
+  box-shadow: inset 0 0 0 1px var(--yellow);
 }
 .slot:focus-visible {
   outline: 2px solid var(--yellow);
   outline-offset: 2px;
 }
-/* 스트라타젬 슬롯: 이름 왼쪽, 칸 수 트레이 오른쪽(타일 폭 안). 좁은 화면은 트레이가 타일 아래로(맨 아래 미디어 쿼리) */
 .slotTop {
-  width: 100%;
-  height: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 6px;
 }
 .slotLbl {
-  font: 700 10.5px var(--font-display);
+  font: 700 12px var(--font-display);
   color: var(--muted);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
 }
 .slotOn .slotLbl {
   color: var(--yellow);
 }
-/* 정사각 타일: 하나면 가득, 2~4칸이면 2×2 */
+/* 고른 그림은 개수와 상관없이 한 변 --pk. 하나면 타일 하나, 2~4칸이면 두 개씩 한 줄(3 · 4칸은 두 줄). 상자 가운데에 둔다 */
 .sq {
   position: relative;
-  width: var(--sq);
-  height: var(--sq);
+  align-self: center;
+  width: var(--pk);
+  height: var(--pk);
   display: grid;
   place-items: center;
-  padding: 8%;
+  padding: 7px;
   background: var(--tile);
-  border: 2px solid var(--line);
+  border: 2px solid var(--tile-line);
   border-radius: var(--r);
   overflow: hidden;
-  transition: border-color 0.15s, box-shadow 0.15s;
 }
-.slot:hover .sq {
-  border-color: var(--acc);
-}
-.slotOn .sq {
-  border-color: var(--yellow);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--yellow) 45%, transparent);
+/* 스트라타젬 슬롯에 하나만 고르면 여러 개일 때의 첫째 칸 자리에: 오른쪽에 그림 하나 + 간격만큼 비워 두 칸 폭으로 가운데 정렬 */
+.sqOne {
+  margin-right: calc(var(--pk) + var(--pk-gap));
 }
 .sqGrid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 6px;
-  padding: 8px;
-  /* 칸을 늘려야 빈 칸도 제 크기로 보인다(가운데 정렬이면 내용 없는 칸이 점으로 줄어든다) */
-  place-items: stretch;
+  width: auto;
+  height: auto;
+  grid-template-columns: repeat(2, var(--pk));
+  gap: var(--pk-gap);
+  padding: 0;
+  background: none;
+  border: 0;
+  overflow: visible;
 }
-/* 2×2 안의 칸: 각각 대상이 될 수 있다(찬 칸 = 교체). 래퍼는 × 위치 기준 */
+/* 칸: 각각 대상이 될 수 있다(찬 칸 = 교체). 래퍼는 × 위치 기준 */
 .cellWrap {
   position: relative;
   display: grid;
-  min-width: 0;
-  min-height: 0;
+  width: var(--pk);
+  height: var(--pk);
 }
 .cell {
   display: grid;
@@ -175,9 +212,10 @@
   height: 100%;
   min-width: 0;
   min-height: 0;
-  padding: 8%;
-  border: 1px solid var(--tile-line);
-  border-radius: 2px;
+  padding: 7px;
+  background: var(--tile);
+  border: 2px solid var(--tile-line);
+  border-radius: var(--r);
   overflow: hidden;
   color: var(--fg);
 }
@@ -185,8 +223,9 @@
   border-color: var(--acc);
 }
 .cellEmpty {
-  border-style: dashed !important;
-  opacity: 0.45;
+  border: 1px dashed var(--tile-line) !important;
+  background: none;
+  opacity: 0.55;
 }
 .cellOn {
   border: 2px solid var(--yellow) !important;
@@ -201,14 +240,15 @@
   font: 700 13px var(--font-display);
   color: var(--danger-fg);
 }
-.sq img {
+.sq img,
+.cell img {
   width: 100%;
   height: 100%;
   min-width: 0;
   min-height: 0;
   object-fit: contain;
 }
-/* 방어구 상체 크롭은 정사각이라 타일을 그대로 채운다 */
+/* 방어구 상체 크롭은 타일을 그대로 채운다 */
 .sqArmor {
   padding: 0;
 }
@@ -217,34 +257,18 @@
 }
 .sqHint {
   font: 600 12px var(--font-display);
-  letter-spacing: 0.1em;
   color: var(--muted);
   opacity: 0.6;
-}
-.slotName {
-  max-width: 100%;
-  height: 17px;
-  font: 700 13px/17px var(--font-display);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-}
-.slotSub {
-  height: 13px;
-  font: 500 11px/13px var(--font-display);
-  color: var(--muted);
-  white-space: nowrap;
 }
 /* 창 안 해제 ×: 타일 오른쪽 위. 모양은 Buttons.module.css의 원형 ✕, 여기서는 크기 · 자리만 */
 .clearBtn {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 4px;
+  right: 4px;
   z-index: 2;
-  width: 20px;
-  height: 20px;
-  font-size: 9px;
+  width: 18px;
+  height: 18px;
+  font-size: 8px;
 }
 .clearBtnSmall {
   top: -6px;
@@ -253,44 +277,47 @@
   height: 17px;
   font-size: 7.5px;
 }
-.slotDot {
-  position: absolute;
-  left: 50%;
-  bottom: 2px;
-  width: 7px;
-  height: 7px;
-  margin-left: -3.5px;
-  border-radius: 50%;
-  background: var(--yellow);
-}
 
-/* 탭 줄은 한 줄 고정(넘치면 가로 스크롤). 줄바꿈으로 높이가 바뀌지 않게 */
-.tabs {
+/* 왼쪽 기둥 + 오른쪽 카드 목록 */
+.main {
+  flex: 1;
+  min-height: 0;
   display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 5px;
-  height: 46px;
-  padding: 0 14px;
-  border-bottom: 1px var(--bstyle) var(--line);
-  overflow-x: auto;
-  scrollbar-width: none;
 }
-.tabs::-webkit-scrollbar {
-  display: none;
+/* 종류 메뉴: 슬롯 아래 2단. 슬롯이 길어져 자리가 모자라면 메뉴만 스크롤하고, 스크롤바를 보여 가려진 항목이 있음을 알린다 */
+.menu {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  gap: 3px;
+  padding: 8px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--box-line) transparent;
 }
 .tab {
   flex: none;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
-  padding: 4px 10px;
-  border: 1px var(--bstyle) var(--line);
+  padding: 5px 10px;
+  border: 1px var(--bstyle) transparent;
   border-radius: var(--r);
   font-size: 12.5px;
+  text-align: left;
+  color: var(--muted);
+}
+.tab:hover {
+  color: var(--fg);
   background: var(--bg2);
 }
-.tabOn {
+.tabOn,
+.tabOn:hover {
   border-color: var(--acc);
   background: var(--acc-soft);
+  color: var(--fg);
   font-weight: 600;
 }
 /* 새로 들어온 항목이 든 탭: 라벨 뒤 작은 노란 점 */
@@ -318,7 +345,7 @@
   fill: currentColor;
 }
 .tab .favCount {
-  vertical-align: 1px;
+  margin-left: auto;
 }
 .groupTitle .favCount {
   margin-left: 4px;
@@ -355,55 +382,12 @@
   font: 500 11px var(--font-display);
   color: var(--muted);
 }
-/* 전체 탭 맨 위 즐겨찾기 묶음 */
-.favTitle {
-  align-items: center;
-  color: var(--fg);
-}
-.favStar {
-  display: inline-grid;
-  color: var(--rc);
-}
-.favStar svg {
-  fill: currentColor;
-}
-.raceChip {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  height: 20px;
-  padding: 0 8px;
-  border-radius: var(--r-pill);
-  background: color-mix(in srgb, var(--rc) 18%, var(--bg2));
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rc) 50%, transparent);
-  font: 600 11.5px var(--font-display);
-}
-.raceChip i {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--rc);
-}
-.favHint {
-  grid-column: 1 / -1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 52px;
-  margin: 0;
-  border: 1.5px dashed color-mix(in srgb, var(--tile-line) 30%, transparent);
-  border-radius: var(--r-soft);
-  color: var(--muted);
-  font: 600 12.5px var(--font-display);
-  text-align: center;
-}
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
   gap: 10px;
 }
-/* 카드와 별은 형제(버튼 안에 버튼을 둘 수 없다). 별은 카드 오른쪽 아래에 겹친다 */
+/* 카드와 별은 형제(버튼 안에 버튼을 둘 수 없다). 별은 카드의 그림 오른쪽 위에 겹친다 */
 .cardWrap {
   position: relative;
   display: grid;
@@ -426,8 +410,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 8px;
+  gap: 5px;
+  padding: 8px 8px 6px;
   background: var(--box);
   border: 1px var(--bstyle) var(--box-line);
   border-radius: var(--r);
@@ -457,10 +441,11 @@
   opacity: 0.9;
   filter: none;
 }
+/* 미보유 · 현재 꼬리표: 그림 왼쪽 위(오른쪽 위는 별 자리). NEW가 있으면 그 아래 */
 .cardTag {
   position: absolute;
   top: 6px;
-  right: 6px;
+  left: 6px;
   z-index: 1;
   padding: 1px 6px;
   border: 1px var(--bstyle) var(--line);
@@ -474,23 +459,23 @@
   border-color: var(--yellow);
   color: var(--yellow);
 }
-/* NEW 알약: 카드 왼쪽 위(오른쪽 위는 미보유 · 현재 태그 자리) */
+/* NEW 알약: 카드 왼쪽 위. 꼬리표가 함께 붙으면 꼬리표가 아래로 내려간다 */
 .cardNew {
   position: absolute;
   top: 6px;
   left: 6px;
   z-index: 1;
 }
+.cardNew ~ .cardTag {
+  top: 26px;
+}
 .cardName {
   font: 600 13px/1.25 var(--font-display);
   word-break: keep-all;
-  padding-right: 22px;
 }
 .cardSub {
   font-size: 11px;
   color: var(--muted);
-  min-height: 13px;
-  padding-right: 22px;
 }
 /* 즐겨찾기 카드: 왼쪽 굵은 띠가 허가서 종족색 */
 .cardFav {
@@ -503,13 +488,15 @@
     inset 4px 0 0 var(--rc),
     inset 0 0 0 1px var(--yellow);
 }
+/* 별: 그림 안 오른쪽 위(1시 방향). 그림 위에서도 보이게 반투명 바탕 */
 .star {
   position: absolute;
-  right: 5px;
-  bottom: 5px;
+  top: 12px;
+  right: 12px;
   z-index: 2;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
+  background: color-mix(in srgb, var(--tile) 78%, transparent);
   display: grid;
   place-items: center;
   border-radius: var(--r-pill);
@@ -549,56 +536,53 @@
   padding: 30px 0;
 }
 
-/* 폰 너비: 슬롯 4개가 한 줄에 들어가게 타일을 줄인다(창 안쪽 폭 = 화면 - 바깥 여백 · 테두리 · 줄 여백 · 간격) */
+/* 폰 너비: 왼쪽 기둥을 목록 위로 올리고(슬롯 2×2 그대로), 종류 메뉴는 가로 줄로 */
 @media (max-width: 720px) {
   .modal {
-    --sq: min(148px, calc((100vw - 90px) / 4));
-    --sq-gap: 8px;
-  }
-  .slots {
-    padding-inline: 8px;
-  }
-  .slotName {
-    font-size: 11.5px;
+    --pk: 54px;
   }
   .favChipLabel {
     display: none;
   }
-  .clearBtn {
-    top: 3px;
-    right: 3px;
-    width: 18px;
-    height: 18px;
+  /* 머리는 두 줄: 전환 토글 · 즐겨찾기 · 닫기, 그 아래 검색창 전체 폭 */
+  .hd {
+    flex-wrap: wrap;
+    row-gap: 8px;
   }
-  .clearBtnSmall {
-    top: -5px;
-    right: -5px;
-    width: 16px;
-    height: 16px;
+  .favChip {
+    margin-left: auto;
   }
-}
-/* 좁거나 낮은 화면: 타일이 작아 슬롯 이름 옆에 트레이가 안 들어가므로 트레이를 타일 아래로 내린다 */
-@media (max-width: 720px), (max-height: 640px) {
-  .slotTop {
-    display: contents;
-  }
-  .sq {
+  .search {
     order: 1;
+    flex: 1 1 100%;
   }
-  .slotTray {
-    order: 2;
+  .switchBtn {
+    padding: 0 10px;
+    font-size: 13px;
   }
-  .slotName {
-    order: 3;
+  .main {
+    flex-direction: column;
   }
-  .slotSub {
-    order: 4;
+  .side {
+    width: auto;
+    border-right: 0;
+  }
+  .slots {
+    padding: 8px;
+  }
+  .menu {
+    flex: none;
+    display: flex;
+    padding: 8px;
+    scrollbar-width: none;
+    border-bottom: 1px var(--bstyle) var(--line);
+    overflow-x: auto;
+    overflow-y: hidden;
   }
 }
-/* 낮은 화면(가로 폰 등): 슬롯 줄이 카드 목록 자리를 다 차지하지 않게 */
+/* 낮은 화면(가로 폰 등): 창이 화면 높이를 넘지 않게 */
 @media (max-height: 640px) {
   .modal {
-    --sq: min(88px, calc((100vw - 90px) / 4));
     height: calc(100vh - 32px);
   }
 }

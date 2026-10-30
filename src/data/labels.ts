@@ -7,26 +7,27 @@ export const KIND_LABEL: Record<Kind, string> = byLang(
   { primary: 'Primary', secondary: 'Secondary', throwable: 'Throwable', armor: 'Armor', stratagem: 'Stratagem' },
 )
 
+// 궤도 타격 · 폭격은 화면 어디서나 "궤도" 하나로 부른다(데이터의 종류 구분은 그대로)
 export const STRAT_TYPE_LABEL: Record<StratType, string> = byLang(
   {
-    orbital_strike: '궤도 타격',
-    orbital_barrage: '궤도 폭격',
+    orbital_strike: '궤도',
+    orbital_barrage: '궤도',
     eagle: '이글',
     support_weapon: '지원무기',
     support_backpack: '지원무기(배낭)',
-    disposable: '일회용 지원무기',
+    disposable: '지원무기(일회용)',
     backpack: '배낭',
     sentry: '센트리',
     emplacement: '배치형',
     vehicle: '탑승물',
   },
   {
-    orbital_strike: 'Orbital Strike',
-    orbital_barrage: 'Orbital Barrage',
+    orbital_strike: 'Orbital',
+    orbital_barrage: 'Orbital',
     eagle: 'Eagle',
     support_weapon: 'Support Weapon',
     support_backpack: 'Support (Backpack)',
-    disposable: 'Disposable',
+    disposable: 'Support (Disposable)',
     backpack: 'Backpack',
     sentry: 'Sentry',
     emplacement: 'Emplacement',

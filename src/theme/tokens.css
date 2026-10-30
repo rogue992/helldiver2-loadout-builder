@@ -5,7 +5,7 @@
   --body: 'Barlow', 'Noto Sans KR', sans-serif;
   --mono: 'IBM Plex Mono', 'Noto Sans KR', monospace;
   /* 상단 고정 영역(방송 띠 + 상단 바) 높이의 첫 프레임용 값. 마운트 뒤에는 App이 실제 높이를 재서 인라인으로 덮어쓴다 */
-  --chrome-h: 72px;
+  --chrome-h: 46px;
   --bar-h: 46px;
   /* 왼쪽 서랍(저장 목록) 폭. 상단 바의 서랍 머리와 같은 값 */
   --drawer-w: 250px;
@@ -15,7 +15,6 @@
   --race-all: #ffe14d;
   /* 겹침 순서: 버전 표시 < 브리핑 < 선택 창 · 크레딧 < 확인창 · 가져오기 < 토스트 */
   --z-tag: 40;
-  --z-briefing: 70;
   --z-modal: 80;
   --z-dialog: 85;
   --z-toast: 90;
@@ -62,49 +61,6 @@
   --bstyle: solid;
   --font-display: var(--display);
   --font-body: var(--body);
-}
-
-/* ── teletype: 녹색 단말 ── */
-:root[data-theme='teletype'] {
-  --chrome-h: 46px;
-  --bg: #040a0f;
-  --bg2: #071016;
-  --fg: #b9f0c4;
-  --muted: #3e8a52;
-  --line: #1e3a2a;
-  --panel: #060d12;
-  --box: #071016;
-  --box-line: #1e3a2a;
-  --tile: #03080b;
-  --tile-line: #5ec27a;
-  --tag: #0f2417;
-  --tag-fg: #a9e6bb;
-  --yellow: #5ec27a;
-  --on-yellow: #04130a;
-  --acc: #5ec27a;
-  --acc-soft: #0f2417;
-  --danger: #ff5a3c;
-  --danger-soft: #1e0c08;
-  --danger-fg: #ffb4a4;
-  --warn: #ffcf5a;
-  --warn-soft: #1e1808;
-  --warn-fg: #ffe0a0;
-  --ok: #5ec27a;
-  --ok-soft: #0f2417;
-  --ok-fg: #a9e6bb;
-  --glow: #0a1a12;
-  --hazard-bg: #040a0f;
-  --r: 0;
-  --r-pill: 0;
-  --r-soft: 0;
-  --bstyle: dashed;
-  --font-display: var(--mono);
-  --font-body: var(--mono);
-  /* 단말 톤에 맞춘 종족색. 전체만 단말 녹색 */
-  --race-terminid: #e8a83a;
-  --race-automaton: #ff5a3c;
-  --race-illuminate: #a78bfa;
-  --race-all: #5ec27a;
 }
 
 /* 기본 리셋 · 바탕 */

@@ -13,6 +13,15 @@ export function stripMarkup(s: string): string {
     .trim()
 }
 
+/** 패시브 설명(<br>로 나뉜 wikitext) → 효과 한 줄씩. 굵게 표시(''')와 강조 span은 걷어 낸다 */
+export function effectLines(description: string): string[] {
+  return description
+    .split(/<br\s*\/?>/i)
+    // 강조 span은 글자에 붙어 있어("2.0s</span>.") 공백 없이 걷어 내야 마침표 앞에 빈칸이 생기지 않는다
+    .map((l) => stripMarkup(l.replace(/'''/g, '').replace(/<\/?span[^>]*>/g, '')))
+    .filter(Boolean)
+}
+
 /** 텍스트에 특정 트레이트 단어가 있는지(대소문자 무시, 부분 문자열). */
 export function hasWord(text: string, word: string): boolean {
   return stripMarkup(text).toLowerCase().includes(word.toLowerCase())

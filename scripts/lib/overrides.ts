@@ -6,6 +6,8 @@ export const KO_PATH = 'data/overrides/ko.json'
 export interface KoOverrides {
   items: Record<string, { nameKo: string; weaponType?: string; warbondId?: string; warbondPage?: number }>
   passives: Record<string, string>
+  /** 패시브 효과 번역. 영어 원문과 줄 수가 같아야 쓴다(다르면 원문이 바뀐 것이라 빌드가 알린다) */
+  passiveEffects?: Record<string, string[]>
   warbonds: Record<string, string>
 }
 

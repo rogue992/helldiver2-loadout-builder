@@ -124,15 +124,6 @@
   background: var(--yellow);
   box-shadow: 0 0 10px var(--yellow);
 }
-.beacon::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border: 1px solid var(--yellow);
-  border-radius: 50%;
-  opacity: 0;
-  animation: ping 2.6s var(--ease) 1.4s infinite;
-}
 .close {
   width: 36px;
   height: 36px;
@@ -193,7 +184,7 @@
   letter-spacing: 0.1em;
 }
 
-/* 수호부 도장: 표지 오른쪽 아래에 쾅. 텔레타이프 모양은 theme/teletype.css */
+/* 수호부 도장: 표지 오른쪽 아래에 쾅 */
 .stamp {
   position: absolute;
   z-index: 3;
@@ -726,16 +717,5 @@
   100% {
     opacity: 1;
     transform: scale(1) rotate(-8deg);
-  }
-}
-@keyframes ping {
-  0% {
-    opacity: 0.9;
-    transform: scale(0.5);
-  }
-  70%,
-  100% {
-    opacity: 0;
-    transform: scale(1.9);
   }
 }

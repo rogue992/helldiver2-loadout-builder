@@ -3,7 +3,7 @@ import { DndContext, KeyboardSensor, PointerSensor, closestCenter, useSensor, us
 import { SortableContext, arrayMove, sortableKeyboardCoordinates, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { useGameData } from '../data/GameDataContext'
-import { factionName, raceInfo } from '../data/factions'
+import { NO_FACTION, factionName, raceInfo } from '../data/factions'
 import { assetUrl } from '../data/loadData'
 import { useStore } from '../store/useStore'
 import { isDefaultLoadout, loadoutLabel } from '../store/defaults'
@@ -51,7 +51,7 @@ export default function Sidebar({ onOpen, onDuplicate, onDelete }: Props) {
     () =>
       [...loadouts]
         // 종족 무관('all') 로드아웃과 기본 로드아웃은 필터와 무관하게 항상 보인다
-        .filter((l) => isDefaultLoadout(l.id) || l.race === 'all' || ((ui.race === 'all' || l.race === ui.race) && (ui.faction === 'all' || l.faction === ui.faction)))
+        .filter((l) => isDefaultLoadout(l.id) || l.race === 'all' || ((ui.race === 'all' || l.race === ui.race) && (ui.faction === 'all' || l.faction === ui.faction || l.faction === NO_FACTION)))
         .sort((a, b) => a.order - b.order),
     [loadouts, ui.race, ui.faction],
   )

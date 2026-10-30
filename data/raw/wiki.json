@@ -2196,7 +2196,10 @@
     "type": "Medium",
     "passive": "Feet First",
     "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 2|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "A-35 Recon",
@@ -2204,7 +2207,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 2|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "A-9 Helljumper",
@@ -2212,7 +2218,10 @@
     "type": "Medium",
     "passive": "Feet First",
     "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 1|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "A-9 Helljumper",
@@ -2220,7 +2229,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Obedient Democracy Support Troopers Legendary Warbond#Page 1|Halo: ODST]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AC-1 Dutiful",
@@ -2228,7 +2240,10 @@
     "type": "Medium",
     "passive": "Acclimated",
     "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "AC-1 Dutiful",
@@ -2236,7 +2251,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AC-2 Obedient",
@@ -2244,7 +2262,10 @@
     "type": "Light",
     "passive": "Acclimated",
     "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "AC-2 Obedient",
@@ -2252,7 +2273,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Righteous Revenants Legendary Warbond|Righteous Revenants]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AD-11 Livewire",
@@ -2260,7 +2284,10 @@
     "type": "Light",
     "passive": "Adreno-Defibrillator",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "AD-11 Livewire",
@@ -2268,7 +2295,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AD-26 Bleeding Edge",
@@ -2276,7 +2306,10 @@
     "type": "Medium",
     "passive": "Adreno-Defibrillator",
     "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "AD-26 Bleeding Edge",
@@ -2284,7 +2317,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AD-49 Apollonian",
@@ -2292,7 +2328,10 @@
     "type": "Heavy",
     "passive": "Adreno-Defibrillator",
     "source": "[[Control Group Premium Warbond#Page 2|Control Group]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "AD-49 Apollonian",
@@ -2300,7 +2339,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Control Group Premium Warbond#Page 2|Control Group]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AF-02 Haz-Master",
@@ -2308,7 +2350,10 @@
     "type": "Medium",
     "passive": "Advanced Filtration",
     "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "AF-02 Haz-Master",
@@ -2316,7 +2361,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AF-50 Noxious Ranger",
@@ -2324,7 +2372,10 @@
     "type": "Light",
     "passive": "Advanced Filtration",
     "source": "[[Chemical Agents Premium Warbond#Page 1|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "AF-50 Noxious Ranger",
@@ -2332,7 +2383,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Chemical Agents Premium Warbond#Page 1|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AF-52 Lockdown",
@@ -2340,7 +2394,10 @@
     "type": "Heavy",
     "passive": "Advanced Filtration",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "AF-52 Lockdown",
@@ -2348,7 +2405,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "AF-91 Field Chemist",
@@ -2356,7 +2416,10 @@
     "type": "Medium",
     "passive": "Advanced Filtration",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "AF-91 Field Chemist",
@@ -2364,7 +2427,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "B-01 Tactical",
@@ -2372,7 +2438,10 @@
     "type": "Medium",
     "passive": "Extra Padding",
     "source": "Starter Equipment",
-    "cost": ""
+    "cost": "",
+    "armor": "150",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "B-01 Tactical",
@@ -2380,7 +2449,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "Starter Equipment",
-    "cost": ""
+    "cost": "",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "B-08 Light Gunner",
@@ -2388,7 +2460,10 @@
     "type": "Light",
     "passive": "Extra Padding",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "100",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "B-08 Light Gunner",
@@ -2396,7 +2471,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "B-22 Model Citizen",
@@ -2404,7 +2482,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "Anniversary Gift",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "B-22 Model Citizen",
@@ -2412,7 +2493,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "Anniversary Gift",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "B-24 Enforcer",
@@ -2420,7 +2504,10 @@
     "type": "Medium",
     "passive": "Fortified",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "129",
+    "speed": "471",
+    "stam_regen": "71"
    },
    {
     "_pageName": "B-24 Enforcer",
@@ -2428,7 +2515,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "B-27 Fortified Commando",
@@ -2436,7 +2526,10 @@
     "type": "Heavy",
     "passive": "Extra Padding",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>",
+    "armor": "200",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "B-27 Fortified Commando",
@@ -2444,7 +2537,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BFM-16 Tanker",
@@ -2452,7 +2548,10 @@
     "type": "Light",
     "passive": "Blunt-Force Mitigation",
     "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "75",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "BFM-16 Tanker",
@@ -2460,7 +2559,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BFM-220 Ironclad",
@@ -2468,7 +2570,10 @@
     "type": "Heavy",
     "passive": "Blunt-Force Mitigation",
     "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "175",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "BFM-220 Ironclad",
@@ -2476,7 +2581,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Ironclad Democracy Premium Warbond|Ironclad Democracy]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BFM-77 Reformer",
@@ -2484,7 +2592,10 @@
     "type": "Medium",
     "passive": "Blunt-Force Mitigation",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "125",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "BFM-77 Reformer",
@@ -2492,7 +2603,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BP-20 Correct Officer",
@@ -2500,7 +2614,10 @@
     "type": "Medium",
     "passive": "Ballistic Padding",
     "source": "[[Force of Law Premium Warbond#Page 1|Force of Law]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "BP-20 Correct Officer",
@@ -2508,7 +2625,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Force of Law Premium Warbond#Page 1|Force of Law]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BP-32 Jackboot",
@@ -2516,7 +2636,10 @@
     "type": "Light",
     "passive": "Ballistic Padding",
     "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "BP-32 Jackboot",
@@ -2524,7 +2647,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "BP-77 Grand Juror",
@@ -2532,7 +2658,10 @@
     "type": "Heavy",
     "passive": "Ballistic Padding",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "BP-77 Grand Juror",
@@ -2540,7 +2669,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-07 Demolition Specialist",
@@ -2548,7 +2680,10 @@
     "type": "Light",
     "passive": "Engineering Kit",
     "source": "[[Democratic Detonation Premium Warbond#Page 2|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "64",
+    "speed": "536",
+    "stam_regen": "118"
    },
    {
     "_pageName": "CE-07 Demolition Specialist",
@@ -2556,7 +2691,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Democratic Detonation Premium Warbond#Page 2|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-101 Guerilla Gorilla",
@@ -2564,7 +2702,10 @@
     "type": "Heavy",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CE-101 Guerilla Gorilla",
@@ -2572,7 +2713,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-27 Ground Breaker",
@@ -2580,7 +2724,10 @@
     "type": "Medium",
     "passive": "Engineering Kit",
     "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CE-27 Ground Breaker",
@@ -2588,7 +2735,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Democratic Detonation Premium Warbond#Page 1|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-35 Trench Engineer",
@@ -2596,7 +2746,10 @@
     "type": "Medium",
     "passive": "Engineering Kit",
     "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 10</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 10</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CE-35 Trench Engineer",
@@ -2604,7 +2757,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 7</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 7</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-64 Grenadier",
@@ -2612,7 +2768,10 @@
     "type": "Heavy",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CE-64 Grenadier",
@@ -2620,7 +2779,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-67 Titan",
@@ -2628,7 +2790,10 @@
     "type": "Light",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "79",
+    "speed": "521",
+    "stam_regen": "111"
    },
    {
     "_pageName": "CE-67 Titan",
@@ -2636,7 +2801,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-74 Breaker",
@@ -2644,7 +2812,10 @@
     "type": "Light",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "CE-74 Breaker",
@@ -2652,7 +2823,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CE-81 Juggernaut",
@@ -2660,7 +2834,10 @@
     "type": "Medium",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CE-81 Juggernaut",
@@ -2668,7 +2845,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CM-09 Bonesnapper",
@@ -2676,7 +2856,10 @@
     "type": "Medium",
     "passive": "Med-Kit",
     "source": "[[Helldivers Mobilize Warbond#Page 4|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 4\">P4</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 15</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 15</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CM-09 Bonesnapper",
@@ -2684,7 +2867,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 4|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 4\">P4</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CM-10 Clinician",
@@ -2692,7 +2878,10 @@
     "type": "Medium",
     "passive": "Med-Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CM-10 Clinician",
@@ -2700,7 +2889,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CM-14 Physician",
@@ -2708,7 +2900,10 @@
     "type": "Medium",
     "passive": "Med-Kit",
     "source": "[[Helldivers Mobilize Warbond#Page 9|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 9\">P9</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 70</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 70</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CM-14 Physician",
@@ -2716,7 +2911,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 9|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 9\">P9</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 50</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 50</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CM-17 Butcher",
@@ -2724,7 +2922,10 @@
     "type": "Heavy",
     "passive": "Med-Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CM-17 Butcher",
@@ -2732,7 +2933,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CM-21 Trench Paramedic",
@@ -2740,7 +2944,10 @@
     "type": "Light",
     "passive": "Med-Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "64",
+    "speed": "536",
+    "stam_regen": "118"
    },
    {
     "_pageName": "CM-21 Trench Paramedic",
@@ -2748,7 +2955,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CPG-48 Sapper",
@@ -2756,7 +2966,10 @@
     "type": "Medium",
     "passive": "Concussive Padding, Grenadier",
     "source": "[[Entrenched Division Premium Warbond#Page 1|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CPG-48 Sapper",
@@ -2764,7 +2977,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Entrenched Division Premium Warbond#Page 1|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CPH-26 Commandant",
@@ -2772,7 +2988,10 @@
     "type": "Light",
     "passive": "Concussive Padding, Hazmat",
     "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "CPH-26 Commandant",
@@ -2780,7 +2999,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Entrenched Division Premium Warbond#Page 2|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CPR-80 Bulwark",
@@ -2788,7 +3010,10 @@
     "type": "Heavy",
     "passive": "Concussive Padding, Reinforced",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "180",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CPR-80 Bulwark",
@@ -2796,7 +3021,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CW-22 Kodiak",
@@ -2804,7 +3032,10 @@
     "type": "Heavy",
     "passive": "Fortified",
     "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CW-22 Kodiak",
@@ -2812,7 +3043,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Polar Patriots Premium Warbond#Page 2|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CW-36 Winter Warrior",
@@ -2820,7 +3054,10 @@
     "type": "Heavy",
     "passive": "Servo-Assisted",
     "source": "[[Polar Patriots Premium Warbond#Page 1|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "CW-36 Winter Warrior",
@@ -2828,7 +3065,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Polar Patriots Premium Warbond#Page 1|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CW-4 Arctic Ranger",
@@ -2836,7 +3076,10 @@
     "type": "Light",
     "passive": "Scout",
     "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "CW-4 Arctic Ranger",
@@ -2844,7 +3087,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Polar Patriots Premium Warbond#Page 3|Polar Patriots]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "CW-9 White Wolf",
@@ -2852,7 +3098,10 @@
     "type": "Medium",
     "passive": "Extra Padding",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "150",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "CW-9 White Wolf",
@@ -2860,7 +3109,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DP-00 Tactical",
@@ -2868,7 +3120,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "[[Liberty Day]]",
-    "cost": ""
+    "cost": "",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DP-00 Tactical",
@@ -2876,7 +3131,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Liberty Day]]",
-    "cost": ""
+    "cost": "",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DP-11 Champion of the People",
@@ -2884,7 +3142,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "[[Helldivers Mobilize Warbond#Page 10|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 10\">P10</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 100</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 100</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DP-11 Champion of the People",
@@ -2892,7 +3153,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 10|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 10\">P10</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DP-40 Hero of the Federation",
@@ -2900,7 +3164,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 25</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 25</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DP-40 Hero of the Federation",
@@ -2908,7 +3175,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 5|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 5\">P5</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 20</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 20</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DP-53 Savior of the Free",
@@ -2916,7 +3186,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "[[Super Citizen Edition]]",
-    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20"
+    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DP-53 Savior of the Free",
@@ -2924,7 +3197,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Super Citizen Edition]]",
-    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20"
+    "cost": "<span  class=\"explain \" title=\"USD\">💲</span>20",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DP-8 Mountain-Scaled",
@@ -2932,7 +3208,10 @@
     "type": "Medium",
     "passive": "Siege-Ready",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DP-8 Mountain-Scaled",
@@ -2940,7 +3219,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DS-10 Big Game Hunter",
@@ -2948,7 +3230,10 @@
     "type": "Light",
     "passive": "Desert Stormer",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "DS-10 Big Game Hunter",
@@ -2956,7 +3241,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DS-191 Scorpion",
@@ -2964,7 +3252,10 @@
     "type": "Medium",
     "passive": "Desert Stormer",
     "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "DS-191 Scorpion",
@@ -2972,7 +3263,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "DS-42 Federation's Blade",
@@ -2980,7 +3274,10 @@
     "type": "Heavy",
     "passive": "Desert Stormer",
     "source": "[[Dust Devils Premium Warbond#Page 1|Dust Devils]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "DS-42 Federation's Blade",
@@ -2988,7 +3285,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Dust Devils Premium Warbond#Page 1|Dust Devils]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "EX-00 Prototype X",
@@ -2996,7 +3296,10 @@
     "type": "Light",
     "passive": "Electrical Conduit",
     "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "EX-00 Prototype X",
@@ -3004,7 +3307,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Cutting Edge Premium Warbond#Page 3|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "EX-03 Prototype 3",
@@ -3012,7 +3318,10 @@
     "type": "Medium",
     "passive": "Electrical Conduit",
     "source": "[[Cutting Edge Premium Warbond#Page 1|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "EX-03 Prototype 3",
@@ -3020,7 +3329,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Cutting Edge Premium Warbond#Page 1|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "EX-16 Prototype 16",
@@ -3028,7 +3340,10 @@
     "type": "Medium",
     "passive": "Electrical Conduit",
     "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "EX-16 Prototype 16",
@@ -3036,7 +3351,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Cutting Edge Premium Warbond#Page 2|Cutting Edge]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-05 Marksman",
@@ -3044,7 +3362,10 @@
     "type": "Heavy",
     "passive": "Fortified",
     "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 6</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 6</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "FS-05 Marksman",
@@ -3052,7 +3373,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 2|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 5</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 5</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-11 Executioner",
@@ -3060,7 +3384,10 @@
     "type": "Heavy",
     "passive": "Fortified",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "FS-11 Executioner",
@@ -3068,7 +3395,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-23 Battle Master",
@@ -3076,7 +3406,10 @@
     "type": "Heavy",
     "passive": "Fortified",
     "source": "[[Helldivers Mobilize Warbond#Page 6|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 6\">P6</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "FS-23 Battle Master",
@@ -3084,7 +3417,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 6|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 6\">P6</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 25</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 25</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-34 Exterminator",
@@ -3092,7 +3428,10 @@
     "type": "Medium",
     "passive": "Fortified",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "FS-34 Exterminator",
@@ -3100,7 +3439,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-37 Ravager",
@@ -3108,7 +3450,10 @@
     "type": "Light",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "FS-37 Ravager",
@@ -3116,7 +3461,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-38 Eradicator",
@@ -3124,7 +3472,10 @@
     "type": "Light",
     "passive": "Fortified",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "FS-38 Eradicator",
@@ -3132,7 +3483,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-55 Devastator",
@@ -3140,7 +3494,10 @@
     "type": "Heavy",
     "passive": "Fortified",
     "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "FS-55 Devastator",
@@ -3148,7 +3505,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Democratic Detonation Premium Warbond#Page 3|Democratic Detonation]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "FS-61 Dreadnought",
@@ -3156,7 +3516,10 @@
     "type": "Heavy",
     "passive": "Servo-Assisted",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "FS-61 Dreadnought",
@@ -3164,7 +3527,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "GS-11 Democracy's Deputy",
@@ -3172,7 +3538,10 @@
     "type": "Light",
     "passive": "Gunslinger",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "GS-11 Democracy's Deputy",
@@ -3180,7 +3549,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "GS-17 Frontier Marshal",
@@ -3188,7 +3560,10 @@
     "type": "Medium",
     "passive": "Gunslinger",
     "source": "[[Borderline Justice Premium Warbond#Page 1|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "GS-17 Frontier Marshal",
@@ -3196,7 +3571,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Borderline Justice Premium Warbond#Page 1|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "GS-66 Lawmaker",
@@ -3204,7 +3582,10 @@
     "type": "Heavy",
     "passive": "Gunslinger",
     "source": "[[Borderline Justice Premium Warbond#Page 2|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "GS-66 Lawmaker",
@@ -3212,7 +3593,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Borderline Justice Premium Warbond#Page 2|Borderline Justice]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "I-09 Heatseeker",
@@ -3220,7 +3604,10 @@
     "type": "Light",
     "passive": "Inflammable",
     "source": "[[Freedom's Flame Premium Warbond#Page 1|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "I-09 Heatseeker",
@@ -3228,7 +3615,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Freedom's Flame Premium Warbond#Page 1|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "I-102 Draconaught",
@@ -3236,7 +3626,10 @@
     "type": "Medium",
     "passive": "Inflammable",
     "source": "[[Freedom's Flame Premium Warbond#Page 2|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "I-102 Draconaught",
@@ -3244,7 +3637,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Freedom's Flame Premium Warbond#Page 2|Freedom's Flame]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "I-44 Salamander",
@@ -3252,7 +3648,10 @@
     "type": "Heavy",
     "passive": "Inflammable",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "I-44 Salamander",
@@ -3260,7 +3659,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "I-92 Fire Fighter",
@@ -3268,7 +3670,10 @@
     "type": "Medium",
     "passive": "Inflammable",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "I-92 Fire Fighter",
@@ -3276,7 +3681,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "IE-12 Righteous",
@@ -3284,7 +3692,10 @@
     "type": "Medium",
     "passive": "Integrated Explosives",
     "source": "[[Servants of Freedom Premium Warbond#Page 2|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "IE-12 Righteous",
@@ -3292,7 +3703,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Servants of Freedom Premium Warbond#Page 2|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "IE-3 Martyr",
@@ -3300,7 +3714,10 @@
     "type": "Medium",
     "passive": "Integrated Explosives",
     "source": "[[Servants of Freedom Premium Warbond#Page 1|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "IE-3 Martyr",
@@ -3308,7 +3725,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Servants of Freedom Premium Warbond#Page 1|Servants of Freedom]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "IE-57 Hell-Bent",
@@ -3316,7 +3736,10 @@
     "type": "Light",
     "passive": "Integrated Explosives",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "IE-57 Hell-Bent",
@@ -3324,7 +3747,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "IX-Voidwalker",
@@ -3332,7 +3758,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Campaigns#Void Piercer|Void Piercer]]",
-    "cost": ""
+    "cost": "",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "KDM-500 Outrider",
@@ -3340,7 +3769,10 @@
     "type": "Heavy",
     "passive": "Kinetic Displacement Mitigation",
     "source": "[[Campaigns#Permanent Enclosure|Permanent Enclosure]]",
-    "cost": ""
+    "cost": "",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "KDM-500 Outrider",
@@ -3348,7 +3780,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Campaigns#Lightning Intercept|Lightning Intercept]]",
-    "cost": ""
+    "cost": "",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "O-2 Heavy Operator",
@@ -3356,7 +3791,10 @@
     "type": "Heavy",
     "passive": "Oxygenator",
     "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "O-2 Heavy Operator",
@@ -3364,7 +3802,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Exo Experts Premium Warbond#Page 2|Exo Experts]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "O-3 Free Spirit",
@@ -3372,7 +3813,10 @@
     "type": "Light",
     "passive": "Oxygenator",
     "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "O-3 Free Spirit",
@@ -3380,7 +3824,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "O-44 Bonded Pilot",
@@ -3388,7 +3835,10 @@
     "type": "Medium",
     "passive": "Oxygenator",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "O-44 Bonded Pilot",
@@ -3396,7 +3846,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "PH-202 Twigsnapper",
@@ -3404,7 +3857,10 @@
     "type": "Heavy",
     "passive": "Peak Physique",
     "source": "[[Viper Commandos Premium Warbond#Page 2|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "PH-202 Twigsnapper",
@@ -3412,7 +3868,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Viper Commandos Premium Warbond#Page 2|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "PH-56 Jaguar",
@@ -3420,7 +3879,10 @@
     "type": "Medium",
     "passive": "Peak Physique",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "PH-56 Jaguar",
@@ -3428,7 +3890,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "PH-9 Predator",
@@ -3436,7 +3901,10 @@
     "type": "Light",
     "passive": "Peak Physique",
     "source": "[[Viper Commandos Premium Warbond#Page 1|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "PH-9 Predator",
@@ -3444,7 +3912,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Viper Commandos Premium Warbond#Page 1|Viper Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RE-1861 Parade Commander",
@@ -3452,7 +3923,10 @@
     "type": "Light",
     "passive": "Reinforced Epaulettes",
     "source": "[[Masters of Ceremony Premium Warbond#Page 2|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "RE-1861 Parade Commander",
@@ -3460,7 +3934,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Masters of Ceremony Premium Warbond#Page 2|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RE-2310 Honorary Guard",
@@ -3468,7 +3945,10 @@
     "type": "Medium",
     "passive": "Reinforced Epaulettes",
     "source": "[[Masters of Ceremony Premium Warbond#Page 1|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "RE-2310 Honorary Guard",
@@ -3476,7 +3956,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Masters of Ceremony Premium Warbond#Page 1|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RE-824 Bearer of the Standard",
@@ -3484,7 +3967,10 @@
     "type": "Heavy",
     "passive": "Reinforced Epaulettes",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "RE-824 Bearer of the Standard",
@@ -3492,7 +3978,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-100 Sanctioner",
@@ -3500,7 +3989,10 @@
     "type": "Light",
     "passive": "Reduced Signature",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "RS-100 Sanctioner",
@@ -3508,7 +4000,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-20 Constrictor",
@@ -3516,7 +4011,10 @@
     "type": "Light",
     "passive": "Rock Solid",
     "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "RS-20 Constrictor",
@@ -3524,7 +4022,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Python Commandos Premium Warbond#Page 1|Python Commandos]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-40 Beast of Prey",
@@ -3532,7 +4033,10 @@
     "type": "Heavy",
     "passive": "Rock Solid",
     "source": "[[Python Commandos Premium Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "RS-40 Beast of Prey",
@@ -3540,7 +4044,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Python Commandos Premium Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-6 Fiend Destroyer",
@@ -3548,7 +4055,10 @@
     "type": "Medium",
     "passive": "Rock Solid",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 300</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "RS-6 Fiend Destroyer",
@@ -3556,7 +4066,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-67 Null Cipher",
@@ -3564,7 +4077,10 @@
     "type": "Medium",
     "passive": "Reduced Signature",
     "source": "[[Redacted Regiment Premium Warbond#Page 2|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "RS-67 Null Cipher",
@@ -3572,7 +4088,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Redacted Regiment Premium Warbond#Page 2|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "RS-89 Shadow Paragon",
@@ -3580,7 +4099,10 @@
     "type": "Light",
     "passive": "Reduced Signature",
     "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "RS-89 Shadow Paragon",
@@ -3588,7 +4110,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Redacted Regiment Premium Warbond#Page 1|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-04 Combat Technician",
@@ -3596,7 +4121,10 @@
     "type": "Medium",
     "passive": "Scout",
     "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 60</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 60</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "SA-04 Combat Technician",
@@ -3604,7 +4132,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 8|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 8\">P8</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-12 Servo Assisted",
@@ -3612,7 +4143,10 @@
     "type": "Medium",
     "passive": "Servo-Assisted",
     "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "SA-12 Servo Assisted",
@@ -3620,7 +4154,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Steeled Veterans Premium Warbond#Page 2|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-25 Steel Trooper",
@@ -3628,7 +4165,10 @@
     "type": "Medium",
     "passive": "Servo-Assisted",
     "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span> </small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 18</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "SA-25 Steel Trooper",
@@ -3636,7 +4176,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span> </small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 12</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-32 Dynamo",
@@ -3644,7 +4187,10 @@
     "type": "Heavy",
     "passive": "Servo-Assisted",
     "source": "[[Steeled Veterans Premium Warbond#Page 3|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 64</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "SA-32 Dynamo",
@@ -3652,7 +4198,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Steeled Veterans Premium Warbond#Page 3|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 48</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-7 Headfirst",
@@ -3660,7 +4209,10 @@
     "type": "Medium",
     "passive": "Supplemental Adrenaline",
     "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "125",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "SA-7 Headfirst",
@@ -3668,7 +4220,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SA-8 Ram",
@@ -3676,7 +4231,10 @@
     "type": "Heavy",
     "passive": "Supplemental Adrenaline",
     "source": "[[Siege Breakers Premium Warbond|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "175",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "SA-8 Ram",
@@ -3684,7 +4242,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Siege Breakers Premium Warbond|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SC-15 Drone Master",
@@ -3692,7 +4253,10 @@
     "type": "Medium",
     "passive": "Engineering Kit",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "SC-15 Drone Master",
@@ -3700,7 +4264,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SC-30 Trailblazer Scout",
@@ -3708,7 +4275,10 @@
     "type": "Light",
     "passive": "Scout",
     "source": "[[Helldivers Mobilize Warbond#Page 7|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 7\">P7</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 50</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 50</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "SC-30 Trailblazer Scout",
@@ -3716,7 +4286,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 7|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 7\">P7</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SC-34 Infiltrator",
@@ -3724,7 +4297,10 @@
     "type": "Light",
     "passive": "Scout",
     "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 3</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 3</span></span>",
+    "armor": "70",
+    "speed": "530",
+    "stam_regen": "115"
    },
    {
     "_pageName": "SC-34 Infiltrator",
@@ -3732,7 +4308,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Helldivers Mobilize Warbond#Page 1|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 2</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 2</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SC-37 Legionnaire",
@@ -3740,7 +4319,10 @@
     "type": "Light",
     "passive": "Servo-Assisted",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 150</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "SC-37 Legionnaire",
@@ -3748,7 +4330,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 75</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SR-18 Roadblock",
@@ -3756,7 +4341,10 @@
     "type": "Heavy",
     "passive": "Siege-Ready",
     "source": "[[Urban Legends Premium Warbond#Page 2|Urban Legends]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "SR-18 Roadblock",
@@ -3764,7 +4352,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Urban Legends Premium Warbond#Page 2|Urban Legends]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SR-24 Street Scout",
@@ -3772,7 +4363,10 @@
     "type": "Light",
     "passive": "Siege-Ready",
     "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 40</span></span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "SR-24 Street Scout",
@@ -3780,7 +4374,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Urban Legends Premium Warbond#Page 1|Urban Legends]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "SR-64 Cinderblock",
@@ -3788,7 +4385,10 @@
     "type": "Heavy",
     "passive": "Siege-Ready",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 250</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "SR-64 Cinderblock",
@@ -3796,7 +4396,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 125</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TG-122 Demo-Trooper",
@@ -3804,7 +4407,10 @@
     "type": "Heavy",
     "passive": "True Grit",
     "source": "[[Castellan's Creed Legendary Warbond#Page 2|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 55</span></span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "TG-122 Demo-Trooper",
@@ -3812,7 +4418,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Castellan's Creed Legendary Warbond#Page 2|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TG-8 Sharpshooter",
@@ -3820,7 +4429,10 @@
     "type": "Medium",
     "passive": "True Grit",
     "source": "[[Castellan's Creed Legendary Warbond#Page 1|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "TG-8 Sharpshooter",
@@ -3828,7 +4440,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Castellan's Creed Legendary Warbond#Page 1|Castellan's Creed]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medal]]</span> 30</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TR-117 Alpha Commander",
@@ -3836,7 +4451,10 @@
     "type": "Medium",
     "passive": "Med-Kit",
     "source": "[[Downloadable Content]]",
-    "cost": ""
+    "cost": "",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "TR-117 Alpha Commander",
@@ -3844,7 +4462,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Downloadable Content]]",
-    "cost": ""
+    "cost": "",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TR-40 Gold Eagle",
@@ -3852,7 +4473,10 @@
     "type": "Medium",
     "passive": "Extra Padding",
     "source": "[[Escalation of Freedom]]",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "150",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "TR-40 Gold Eagle",
@@ -3860,7 +4484,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Escalation of Freedom]]",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TR-62 Knight",
@@ -3868,7 +4495,10 @@
     "type": "Heavy",
     "passive": "Servo-Assisted",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "150",
+    "speed": "450",
+    "stam_regen": "50"
    },
    {
     "_pageName": "TR-62 Knight",
@@ -3876,7 +4506,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TR-7 Ambassador of the Brand",
@@ -3884,7 +4517,10 @@
     "type": "Medium",
     "passive": "Extra Padding",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "150",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "TR-7 Ambassador of the Brand",
@@ -3892,7 +4528,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "TR-9 Cavalier of Democracy",
@@ -3900,7 +4539,10 @@
     "type": "Medium",
     "passive": "Democracy Protects",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "TR-9 Cavalier of Democracy",
@@ -3908,7 +4550,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "Pre-Order Bonus",
-    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>"
+    "cost": "<span  class=\"explain \" title=\"Exclusive\">❌</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "UF-16 Inspector",
@@ -3916,7 +4561,10 @@
     "type": "Light",
     "passive": "Unflinching",
     "source": "[[Truth Enforcers Premium Warbond#Page 3|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 65</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 65</span></span>",
+    "armor": "75",
+    "speed": "550",
+    "stam_regen": "125"
    },
    {
     "_pageName": "UF-16 Inspector",
@@ -3924,7 +4572,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Truth Enforcers Premium Warbond#Page 3|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "UF-50 Bloodhound",
@@ -3932,7 +4583,10 @@
     "type": "Medium",
     "passive": "Unflinching",
     "source": "[[Truth Enforcers Premium Warbond#Page 2|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 45</span></span>",
+    "armor": "125",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "UF-50 Bloodhound",
@@ -3940,7 +4594,10 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Truth Enforcers Premium Warbond#Page 2|Truth Enforcers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=Medals]]</span> 35</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    },
    {
     "_pageName": "UF-84 Doubt Killer",
@@ -3948,7 +4605,10 @@
     "type": "Medium",
     "passive": "Unflinching",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 400</span></span>",
+    "armor": "125",
+    "speed": "500",
+    "stam_regen": "100"
    },
    {
     "_pageName": "UF-84 Doubt Killer",
@@ -3956,133 +4616,167 @@
     "type": "Helmet",
     "passive": "[[Standard_Issue]]",
     "source": "[[Superstore]]",
-    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>"
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=Super Credits]] 200</span></span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
    }
   ],
   "Armor_Passive": [
    {
     "_pageName": "Acclimated",
-    "image": "Acclimated Armor Passive Icon.svg"
+    "image": "Acclimated Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|fire, gas, acid, and electrical damage]]."
    },
    {
     "_pageName": "Adreno-Defibrillator",
-    "image": "Adreno-Defibrillator Armor Passive Icon.svg"
+    "image": "Adreno-Defibrillator Armor Passive Icon.svg",
+    "description": "Provides one-time, short-lived resuscitation upon death, given that the [[Helldiver's]] body is still intact.<br>Increases [[stim]] effect duration by '''<span style=color:var(--wiki-custom-emphasis-color)>2.0s</span>'''.<br>Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|arc damage]]."
    },
    {
     "_pageName": "Advanced Filtration",
-    "image": "Advanced Filtration Armor Passive Icon.svg"
+    "image": "Advanced Filtration Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>80%</span>''' resistance to [[Damage#Damage Types|gas damage]] and effects."
    },
    {
     "_pageName": "Ballistic Padding",
-    "image": "Ballistic Padding Armor Passive Icon.svg"
+    "image": "Ballistic Padding Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>25%</span>''' resistance to [[Damage#Armor Damage Modifiers|chest damage]].<br>Provides '''<span style=color:var(--wiki-custom-emphasis-color)>25%</span>''' resistance to [[Damage#Damage Types|explosive damage]].<br>Prevents '''<span style=color:var(--wiki-custom-emphasis-color)>all [[Damage|damage]] from [[Physical Conditions|bleeding]]</span>''' if chest hemorrhages."
    },
    {
     "_pageName": "Blunt-Force Mitigation",
-    "image": "Blunt-Force Mitigation Armor Passive Icon.svg"
+    "image": "Blunt-Force Mitigation Armor Passive Icon.svg",
+    "description": "Bearer is more resistant to being knocked prone. <br> Reduces damage taken from impact and collisions by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''. <br> Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher armor rating</span>'''."
    },
    {
     "_pageName": "Concussive Padding, Grenadier",
-    "image": "Concussive Padding Armor Passive Icon.svg"
+    "image": "Concussive Padding Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|explosive damage]].<br>Increases initial inventory and holding capacity of [[throwable]]s by '''<span style=color:var(--wiki-custom-emphasis-color)>+2</span>'''."
    },
    {
     "_pageName": "Concussive Padding, Hazmat",
-    "image": "Concussive Padding Armor Passive Icon.svg"
+    "image": "Concussive Padding Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|explosive damage]].<br>Provides '''<span style=color:var(--wiki-custom-emphasis-color)>25%</span>''' resistance to [[Damage#Damage Types|gas damage]] and effects.<br>Sidearm [[recoil]] reduced by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''."
    },
    {
     "_pageName": "Concussive Padding, Reinforced",
-    "image": "Concussive Padding Armor Passive Icon.svg"
+    "image": "Concussive Padding Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|explosive damage]].<br>Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher [[Damage#Armor Damage Modifiers|armor rating]]</span>'''."
    },
    {
     "_pageName": "Democracy Protects",
-    "image": "Democracy Protects Armor Passive Icon.svg"
+    "image": "Democracy Protects Armor Passive Icon.svg",
+    "description": "'''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' chance to not die when taking lethal [[damage]].<br>Prevents '''<span style=color:var(--wiki-custom-emphasis-color)>all damage from [[Physical Conditions|bleeding]]</span>''' if chest hemorrhages."
    },
    {
     "_pageName": "Desert Stormer",
-    "image": "Desert Stormer Armor Passive Icon.svg"
+    "image": "Desert Stormer Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>40%</span>''' resistance to [[Damage#Damage Types|fire, gas, acid, and electrical damage]].<br>Increases throwing range by '''<span style=color:var(--wiki-custom-emphasis-color)>20%</span>'''."
    },
    {
     "_pageName": "Electrical Conduit",
-    "image": "Electrical Conduit Armor Passive Icon.svg"
+    "image": "Electrical Conduit Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>95%</span>''' resistance to [[Damage#Damage Types|arc damage]]."
    },
    {
     "_pageName": "Engineering Kit",
-    "image": "Engineering Kit Armor Passive Icon.svg"
+    "image": "Engineering Kit Armor Passive Icon.svg",
+    "description": "Further reduces [[recoil]] when crouching or prone by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Increases initial inventory and holding capacity of [[throwable]]s by '''<span style=color:var(--wiki-custom-emphasis-color)>+2</span>'''."
    },
    {
     "_pageName": "Extra Padding",
-    "image": "Extra Padding Armor Passive Icon.svg"
+    "image": "Extra Padding Armor Passive Icon.svg",
+    "description": "Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher [[Damage#Armor Damage Modifiers|armor rating]]</span>'''."
    },
    {
     "_pageName": "Feet First",
-    "image": "Feet First Armor Passive Icon.svg"
+    "image": "Feet First Armor Passive Icon.svg",
+    "description": "Wearer makes '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' less noise when moving.<br>Increases [[Minor Places of Interest|point-of-interest]] identification range by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Provides immunity to leg injuries."
    },
    {
     "_pageName": "Fortified",
-    "image": "Fortified Armor Passive Icon.svg"
+    "image": "Fortified Armor Passive Icon.svg",
+    "description": "Further reduces [[recoil]] when crouching or prone by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|explosive damage]]."
    },
    {
     "_pageName": "Gunslinger",
-    "image": "Gunslinger Armor Passive Icon.svg"
+    "image": "Gunslinger Armor Passive Icon.svg",
+    "description": "Increases [[sidearms]] reload speed by '''<span style=color:var(--wiki-custom-emphasis-color)>40%</span>'''.<br>Sidearm draw/holster speed increased by '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>'''.<br>Sidearm [[recoil]] reduced by '''<span style=color:var(--wiki-custom-emphasis-color)>70%</span>'''."
    },
    {
     "_pageName": "Inflammable",
-    "image": "Inflammable Armor Passive Icon.svg"
+    "image": "Inflammable Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>75%</span>''' [[damage]] resistance to [[Damage#Damage Types|fire]], allowing bearer to rest assured in their inflammability."
    },
    {
     "_pageName": "Integrated Explosives",
-    "image": "Integrated Explosives Armor Passive Icon.svg"
+    "image": "Integrated Explosives Armor Passive Icon.svg",
+    "description": "Armor explodes '''<span style=color:var(--wiki-custom-emphasis-color)>1.5s</span>''' after the wearer dies.<br>Increases initial inventory and holding capacity of [[throwable]]s by '''<span style=color:var(--wiki-custom-emphasis-color)>+2</span>'''."
    },
    {
     "_pageName": "Kinetic Displacement Mitigation",
-    "image": "Kinetic Displacement Mitigation Armor Passive Icon.svg"
+    "image": "Kinetic Displacement Mitigation Armor Passive Icon.svg",
+    "description": "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' damage resistance to fire, allowing bearer to rest assured in their inflammability.<br>Gives the wearer a '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' chance to avoid grievous limb injury.<br>Reduces damage taken from impact and collisions by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''."
    },
    {
     "_pageName": "Med-Kit",
-    "image": "Med-Kit Armor Passive Icon.svg"
+    "image": "Med-Kit Armor Passive Icon.svg",
+    "description": "Increases initial inventory and holding capacity of [[stim]]s by '''<span style=color:var(--wiki-custom-emphasis-color)>+2</span>'''.<br>Increases stim effect duration by '''<span style=color:var(--wiki-custom-emphasis-color)>2.0s</span>'''."
    },
    {
     "_pageName": "Oxygenator",
-    "image": "Oxygenator Armor Passive Icon.svg"
+    "image": "Oxygenator Armor Passive Icon.svg",
+    "description": "Increases the wearer's walking speed and running speed.<br>Increases the speed and duration of slides."
    },
    {
     "_pageName": "Peak Physique",
-    "image": "Peak Physique Armor Passive Icon.svg"
+    "image": "Peak Physique Armor Passive Icon.svg",
+    "description": "Increases [[melee]] [[damage]] by '''<span style=color:var(--wiki-custom-emphasis-color)>40%</span>'''.<br>Improves [[weapon]]s handling with less drag on weapon movement."
    },
    {
     "_pageName": "Reduced Signature",
-    "image": "Reduced Signature Armor Passive Icon.svg"
+    "image": "Reduced Signature Armor Passive Icon.svg",
+    "description": "Wearer makes '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' less noise when moving.<br>Reduces range at which enemies can detect the wearer by '''<span style=color:var(--wiki-custom-emphasis-color)>40%</span>'''."
    },
    {
     "_pageName": "Reinforced Epaulettes",
-    "image": "Reinforced Epaulettes Armor Passive Icon.svg"
+    "image": "Reinforced Epaulettes Armor Passive Icon.svg",
+    "description": "Increases reload speed of [[primary weapons]] by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Gives wearer a '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' chance to avoid grievous limb injury.<br>Increases [[melee]] [[damage]] by '''<span style=color:var(--wiki-custom-emphasis-color)>20%</span>'''."
    },
    {
     "_pageName": "Rock Solid",
-    "image": "Rock Solid Armor Passive Icon.svg"
+    "image": "Rock Solid Armor Passive Icon.svg",
+    "description": "Increases [[melee]] [[damage]] by '''<span style=color:var(--wiki-custom-emphasis-color)>40%</span>'''.<br>Bearer is more resistant to being knocked prone."
    },
    {
     "_pageName": "Scout",
-    "image": "Scout Armor Passive Icon.svg"
+    "image": "Scout Armor Passive Icon.svg",
+    "description": "Markers placed on the [[map]] will generate radar scans every '''<span style=color:var(--wiki-custom-emphasis-color)>2.0s</span>'''.<br>Reduces range at which [[enemies]] can detect the wearer by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''."
    },
    {
     "_pageName": "Servo-Assisted",
-    "image": "Servo-Assisted Armor Passive Icon.svg"
+    "image": "Servo-Assisted Armor Passive Icon.svg",
+    "description": "Increases throwing range by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Provides '''<span style=color:var(--wiki-custom-emphasis-color)>+50%</span>''' limb health."
    },
    {
     "_pageName": "Siege-Ready",
-    "image": "Siege-Ready Armor Passive Icon.svg"
+    "image": "Siege-Ready Armor Passive Icon.svg",
+    "description": "Increases reload speed of [[primary weapons]] by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Increases ammo capacity of all [[weapons]] by '''<span style=color:var(--wiki-custom-emphasis-color)>20%</span>'''. Does not affect weapon backpacks."
    },
    {
     "_pageName": "Supplemental Adrenaline",
-    "image": "Supplemental Adrenaline Armor Passive Icon.svg"
+    "image": "Supplemental Adrenaline Armor Passive Icon.svg",
+    "description": "When the wearer takes damage, they regain some stamina.<br>Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher [[Damage#Armor Damage Modifiers|armor rating]]</span>'''."
    },
    {
     "_pageName": "True Grit",
-    "image": "True Grit Armor Passive Icon.svg"
+    "image": "True Grit Armor Passive Icon.svg",
+    "description": "Increases reload speed of support weapons by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Slightly increases weapon ergonomics to reduce drag on weapon movement."
    },
    {
     "_pageName": "Unflinching",
-    "image": "Unflinching Armor Passive Icon.svg"
+    "image": "Unflinching Armor Passive Icon.svg",
+    "description": "Helps prevent [[Helldiver|Helldivers]] from flinching when hit.<br>Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher [[Damage#Armor Damage Modifiers|armor rating]]</span>'''.<br>Markers placed on the [[map]] will generate radar scans every '''<span style=color:var(--wiki-custom-emphasis-color)>2.0s</span>'''."
    }
   ],
   "Warbonds": [

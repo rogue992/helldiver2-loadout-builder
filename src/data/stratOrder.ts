@@ -3,19 +3,18 @@
 // 새 스트라타젬은 나무위키에서 놓인 자리에 id를 넣는다. 빠지면 그 묶음 맨 뒤에 붙고 단위 테스트가 실패한다.
 
 export const STRAT_ORDER: string[] = [
-  // 궤도 타격
+  // 궤도(타격 · 폭격이 섞인 나무위키 목차 순서. 선택 창은 둘을 한 묶음으로 보여 준다)
   'st-orbital-precision-strike',
+  'st-orbital-gatling-barrage',
   'st-orbital-airburst-strike',
+  'st-orbital-120mm-he-barrage',
+  'st-orbital-380mm-he-barrage',
+  'st-orbital-walking-barrage',
   'st-orbital-laser',
   'st-orbital-railcannon-strike',
   'st-orbital-gas-strike',
   'st-orbital-ems-strike',
   'st-orbital-smoke-strike',
-  // 궤도 폭격
-  'st-orbital-gatling-barrage',
-  'st-orbital-120mm-he-barrage',
-  'st-orbital-380mm-he-barrage',
-  'st-orbital-walking-barrage',
   'st-orbital-napalm-barrage',
   // 이글
   'st-eagle-strafing-run',
@@ -75,7 +74,7 @@ export const STRAT_ORDER: string[] = [
   'st-b-md-c4-pack',
   'st-gl-28-belt-fed-grenade-launcher',
   'st-b-flam-80-cremator',
-  // 일회용 지원무기
+  // 지원무기(일회용)
   'st-mgx-42-bullet-storm',
   'st-eat-17-expendable-anti-tank',
   'st-mls-4x-commando',

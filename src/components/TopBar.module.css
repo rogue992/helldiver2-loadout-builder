@@ -82,14 +82,8 @@
   margin-right: 2px;
 }
 .seal {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--yellow);
-  color: var(--on-yellow);
   display: grid;
-  place-items: center;
-  font: 800 11px var(--font-display);
+  flex: none;
 }
 .brand h1 {
   font: 700 18px/1 var(--font-display);
@@ -105,9 +99,11 @@
   border-radius: var(--r-pill);
   background: color-mix(in srgb, var(--acc) 4%, transparent);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
-  flex: none;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 .races button {
+  flex: none;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -147,25 +143,36 @@
 .races .on i {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--dot) 28%, transparent);
 }
-.sep {
-  width: 1px;
-  height: 22px;
-  background: var(--line);
-  flex: none;
+/* 고른 종족 묶음: 종족 버튼 · 구분선 · 팩션 칩이 종족색 테두리 하나에 묶인다 */
+.grp {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  flex: 0 1 auto;
+  padding-right: 3px;
+  border-radius: var(--r-pill);
+  background: color-mix(in srgb, var(--dot) 10%, var(--bg2));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--dot) 60%, transparent);
 }
-.k {
-  font: 600 11px var(--font-display);
-  color: var(--muted);
-  letter-spacing: 0.06em;
+.races .grp .on,
+.races .grp .on:hover {
+  background: color-mix(in srgb, var(--dot) 26%, var(--bg2));
+  box-shadow: none;
+}
+.grpSep {
+  flex: none;
+  width: 1px;
+  height: 18px;
+  margin: 0 4px;
+  background: color-mix(in srgb, var(--dot) 50%, transparent);
 }
 /* 팩션 칩 줄: 남는 폭만 쓰고, 넘치면 가로로 민다(스크롤 막대 없이). 넘친 쪽 끝은 흐리게(data-more, TopBar가 붙인다) */
 .chips {
   display: flex;
-  gap: 4px;
+  gap: 3px;
   align-items: center;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   min-width: 0;
-  padding-block: 4px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
@@ -177,36 +184,24 @@
   -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent);
   mask-image: linear-gradient(90deg, #000 calc(100% - 32px), transparent);
 }
-.chip {
-  flex: none;
-  height: 28px;
-  padding: 0 8px;
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r-pill);
-  font-size: 12.5px;
+.races .chip {
+  height: 26px;
+  padding: 0 9px;
+  border: 1px var(--bstyle) transparent;
+  font: 500 12.5px var(--font-body);
   color: var(--muted);
-  background: var(--bg2);
   white-space: nowrap;
-  transition:
-    transform 0.3s var(--ease),
-    color 0.3s var(--ease),
-    border-color 0.3s var(--ease),
-    background-color 0.3s var(--ease);
 }
-.chip:hover {
+.races .chip:hover {
   color: var(--fg);
-  border-color: var(--box-line);
+  background: color-mix(in srgb, var(--dot) 12%, transparent);
 }
-.chip:active {
-  transform: scale(0.97);
-}
-.chipOn,
-.chipOn:hover {
+.races .chipOn,
+.races .chipOn:hover {
   color: var(--fg);
-  border-color: var(--acc);
-  background: var(--acc-soft);
+  border-color: color-mix(in srgb, var(--dot) 70%, transparent);
+  background: color-mix(in srgb, var(--dot) 18%, var(--bg2));
   font-weight: 600;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 .right {
   margin-left: auto;
@@ -216,71 +211,6 @@
   flex: none;
 }
 
-/* 테마 미니 화면: 바탕(--sbg) 위에 상단 바(--sacc) · 목록 · 본문(--spanel) 세 덩어리. 화면이 어떻게 바뀌는지 그 자체가 라벨 */
-.themes {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.scr {
-  position: relative;
-  width: 34px;
-  height: 24px;
-  padding: 0;
-  border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: var(--sbg);
-  overflow: hidden;
-  opacity: 0.72;
-  transition:
-    opacity 0.3s var(--ease),
-    transform 0.4s var(--ease);
-}
-.scr:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-.scrOn {
-  opacity: 1;
-  outline: 2px solid var(--yellow);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 5px color-mix(in srgb, var(--yellow) 10%, transparent);
-}
-.scr i {
-  position: absolute;
-  display: block;
-}
-.scrTop {
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 5px;
-  background: var(--sacc);
-}
-.scrSide {
-  left: 4px;
-  top: 9px;
-  bottom: 4px;
-  width: 8px;
-  background: var(--spanel);
-}
-.scrMain {
-  left: 15px;
-  right: 4px;
-  top: 9px;
-  bottom: 4px;
-  background: var(--spanel);
-}
-.scr_console {
-  --sbg: #08111d;
-  --sacc: #ffe14d;
-  --spanel: #0e1a2b;
-}
-.scr_teletype {
-  --sbg: #040a0f;
-  --sacc: #5ec27a;
-  --spanel: #0f2417;
-}
 /* 크레딧 · 설정: 테두리 없는 글자 버튼. 올리거나 열려 있으면 밑줄이 왼쪽부터 그려진다 */
 .btn {
   position: relative;
@@ -326,12 +256,12 @@
   }
 }
 /* 한 줄이 안 들어가는 폭(서랍이 옆 기둥인 구간): 2단.
-   윗단 서랍 머리 | 브랜드 ...... 테마 · 크레딧 · 설정, 아랫단 종족 탭 | 팩션 칩(감김).
+   윗단 서랍 머리 | 브랜드 ...... 크레딧 · 설정, 아랫단 종족 알약(팩션 칩은 가로로 민다).
    서랍 머리가 두 단 높이를 다 차지해 아래 목록과 기둥이 끊기지 않는다 */
 @media (820px < width < 1200px) {
   .bar {
     display: grid;
-    grid-template-columns: auto auto auto auto minmax(0, 1fr) auto;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     grid-template-rows: var(--bar-h) auto;
     column-gap: 7px;
     height: auto;
@@ -343,37 +273,22 @@
     padding-top: calc((var(--bar-h) - 30px) / 2);
   }
   .brand {
-    grid-column: 2 / 6;
+    grid-column: 2;
     grid-row: 1;
   }
   .right {
-    grid-column: 6;
+    grid-column: 3;
     grid-row: 1;
   }
-  .races,
-  .bar > .sep,
-  .k {
+  .races {
+    grid-column: 2 / 4;
     grid-row: 2;
+    justify-self: start;
+    max-width: 100%;
     margin-bottom: 8px;
   }
-  .races {
-    grid-column: 2;
-  }
-  .bar > .sep {
-    grid-column: 3;
-  }
-  .k {
-    grid-column: 4;
-  }
-  .chips {
-    grid-column: 5 / 7;
-    grid-row: 2;
-    flex-wrap: wrap;
-    overflow: visible;
-    padding-block: 0 8px;
-  }
 }
-/* 폰 폭: 서랍이 위로 올라가므로 그냥 감긴다. 종족 탭 뒤 구분선 자리에서 줄을 바꿔 팩션 라벨과 칩이 함께 내려간다 */
+/* 폰 폭: 서랍이 위로 올라가므로 그냥 감긴다. 종족 알약은 한 줄을 다 쓰고, 팩션 칩은 그 안에서 가로로 민다 */
 @media (width <= 820px) {
   .bar {
     flex-wrap: wrap;
@@ -382,17 +297,10 @@
     min-height: var(--bar-h);
     padding-bottom: 6px;
   }
-  .bar > .sep {
-    flex-basis: 100%;
-    height: 0;
-  }
-  .k {
+  .races {
+    order: 1;
+    max-width: calc(100% - 12px);
     margin-left: 12px;
-  }
-  .chips {
-    flex: 0 1 auto;
-    flex-wrap: wrap;
-    overflow: visible;
   }
 }
 

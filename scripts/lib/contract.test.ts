@@ -2,7 +2,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { itemId, modelCodeKey, normKey, slugify, stripModelCode } from './slug.ts'
-import { firstLink, normalizePageName, warbondPageOf } from './wikitext.ts'
+import { effectLines, firstLink, normalizePageName, warbondPageOf } from './wikitext.ts'
 import { resolveAliasId } from './overrides.ts'
 
 test('아이템 id = 종류 접두 + 페이지명 슬러그', () => {
@@ -32,4 +32,9 @@ test('채권 링크 파싱과 페이지 번호', () => {
 test('alias는 사슬을 따라가고 자기 키만 본다', () => {
   assert.equal(resolveAliasId({ a: 'b', b: 'c' }, 'a'), 'c')
   assert.equal(resolveAliasId({}, 'constructor'), 'constructor')
+})
+
+test('패시브 설명은 <br>마다 한 줄, 강조 표시와 링크는 글자만 남긴다', () => {
+  const d = "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|arc damage]].<br>Increases [[stim]] effect duration by '''<span>2.0s</span>'''. <br />"
+  assert.deepEqual(effectLines(d), ['Provides 50% resistance to arc damage.', 'Increases stim effect duration by 2.0s.'])
 })

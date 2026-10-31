@@ -338,7 +338,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
               </div>
             )}
             {target.kind === 'gear' && draft && (
-              <div className={styles.slots} role="tablist" aria-label={copy.pickerGearTitle} data-part="picker-slots">
+              <div className={[styles.slots, styles.slotsGear].join(' ')} role="tablist" aria-label={copy.pickerGearTitle} data-part="picker-slots">
                 {GEAR_ORDER.map((s) => {
                   const on = target.slot === s
                   const id = draft.gear[s]
@@ -348,7 +348,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                   return (
                     <div key={s} role="tab" tabIndex={0} aria-selected={on} aria-label={`${KIND_LABEL[s]} ${gearTitle}`} title={gearTitle} className={[styles.slot, on && styles.slotOn].filter(Boolean).join(' ')} onClick={go} onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && go()}>
                       <span className={styles.slotLbl}>{KIND_LABEL[s]}</span>
-                      <span className={[styles.sq, s === 'armor' && it && styles.sqArmor, !id && styles.sqEmpty].filter(Boolean).join(' ')}>
+                      <span className={[styles.sq, styles.sqGear, s === 'armor' && it && styles.sqArmor, !id && styles.sqEmpty].filter(Boolean).join(' ')}>
                         {id ? (
                           <>
                             {it ? <img src={assetUrl(it.card)} alt="" /> : <span className={styles.sqHint}>{copy.deletedItem}</span>}

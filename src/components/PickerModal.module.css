@@ -586,3 +586,25 @@
     height: calc(100vh - 32px);
   }
 }
+
+/* 개인 장비 칸: 장비 메뉴는 항목이 적어 기둥 아래가 빈다. 그림 한 변(--gk)을 가장 긴 주무기 메뉴가 스크롤 없이 남는 높이까지 키우고,
+   상자 안쪽 폭은 넘지 않게 상한을 둔다. 빼는 값 = 창 머리 · 상자 머리와 여백 · 주무기 메뉴 높이(창 높이 92vh 기준) */
+.slotsGear {
+  --gk: clamp(60px, calc(46vh - 182px), 128px);
+}
+.sqGear {
+  width: var(--gk);
+  height: var(--gk);
+}
+/* 낮은 화면은 창 높이가 100vh - 32px라 식이 다르다 */
+@media (max-height: 640px) {
+  .slotsGear {
+    --gk: clamp(60px, calc((100vh - 396px) / 2), 128px);
+  }
+}
+/* 폰 폭: 슬롯이 목록 위에 있어 키우면 목록이 줄어든다. 스트라타젬 칸과 같은 크기 */
+@media (max-width: 720px) {
+  .slotsGear {
+    --gk: var(--pk);
+  }
+}

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { KIND_LABEL, SOURCE_LABEL, STRAT_TYPE_LABEL, WARBOND_TYPE_LABEL, gearCaption, passiveName, warbondName } from '../data/labels'
+import { KIND_LABEL, SOURCE_LABEL, WARBOND_TYPE_LABEL, gearCaption, passiveName, stratTypeLabel, warbondName } from '../data/labels'
 import { assetUrl } from '../data/loadData'
 import { NEW_DAYS, isNewItem } from '../data/newness'
 import { noticeItems } from '../data/notice'
@@ -48,7 +48,7 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
   const date = warbond.releaseDate.slice(0, 10).replaceAll('-', '.')
 
   const sub = (it: Item) => {
-    const caption = it.kind === 'stratagem' ? (it.stratType ? STRAT_TYPE_LABEL[it.stratType] : '') : gearCaption(it)
+    const caption = it.kind === 'stratagem' ? (it.stratType ? stratTypeLabel(it.stratType) : '') : gearCaption(it)
     return caption ? `${KIND_LABEL[it.kind]} · ${caption}` : KIND_LABEL[it.kind]
   }
   // 함께 들어온 항목의 출처: 다른 채권이면 그 이름, 아니면 슈퍼 스토어 · 캠페인 등
@@ -99,7 +99,6 @@ export default function WarbondNotice({ warbond, mode, onClose }: Props) {
             </figcaption>
             {/* 수호부 도장 */}
             <div className={styles.stamp} aria-hidden data-part="notice-stamp">
-              <i className={styles.led} />
               <b>{copy.noticeStamp}</b>
               <small>{copy.noticeStampSub(date)}</small>
             </div>

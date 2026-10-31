@@ -5,8 +5,8 @@ import { readFileSync, writeFileSync, existsSync, renameSync, mkdirSync } from '
 import type { Item, Kind, Meta, RuleTag, Source, StratType, Warbond } from '../src/data/types.ts'
 import { loadRaw, targetArmor, targetStratagems, targetWeapons, WEAPON_CATEGORY_TO_KIND } from './lib/raw.ts'
 import { itemId, slugify } from './lib/slug.ts'
-import { effectLines, firstLink, hasWord, replaceEmDash, stripMarkup, warbondPageOf } from './lib/wikitext.ts'
-import { KO_PATH, readJson, resolveAliasId, type KoOverrides } from './lib/overrides.ts'
+import { cargoInt, effectLines, firstLink, hasWord, replaceEmDash, stripMarkup, warbondPageOf } from './lib/wikitext.ts'
+import { KO_PATH, pickEffects, readJson, resolveAliasId, type KoOverrides } from './lib/overrides.ts'
 import type { CargoRow } from './lib/cargo.ts'
 
 interface Manual { [id: string]: { stratType?: StratType; exclude?: boolean } }
@@ -109,15 +109,14 @@ function main() {
     })
 
   // ── 패시브 ──
-  const passiveIcon = new Map(raw.tables.Armor_Passive.map((p) => [p._pageName, `icons/passive/${slugify(p._pageName)}.webp`]))
-  const passiveEffects = new Map(raw.tables.Armor_Passive.map((p) => {
+  const passiveInfo = new Map(raw.tables.Armor_Passive.map((p) => {
     const en = effectLines(p.description ?? '').map(replaceEmDash)
-    const tr = ko.passiveEffects?.[p._pageName]
-    if (!tr) missingKo.push(`passive-effects:${p._pageName}`)
-    else if (tr.length !== en.length) warnings.push(`패시브 효과 번역 줄 수가 원문과 다름(원문이 바뀌었을 수 있음): ${p._pageName} ${tr.length}/${en.length}`)
-    return [p._pageName, { effectsKo: tr && tr.length === en.length ? tr : en, effectsEn: en }]
+    const tr = ko.passiveEffects && Object.hasOwn(ko.passiveEffects, p._pageName) ? ko.passiveEffects[p._pageName] : undefined
+    const { lines, problem } = pickEffects(tr, en)
+    if (problem === 'missing') missingKo.push(`passive-effects:${p._pageName}`)
+    else if (problem) warnings.push(`패시브 효과 번역의 ${problem === 'lines' ? '줄 수' : '숫자'}가 원문과 달라 영어 원문을 씀(원문이 바뀌었으면 번역을 고칠 것): ${p._pageName}`)
+    return [p._pageName, { icon: `icons/passive/${slugify(p._pageName)}.webp`, effectsKo: lines, effectsEn: en }]
   }))
-  const num = (v: string | undefined) => (v !== undefined && /^\d+$/.test(v.trim()) ? Number(v) : null)
 
   // ── 아이템 ──
   const items: Item[] = []
@@ -160,11 +159,12 @@ function main() {
     if (passiveEn) {
       const nameKo = ko.passives[passiveEn]
       if (!nameKo) missingKo.push(`passive:${passiveEn}`)
-      passive = { nameKo: nameKo ?? passiveEn, nameEn: passiveEn, icon: passiveIcon.get(passiveEn) ?? '', ...(passiveEffects.get(passiveEn) ?? { effectsKo: [], effectsEn: [] }) }
-      if (!passiveIcon.has(passiveEn)) warnings.push(`패시브 아이콘 없음: ${passiveEn} (${b.id})`)
+      const info = passiveInfo.get(passiveEn)
+      if (!info) warnings.push(`패시브 표에 없음(아이콘 · 효과 없이 들어감): ${passiveEn} (${b.id})`)
+      passive = { nameKo: nameKo ?? passiveEn, nameEn: passiveEn, icon: info?.icon ?? '', effectsKo: info?.effectsKo ?? [], effectsEn: info?.effectsEn ?? [] }
     }
     const cls = row.type?.toLowerCase()
-    const [armor, speed, stamina] = [num(row.armor), num(row.speed), num(row.stam_regen)]
+    const [armor, speed, stamina] = [cargoInt(row.armor), cargoInt(row.speed), cargoInt(row.stam_regen)]
     if (armor === null || speed === null || stamina === null) warnings.push(`방어구 수치 없음: ${b.id}`)
     items.push({
       ...b, armorClass: cls === 'light' || cls === 'medium' || cls === 'heavy' ? cls : null, passive,

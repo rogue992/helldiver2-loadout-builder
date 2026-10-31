@@ -9,16 +9,15 @@ interface Props {
   size: PoolSize
   disabled?: boolean
   onChange: (size: PoolSize) => void
-  /** 선택 창 슬롯 줄용으로 조금 크게 */
+  /** 선택 창 슬롯 상자용으로 조금 크게 */
   large?: boolean
-  className?: string
 }
 
-/** 스트라타젬 슬롯의 후보 칸 수(1~4). 빌더 슬롯 캡션과 선택 창 슬롯 이름 옆에서 같이 쓴다. 누르기가 슬롯 선택으로 번지지 않게 막는다 */
-export default function PoolSizeTray({ slotIndex, size, disabled = false, onChange, large = false, className }: Props) {
+/** 스트라타젬 슬롯의 후보 칸 수(1~4). 빌더 슬롯 캡션과 선택 창 슬롯 번호 옆에서 같이 쓴다. 누르기가 슬롯 선택으로 번지지 않게 막는다 */
+export default function PoolSizeTray({ slotIndex, size, disabled = false, onChange, large = false }: Props) {
   return (
     <span
-      className={[styles.tray, large && styles.large, className].filter(Boolean).join(' ')}
+      className={[styles.tray, large && styles.large].filter(Boolean).join(' ')}
       role="radiogroup"
       aria-label={`${copy.pickerStrat(slotIndex + 1)} ${copy.poolSize}`}
       data-part="size-select"

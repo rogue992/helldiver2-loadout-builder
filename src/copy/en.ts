@@ -197,6 +197,7 @@ export const copyEn: Copy = {
   warDefense: 'Defend',
   warLiberate: 'Liberate',
   warHoursLeft: (h: number) => `${h}h left`,
+  warMinutesLeft: (m: number) => `${m}m left`,
   warFooter: 'Click a front to filter by that enemy · Source: community API (helldivers2.dev)',
   statArmor: 'Armor',
   statSpeed: 'Speed',

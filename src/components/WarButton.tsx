@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { loadWar, type Front, type WarSummary } from '../data/galacticWar'
+import { loadWar, timeLeft, type Front, type WarSummary } from '../data/galacticWar'
 import { RACE_BY_ID, raceLabel, type Race } from '../data/factions'
 import { useStore } from '../store/useStore'
 import { copy } from '../copy'
@@ -86,7 +86,7 @@ function WarPanel({ war, onFront, onClose }: { war: WarSummary; onFront: (f: Fro
       </div>
       <div className={styles.fronts}>
         {war.fronts.slice(0, TOP).map((f) => {
-          const hours = f.endsAt ? Math.max(0, Math.round((Date.parse(f.endsAt) - now) / 3600000)) : null
+          const left = timeLeft(f.endsAt, now)
           return (
             <button key={f.name} type="button" className={styles.front} style={dot(f.race)} onClick={() => onFront(f)} data-part="war-front">
               <span className={styles.nm}>
@@ -95,7 +95,7 @@ function WarPanel({ war, onFront, onClose }: { war: WarSummary; onFront: (f: Fro
                   <span className={styles.rdot}>{raceLabel(RACE_BY_ID[f.race])}</span>
                   {f.sector}
                   <span className={[styles.kind, f.defense ? styles.def : styles.lib].join(' ')}>{f.defense ? copy.warDefense : copy.warLiberate}</span>
-                  {hours !== null && <span>{copy.warHoursLeft(hours)}</span>}
+                  {left && <span>{'hours' in left ? copy.warHoursLeft(left.hours) : copy.warMinutesLeft(left.minutes)}</span>}
                 </small>
               </span>
               <span className={styles.lv}>

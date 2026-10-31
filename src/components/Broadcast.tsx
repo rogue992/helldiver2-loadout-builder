@@ -5,7 +5,7 @@ import styles from './Broadcast.module.css'
 const pick = Math.random()
 
 interface Props {
-  /** 승인 도장 상태면 "모범 헬다이버" 문구로 바뀐다 */
+  /** 방금 저장해 승인이 났으면 "모범 헬다이버" 문구로 바뀐다 */
   exemplary?: boolean
 }
 

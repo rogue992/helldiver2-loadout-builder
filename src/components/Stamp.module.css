@@ -2,7 +2,6 @@
 .stamp {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
   white-space: nowrap;
   --c: var(--warn);
   --cf: var(--warn-fg);

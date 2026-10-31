@@ -199,6 +199,7 @@ export const copyKo = {
   warDefense: '방어',
   warLiberate: '해방',
   warHoursLeft: (h: number) => `${h}시간 남음`,
+  warMinutesLeft: (m: number) => `${m}분 남음`,
   warFooter: '전선을 누르면 그 종족으로 거릅니다 · 출처: 커뮤니티 API(helldivers2.dev)',
   statArmor: '방어',
   statSpeed: '속도',

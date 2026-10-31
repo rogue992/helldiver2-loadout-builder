@@ -1,5 +1,6 @@
 // 수정 · 삭제할 수 없는 고정 기본 로드아웃(복제만 가능). 구성은 ses-csd의 기본 로드아웃과 같다(궤도 정밀 타격 · MG-43 · B-01 · AR-23 · P-2 · G-12).
 import { copy } from '../copy'
+import { NO_FACTION } from '../data/factions'
 import type { Loadout } from './types'
 
 export const DEFAULT_LOADOUT_ID = 'default'
@@ -12,7 +13,7 @@ export function defaultLoadout(): Loadout {
     id: DEFAULT_LOADOUT_ID,
     name: copy.defaultLoadoutName,
     race: 'all',
-    faction: 'default',
+    faction: NO_FACTION,
     gear: { armor: 'ar-b-01-tactical', primary: 'pw-ar-23-liberator', secondary: 'sw-p-2-peacemaker', throwable: 'th-g-12-high-explosive' },
     pools: [['st-orbital-precision-strike'], ['st-mg-43-machine-gun'], [], []],
     sizes: [1, 1, 1, 1],

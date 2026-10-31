@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react'
 import { LOADOUT_RACES, factionLabel, raceInfo, raceLabel, type LoadoutRace } from '../data/factions'
 import { useStore } from '../store/useStore'
+import { assetUrl } from '../data/loadData'
 import { copy } from '../copy'
-import AppIcon from './AppIcon'
 import Icon from './Icon'
 import WarButton from './WarButton'
 import styles from './TopBar.module.css'
@@ -25,11 +25,10 @@ export default function TopBar({ onOpenCredits }: Props) {
   const chipsRef = useRef<HTMLSpanElement>(null)
 
   // 팩션 칩 줄: 넘칠 때만 오른쪽 끝을 흐리고(끝까지 밀면 걷힌다), 세로 휠을 가로 스크롤로 옮긴다.
-  // 종족이 바뀌면 같은 줄이 재사용되므로 맨 앞(선택된 전체 칩)으로 되돌린다.
+  // 칩 줄은 고른 종족 알약 안에 새로 그려지므로 종족이 바뀔 때마다 새 요소에 다시 건다
   useEffect(() => {
     const el = chipsRef.current
     if (!el) return
-    el.scrollLeft = 0
     const update = () => el.toggleAttribute('data-more', el.scrollLeft + el.clientWidth < el.scrollWidth - 1)
     const onWheel = (e: WheelEvent) => {
       if (el.scrollWidth <= el.clientWidth || Math.abs(e.deltaX) >= Math.abs(e.deltaY)) return
@@ -85,9 +84,8 @@ export default function TopBar({ onOpenCredits }: Props) {
       </div>
 
       <div className={styles.brand}>
-        <span className={styles.seal}>
-          <AppIcon />
-        </span>
+        {/* 앱 아이콘(호출 비컨). 파비콘 · 홈 화면 아이콘과 같은 파일 */}
+        <img className={styles.seal} src={assetUrl('icon.svg')} width={28} height={28} alt="" />
         <h1>{copy.appName}</h1>
       </div>
 

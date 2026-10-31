@@ -10,7 +10,6 @@
     "typecheck": "tsc -b --noEmit",
     "test": "tsx --test \"src/**/*.test.ts\" \"scripts/**/*.test.ts\"",
     "lint:copy": "tsx scripts/lint-copy.ts",
-    "lint:theme": "tsx scripts/lint-theme.ts",
     "data:fetch": "tsx scripts/fetch-wiki.ts",
     "data:seed": "tsx scripts/seed-from-ses.ts",
     "data:build": "tsx scripts/build-data.ts",

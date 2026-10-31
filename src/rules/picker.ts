@@ -65,3 +65,11 @@ export function nextGearTarget(gear: Gear, from: GearSlot): GearSlot | null {
   }
   return null
 }
+
+export type SwitchTarget = { kind: 'gear'; slot: GearSlot } | ({ kind: 'pool' } & PoolTarget)
+
+/** 스트라타젬 ↔ 개인 장비 전환의 대상: 그쪽의 첫 빈 칸, 다 찼으면 첫 칸 */
+export function switchTarget(to: SwitchTarget['kind'], gear: Gear, pools: Pools, sizes: PoolSizes): SwitchTarget {
+  if (to === 'gear') return { kind: 'gear', slot: GEAR_ORDER.find((s) => !gear[s]) ?? GEAR_ORDER[0] }
+  return { kind: 'pool', ...(nextPoolTarget(pools, sizes, 0) ?? { slotIndex: 0, cell: 0 }) }
+}

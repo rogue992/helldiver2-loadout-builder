@@ -7,11 +7,13 @@ export const KIND_LABEL: Record<Kind, string> = byLang(
   { primary: 'Primary', secondary: 'Secondary', throwable: 'Throwable', armor: 'Armor', stratagem: 'Stratagem' },
 )
 
-// 궤도 타격 · 폭격은 화면 어디서나 "궤도" 하나로 부른다(데이터의 종류 구분은 그대로)
-export const STRAT_TYPE_LABEL: Record<StratType, string> = byLang(
+/** 화면에서 묶어 부르는 스트라타젬 종류. 궤도 타격 · 폭격은 "궤도" 한 묶음이다(데이터의 종류 구분은 그대로) */
+export type StratGroup = 'orbital' | Exclude<StratType, 'orbital_strike' | 'orbital_barrage'>
+export const stratGroup = (t: StratType): StratGroup => (t === 'orbital_strike' || t === 'orbital_barrage' ? 'orbital' : t)
+
+export const STRAT_GROUP_LABEL: Record<StratGroup, string> = byLang(
   {
-    orbital_strike: '궤도',
-    orbital_barrage: '궤도',
+    orbital: '궤도',
     eagle: '이글',
     support_weapon: '지원무기',
     support_backpack: '지원무기(배낭)',
@@ -22,8 +24,7 @@ export const STRAT_TYPE_LABEL: Record<StratType, string> = byLang(
     vehicle: '탑승물',
   },
   {
-    orbital_strike: 'Orbital',
-    orbital_barrage: 'Orbital',
+    orbital: 'Orbital',
     eagle: 'Eagle',
     support_weapon: 'Support Weapon',
     support_backpack: 'Support (Backpack)',
@@ -35,19 +36,11 @@ export const STRAT_TYPE_LABEL: Record<StratType, string> = byLang(
   },
 )
 
-/** 선택 창의 종류 탭 · 묶음 순서. 나무위키 스트라타젬 문서의 장 순서(공격 → 방어 → 보급). 묶음 안 순서는 stratOrder.ts */
-export const STRAT_TYPE_ORDER: StratType[] = [
-  'orbital_strike',
-  'orbital_barrage',
-  'eagle',
-  'sentry',
-  'emplacement',
-  'support_weapon',
-  'support_backpack',
-  'disposable',
-  'backpack',
-  'vehicle',
-]
+/** 아이템 하나의 종류 이름표(묶음 이름) */
+export const stratTypeLabel = (t: StratType): string => STRAT_GROUP_LABEL[stratGroup(t)]
+
+/** 선택 창의 종류 메뉴 · 묶음 순서. 나무위키 스트라타젬 문서의 장 순서(공격 → 방어 → 보급). 묶음 안 순서는 stratOrder.ts */
+export const STRAT_GROUP_ORDER: StratGroup[] = ['orbital', 'eagle', 'sentry', 'emplacement', 'support_weapon', 'support_backpack', 'disposable', 'backpack', 'vehicle']
 
 export const SOURCE_LABEL: Record<Source, string> = byLang(
   { warbond: '채권', default: '기본 지급', superstore: '슈퍼 스토어', campaign: '캠페인 · 이벤트', citizen: '슈퍼시민권', unknown: '출처 미확인' },

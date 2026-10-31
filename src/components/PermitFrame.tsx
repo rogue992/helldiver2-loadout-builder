@@ -9,7 +9,7 @@ interface Props {
 /** 허가서 틀: 상단 위험 줄무늬 + 노란 라인 + 노치. */
 export default function PermitFrame({ children, className }: Props) {
   return (
-    <aside className={[styles.frame, styles.console, className].filter(Boolean).join(' ')} data-part="permit-frame">
+    <aside className={[styles.frame, className].filter(Boolean).join(' ')} data-part="permit-frame">
       <div className={styles.hazard} aria-hidden />
       {children}
     </aside>

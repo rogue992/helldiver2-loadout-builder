@@ -1,7 +1,7 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import type { Pools, PoolSizes } from '../store/types'
-import { cellTarget, favoritesFirst, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, targetAfterResize } from './picker'
+import type { Gear, Pools, PoolSizes } from '../store/types'
+import { cellTarget, favoritesFirst, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, switchTarget, targetAfterResize } from './picker'
 
 test('앞쪽 후보를 빼고 고르면 빈 칸에 들어간다(다른 후보를 덮어쓰지 않는다)', () => {
   const { pool, cell } = removeFromPool(['A', 'B', 'C'], 0)
@@ -42,4 +42,14 @@ test('칸 수를 바꾼 뒤: 늘리면 그 슬롯 첫 빈 칸, 줄이면 대상 
 test('즐겨찾기 먼저: 즐겨찾기끼리 · 나머지끼리 원래 순서를 지킨다', () => {
   const items = ['a', 'b', 'c', 'd', 'e'].map((id) => ({ id }))
   assert.deepEqual(favoritesFirst(items, new Set(['d', 'b'])).map((i) => i.id), ['b', 'd', 'a', 'c', 'e'])
+})
+
+test('스트라타젬 ↔ 장비 전환: 그쪽 첫 빈 칸, 다 찼으면 첫 칸', () => {
+  const full: Gear = { armor: 'a', primary: 'p', secondary: 's', throwable: 't' }
+  const pools: Pools = [['a'], ['b', 'c'], [], []]
+  const sizes: PoolSizes = [1, 2, 1, 1]
+  assert.deepEqual(switchTarget('gear', { ...full, secondary: null }, pools, sizes), { kind: 'gear', slot: 'secondary' })
+  assert.deepEqual(switchTarget('gear', full, pools, sizes), { kind: 'gear', slot: 'armor' })
+  assert.deepEqual(switchTarget('pool', full, pools, sizes), { kind: 'pool', slotIndex: 2, cell: 0 })
+  assert.deepEqual(switchTarget('pool', full, [['a'], ['b', 'c'], ['d'], ['e']], sizes), { kind: 'pool', slotIndex: 0, cell: 0 })
 })

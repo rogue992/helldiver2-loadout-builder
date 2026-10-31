@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { KIND_LABEL, STRAT_TYPE_LABEL, acquireLabel, gearCaption, passiveName } from '../data/labels'
+import { KIND_LABEL, STRAT_GROUP_LABEL, acquireLabel, gearCaption, passiveName, stratGroup } from '../data/labels'
 import { assetUrl } from '../data/loadData'
 import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
@@ -61,9 +61,8 @@ export default function Builder({ warnings, onAssignRace }: Props) {
   const inert = locked || pending
 
   const poolTypeLabel = (ids: string[]) => {
-    // 이름표로 겹침을 지운다(궤도 타격 · 폭격은 같은 이름표)
-    const labels = new Set(ids.map((id) => index.byId.get(id)?.stratType).flatMap((t) => (t ? [STRAT_TYPE_LABEL[t]] : [])))
-    return [...labels].join(' · ')
+    const groups = new Set(ids.map((id) => index.byId.get(id)?.stratType).flatMap((t) => (t ? [stratGroup(t)] : [])))
+    return [...groups].map((g) => STRAT_GROUP_LABEL[g]).join(' · ')
   }
 
   const gearItem = (slot: GearSlotKey): Item | null => (draft.gear[slot] ? index.byId.get(draft.gear[slot]!) ?? null : null)

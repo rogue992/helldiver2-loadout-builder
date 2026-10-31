@@ -82,7 +82,7 @@
   margin-right: 2px;
 }
 .seal {
-  display: grid;
+  display: block;
   flex: none;
 }
 .brand h1 {

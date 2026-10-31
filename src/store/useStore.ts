@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist, createJSONStorage } from 'zustand/middleware'
-import type { LoadoutRace, Race } from '../data/factions'
+import { NO_FACTION, type LoadoutRace, type Race } from '../data/factions'
 import type { Aliases } from '../data/types'
 import { resolveAlias } from '../data/loadData'
 import { defaultLoadout, ensureDefault, isDefaultLoadout } from './defaults'
@@ -92,7 +92,7 @@ function nextName(loadouts: Loadout[]): string {
 
 function blank(loadouts: Loadout[]): Loadout {
   return {
-    id: newId(), name: nextName(loadouts), race: 'all', faction: 'default',
+    id: newId(), name: nextName(loadouts), race: 'all', faction: NO_FACTION,
     gear: { ...EMPTY_GEAR }, pools: emptyPools(), sizes: defaultSizes(), order: loadouts.length, createdAt: now(), updatedAt: now(),
   }
 }

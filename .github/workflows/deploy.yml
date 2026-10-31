@@ -30,7 +30,6 @@ jobs:
       # 배포 전 검사: 타입 · 문구(em dash) · 테마 계약 · 단위 테스트. 하나라도 실패하면 배포하지 않는다
       - run: npm run typecheck
       - run: npm run lint:copy
-      - run: npm run lint:theme
       - run: npm test
       - run: npm run build
       - uses: actions/configure-pages@v5

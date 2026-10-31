@@ -22,6 +22,11 @@ export function effectLines(description: string): string[] {
     .filter(Boolean)
 }
 
+/** Cargo 정수 칸. 비었거나 정수가 아니면(소수 · 문구) null */
+export function cargoInt(v: string | undefined): number | null {
+  return v !== undefined && /^\d+$/.test(v.trim()) ? Number(v) : null
+}
+
 /** 텍스트에 특정 트레이트 단어가 있는지(대소문자 무시, 부분 문자열). */
 export function hasWord(text: string, word: string): boolean {
   return stripMarkup(text).toLowerCase().includes(word.toLowerCase())

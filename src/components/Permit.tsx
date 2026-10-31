@@ -16,6 +16,8 @@ interface Props {
   warnings: Warning[]
   stamp: StampState
   stampKey: number
+  /** 방금 저장해 승인이 났다: 방송이 모범 헬다이버 문구로 바뀐다 */
+  exemplary: boolean
   onSave: () => void
   onDuplicate: () => void
   /** 열린 로드아웃을 목록에서 바로 삭제(되돌리기 토스트는 상위에서) */
@@ -59,7 +61,7 @@ function issuedOn(iso: string, fixed: boolean): { y: string; m: string; d: strin
 }
 
 /** 수호부 출격 허가서: 이름 · 종족/팩션 · 도장 · 위반 사항 · 버튼. 저장은 draft → loadouts. */
-export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate, onDelete }: Props) {
+export default function Permit({ warnings, stamp, stampKey, exemplary, onSave, onDuplicate, onDelete }: Props) {
   const draft = useStore((s) => s.draft)
   const editDraft = useStore((s) => s.editDraft)
   const clearDraft = useStore((s) => s.clearDraft)
@@ -92,7 +94,7 @@ export default function Permit({ warnings, stamp, stampKey, onSave, onDuplicate,
         </div>
       </div>
 
-      <Broadcast exemplary={stamp === 'approved'} />
+      <Broadcast exemplary={exemplary} />
 
       <div className={styles.kv} data-part="permit-kv">
         <span>{copy.race}</span>

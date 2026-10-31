@@ -1,14 +1,14 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { useGameData } from '../data/GameDataContext'
-import { ARMOR_CLASS_LABEL, KIND_LABEL, STRAT_TYPE_LABEL, STRAT_TYPE_ORDER, acquireLabel, weaponTypeLabel } from '../data/labels'
+import { ARMOR_CLASS_LABEL, KIND_LABEL, STRAT_GROUP_LABEL, STRAT_GROUP_ORDER, acquireLabel, stratGroup, weaponTypeLabel, type StratGroup } from '../data/labels'
 import { assetUrl } from '../data/loadData'
-import type { Item, StratType } from '../data/types'
+import type { Item } from '../data/types'
 import { useItemName } from '../data/useItemName'
 import { isNewItem } from '../data/newness'
 import { raceInfo, raceLabel } from '../data/factions'
 import { useStore } from '../store/useStore'
 import { sizesOf, type GearSlot, type PoolSize, type PoolSizes } from '../store/types'
-import { GEAR_ORDER, cellTarget, favoritesFirst, firstEmptyCell, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, targetAfterResize } from '../rules/picker'
+import { GEAR_ORDER, cellTarget, favoritesFirst, firstEmptyCell, nextGearTarget, nextPoolTarget, placeInPool, removeFromPool, switchTarget, targetAfterResize } from '../rules/picker'
 import { copy } from '../copy'
 import Icon from './Icon'
 import NewBadge from './NewBadge'
@@ -65,15 +65,10 @@ function ClearX({ label, small = false, onClear }: { label: string; small?: bool
  * 대상은 "칸" 단위: 찬 칸을 누르고 고르면 교체, 빈 칸이면 채움. 고른 뒤에는 다음 빈 칸으로 자동 이동하고, 빈 칸이 없어도 창은 그대로(닫기는 사용자가).
  * 타일 · 칸의 ✕로 창 안에서 해제할 수 있다.
  * 보유 채권 필터는 숨기지 않고 순서 · 농도로: 미보유 채권 · (설정에서 뺀) 슈퍼 스토어는 각 묶음 뒤쪽에 흐리게.
- * 즐겨찾기는 허가서 종족 기준: 카드 오른쪽 아래 별로 넣고 빼며, 따로 모으지 않고 각 묶음 안에서 맨 앞(종족색 띠)에 온다.
+ * 즐겨찾기는 허가서 종족 기준: 카드 그림 오른쪽 위 별로 넣고 빼며, 따로 모으지 않고 각 묶음 안에서 맨 앞(종족색 띠)에 온다.
  * 스트라타젬 창의 슬롯 번호 옆 트레이로 칸 수(1~4)를 바꾼다. 빌더 캡션의 트레이와 같은 값이다.
  * 방어구 창은 목록 오른쪽에 상세 패널(수치 · 패시브 효과)이 붙는다.
  */
-
-/** 궤도 타격 · 폭격은 종류 메뉴와 묶음에서 "궤도" 하나로 보인다(묶음 안 순서는 순서표) */
-const ORBITAL: StratType[] = ['orbital_strike', 'orbital_barrage']
-const stratTab = (t: StratType | null | undefined): string => (t && ORBITAL.includes(t) ? 'orbital' : (t ?? ''))
-const stratTabLabel = (id: string): string => STRAT_TYPE_LABEL[id === 'orbital' ? 'orbital_strike' : (id as StratType)]
 export default function PickerModal({ target, onTarget, onClose }: Props) {
   const { index, warbondById } = useGameData()
   const settings = useStore((s) => s.settings)
@@ -114,9 +109,8 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
   const race = raceInfo(draft?.race ?? 'all')
   const raceName = raceLabel(race)
   const favSet = useMemo(() => new Set(settings.favorites[race.id]), [settings.favorites, race.id])
-  // 별을 누르면 그 카드가 즐겨찾기 자리로 옮겨 가고 위 묶음 높이도 바뀐다. 누른 카드가 화면에서 같은 높이에 남도록
-  // 바뀐 직후 그만큼 목록을 스크롤하고, 옮겨 간 카드를 잠깐 깜빡여 눈이 따라가게 한다.
-  // 즐겨찾기 묶음에서 별을 꺼 그 카드가 사라졌으면 맞추지 않는다(다음 즐겨찾기가 그 자리로 당겨진다)
+  // 별을 누르면 그 카드가 묶음 맨 앞(또는 즐겨찾기 뒤)으로 옮겨 간다. 누른 카드가 화면에서 같은 높이에 남도록
+  // 바뀐 직후 그만큼 목록을 스크롤하고, 옮겨 간 카드를 잠깐 깜빡여 눈이 따라가게 한다
   const bodyRef = useRef<HTMLDivElement>(null)
   const anchor = useRef<{ key: string; top: number } | null>(null)
   useLayoutEffect(() => {
@@ -136,20 +130,21 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
   const arrange = (items: Item[]) => favoritesFirst(ownedFirst(items), favSet)
   // 새로 들어온 아이템: 카드에 NEW, 그 아이템이 든 탭(전체 포함)에 점
   const fresh = useMemo(() => new Set(base.filter((i) => isNewItem(i)).map((i) => i.id)), [base])
-  const tabOf = (it: Item) => (kind === 'stratagem' ? stratTab(it.stratType) : kind === 'armor' ? it.armorClass : it.weaponType)
+  const groupOf = (it: Item): StratGroup | null => (it.stratType ? stratGroup(it.stratType) : null)
+  const tabOf = (it: Item) => (kind === 'stratagem' ? groupOf(it) : kind === 'armor' ? it.armorClass : it.weaponType)
   const freshTabs = new Set(base.filter((i) => fresh.has(i.id)).flatMap((i) => ['all', tabOf(i)]))
-  const stratTabs = [...new Set(STRAT_TYPE_ORDER.filter((t) => index.stratByType.has(t)).map(stratTab))]
+  const stratTabs = STRAT_GROUP_ORDER.filter((g) => base.some((i) => groupOf(i) === g))
 
   const tabs: { id: string; label: string }[] =
     kind === 'stratagem'
-      ? [{ id: 'all', label: copy.all }, ...stratTabs.map((id) => ({ id, label: stratTabLabel(id) }))]
+      ? [{ id: 'all', label: copy.all }, ...stratTabs.map((id) => ({ id, label: STRAT_GROUP_LABEL[id] }))]
       : kind === 'armor'
         ? [{ id: 'all', label: copy.all }, ...(['light', 'medium', 'heavy'] as const).map((c) => ({ id: c, label: ARMOR_CLASS_LABEL[c] }))]
         : [{ id: 'all', label: copy.all }, ...[...new Set(base.map((i) => i.weaponType).filter(Boolean))].map((w) => ({ id: w!, label: weaponTypeLabel(w!) }))]
 
   const list = base.filter((it) => {
     if (tab !== 'all') {
-      if (kind === 'stratagem' && stratTab(it.stratType) !== tab) return false
+      if (kind === 'stratagem' && groupOf(it) !== tab) return false
       if (kind === 'armor' && it.armorClass !== tab) return false
       if (kind !== 'stratagem' && kind !== 'armor' && it.weaponType !== tab) return false
     }
@@ -161,7 +156,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
   })
   const groups: { key: string; label: string | null; items: Item[] }[] =
     kind === 'stratagem' && tab === 'all'
-      ? stratTabs.map((id) => ({ key: id, label: stratTabLabel(id), items: arrange(list.filter((i) => stratTab(i.stratType) === id)) })).filter((g) => g.items.length)
+      ? stratTabs.map((id) => ({ key: id, label: STRAT_GROUP_LABEL[id], items: arrange(list.filter((i) => groupOf(i) === id)) })).filter((g) => g.items.length)
       : [{ key: 'flat', label: null, items: arrange(list) }]
 
   /** 고르기: 대상 칸을 채우거나 교체하고 다음 빈 칸으로. 빈 칸이 없으면 그 자리에 머문다(창은 닫지 않음) */
@@ -201,33 +196,32 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
     onTarget({ kind: 'gear', slot: s })
   }
 
-  /** 스트라타젬 ↔ 개인 장비 전환: 그쪽의 첫 빈 칸(다 찼으면 첫 칸)이 대상 */
+  /** 스트라타젬 ↔ 개인 장비 전환. 검색어는 다른 종류의 목록을 비워 버리므로 지운다 */
   const switchKind = (to: PickerTarget['kind']) => {
     if (!draft || target.kind === to) return
-    if (to === 'gear') onTarget({ kind: 'gear', slot: GEAR_ORDER.find((s) => !draft.gear[s]) ?? GEAR_ORDER[0] })
-    else onTarget({ kind: 'pool', ...(nextPoolTarget(draft.pools, sizes, 0) ?? { slotIndex: 0, cell: 0 }) })
+    setQ('')
+    onTarget(switchTarget(to, draft.gear, draft.pools, sizes))
   }
 
   const shape = kind === 'armor' ? 'torso' : kind === 'stratagem' || kind === 'throwable' ? 'square' : 'wide'
   const currentGear = target.kind === 'gear' ? draft?.gear[target.slot] ?? null : null
   const title = target.kind === 'pool' ? copy.pickerStratTitle : copy.pickerGearTitle
 
-  /** group = 이 카드가 든 묶음 키. 별 위치 맞춤이 묶음 안에서 옮겨 간 카드를 찾는 데 쓴다 */
-  const card = (it: Item, sub: string, group: string) => {
+  const card = (it: Item, sub: string) => {
     // 다른 칸에 이미 있으면 비활성. 대상 칸에 든 것은 "현재"
     const inTargetCell = target.kind === 'pool' && draft?.pools[target.slotIndex][target.cell] === it.id
     const dup = target.kind === 'pool' && inPools.has(it.id) && !inTargetCell
     const current = inTargetCell || (target.kind === 'gear' && currentGear === it.id)
     const reason = unownedReason(it)
     const fav = favSet.has(it.id)
+    // 패널용 마우스 올림은 바깥 틀에서 받는다: 고를 수 없는 카드(현재 · 다른 칸)는 비활성 버튼이라 이벤트가 오지 않는다
     return (
-      <div key={it.id} className={styles.cardWrap} data-anchor={`${group}:${it.id}`}>
+      <div key={it.id} className={styles.cardWrap} data-anchor={it.id} onMouseEnter={kind === 'armor' ? () => setPeek(it.id) : undefined}>
         <button
           type="button"
           className={[styles.card, dup && styles.cardDup, current && styles.cardCurrent, reason && styles.cardUnowned, fav && styles.cardFav].filter(Boolean).join(' ')}
           disabled={dup || current}
           onClick={() => pick(it)}
-          onMouseEnter={kind === 'armor' ? () => setPeek(it.id) : undefined}
           onFocus={kind === 'armor' ? () => setPeek(it.id) : undefined}
           data-part="card"
           data-unowned={reason ? '' : undefined}
@@ -384,7 +378,8 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
             </div>
           </div>
 
-          <div className={styles.body} ref={bodyRef}>
+          {/* 목록을 벗어나면 방어구 패널은 지금 장착한 방어구로 돌아간다 */}
+          <div className={styles.body} ref={bodyRef} onMouseLeave={kind === 'armor' ? () => setPeek(null) : undefined}>
             {groups.map((g) => {
               const nFav = countFav(g.items)
               return (
@@ -395,7 +390,7 @@ export default function PickerModal({ target, onTarget, onClose }: Props) {
                       <FavCount n={nFav} label={copy.favCount(raceName, nFav)} />
                     </h3>
                   )}
-                  <div className={styles.grid}>{g.items.map((it) => card(it, acquireLabel(it, warbondById), g.key))}</div>
+                  <div className={styles.grid}>{g.items.map((it) => card(it, acquireLabel(it, warbondById)))}</div>
                 </section>
               )
             })}

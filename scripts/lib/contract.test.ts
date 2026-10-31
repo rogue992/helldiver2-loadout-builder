@@ -2,8 +2,8 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { itemId, modelCodeKey, normKey, slugify, stripModelCode } from './slug.ts'
-import { effectLines, firstLink, normalizePageName, warbondPageOf } from './wikitext.ts'
-import { resolveAliasId } from './overrides.ts'
+import { cargoInt, effectLines, firstLink, normalizePageName, warbondPageOf } from './wikitext.ts'
+import { pickEffects, resolveAliasId } from './overrides.ts'
 
 test('아이템 id = 종류 접두 + 페이지명 슬러그', () => {
   assert.equal(itemId('stratagem', 'EAT-17 Expendable Anti-Tank'), 'st-eat-17-expendable-anti-tank')
@@ -37,4 +37,23 @@ test('alias는 사슬을 따라가고 자기 키만 본다', () => {
 test('패시브 설명은 <br>마다 한 줄, 강조 표시와 링크는 글자만 남긴다', () => {
   const d = "Provides '''<span style=color:var(--wiki-custom-emphasis-color)>50%</span>''' resistance to [[Damage#Damage Types|arc damage]].<br>Increases [[stim]] effect duration by '''<span>2.0s</span>'''. <br />"
   assert.deepEqual(effectLines(d), ['Provides 50% resistance to arc damage.', 'Increases stim effect duration by 2.0s.'])
+})
+
+test('패시브 효과 번역: 줄 수 · 줄마다 숫자가 원문과 같을 때만 쓰고, 아니면 영어 원문', () => {
+  const en = ['Provides 50% resistance to explosive damage.', 'Increases stim effect duration by 2.0s.']
+  const ko = ['폭발 피해 저항 50%', '스팀 효과 시간 2.0초 증가']
+  assert.deepEqual(pickEffects(ko, en), { lines: ko, problem: null })
+  assert.deepEqual(pickEffects(undefined, en), { lines: en, problem: 'missing' })
+  assert.deepEqual(pickEffects(ko.slice(0, 1), en), { lines: en, problem: 'lines' })
+  const patched = ['Provides 40% resistance to explosive damage.', en[1]]
+  assert.deepEqual(pickEffects(ko, patched), { lines: patched, problem: 'numbers' })
+})
+
+test('Cargo 정수 칸: 정수만 숫자로, 빈 값 · 소수 · 문구는 null', () => {
+  assert.equal(cargoInt('150'), 150)
+  assert.equal(cargoInt(' 50 '), 50)
+  assert.equal(cargoInt(''), null)
+  assert.equal(cargoInt(undefined), null)
+  assert.equal(cargoInt('1.5'), null)
+  assert.equal(cargoInt('N/A'), null)
 })

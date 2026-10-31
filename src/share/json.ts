@@ -18,7 +18,7 @@ export function fileStamp(d = new Date()): string {
 }
 
 /** 자기 사이트(Pages)라 <a download>가 동작한다. 브라우저가 차단해도 예외는 나지 않는다. */
-export function triggerDownload(href: string, fileName: string): void {
+function triggerDownload(href: string, fileName: string): void {
   const a = document.createElement('a')
   a.href = href
   a.download = fileName

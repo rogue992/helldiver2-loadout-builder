@@ -31,15 +31,11 @@ type LoadState = { status: 'loading' } | { status: 'error'; message: string } | 
 export default function App() {
   const [state, setState] = useState<LoadState>({ status: 'loading' })
   const [attempt, setAttempt] = useState(0)
-  const theme = useStore((s) => s.settings.theme)
   const lang = useStore((s) => s.settings.nameDisplay)
   const applyAliases = useStore((s) => s.applyAliases)
   // 그리기 전에 화면 언어를 맞춘다. 아래의 모든 문구 · 라벨 · 이름이 그리는 순간 이 값을 읽는다
   setLang(lang)
 
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme
-  }, [theme])
   useEffect(() => {
     document.documentElement.lang = lang
     document.title = copy.appName
@@ -91,6 +87,8 @@ function Shell() {
   const setSettings = useStore((s) => s.setSettings)
   const { notify } = useToast()
   const [stampKey, setStampKey] = useState(0)
+  // 방금 저장한 허가서. 모범 헬다이버 방송은 저장해서 승인이 난 그 허가서를 보고 있는 동안만 나온다
+  const [justSaved, setJustSaved] = useState<string | null>(null)
   const [credits, setCredits] = useState(false)
   const [pending, setPending] = useState<Pending | null>(null)
   const [importFile, setImportFile] = useState<ReturnType<typeof parseImport>>(null)
@@ -151,6 +149,7 @@ function Shell() {
   }
   const run = (p: Pending) => {
     setPending(null)
+    setJustSaved(null)
     if (p.kind === 'open') openLoadout(p.id)
     else if (p.kind === 'new') startNew()
     else if (p.kind === 'replace') {
@@ -165,6 +164,7 @@ function Shell() {
   const onSave = () => {
     const saved = saveDraft()
     if (!saved) return
+    setJustSaved(saved.id)
     setStampKey((k) => k + 1)
     notify(copy.noticeSaved)
   }
@@ -244,7 +244,7 @@ function Shell() {
           <main className={styles.main}>
             <Builder warnings={warnings} onAssignRace={onAssignRace} />
           </main>
-          <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} onSave={onSave} onDuplicate={onDuplicate} onDelete={onDelete} />
+          <Permit warnings={warnings} stamp={stamp} stampKey={stampKey} exemplary={stamp === 'approved' && !!draft && justSaved === draft.id} onSave={onSave} onDuplicate={onDuplicate} onDelete={onDelete} />
         </div>
       </div>
       <VersionTag />

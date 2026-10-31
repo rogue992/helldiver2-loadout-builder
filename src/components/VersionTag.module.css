@@ -1,4 +1,4 @@
-/* 오른쪽 아래에 떠 있는 작은 유리 알약. 내용 위에 있되 창 · 브리핑 · 토스트에는 덮인다 */
+/* 오른쪽 아래에 떠 있는 작은 유리 알약. 내용 위에 있되 창 · 토스트에는 덮인다 */
 .tag {
   position: fixed;
   right: calc(12px + env(safe-area-inset-right, 0px));

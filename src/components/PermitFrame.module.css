@@ -2,16 +2,11 @@
   display: flex;
   flex-direction: column;
   background: var(--panel);
-  border: 1px var(--bstyle) var(--line);
-  border-radius: var(--r);
-  position: relative;
-}
-
-/* 위쪽 줄무늬가 테두리 윗변을 대신한다 */
-.console {
-  border-color: color-mix(in srgb, var(--yellow) 55%, transparent);
+  /* 위쪽 줄무늬가 테두리 윗변을 대신한다 */
+  border: 1px var(--bstyle) color-mix(in srgb, var(--yellow) 55%, transparent);
   border-top: 0;
   border-radius: 0 0 3px 3px;
+  position: relative;
 }
 .hazard {
   position: relative;

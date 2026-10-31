@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs'
 import type { Item } from './types'
 import { STRAT_ORDER } from './stratOrder'
 import { buildIndex } from './itemIndex'
+import { STRAT_GROUP_ORDER, stratGroup } from './labels'
+import type { StratType } from './types'
 
 const items = JSON.parse(readFileSync(new URL('../../public/data/items.json', import.meta.url), 'utf8')) as Item[]
 const strat = items.filter((i) => i.kind === 'stratagem')
@@ -21,4 +23,13 @@ test('색인: 스트라타젬은 순서표 순, 순서표에 없는 것은 같�
   const sameType = index.stratByType.get(extra.stratType!)!.map((i) => i.id)
   assert.equal(sameType.at(-1), 'st-new-thing')
   assert.deepEqual(index.byKind.stratagem.filter((i) => i.id !== 'st-new-thing').map((i) => i.id), STRAT_ORDER)
+})
+
+test('묶음: 궤도 타격 · 폭격은 "궤도" 한 묶음, 묶음 순서표는 데이터의 모든 종류를 한 번씩 덮는다', () => {
+  assert.equal(stratGroup('orbital_strike'), 'orbital')
+  assert.equal(stratGroup('orbital_barrage'), 'orbital')
+  assert.equal(stratGroup('eagle'), 'eagle')
+  assert.equal(new Set(STRAT_GROUP_ORDER).size, STRAT_GROUP_ORDER.length)
+  const groups = new Set(strat.map((i) => stratGroup(i.stratType as StratType)))
+  assert.deepEqual([...groups].filter((g) => !STRAT_GROUP_ORDER.includes(g)), [])
 })

@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import type { Item } from '../data/types'
 import { copyEn } from './en'
 import { copy, setLang } from './index'
-import { ARMOR_CLASS_LABEL, KIND_LABEL, SOURCE_LABEL, STRAT_TYPE_LABEL, WARBOND_TYPE_LABEL, weaponTypeLabel } from '../data/labels'
+import { ARMOR_CLASS_LABEL, KIND_LABEL, SOURCE_LABEL, STRAT_GROUP_LABEL, WARBOND_TYPE_LABEL, weaponTypeLabel } from '../data/labels'
 import { LOADOUT_RACES, factionLabel, raceLabel } from '../data/factions'
 
 const HANGUL = /[가-힣]/
@@ -31,7 +31,7 @@ test('영어 화면: 라벨 · 종족 · 팩션 · 무기 종류가 영어로 �
   try {
     assert.equal(copy.appName, 'Loadout Builder')
     const shown = [
-      ...[KIND_LABEL, STRAT_TYPE_LABEL, SOURCE_LABEL, WARBOND_TYPE_LABEL, ARMOR_CLASS_LABEL].flatMap((t) => Object.values(t)),
+      ...[KIND_LABEL, STRAT_GROUP_LABEL, SOURCE_LABEL, WARBOND_TYPE_LABEL, ARMOR_CLASS_LABEL].flatMap((t) => Object.values(t)),
       ...weaponTypes.map(weaponTypeLabel),
       ...LOADOUT_RACES.flatMap((r) => [raceLabel(r), ...r.factions.map(factionLabel)]),
     ]

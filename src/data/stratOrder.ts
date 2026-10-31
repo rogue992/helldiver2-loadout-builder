@@ -1,9 +1,9 @@
 // 스트라타젬 선택 창의 순서. 나무위키 HELLDIVERS 2/스트라타젬의 공격 · 방어 · 보급 문서 목차 순서를 따른다.
-// 묶음(종류) 순서는 labels.ts의 STRAT_TYPE_ORDER가 정하고, 여기서는 묶음 안의 순서만 쓴다.
+// 묶음 순서는 labels.ts의 STRAT_GROUP_ORDER가 정하고, 여기서는 묶음 안의 순서만 쓴다.
 // 새 스트라타젬은 나무위키에서 놓인 자리에 id를 넣는다. 빠지면 그 묶음 맨 뒤에 붙고 단위 테스트가 실패한다.
 
 export const STRAT_ORDER: string[] = [
-  // 궤도(타격 · 폭격이 섞인 나무위키 목차 순서. 선택 창은 둘을 한 묶음으로 보여 준다)
+  // 궤도(타격 · 폭격이 섞인 나무위키 목차 순서. 한 묶음인 것은 labels.ts의 stratGroup)
   'st-orbital-precision-strike',
   'st-orbital-gatling-barrage',
   'st-orbital-airburst-strike',

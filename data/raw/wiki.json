@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-12T05:54:41.778Z",
+ "fetchedAt": "2026-10-31T00:24:39.876Z",
  "tables": {
   "Stratagems": [
    {
@@ -118,6 +118,15 @@
     "traits": "",
     "base_cooldown": "0s",
     "source": ""
+   },
+   {
+    "_pageName": "AMW-20 Apex",
+    "image": "Apex Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Backpack &nbsp;&bull;&nbsp; Heavy Armour Penetrating &nbsp;&bull;&nbsp; Stationary Reload",
+    "base_cooldown": "480s",
+    "source": "[[Scope of Authority Premium Warbond#Page 2|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>"
    },
    {
     "_pageName": "APW-1 Anti-Materiel Rifle",
@@ -345,6 +354,15 @@
     "source": "Hangar"
    },
    {
+    "_pageName": "Eagle Fly By",
+    "image": "Eagle Stratagem Fallback Icon Background.svg",
+    "stratagem_type": "Eagle",
+    "permit_type": "Offensive",
+    "traits": "Eagle",
+    "base_cooldown": "",
+    "source": "[[Liberty Day|Liberty Day 2026]]"
+   },
+   {
     "_pageName": "Eagle Gas Airstrike",
     "image": "Eagle Gas Airstrike Stratagem Icon Background.svg",
     "stratagem_type": "Eagle",
@@ -525,6 +543,15 @@
     "source": ""
    },
    {
+    "_pageName": "LAS-44 Nova",
+    "image": "Nova Stratagem Icon Background.svg",
+    "stratagem_type": "Support Weapon",
+    "permit_type": "Supply",
+    "traits": "Support Weapon &nbsp;&bull;&nbsp; Anti-Tank &nbsp;&bull;&nbsp; Heat",
+    "base_cooldown": "480s",
+    "source": "[[Scope of Authority Premium Warbond#Page 3|Scope of Authority]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>"
+   },
+   {
     "_pageName": "LAS-98 Laser Cannon",
     "image": "Laser Cannon Stratagem Icon Background.svg",
     "stratagem_type": "Support Weapon",
@@ -594,7 +621,7 @@
     "permit_type": "Supply",
     "traits": "Vehicle &nbsp;&bull;&nbsp; Medium Armor Penetrating",
     "base_cooldown": "480s",
-    "source": "[[Campaigns#Census_Thunder|Census Thunder]]"
+    "source": "Hanger"
    },
    {
     "_pageName": "M-104 Incinerator FRV",
@@ -728,8 +755,17 @@
     "stratagem_type": "Orbital",
     "permit_type": "Offensive",
     "traits": "Explosive &nbsp;&bull;&nbsp; Orbital &nbsp;&bull;&nbsp; Medium Armor Penetrating",
-    "base_cooldown": "100s",
+    "base_cooldown": "90s",
     "source": "Orbital Cannons"
+   },
+   {
+    "_pageName": "Orbital Confetti",
+    "image": "Orbital Strike Stratagem Fallback Icon Background.svg",
+    "stratagem_type": "Orbital",
+    "permit_type": "Offensive",
+    "traits": "Orbital",
+    "base_cooldown": "80s",
+    "source": "[[Liberty Day|Liberty Day 2026]]"
    },
    {
     "_pageName": "Orbital EMS Strike",
@@ -926,7 +962,7 @@
     "stratagem_type": "Objective",
     "permit_type": "",
     "traits": "",
-    "base_cooldown": "N/A",
+    "base_cooldown": "27.5",
     "source": ""
    },
    {
@@ -1088,7 +1124,7 @@
     "_pageName": "40-K Meltagun",
     "image": "40-K Meltagun Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Energy-Based",
+    "weapon_type": "",
     "source": "[[Castellan’s Creed Legendary Warbond#Page_3|Castellan’s Creed]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1096,15 +1132,23 @@
     "_pageName": "AC-8 Autocannon",
     "image": "AC-8_Autocannon_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Explosives",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
+    "cost": ""
+   },
+   {
+    "_pageName": "AMW-20 Apex",
+    "image": "AMW-20 Apex_Weapon_and_Backpack_Support_Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "",
+    "source": "[[Scope of Authority Premium Warbond#Page 2|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
    {
     "_pageName": "APW-1 Anti-Materiel Rifle",
     "image": "APW-1 Anti-Materiel Rifle Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Armor Precision",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1147,6 +1191,14 @@
     "weapon_type": "Assault Rifles",
     "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 20</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "AR-23L Liberator Legacy",
+    "image": "AR-23L Liberator Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Assault Rifles",
+    "source": "[[Liberty Day|Liberty Day 2186]]",
+    "cost": ""
    },
    {
     "_pageName": "AR-23P Liberator Penetrator",
@@ -1200,7 +1252,7 @@
     "_pageName": "ARC-3 Arc Thrower",
     "image": "ARC-3 Arc Thrower Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Energy-Based",
+    "weapon_type": "",
     "source": "Engineering Bay",
     "cost": ""
    },
@@ -1208,7 +1260,7 @@
     "_pageName": "B/FLAM-80 Cremator",
     "image": "B_FLAM-80_Cremator_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Entrenched Division Premium Warbond#Page_3|Entrenched Division]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1216,7 +1268,7 @@
     "_pageName": "B/MD C4 Pack",
     "image": "B MD C4 Pack Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Tank",
+    "weapon_type": "",
     "source": "[[Redacted Regiment Premium Warbond#Page 3|Redacted Regiment]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1240,7 +1292,7 @@
     "_pageName": "CQC-1 One True Flag",
     "image": "CQC-1 One True Flag Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Melee",
+    "weapon_type": "",
     "source": "[[Masters_of_Ceremony_Premium_Warbond#Page_3|Masters of Ceremony]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1264,7 +1316,7 @@
     "_pageName": "CQC-20 Breaching Hammer",
     "image": "CQC-20 Breaching Hammer Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Melee",
+    "weapon_type": "",
     "source": "[[Siege Breakers Premium Warbond#Page 1|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": ""
    },
@@ -1312,7 +1364,7 @@
     "_pageName": "CQC-9 Defoliation Tool",
     "image": "CQC-9 Defoliation Tool Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Melee",
+    "weapon_type": "",
     "source": "[[Python Commandos_Premium_Warbond#Page 2|Python Commandos]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -1328,7 +1380,7 @@
     "_pageName": "EAT-17 Expendable Anti-Tank",
     "image": "EAT-17 Expendable Anti-Tank Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Tank",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1336,7 +1388,7 @@
     "_pageName": "EAT-411 Leveller",
     "image": "EAT-411_Leveller_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Tank",
+    "weapon_type": "",
     "source": "[[Siege Breakers Premium Warbond#Page 2|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -1344,7 +1396,7 @@
     "_pageName": "EAT-700 Expendable Napalm",
     "image": "EAT-700 Expendable Napalm Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Incendiary",
+    "weapon_type": "",
     "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -1352,7 +1404,7 @@
     "_pageName": "FAF-14 Spear",
     "image": "FAF-14 Spear Weapon and Backpack Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Missiles",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1360,7 +1412,7 @@
     "_pageName": "FLAM-40 Flamethrower",
     "image": "FLAM-40 Flamethrower Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1387,6 +1439,14 @@
     "weapon_type": "Special",
     "source": "[[Force of Law Premium Warbond#Page 3|Force of Law]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "G-11 Caltrops",
+    "image": "G-11 Caltrops Throwable Render.png",
+    "weapon_category": "Throwables",
+    "weapon_type": "Special",
+    "source": "[[Scope of Authority Premium Warbond#Page 1|Scope of Authority]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
    },
    {
     "_pageName": "G-12 High Explosive",
@@ -1544,7 +1604,7 @@
     "_pageName": "GL-21 Grenade Launcher",
     "image": "GL-21 Grenade Launcher Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Explosives",
+    "weapon_type": "",
     "source": "Engineering Bay",
     "cost": ""
    },
@@ -1552,7 +1612,7 @@
     "_pageName": "GL-28 Belt-Fed Grenade Launcher",
     "image": "GL-28_Belt-Fed_Grenade_Launcher_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Siege Breakers Premium Warbond#Page_3|Siege Breakers]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1560,7 +1620,7 @@
     "_pageName": "GL-52 De-Escalator",
     "image": "GL-52 De-Escalator Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Stun &nbsp;&bull;&nbsp; Tesla",
+    "weapon_type": "",
     "source": "[[Force of Law Premium Warbond#Page 2|Force of Law]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -1584,7 +1644,7 @@
     "_pageName": "GR-8 Recoilless Rifle",
     "image": "GR-8_Recoilless_Rifle_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Tank",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1637,6 +1697,14 @@
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
    },
    {
+    "_pageName": "LAS-44 Nova",
+    "image": "LAS-44 Nova Support Render.png",
+    "weapon_category": "Support Weapons",
+    "weapon_type": "",
+    "source": "[[Scope of Authority Premium Warbond#Page 3|Scope of Authority]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": ""
+   },
+   {
     "_pageName": "LAS-5 Scythe",
     "image": "LAS-5 Scythe Primary Render.png",
     "weapon_category": "Primary Weapons",
@@ -1664,7 +1732,7 @@
     "_pageName": "LAS-98 Laser Cannon",
     "image": "LAS-98 Laser Cannon Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Energy-Based",
+    "weapon_type": "",
     "source": "Engineering Bay",
     "cost": ""
    },
@@ -1672,7 +1740,7 @@
     "_pageName": "LAS-99 Quasar Cannon",
     "image": "LAS-99 Quasar Cannon Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Energy-Based",
+    "weapon_type": "",
     "source": "Engineering Bay",
     "cost": ""
    },
@@ -1680,7 +1748,7 @@
     "_pageName": "M-1000 Maxigun",
     "image": "M-1000_Maxigun_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Python Commandos Premium Warbond#Page 3|Python Commandos]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1688,7 +1756,7 @@
     "_pageName": "M-105 Stalwart",
     "image": "M-105 Stalwart Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1728,7 +1796,7 @@
     "_pageName": "MG-206 Heavy Machine Gun",
     "image": "MG-206 Heavy Machine Gun Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Requisition Slip.svg|link=Requisition Slips|alt=]] 6000</span> [[Requisition Slips]]</span>"
    },
@@ -1736,7 +1804,7 @@
     "_pageName": "MG-43 Machine Gun",
     "image": "MG-43 Machine Gun Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1744,7 +1812,7 @@
     "_pageName": "MGX-42 Bullet Storm",
     "image": "MGX-42 Bullet Storm Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Exo Experts Premium Warbond#Page 1|Exo Experts]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": ""
    },
@@ -1752,7 +1820,7 @@
     "_pageName": "MLS-4X Commando",
     "image": "MLS-4X Commando Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Missiles",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1768,7 +1836,7 @@
     "_pageName": "MS-11 Solo Silo",
     "image": "MS-11 Solo Silo Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Explosive",
+    "weapon_type": "",
     "source": "[[Dust Devils Premium Warbond#Page 3|Dust Devils]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": ""
    },
@@ -1835,6 +1903,14 @@
     "weapon_type": "Pistols",
     "source": "[[Steeled Veterans Premium Warbond#Page 1|Steeled Veterans]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 15</span> [[Medal]]s</span>"
+   },
+   {
+    "_pageName": "P-44 Mist",
+    "image": "P-44 Mist Secondary Render.png",
+    "weapon_category": "Secondary Weapons",
+    "weapon_type": "Pistols",
+    "source": "[[Scope of Authority Premium Warbond#Page 3|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 65</span> [[Medal]]s</span>"
    },
    {
     "_pageName": "P-69 Veto",
@@ -1904,7 +1980,7 @@
     "_pageName": "PLAS-45 Epoch",
     "image": "PLAS-45 Epoch Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Control Group Premium Warbond#Page 1|Control Group]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
     "cost": ""
    },
@@ -1939,6 +2015,14 @@
     "weapon_type": "Marksman Rifles",
     "source": "[[Campaigns#Celestial Fence|Celestial Fence]]",
     "cost": ""
+   },
+   {
+    "_pageName": "R-40 Sightliner",
+    "image": "R-40 Sightliner Primary Render.png",
+    "weapon_category": "Primary Weapons",
+    "weapon_type": "Sniper Rifles",
+    "source": "[[Scope of Authority Premium Warbond#Page 1|Scope of Authority]] <small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 35</span> [[Medal]]s</span>"
    },
    {
     "_pageName": "R-6 Deadeye",
@@ -1984,7 +2068,7 @@
     "_pageName": "RL-77 Airburst Rocket Launcher",
     "image": "RL-77_Airburst_Rocket_Launcher_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Rocket Launcher",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -1992,7 +2076,7 @@
     "_pageName": "RS-422 Railgun",
     "image": "RS-422 Railgun Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Armor Precision",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -2000,7 +2084,7 @@
     "_pageName": "S-11 Speargun",
     "image": "S-11 Speargun Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Anti-Armor Precision",
+    "weapon_type": "",
     "source": "[[Dust Devils Premium Warbond#Page 2|Dust Devils]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -2113,7 +2197,7 @@
     "image": "SMG-37 Defender Primary Render.png",
     "weapon_category": "Primary Weapons",
     "weapon_type": "Submachine Guns",
-    "source": "[[Helldivers Mobilize Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
+    "source": "[[Helldivers Mobilize! Warbond#Page 3|Helldivers Mobilize!]] <small><span  class=\"explain \" title=\"Page 3\">P3</span></small>",
     "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 15</span> [[Medal]]s</span>"
    },
    {
@@ -2152,7 +2236,7 @@
     "_pageName": "StA-X3 W.A.S.P. Launcher",
     "image": "StA-X3_W.A.S.P._Launcher_Weapon_and_Backpack_Support_Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Missiles",
+    "weapon_type": "",
     "source": "Patriotic Administration Center",
     "cost": ""
    },
@@ -2176,7 +2260,7 @@
     "_pageName": "TX-41 Sterilizer",
     "image": "TX-41 Sterilizer Support Render.png",
     "weapon_category": "Support Weapons",
-    "weapon_type": "Heavy Weapons",
+    "weapon_type": "",
     "source": "[[Chemical Agents Premium Warbond#Page 2|Chemical Agents]] <small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
     "cost": ""
    },
@@ -4402,6 +4486,72 @@
     "stam_regen": ""
    },
    {
+    "_pageName": "SS-15 Focal Point",
+    "image": "SS-15 Focal Point Armor Render.png",
+    "type": "Medium",
+    "passive": "Stationary Shroud",
+    "source": "[[Scope of Authority Premium Warbond#Page 2|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 55</span> [[Medal]]s</span>",
+    "armor": "100",
+    "speed": "500",
+    "stam_regen": "100"
+   },
+   {
+    "_pageName": "SS-15 Focal Point",
+    "image": "SS-15 Focal Point Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Scope of Authority Premium Warbond#Page 2|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 2\">P2</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 45</span> [[Medal]]s</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
+   },
+   {
+    "_pageName": "SS-33 Mimetic Marshal",
+    "image": "SS-33 Mimetic Marshal Armor Render.png",
+    "type": "Light",
+    "passive": "Stationary Shroud",
+    "source": "[[Scope of Authority Premium Warbond#Page 1|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 45</span> [[Medal]]s</span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
+   },
+   {
+    "_pageName": "SS-33 Mimetic Marshal",
+    "image": "SS-33 Mimetic Marshal Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Scope of Authority Premium Warbond#Page 1|Scope of Authority]]<small><span  class=\"explain \" title=\"Page 1\">P1</span></small>",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\"><span class=\"Medalicon\">[[File:Medal.svg|link=Medal|alt=]]</span> 30</span> [[Medal]]s</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
+   },
+   {
+    "_pageName": "SS-500 Pale Prosecutor",
+    "image": "SS-500 Pale Prosecutor Armor Render.png",
+    "type": "Light",
+    "passive": "Stationary Shroud",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 250</span> [[Super Credits]]</span>",
+    "armor": "50",
+    "speed": "550",
+    "stam_regen": "125"
+   },
+   {
+    "_pageName": "SS-500 Pale Prosecutor",
+    "image": "SS-500 Pale Prosecutor Helmet Render.png",
+    "type": "Helmet",
+    "passive": "[[Standard_Issue]]",
+    "source": "[[Superstore]]",
+    "cost": "<span class=\"Currencyicons\"><span style=\"white-space:nowrap\">[[File:Super Credit.svg|link=Super Credits|alt=]] 125</span> [[Super Credits]]</span>",
+    "armor": "",
+    "speed": "",
+    "stam_regen": ""
+   },
+   {
     "_pageName": "TG-122 Demo-Trooper",
     "image": "TG-122 Demo-Trooper Armor Render.png",
     "type": "Heavy",
@@ -4764,6 +4914,11 @@
     "description": "Increases reload speed of [[primary weapons]] by '''<span style=color:var(--wiki-custom-emphasis-color)>30%</span>'''.<br>Increases ammo capacity of all [[weapons]] by '''<span style=color:var(--wiki-custom-emphasis-color)>20%</span>'''. Does not affect weapon backpacks."
    },
    {
+    "_pageName": "Stationary Shroud",
+    "image": "Stationary Shroud Armor Passive Icon.svg",
+    "description": "Reduces weapon sway while aiming by <b><span style=color:var(--wiki-custom-emphasis-color)>35%</span></b>.<br>Wearer makes <b><span style=color:var(--wiki-custom-emphasis-color)>15%</span></b> less noise when moving.<br>Mimics foliage-level concealment, reducing enemy detection range while the wearer remains stationary and crouched or prone."
+   },
+   {
     "_pageName": "Supplemental Adrenaline",
     "image": "Supplemental Adrenaline Armor Passive Icon.svg",
     "description": "When the wearer takes damage, they regain some stamina.<br>Provides a '''<span style=color:var(--wiki-custom-emphasis-color)>higher [[Damage#Armor Damage Modifiers|armor rating]]</span>'''."
@@ -4930,6 +5085,14 @@
     "image": "Righteous Revenants Legendary Warbond Cover.png",
     "date": "2025-12-18",
     "type": "Legendary",
+    "date__precision": "1"
+   },
+   {
+    "_pageName": "Scope of Authority Premium Warbond",
+    "title": "Scope of Authority",
+    "image": "Scope of Authority Premium Warbond Cover.png",
+    "date": "2026-10-20",
+    "type": "Premium",
     "date__precision": "1"
    },
    {

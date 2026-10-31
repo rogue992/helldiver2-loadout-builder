@@ -1,2 +1,8 @@
 {
+  "st-eagle-fly-by": {
+    "exclude": true
+  },
+  "st-orbital-confetti": {
+    "exclude": true
+  }
 }

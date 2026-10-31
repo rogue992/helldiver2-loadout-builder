@@ -223,5 +223,14 @@
     "releaseDate": "2026-09-22",
     "type": "premium",
     "cover": "icons/warbond/ironclad-democracy-premium-warbond.webp"
+  },
+  {
+    "id": "scope-of-authority-premium-warbond",
+    "nameKo": "권위의 가늠자",
+    "nameEn": "Scope of Authority",
+    "order": 25,
+    "releaseDate": "2026-10-20",
+    "type": "premium",
+    "cover": "icons/warbond/scope-of-authority-premium-warbond.webp"
   }
 ]

@@ -27,6 +27,7 @@ export const WARBOND_COLOR: Record<string, string> = {
   'exo-experts-premium-warbond': '#ff6047', // 레이저 산호빛
   'castellan-s-creed-legendary-warbond': '#a3a55e', // 카디안 카키
   'ironclad-democracy-premium-warbond': '#5fa8ae', // 전차 강철 청록
+  'scope-of-authority-premium-warbond': '#7fa57c', // 길리 수트 이끼빛
 }
 
 /** 색표에 없는 채권(새로 들어와 아직 안 정한 것)은 테마 강조색 */

@@ -1,5 +1,18 @@
 # 데이터 변경 기록
 
+## 01.007.201 (2026-10-31)
+
+추가:
+- AR-23L 리버레이터 레거시 (AR-23L Liberator Legacy)
+- G-11 마름쇠 (G-11 Caltrops)
+- P-44 미스트 (P-44 Mist)
+- R-40 사이트라이너 (R-40 Sightliner)
+- SS-15 포컬 포인트 (SS-15 Focal Point)
+- SS-33 모방의 원수 (SS-33 Mimetic Marshal)
+- SS-500 창백한 검찰관 (SS-500 Pale Prosecutor)
+- AMW-20 에이펙스 (AMW-20 Apex)
+- LAS-44 노바 (LAS-44 Nova)
+
 ## 01.007.100 (2026-10-12)
 
 추가:

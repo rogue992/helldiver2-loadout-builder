@@ -1364,6 +1364,37 @@
     },
     "st-td-110-maelstrom": {
       "nameKo": "TD-110 마엘스트롬"
+    },
+    "pw-r-40-sightliner": {
+      "nameKo": "R-40 사이트라이너",
+      "weaponType": "저격소총"
+    },
+    "pw-ar-23l-liberator-legacy": {
+      "nameKo": "AR-23L 리버레이터 레거시",
+      "weaponType": "돌격소총"
+    },
+    "sw-p-44-mist": {
+      "nameKo": "P-44 미스트",
+      "weaponType": "보조-권총"
+    },
+    "th-g-11-caltrops": {
+      "nameKo": "G-11 마름쇠",
+      "weaponType": "특수 수류탄"
+    },
+    "ar-ss-15-focal-point": {
+      "nameKo": "SS-15 포컬 포인트"
+    },
+    "ar-ss-33-mimetic-marshal": {
+      "nameKo": "SS-33 모방의 원수"
+    },
+    "ar-ss-500-pale-prosecutor": {
+      "nameKo": "SS-500 창백한 검찰관"
+    },
+    "st-amw-20-apex": {
+      "nameKo": "AMW-20 에이펙스"
+    },
+    "st-las-44-nova": {
+      "nameKo": "LAS-44 노바"
     }
   },
   "passives": {
@@ -1397,7 +1428,8 @@
     "Kinetic Displacement Mitigation": "운동 에너지 변위 완화",
     "True Grit": "진정한 위용",
     "Concussive Padding, Reinforced": "충격 방지 패드, 강화 버전",
-    "Blunt-Force Mitigation": "둔기 충격 완화"
+    "Blunt-Force Mitigation": "둔기 충격 완화",
+    "Stationary Shroud": "정적인 장막"
   },
   "passiveEffects": {
     "Acclimated": [
@@ -1527,6 +1559,11 @@
       "맞아도 잘 움찔하지 않음",
       "방어 등급 상승",
       "지도에 찍은 표시가 2.0초마다 레이더 탐지"
+    ],
+    "Stationary Shroud": [
+      "조준 시 무기 흔들림 35% 감소",
+      "이동 소음 15% 감소",
+      "움직이지 않고 앉거나 엎드려 있으면 적에게 발각되는 거리 감소(수풀 수준 은폐)"
     ]
   },
   "warbonds": {
@@ -1554,6 +1591,7 @@
     "entrenched-division-premium-warbond": "견고한 참호 사단",
     "exo-experts-premium-warbond": "외계 전문가",
     "castellan-s-creed-legendary-warbond": "카스텔란의 신조",
-    "ironclad-democracy-premium-warbond": "철갑의 민주주의"
+    "ironclad-democracy-premium-warbond": "철갑의 민주주의",
+    "scope-of-authority-premium-warbond": "권위의 가늠자"
   }
 }

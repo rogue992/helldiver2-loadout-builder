@@ -35,6 +35,7 @@ CI는 데이터 스크립트를 돌리지 않는다.
    - `warbondId` / `warbondPage`: Cargo `source`에서 자동 판정되면 생략. `unknownSource`만 판단.
    - 스트라타젬 `stratType`: 자동 판정(`Orbital` + `Barrage`, `traits`의 `Expendable` · `Backpack`)과 다르면 `data/overrides/manual.json`에 `{ "stratType": "..." }`. 근거는 `api.php?action=parse&page=<페이지명>&prop=wikitext`로 1회 조회해 인용.
    - 기록 위치: `data/overrides/ko.json`의 `items[id].nameKo`, `passives[영문]`, `warbonds[id]`.
+   - 무기는 `items[id].weaponType`(기존 한글 분류 중 하나. 새 분류면 `src/data/labels.ts`의 영어 표에도 넣는다), 새 패시브는 `passiveEffects[영문]`에 효과 번역을 원문과 같은 줄 수 · 같은 숫자로 넣는다(다르면 빌드가 영어 원문을 쓰고 경고한다).
    - 새 채권은 `src/data/warbondColors.ts`에 id와 색을 넣는다. 색은 그 채권 표지(6단계 뒤 `public/icons/warbond/<id>.webp`)의 주된 색이나 로고 색에서 고르고, 기존 채권과 너무 겹치지 않게 한다. 빠지면 `npm test`의 색표 검사가 실패한다.
    - 새 스트라타젬은 선택 창 순서표 `src/data/stratOrder.ts`에도 id를 넣는다. 자리는 나무위키 HELLDIVERS 2/스트라타젬의 공격 · 방어 · 보급 문서 목차에서 그 항목이 놓인 곳(같은 종류 묶음 안). id가 바뀐(rename) 스트라타젬은 순서표의 id도 고친다. 빠지면 `npm test`의 순서표 검사가 실패한다.
 5. **산출물 생성**: `npm run data:build -- --assign-n --label <패치 버전>` (예: `01.007.002`)
@@ -47,7 +48,7 @@ CI는 데이터 스크립트를 돌리지 않는다.
    - nvigneux는 `scripts/fetch-icons.ts`의 `NVIG_REF`(커밋 SHA)로 고정돼 있다. 새 아이콘이 필요하면 그 저장소의 변경을 확인한 뒤 SHA를 올린다.
    - 받은 SVG에 스크립트 · 이벤트 속성 · 외부 참조가 있으면 저장하지 않고 "SVG 거부"로 실패한다. 그대로 보고하고 손으로 고치지 않는다.
 7. **아이콘 검증 재빌드**: `npm run data:build -- --label <패치 버전>` → "아이콘 파일 없음" 경고가 0건인지 확인.
-8. **검증**: `npm run typecheck && npm run lint:copy && npm run lint:theme && npm test && npm run build`
+8. **검증**: `npm run typecheck && npm run lint:copy && npm test && npm run build`
 9. **보고**: 변경 파일 목록 · CHANGELOG 블록 · 폴백 목록 · unknownSource를 요약해 사용자에게 전달한다. **커밋 · 푸시는 하지 않는다**(사용자가 한다. main push가 Pages 배포를 트리거한다).
 
 ## 자주 걸리는 것

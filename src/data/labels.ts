@@ -61,6 +61,7 @@ export const ARMOR_CLASS_LABEL: Record<'light' | 'medium' | 'heavy', string> = b
 const WEAPON_TYPE_EN: Record<string, string> = {
   돌격소총: 'Assault Rifle',
   지정사수소총: 'Marksman Rifle',
+  저격소총: 'Sniper Rifle',
   기관단총: 'SMG',
   산탄총: 'Shotgun',
   폭발: 'Explosive',

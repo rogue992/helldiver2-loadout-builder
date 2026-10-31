@@ -26,7 +26,8 @@ const errors: string[] = []
 const warnings: string[] = []
 
 // ── 획득처 매핑(wiki Cargo `source` 문구 기준) ─────────────────────
-const SHIP_MODULES = ['Patriotic Administration Center', 'Engineering Bay', 'Hangar', 'Robotics Workshop', 'Bridge', 'Orbital Cannons', 'Starter Equipment']
+// Hanger: 위키에 Hangar를 잘못 적은 행이 있다(M-103 Supply FRV). 고쳐지면 지워도 된다
+const SHIP_MODULES = ['Patriotic Administration Center', 'Engineering Bay', 'Hangar', 'Hanger', 'Robotics Workshop', 'Bridge', 'Orbital Cannons', 'Starter Equipment']
 const CAMPAIGN_MARKERS = ['Liberty Day', 'Anniversary Gift', 'Pre-Order Bonus', 'Campaigns', 'Downloadable Content', 'Escalation of Freedom']
 
 function classifySource(source: string, warbondPages: Map<string, string>): { source: Source; warbondId: string | null; warbondPage: number | null } {

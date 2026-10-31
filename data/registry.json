@@ -1,5 +1,5 @@
 {
-  "next": 307,
+  "next": 316,
   "ids": {
     "pw-ar-2-coyote": 1,
     "pw-ar-23-liberator": 2,
@@ -306,7 +306,16 @@
     "ar-bfm-16-tanker": 303,
     "ar-bfm-220-ironclad": 304,
     "ar-bfm-77-reformer": 305,
-    "st-td-110-maelstrom": 306
+    "st-td-110-maelstrom": 306,
+    "pw-ar-23l-liberator-legacy": 307,
+    "th-g-11-caltrops": 308,
+    "sw-p-44-mist": 309,
+    "pw-r-40-sightliner": 310,
+    "ar-ss-15-focal-point": 311,
+    "ar-ss-33-mimetic-marshal": 312,
+    "ar-ss-500-pale-prosecutor": 313,
+    "st-amw-20-apex": 314,
+    "st-las-44-nova": 315
   },
   "added": {
     "pw-ar-11-arbitrator": "2026-10-12",
@@ -318,6 +327,15 @@
     "ar-bfm-16-tanker": "2026-10-12",
     "ar-bfm-220-ironclad": "2026-10-12",
     "ar-bfm-77-reformer": "2026-10-12",
-    "st-td-110-maelstrom": "2026-10-12"
+    "st-td-110-maelstrom": "2026-10-12",
+    "pw-ar-23l-liberator-legacy": "2026-10-31",
+    "th-g-11-caltrops": "2026-10-31",
+    "sw-p-44-mist": "2026-10-31",
+    "pw-r-40-sightliner": "2026-10-31",
+    "ar-ss-15-focal-point": "2026-10-31",
+    "ar-ss-33-mimetic-marshal": "2026-10-31",
+    "ar-ss-500-pale-prosecutor": "2026-10-31",
+    "st-amw-20-apex": "2026-10-31",
+    "st-las-44-nova": "2026-10-31"
   }
 }

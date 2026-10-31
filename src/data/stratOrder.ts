@@ -59,6 +59,7 @@ export const STRAT_ORDER: string[] = [
   'st-gl-52-de-escalator',
   'st-plas-45-epoch',
   'st-40-k-meltagun',
+  'st-las-44-nova',
   'st-tx-41-sterilizer',
   'st-s-11-speargun',
   'st-cqc-1-one-true-flag',
@@ -66,6 +67,7 @@ export const STRAT_ORDER: string[] = [
   'st-cqc-20-breaching-hammer',
   // 지원무기(배낭)
   'st-m-1000-maxigun',
+  'st-amw-20-apex',
   'st-gr-8-recoilless-rifle',
   'st-ac-8-autocannon',
   'st-faf-14-spear',
